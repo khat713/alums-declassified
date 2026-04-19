@@ -1,23 +1,115 @@
-<!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Alum's Declassified</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Alum's Declassified 🎓</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-controls="mainNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="start-here.html">Start Here</a></li>
           <li class="nav-item"><a class="nav-link" href="tech-help.html">Tech Help</a></li>
+          <li class="nav-item"><a class="nav-link" href="framework.html">Framework</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <small>Alum's Declassified: College Survival Guide &copy; 2025 | Free for all first-gen students</small>
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>About This Course</h1>
+      <p>Who made this, why it exists, and who it's for.</p>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="container my-5">
+
+    <!-- Instructor Bio -->
+    <div class="content-block">
+      <span class="section-label label-content">Instructor</span>
+      <h2>About the Instructor</h2>
+      <div class="row align-items-start g-4">
+        <div class="col-md-3 text-center">
+          <div class="placeholder-box" style="min-height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            📷<br><small>Add a photo here<br>(use an &lt;img&gt; tag with alt text)</small>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <h4 style="font-weight: 700;">[Your Name Here]</h4>
+          <p class="text-muted mb-3" style="font-size: 0.9rem;">[Your title, program, or institution]</p>
+          <div class="placeholder-box" style="text-align: left;">
+            <strong>Write 2–3 sentences covering:</strong>
+            <ol style="margin: 0.5rem 0 0 1rem; padding: 0;">
+              <li>Your academic or professional background</li>
+              <li>Why you built this course — your personal connection to first-gen students</li>
+              <li>One personal detail that makes you feel real to your students</li>
+            </ol>
+            <p style="margin: 0.8rem 0 0 0; font-size: 0.88rem; color: #999;">
+              ⚠️ Required by rubric Standard 1.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why This Course -->
+    <div class="content-block">
+      <span class="section-label label-content">Purpose</span>
+      <h2>Why This Course Exists</h2>
+      <div class="placeholder-box" style="text-align: left; min-height: 100px;">
+        Write a paragraph here about the gap this course addresses — first-gen students
+        navigating both higher education and independent adult life without family guidance.
+        You can draw from your abstract.
+      </div>
+    </div>
+
+    <!-- Student Intro -->
+    <div class="content-block">
+      <span class="section-label label-activity">Student Introduction</span>
+      <h2>Now — Tell Me About You</h2>
+      <p>
+        Before you start Module 1, I want to hear from you. Introduce yourself below.
+        No pressure on length or format — just tell me something true.
+      </p>
+      <div class="placeholder-box text-center">
+        📝 <strong>Discussion / Intro Form Placeholder</strong><br>
+        <small>Embed a Google Form, Padlet, or discussion thread here.<br>
+        Suggested prompt: "What's one thing you're hoping to figure out before your first semester?"</small>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-4">
+      <a href="start-here.html" class="btn-red me-2">Read the Syllabus →</a>
+      <a href="module-1.html" class="btn-dark-outline">Jump to Module 1 →</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Alum's Declassified: College Survival Guide &copy; 2025 &nbsp;|&nbsp;
+    Free for all first-generation students &nbsp;|&nbsp;
+    <a href="mailto:your-email@example.com">Contact</a></p>
   </footer>
-  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
