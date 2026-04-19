@@ -8,17 +8,12 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Alum's Declassified 🎓</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#mainNav" aria-controls="mainNav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-      </button>
+      <a class="navbar-brand" href="index.html">🎓 Alum's Declassified</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNav">
-         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="start-here.html">Start Here</a></li>
@@ -26,146 +21,225 @@
           <li class="nav-item"><a class="nav-link" href="assignments.html">Assignments</a></li>
           <li class="nav-item"><a class="nav-link" href="tech-help.html">Tech Help</a></li>
           <li class="nav-item"><a class="nav-link" href="framework.html">Framework</a></li>
-      </ul>
+        </ul>
       </div>
     </div>
   </nav>
-
-  <div class="breadcrumb-bar">
-    <div class="container">
-      <a href="index.html">← Back to Home</a> &nbsp;/&nbsp; Module 3
-    </div>
-  </div>
-
+  <div class="breadcrumb-bar"><div class="container"><a href="index.html">Home</a><span class="bc-sep">/</span><a href="modules.html">Modules</a><span class="bc-sep">/</span><span class="bc-current">Module 3: Financial Literacy</span></div></div>
   <section class="module-header">
     <div class="container">
       <p class="module-tag">Week 3 · Module 3</p>
       <h1>Financial Literacy</h1>
-      <p>FAFSA, award letters, loans vs. grants, budgeting on a student income,
-      banking basics, and scams to avoid.</p>
+      <p>Your award letter is not a gift card. Some of that money is free — and some of it you will be paying back for years. Know the difference before you accept anything.</p>
+      <div class="module-meta-row">
+        <span class="module-meta-item">⏱ <strong>~50 minutes</strong></span>
+        <span class="module-meta-item">💰 <strong>Assessment:</strong> Budget Worksheet</span>
+        <span class="module-meta-item">🏆 <strong>75 points</strong></span>
+      </div>
     </div>
   </section>
+  <div class="container my-4">
+    <div class="row g-4">
+      <div class="col-lg-8">
 
-  <main class="container my-5">
+        <div class="content-block" id="objectives">
+          <span class="section-label label-objectives">Learning Objectives</span>
+          <h2>By the End of This Module, You Will Be Able To:</h2>
+          <ol style="line-height: 2.1; margin-bottom: 0;">
+            <li>Distinguish between grants, scholarships, and loans in a financial aid award letter and explain the repayment implications of each.</li>
+            <li>Calculate a monthly student budget by categorizing income sources and expenses as fixed or variable.</li>
+            <li>Identify at least two strategies for addressing a negative budget gap before the semester begins.</li>
+            <li>Recognize at least three financial scams commonly targeting college students and describe how to avoid them.</li>
+          </ol>
+        </div>
 
-    <div class="content-block">
-      <span class="section-label label-objectives">Learning Objectives</span>
-      <h2>By the End of This Module, You Will Be Able To:</h2>
-      <div class="placeholder-box" style="text-align: left;">
-        <ol style="margin: 0; padding-left: 1.2rem;">
-          <li>Read and interpret a financial aid award letter, distinguishing grants from loans.</li>
-          <li>Build a monthly student budget using your school's actual cost of attendance.</li>
-          <li>Identify at least two strategies for reducing expenses if your budget is negative.</li>
-          <li>Recognize common financial scams targeting college students.</li>
-        </ol>
+        <div class="content-block" id="lesson">
+          <span class="section-label label-content">Instructional Content</span>
+          <h2>Module 3 Lesson</h2>
+          <div style="text-align: left;">
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--ink); margin-bottom: 0.75rem;">Your Financial Aid Award Letter Is Not a Gift Card</h3>
+            <p>When your financial aid award letter arrives, it will list a number that looks like a lot of money. Some of it is. Some of it is a loan you will have to repay — with interest. Knowing the difference before you accept anything is one of the most important financial decisions you will make in college.</p>
+
+            <h4 style="font-weight: 700; color: var(--ink); margin-top: 1.4rem;">💵 Grants vs. Loans: The Most Important Distinction</h4>
+            <p><strong>Grants</strong> are free money. You do not pay them back. The Pell Grant is the most common federal grant for students with financial need. Your school may also offer institutional grants. If your award letter lists a grant, that amount is yours to use for school expenses.</p>
+            <p><strong>Loans</strong> are borrowed money. You pay them back after graduation, with interest. There are two main types:</p>
+            <ul>
+              <li><strong>Subsidized loans:</strong> The government pays the interest while you are in school. These are better. You only qualify if you demonstrate financial need.</li>
+              <li><strong>Unsubsidized loans:</strong> Interest starts accruing immediately, even while you are in school. If you do not pay the interest as it builds, it gets added to your loan balance — meaning you pay interest on your interest.</li>
+            </ul>
+            <p><strong>Rule of thumb:</strong> Accept grants first. Accept subsidized loans before unsubsidized. Do not accept more in loans than you actually need to cover your costs.</p>
+
+            <h4 style="font-weight: 700; color: var(--ink); margin-top: 1.4rem;">📄 How to Read an Award Letter</h4>
+            <p>Award letters are not standardized — every school formats them differently. Here is what to look for:</p>
+            <ol>
+              <li>Find the total cost of attendance (tuition + fees + housing + food + books + personal expenses). This is what school actually costs.</li>
+              <li>Subtract any grants and scholarships (free money). What remains is your "net cost" — what you or your family need to cover.</li>
+              <li>Then look at what loans are being offered to cover that net cost. These are NOT free money. They are options, not requirements.</li>
+              <li>You do not have to accept all the loans offered. Accept only what you need.</li>
+            </ol>
+
+            <h4 style="font-weight: 700; color: var(--ink); margin-top: 1.4rem;">🏦 Budgeting on a Student Income</h4>
+            <p>A student budget has two sides: money coming in and money going out. Most students underestimate the "going out" side.</p>
+            <p><strong>Fixed expenses</strong> are the same every month: rent, phone bill, loan payments, subscription services.</p>
+            <p><strong>Variable expenses</strong> change month to month: groceries, gas, entertainment, clothing, eating out. These are where most students overspend without realizing it.</p>
+            <p>The most important line in your budget is the gap between income and expenses. If that number is negative, you need a plan before the semester starts — not after you are overdrawn.</p>
+
+            <h4 style="font-weight: 700; color: var(--ink); margin-top: 1.4rem;">🚨 Financial Scams Targeting College Students</h4>
+            <ul>
+              <li><strong>Scholarship scams:</strong> Any scholarship that requires a fee to apply is a scam. Legitimate scholarships are free to apply for.</li>
+              <li><strong>Fake financial aid emails:</strong> Your school will never ask for your FSA ID password via email. If an email asks for login credentials, it is a phishing attempt.</li>
+              <li><strong>Student loan forgiveness scams:</strong> Companies that charge you to help with loan repayment or forgiveness are almost always scams. All federal loan repayment help is available free at StudentAid.gov.</li>
+              <li><strong>Overpayment scams:</strong> Someone overpays you by check and asks you to send the difference back. The check bounces and you are out the money you sent.</li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <h4 style="font-weight: 700; color: var(--ink);">📊 How to Read an Award Letter — Visual Guide</h4>
+            <div class="placeholder-box text-center" style="min-height: 180px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+              🖼 <strong>Embed your Canva infographic here</strong><br>
+              <small>Annotated sample award letter with grants/loans color-coded<br>
+              Save as <code>images/module3-infographic.png</code>, then replace this with:<br>
+              <code>&lt;img src="images/module3-infographic.png" alt="Annotated financial aid award letter" style="width:100%; border-radius:8px;" /&gt;</code></small>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-block" id="activity">
+          <span class="section-label label-activity">Learning Activity</span>
+          <h2>Activity: Read a Sample Award Letter</h2>
+          <div style="text-align: left;">
+            <p>Use the fictional award letter below to practice reading financial aid. Answer the four questions that follow.</p>
+            <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--r); padding: 1.25rem; margin: 1rem 0; font-size: 0.92rem;">
+              <p style="font-weight: 700; margin-bottom: 0.5rem;">Riverside Community College — Financial Aid Award Letter</p>
+              <p style="margin-bottom: 0.25rem;">Student: Jordan A. | Academic Year: 2025–2026</p>
+              <hr style="border-color: var(--border); margin: 0.75rem 0;">
+              <table style="width:100%; font-size: 0.88rem; border-collapse: collapse;">
+                <tr><td style="padding: 4px 0;"><strong>Total Cost of Attendance</strong></td><td style="text-align:right;">$28,000</td></tr>
+                <tr><td style="padding: 4px 0; color: var(--green);">Federal Pell Grant</td><td style="text-align:right; color: var(--green);">- $7,395</td></tr>
+                <tr><td style="padding: 4px 0; color: var(--green);">Institutional Grant</td><td style="text-align:right; color: var(--green);">- $5,000</td></tr>
+                <tr style="border-top: 1px solid var(--border);"><td style="padding: 4px 0;"><strong>Net Cost After Free Aid</strong></td><td style="text-align:right;"><strong>$15,605</strong></td></tr>
+                <tr><td style="padding: 4px 0; color: var(--amber);">Subsidized Loan (offered)</td><td style="text-align:right; color: var(--amber);">$3,500</td></tr>
+                <tr><td style="padding: 4px 0; color: var(--amber);">Unsubsidized Loan (offered)</td><td style="text-align:right; color: var(--amber);">$2,000</td></tr>
+              </table>
+            </div>
+            <p><strong>Answer these four questions in writing:</strong></p>
+            <ol>
+              <li>What is Jordan's total cost of attendance?</li>
+              <li>How much free money (grants) is Jordan receiving? What is the net cost after grants?</li>
+              <li>If Jordan accepts both loans offered, what will the total borrowed amount be — and which loan is better to accept first, and why?</li>
+              <li>Jordan's net cost after all aid (including both loans) is $10,105. What are two ways Jordan could cover that gap without taking on additional loans?</li>
+            </ol>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Keep your answers — they will help you complete the budget worksheet assessment.</p>
+          </div>
+        </div>
+
+        <div class="content-block" id="assessment">
+          <span class="section-label label-assessment">Assessment</span>
+          <h2>Budget Worksheet — Assignment 3 (75 pts)</h2>
+          <p>Build a monthly budget for your first semester using your school's actual cost of attendance and your financial aid information. Categorize each expense as fixed or variable, identify two areas where you could reduce spending, and complete a gap analysis.</p>
+          <div class="placeholder-box" style="text-align: left;">
+            <strong>Two-part submission:</strong>
+            <div class="placeholder-box text-center mt-2" style="margin-bottom: 0.75rem;">
+              📊 Create a Google Sheet budget template, then replace this with:<br>
+              <code>&lt;a href="YOUR_GOOGLE_SHEET_LINK" target="_blank" class="btn-dark-outline"&gt;Download Budget Template →&lt;/a&gt;</code>
+            </div>
+            <div class="placeholder-box text-center mt-2">
+              📝 Create a Google Form for submission, then replace this with:<br>
+              <code>&lt;a href="YOUR_GOOGLE_FORM_LINK" target="_blank" class="btn-red"&gt;Submit Completed Budget →&lt;/a&gt;</code>
+            </div>
+            <p style="margin-top: 0.8rem; font-size: 0.85rem; color: var(--text-light);">Rubric: Exemplary = all categories complete, correctly labeled fixed/variable, gap analysis includes a specific realistic plan. Proficient = all categories with required labels. Emerging = missing categories or labels. Incomplete = missing.</p>
+          </div>
+        </div>
+
+        <div class="content-block" id="model">
+          <span class="section-label label-model">Model Response</span>
+          <h2>Example Budget — See What Proficient Looks Like</h2>
+          <div style="text-align: left;">
+            <p><strong>Example Budget — Jordan, First Semester at Riverside Community College:</strong></p>
+            <div class="table-responsive">
+              <table class="styled-table">
+                <thead><tr><th>Category</th><th>Type</th><th>Monthly Amount</th></tr></thead>
+                <tbody>
+                  <tr><td colspan="3" style="background:var(--green-bg); font-weight:700; color:var(--green);">INCOME</td></tr>
+                  <tr><td>Pell Grant (divided over 8 months)</td><td>Fixed</td><td>$616</td></tr>
+                  <tr><td>Institutional Grant (divided over 8 months)</td><td>Fixed</td><td>$417</td></tr>
+                  <tr><td>Subsidized Loan (divided over 8 months)</td><td>Fixed</td><td>$292</td></tr>
+                  <tr><td>Part-time campus job (10 hrs/wk at $13/hr)</td><td>Variable</td><td>$520</td></tr>
+                  <tr><td><strong>Total Income</strong></td><td></td><td><strong>$1,845</strong></td></tr>
+                  <tr><td colspan="3" style="background:var(--rose-bg); font-weight:700; color:var(--rose);">EXPENSES</td></tr>
+                  <tr><td>Housing (dorm, meal plan included)</td><td>Fixed</td><td>$1,100</td></tr>
+                  <tr><td>Phone bill</td><td>Fixed</td><td>$45</td></tr>
+                  <tr><td>Transportation (bus pass)</td><td>Fixed</td><td>$30</td></tr>
+                  <tr><td>Groceries / extra food</td><td>Variable</td><td>$150</td></tr>
+                  <tr><td>Personal care / hygiene</td><td>Variable</td><td>$40</td></tr>
+                  <tr><td>Books and supplies</td><td>Variable</td><td>$80</td></tr>
+                  <tr><td>Entertainment</td><td>Variable</td><td>$60</td></tr>
+                  <tr><td><strong>Total Expenses</strong></td><td></td><td><strong>$1,505</strong></td></tr>
+                  <tr><td><strong>Monthly Gap</strong></td><td></td><td><strong style="color:var(--green);">+$340</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-top: 0.8rem;"><strong>If my gap were negative:</strong> I would reduce entertainment first, then look into whether I qualify for the campus food pantry to cut grocery costs. I would also visit the financial aid office to ask about work-study options.</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">Proficient: all categories completed, fixed vs. variable correctly labeled, and the gap analysis includes a specific and realistic plan.</p>
+          </div>
+        </div>
+
+        <div class="content-block" id="tools">
+          <span class="section-label label-tools">Tools Used in This Module</span>
+          <h2>Technological Tools</h2>
+          <table class="styled-table">
+            <thead><tr><th>Tool</th><th>Purpose</th><th>Privacy Policy</th><th>Cost</th></tr></thead>
+            <tbody>
+              <tr><td>Google Forms</td><td>Budget worksheet submission</td><td><a href="https://policies.google.com/privacy" target="_blank">View</a></td><td>Free</td></tr>
+              <tr><td>Google Sheets</td><td>Budget template</td><td><a href="https://policies.google.com/privacy" target="_blank">View</a></td><td>Free</td></tr>
+              <tr><td>StudentAid.gov</td><td>Official FAFSA and loan information</td><td><a href="https://studentaid.gov/privacy" target="_blank">View</a></td><td>Free</td></tr>
+              <tr><td>Canva</td><td>Award letter infographic</td><td><a href="https://www.canva.com/policies/privacy-policy/" target="_blank">View</a></td><td>Free</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="module-nav mt-2">
+          <div><p class="nav-label">← Previous</p><p class="nav-title"><a href="module-2.html">Module 2: Campus Resources</a></p></div>
+          <div class="text-end"><p class="nav-label">Next →</p><p class="nav-title"><a href="module-4.html">Module 4: Essential Life Skills</a></p></div>
+        </div>
+
       </div>
-    </div>
 
-    <div class="content-block">
-      <span class="section-label label-content">Instructional Content</span>
-      <h2>Module 3 Lesson</h2>
-      <div class="placeholder-box" style="text-align: left; min-height: 200px;">
-        <strong>Add your original content here (2+ modalities):</strong>
-        <ul style="margin: 0.8rem 0 0 1rem;">
-          <li>📝 Written lesson: FAFSA basics, how to read an award letter, grants vs. loans,
-          subsidized vs. unsubsidized, what "EFC" means, budgeting categories, banking basics</li>
-          <li>🎥 Video or infographic: annotated sample award letter walkthrough</li>
-        </ul>
-        <p style="margin-top: 0.8rem; color: #999; font-size: 0.85rem;">
-          Merrill activation principle: open with a real sample award letter scenario before
-          explaining the concepts. Students engage more when they encounter the problem first.
-        </p>
-      </div>
-    </div>
-
-    <div class="content-block">
-      <span class="section-label label-activity">Learning Activity</span>
-      <h2>Activity: FAFSA Section Walkthrough</h2>
-      <div class="placeholder-box" style="text-align: left;">
-        <strong>Instructions:</strong> Walk through the FAFSA form using the guide provided
-        in this module. For each section listed below, write one sentence explaining what
-        information it asks for and why it matters:<br><br>
-        <ol style="margin: 0.5rem 0 0 1rem;">
-          <li>Student information</li>
-          <li>School selection</li>
-          <li>Dependency status</li>
-          <li>Parent financial information (if dependent)</li>
-          <li>Student financial information</li>
-        </ol>
-        <p style="margin-top: 0.8rem; font-size: 0.85rem; color: #555;">
-          Use <a href="https://studentaid.gov/apply-for-aid/fafsa/filling-out" target="_blank" rel="noopener">StudentAid.gov</a>
-          as your reference. This is the official FAFSA resource — always free.
-        </p>
-      </div>
-    </div>
-
-    <div class="content-block">
-      <span class="section-label label-assessment">Assessment</span>
-      <h2>Budget Worksheet: Build Your First Semester Budget</h2>
-      <div class="placeholder-box" style="text-align: left;">
-        <strong>Instructions:</strong> Using your school's published cost of attendance and
-        your own financial aid information (or estimates), build a monthly budget for your
-        first semester. The template walks you through:
-        <ul style="margin: 0.5rem 0 0 1rem;">
-          <li>Fixed vs. variable expenses</li>
-          <li>All income sources (grants, loans, jobs, family)</li>
-          <li>Gap analysis — what happens if expenses exceed income?</li>
-          <li>Two concrete steps if your balance is negative</li>
-        </ul>
-        <strong>Submission:</strong>
-        <div class="placeholder-box text-center mt-2">
-          📎 Link to budget template (Google Sheet or Word) + submission form
+      <div class="col-lg-4">
+        <div style="position: sticky; top: 74px;">
+          <div class="sidebar-block">
+            <p class="sidebar-label">In This Module</p>
+            <ul class="sidebar-nav-list">
+              <li><a href="#objectives">📌 Learning Objectives</a></li>
+              <li><a href="#lesson">📖 Lesson</a></li>
+              <li><a href="#activity">📄 Activity</a></li>
+              <li><a href="#assessment">💰 Assessment</a></li>
+              <li><a href="#model">💡 Model Response</a></li>
+              <li><a href="#tools">🛠 Tools</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-assignment">
+            <p class="sa-label">Assignment Due</p>
+            <p><strong>Budget Worksheet</strong> · 75 pts</p>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">Build a monthly budget using your real aid info and school costs.</p>
+            <a href="assignments.html#a3">View full rubric →</a>
+          </div>
+          <div class="sidebar-block">
+            <p class="sidebar-label">Course Progress</p>
+            <div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.82rem;">
+              <div style="display:flex; align-items:center; gap:8px; color:var(--text-light);"><span>✓</span><a href="module-1.html" style="color:var(--text-light);">Module 1</a></div>
+              <div style="display:flex; align-items:center; gap:8px; color:var(--text-light);"><span>✓</span><a href="module-2.html" style="color:var(--text-light);">Module 2</a></div>
+              <div style="display:flex; align-items:center; gap:8px;"><span style="color:var(--teal); font-weight:700;">●</span><span style="font-weight:600; color:var(--ink);">Module 3 — Current</span></div>
+              <div style="display:flex; align-items:center; gap:8px; color:var(--text-light);"><span>○</span><a href="module-4.html" style="color:var(--text-light);">Module 4: Life Skills</a></div>
+              <div style="display:flex; align-items:center; gap:8px; color:var(--text-light);"><span>○</span><span>Modules 5–7…</span></div>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
-
-    <div class="content-block">
-      <span class="section-label label-model">Model Response</span>
-      <h2>Example Budget — Jordan, First-Semester Student</h2>
-      <div class="placeholder-box" style="text-align: left;">
-        ✏️ <strong>Complete the budget worksheet yourself using a fictional student.</strong><br><br>
-        Create a sample budget for "Jordan" at a fictional school with realistic numbers.
-        Show all categories filled in, fixed vs. variable labeled, and a completed gap analysis.
-        Make it visible directly on this page — not linked elsewhere.
-      </div>
-    </div>
-
-    <div class="content-block">
-      <span class="section-label label-tools">Tools Used in This Module</span>
-      <h2>Technological Tools</h2>
-      <table class="styled-table">
-        <thead><tr><th>Tool</th><th>Purpose</th><th>Privacy Policy</th><th>Cost</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>StudentAid.gov</td>
-            <td>Official FAFSA resource</td>
-            <td><a href="https://studentaid.gov/privacy" target="_blank" rel="noopener">Privacy policy</a></td>
-            <td>Free</td>
-          </tr>
-          <tr><td>[Additional tool]</td><td>[Purpose]</td><td><a href="#">Privacy policy</a></td><td>Free</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="module-nav mt-4">
-      <div>
-        <p class="nav-label">← Previous</p>
-        <p class="nav-title"><a href="module-2.html" style="color: #1a1a2e; text-decoration: none;">Module 2: Campus Resources</a></p>
-      </div>
-      <div class="text-end">
-        <p class="nav-label">Next →</p>
-        <p class="nav-title"><a href="module-4.html" style="color: #1a1a2e; text-decoration: none;">Module 4: Essential Life Skills</a></p>
-      </div>
-    </div>
-
-  </main>
-
-  <footer>
-    <p>Alum's Declassified: College Survival Guide &copy; 2025 &nbsp;|&nbsp;
-    Free for all first-generation students &nbsp;|&nbsp;
-    <a href="mailto:your-email@example.com">Contact</a></p>
-  </footer>
-
+  </div>
+  <footer><p>Alum's Declassified: College Survival Guide &copy; 2025 &nbsp;·&nbsp; Free for all first-generation students &nbsp;·&nbsp; <a href="mailto:your-email@example.com">Contact</a></p></footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
