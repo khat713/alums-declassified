@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AccordionItem } from "@/components/ui/accordion";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
   title: "Tech Help | Alum's Declassified",
@@ -46,54 +46,71 @@ export default function TechHelpPage() {
             Solve It Yourself — Common Problems
           </h2>
 
-          <AccordionItem title="🎥 A video won't load or play">
-            <ol className="ml-5 space-y-1">
-              <li>Refresh the page (F5 or Ctrl+R).</li>
-              <li>Try a different browser (Chrome or Firefox work best).</li>
-              <li>Check that your internet connection is active.</li>
-              <li>If it&apos;s a YouTube embed, try opening it directly on YouTube.</li>
-              <li>If it&apos;s a Loom video, try opening the direct Loom link.</li>
-              <li>Still stuck? Email me with your browser and device.</li>
-            </ol>
-          </AccordionItem>
+          <Accordion type="single" collapsible={true}>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>🎥 A video won&apos;t load or play</AccordionTrigger>
+              <AccordionContent>
+                <ol className="ml-5 space-y-1">
+                  <li>Refresh the page (F5 or Ctrl+R).</li>
+                  <li>Try a different browser (Chrome or Firefox work best).</li>
+                  <li>Check that your internet connection is active.</li>
+                  <li>If it&apos;s a YouTube embed, try opening it directly on YouTube.</li>
+                  <li>If it&apos;s a Loom video, try opening the direct Loom link.</li>
+                  <li>Still stuck? Email me with your browser and device.</li>
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem title="🔗 A link is broken or leads to a 404 page">
-            <ol className="ml-5 space-y-1">
-              <li>Copy the URL from the broken link and paste it into a new tab.</li>
-              <li>Check for any extra spaces or characters in the address bar.</li>
-              <li>Go back to the home page and navigate from there.</li>
-              <li>Email me the URL of the broken link so I can fix it.</li>
-            </ol>
-          </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>🔗 A link is broken or leads to a 404 page</AccordionTrigger>
+              <AccordionContent>
+                <ol className="ml-5 space-y-1">
+                  <li>Copy the URL from the broken link and paste it into a new tab.</li>
+                  <li>Check for any extra spaces or characters in the address bar.</li>
+                  <li>Go back to the home page and navigate from there.</li>
+                  <li>Email me the URL of the broken link so I can fix it.</li>
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem title="📝 A form or submission won't go through">
-            <ol className="ml-5 space-y-1">
-              <li>Make sure all required fields are filled in (look for red borders or asterisks).</li>
-              <li>Try refreshing the page and re-entering your response.</li>
-              <li>Try a different browser.</li>
-              <li>If you&apos;re on a school or work network, try your personal wi-fi — some networks block form submissions.</li>
-              <li>As a backup, email your completed response directly to me.</li>
-            </ol>
-          </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>📝 A form or submission won&apos;t go through</AccordionTrigger>
+              <AccordionContent>
+                <ol className="ml-5 space-y-1">
+                  <li>Make sure all required fields are filled in (look for red borders or asterisks).</li>
+                  <li>Try refreshing the page and re-entering your response.</li>
+                  <li>Try a different browser.</li>
+                  <li>If you&apos;re on a school or work network, try your personal wi-fi — some networks block form submissions.</li>
+                  <li>As a backup, email your completed response directly to me.</li>
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem title="📱 The site looks broken on my phone">
-            <ol className="ml-5 space-y-1">
-              <li>Make sure you&apos;re using an up-to-date browser (Chrome or Safari on mobile).</li>
-              <li>Try rotating your phone to landscape mode for wider tables or content.</li>
-              <li>If text is very small, use your browser&apos;s zoom feature.</li>
-              <li>Clear your browser cache: Settings → Browser → Clear Cache.</li>
-              <li>Email me and describe exactly what looks wrong — screenshot if possible.</li>
-            </ol>
-          </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>📱 The site looks broken on my phone</AccordionTrigger>
+              <AccordionContent>
+                <ol className="ml-5 space-y-1">
+                  <li>Make sure you&apos;re using an up-to-date browser (Chrome or Safari on mobile).</li>
+                  <li>Try rotating your phone to landscape mode for wider tables or content.</li>
+                  <li>If text is very small, use your browser&apos;s zoom feature.</li>
+                  <li>Clear your browser cache: Settings → Browser → Clear Cache.</li>
+                  <li>Email me and describe exactly what looks wrong — screenshot if possible.</li>
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem title="📄 I can't download or open a template file">
-            <ol className="ml-5 space-y-1">
-              <li>Right-click the download link and choose &ldquo;Save link as...&rdquo;</li>
-              <li>If it&apos;s a Google Doc link, make sure you&apos;re signed into a Google account and click &ldquo;Make a copy.&rdquo;</li>
-              <li>If you don&apos;t have Word, Google Docs opens .docx files for free.</li>
-              <li>Email me and I&apos;ll send you the file directly.</li>
-            </ol>
-          </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger>📄 I can&apos;t download or open a template file</AccordionTrigger>
+              <AccordionContent>
+                <ol className="ml-5 space-y-1">
+                  <li>Right-click the download link and choose &ldquo;Save link as...&rdquo;</li>
+                  <li>If it&apos;s a Google Doc link, make sure you&apos;re signed into a Google account and click &ldquo;Make a copy.&rdquo;</li>
+                  <li>If you don&apos;t have Word, Google Docs opens .docx files for free.</li>
+                  <li>Email me and I&apos;ll send you the file directly.</li>
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
 
         {/* Supported Browsers */}
