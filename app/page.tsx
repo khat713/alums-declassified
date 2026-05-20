@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SplineScene } from "@/components/ui/splite";
+import { Spotlight } from "@/components/ui/spotlight";
 
 export const metadata: Metadata = {
   title: "Home | Alum's Declassified",
@@ -9,47 +11,63 @@ export default function HomePage() {
   return (
     <main>
       {/* HERO */}
-      <section
-        className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] text-center py-16 px-4"
-        style={{ paddingTop: "4rem", paddingBottom: "3rem" }}
-      >
-        <div className="container mx-auto px-4">
-          <p className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.09em] uppercase text-[#0d7c7e] mb-4">
-            Free · Asynchronous · Built for You
-          </p>
-          <h1
-            className="text-[2.8rem] font-bold leading-[1.15] tracking-[-0.025em] text-[#1b2537] dark:text-[#e2e8f0] mb-4 mx-auto"
-            style={{ fontFamily: "var(--font-display)", maxWidth: "680px" }}
-          >
-            Nobody Hands You a Manual
-            <br />
-            When You Get to College.
-          </h1>
-          <p
-            className="text-[#5a6a82] dark:text-[#94a3b8] text-[1.1rem] leading-[1.7] mx-auto mb-8"
-            style={{ maxWidth: "620px" }}
-          >
-            Alum&apos;s Declassified is a free seven-week course for
-            first-generation college students — covering everything from syllabi
-            and office hours to budgeting, mental health, and building a career.
-            The stuff nobody tells you out loud.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link
-              href="/start-here"
-              className="bg-[#0d7c7e] text-white no-underline py-[13px] px-[30px] text-[0.95rem] rounded-[5px] font-bold inline-block hover:bg-[#096163] hover:-translate-y-px transition-all"
+      <section className="relative bg-[#1b2537] overflow-hidden min-h-[500px] flex flex-col">
+        <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
+        <div className="flex-1 flex flex-col md:flex-row items-center container mx-auto px-4 py-16 relative z-10">
+          {/* Left: Text + CTAs */}
+          <div className="flex-1 flex flex-col justify-center py-8 md:py-0 md:pr-12">
+            <p className="text-[0.75rem] font-bold tracking-[0.09em] uppercase text-[#7ec8ca] mb-4">
+              Free · Asynchronous · Built for You
+            </p>
+            <h1
+              className="text-[clamp(1.9rem,3.8vw,3rem)] font-bold leading-[1.1] tracking-[-0.025em] mb-5"
+              style={{ fontFamily: "var(--font-display)" }}
             >
-              Start Here — Read the Syllabus →
-            </Link>
-            <Link
-              href="/module-1"
-              className="bg-transparent text-[#1b2537] dark:text-[#e2e8f0] border-[1.5px] border-[#1b2537] dark:border-[#e2e8f0] no-underline py-[13px] px-[30px] text-[0.95rem] rounded-[5px] font-semibold inline-block hover:bg-[#1b2537] dark:hover:bg-[#e2e8f0] hover:text-white dark:hover:text-[#1b2537] transition-all"
-            >
-              Jump to Module 1 →
-            </Link>
+              <span className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent">
+                Everything they forgot to tell you about college — documented.
+              </span>
+            </h1>
+            <p className="text-neutral-300 text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
+              Alum&apos;s Declassified is a free seven-week course for
+              first-generation college students — covering everything from syllabi
+              and office hours to budgeting, mental health, and building a career.
+              The stuff nobody tells you out loud.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <Link
+                href="/module-1"
+                className="bg-[#0d7c7e] text-white no-underline py-[13px] px-[30px] text-[0.95rem] rounded-[5px] font-bold inline-block hover:bg-[#096163] hover:-translate-y-px transition-all"
+              >
+                Start Module 1 →
+              </Link>
+              <Link
+                href="/start-here"
+                className="bg-transparent text-white border-[1.5px] border-white/40 no-underline py-[13px] px-[30px] text-[0.95rem] rounded-[5px] font-semibold inline-block hover:bg-white/10 transition-all"
+              >
+                Read the Syllabus →
+              </Link>
+            </div>
+          </div>
+
+          {/* Right: Spline Scene */}
+          <div className="flex-1 h-[300px] md:h-[420px] w-full">
+            <SplineScene
+              scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
+              className="w-full h-full"
+            />
           </div>
         </div>
       </section>
+
+      {/* COURSE META BAR */}
+      <div className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-3">
+        <div className="container mx-auto px-4 flex flex-wrap gap-x-8 gap-y-2 items-center justify-center md:justify-start text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]">
+          <span>📅 7 modules</span>
+          <span>⏱ ~45 min per module</span>
+          <span>💸 Completely free</span>
+          <span>📱 Works on your phone</span>
+        </div>
+      </div>
 
       <div className="container mx-auto px-4 my-12">
         {/* WHAT THIS COURSE IS */}
