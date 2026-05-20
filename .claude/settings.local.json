@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p ~/.claude/skills/ui-ux-pro-max)",
+      "Bash(cp /tmp/ui-ux-pro-max-skill/.claude/skills/ui-ux-pro-max/SKILL.md ~/.claude/skills/ui-ux-pro-max/SKILL.md)",
+      "Bash(cp -r /tmp/ui-ux-pro-max-skill/src/ui-ux-pro-max/data ~/.claude/skills/ui-ux-pro-max/data)",
+      "Bash(cp -r /tmp/ui-ux-pro-max-skill/src/ui-ux-pro-max/scripts ~/.claude/skills/ui-ux-pro-max/scripts)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\khat2\\\\OneDrive\\\\Desktop\\\\alums-declassified\" -Recurse -Force)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(npm install *)",
+      "Bash(npx next *)"
+    ]
+  }
+}

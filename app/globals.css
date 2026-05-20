@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: #f2f4f7;
+    color: #1b2537;
+    font-size: 15.5px;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
+
+  a { color: #0d7c7e; text-decoration: none; transition: color 0.15s; }
+  a:hover { color: #096163; text-decoration: underline; }
+  p { margin-bottom: 0.85rem; }
+  p:last-child { margin-bottom: 0; }
+}
+
+@layer components {
+  .font-display-family {
+    font-family: var(--font-display);
+  }
+}
