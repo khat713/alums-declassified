@@ -44,12 +44,12 @@ export default function Module4Page() {
           {/* Main Content */}
           <div>
             {/* Objectives */}
-            <div id="objectives" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="objectives" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
                 Learning Objectives
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 By the End of This Module, You Will Be Able To:
@@ -63,17 +63,17 @@ export default function Module4Page() {
             </div>
 
             {/* Lesson */}
-            <div id="lesson" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="lesson" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">
                 Instructional Content
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Module 4 Lesson
               </h2>
-              <p className="text-[#5a6a82] text-[0.92rem] mb-4">
+              <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] mb-4">
                 The lesson for this module covers grocery shopping on a budget, laundry basics, how to read a health insurance card, and what to check before signing a lease.
               </p>
               <Link
@@ -85,12 +85,12 @@ export default function Module4Page() {
             </div>
 
             {/* Activity */}
-            <div id="activity" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="activity" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
                 Learning Activity
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Activity: Plan a $30 Grocery Run
@@ -102,16 +102,16 @@ export default function Module4Page() {
                 <li>Check whether your total is under $30. If not, swap one item for a cheaper alternative and note what you swapped.</li>
                 <li>Identify one ingredient that appears in multiple meals — this is the principle of buying ingredients, not single-use items.</li>
               </ol>
-              <p className="text-[0.85rem] text-[#8d9db5] mt-4">💡 <strong>Tip:</strong> Rice and eggs are two of the most versatile and affordable grocery items.</p>
+              <p className="text-[0.85rem] text-[#8d9db5] dark:text-[#64748b] mt-4">💡 <strong>Tip:</strong> Rice and eggs are two of the most versatile and affordable grocery items.</p>
             </div>
 
             {/* Assessment */}
-            <div id="assessment" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="assessment" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
                 Assessment
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Life Skills Inventory — 50 Points
@@ -125,26 +125,26 @@ export default function Module4Page() {
                   <thead>
                     <tr>
                       {["Level", "What it looks like"].map((h) => (
-                        <th key={h} className="bg-[#f2f4f7] text-[#5a6a82] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb]">{h}</th>
+                        <th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>
                       ))}
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="hover:bg-[#fafbfd]">
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]"><strong className="text-[#16723d]">Exemplary</strong></td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">Reflection is honest and specific. The uncertain skill section names a real gap and describes concrete, time-bound steps. Response connects clearly to your actual circumstances.</td>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]"><strong className="text-[#16723d]">Exemplary</strong></td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">Reflection is honest and specific. The uncertain skill section names a real gap and describes concrete, time-bound steps. Response connects clearly to your actual circumstances.</td>
                     </tr>
-                    <tr className="hover:bg-[#fafbfd]">
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]"><strong className="text-[#1a56a4]">Proficient</strong></td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">All three questions addressed. Plan for an uncertain skill is specific enough to act on. Meets completion standard.</td>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]"><strong className="text-[#1a56a4]">Proficient</strong></td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">All three questions addressed. Plan for an uncertain skill is specific enough to act on. Meets completion standard.</td>
                     </tr>
-                    <tr className="hover:bg-[#fafbfd]">
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]"><strong className="text-[#c2680a]">Emerging</strong></td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">One or more questions not addressed, or the plan is too vague. Revision encouraged.</td>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]"><strong className="text-[#c2680a]">Emerging</strong></td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">One or more questions not addressed, or the plan is too vague. Revision encouraged.</td>
                     </tr>
-                    <tr className="hover:bg-[#fafbfd]">
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]"><strong className="text-[#b0264a]">Incomplete</strong></td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">Missing or off-topic. Must be resubmitted.</td>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]"><strong className="text-[#b0264a]">Incomplete</strong></td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">Missing or off-topic. Must be resubmitted.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -157,18 +157,18 @@ export default function Module4Page() {
             </div>
 
             {/* Model Response */}
-            <div id="model" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="model" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
                 Model Response
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Example Reflection — See What Proficient Looks Like
               </h2>
               <p className="font-bold text-[0.92rem] mb-3">Example Reflection — a student named Alex:</p>
-              <blockquote className="border-l-[3px] border-l-[#0d7c7e] pl-4 my-4 text-[#2e3f5c] space-y-3 text-[0.92rem]">
+              <blockquote className="border-l-[3px] border-l-[#0d7c7e] pl-4 my-4 text-[#2e3f5c] dark:text-[#94a3b8] space-y-3 text-[0.92rem]">
                 <p>I feel confident about grocery shopping and cooking. Growing up, I helped with dinner most nights because both of my parents worked late shifts, so I know how to make a few basic meals and I understand that buying rice and beans in bulk is cheaper than buying pre-made food. I also feel okay about my weekly schedule — I am used to managing my own time because my high school had open campus.</p>
                 <p>Where I am genuinely uncertain is health insurance. I have never had to use it myself before — my mom always handled doctor&apos;s appointments, and I did not know what a copay was until this module. The part that confuses me is how to know if a doctor is &ldquo;in-network&rdquo; before I go. I do not want to show up somewhere and get a bill I did not expect.</p>
                 <p>My plan for getting better at this: I am going to look up my school&apos;s student health center this week and confirm it accepts my insurance. I will also call the number on the back of my insurance card and ask them to explain what in-network means and how to find in-network providers near campus. I want to do this before I arrive so I am not figuring it out while I am sick.</p>
@@ -177,12 +177,12 @@ export default function Module4Page() {
             </div>
 
             {/* Tools */}
-            <div id="tools" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="tools" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#f2f4f7] text-[#5a6a82]">
                 Tools Used in This Module
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Technological Tools
@@ -191,7 +191,7 @@ export default function Module4Page() {
                 <thead>
                   <tr>
                     {["Tool", "Purpose", "Privacy Policy", "Cost"].map((h) => (
-                      <th key={h} className="bg-[#f2f4f7] text-[#5a6a82] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb]">{h}</th>
+                      <th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -200,11 +200,11 @@ export default function Module4Page() {
                     ["Google Forms", "Life skills checklist and reflection submission", "https://policies.google.com/privacy"],
                     ["Canva", "Health insurance card infographic", "https://www.canva.com/policies/privacy-policy/"],
                   ].map(([tool, purpose, privacy]) => (
-                    <tr key={tool} className="hover:bg-[#fafbfd]">
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">{tool}</td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">{purpose}</td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]"><a href={privacy} target="_blank" rel="noopener noreferrer" className="text-[#0d7c7e] hover:underline">View</a></td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">Free</td>
+                    <tr key={tool} className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{tool}</td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{purpose}</td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]"><a href={privacy} target="_blank" rel="noopener noreferrer" className="text-[#0d7c7e] hover:underline">View</a></td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">Free</td>
                     </tr>
                   ))}
                 </tbody>
@@ -212,13 +212,13 @@ export default function Module4Page() {
             </div>
 
             {/* Prev/Next Nav */}
-            <div className="flex justify-between items-start py-5 border-t border-[#dde2eb] mt-2">
+            <div className="flex justify-between items-start py-5 border-t border-[#dde2eb] dark:border-[#334155] mt-2">
               <div>
-                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] font-semibold mb-1">← Previous</p>
+                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-semibold mb-1">← Previous</p>
                 <Link href="/module-3" className="text-[0.95rem] font-semibold text-[#0d7c7e] hover:underline">Module 3: Financial Literacy</Link>
               </div>
               <div className="text-right">
-                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] font-semibold mb-1">Next →</p>
+                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-semibold mb-1">Next →</p>
                 <Link href="/module-5" className="text-[0.95rem] font-semibold text-[#0d7c7e] hover:underline">Module 5: Academic Success</Link>
               </div>
             </div>
@@ -227,8 +227,8 @@ export default function Module4Page() {
           {/* Sidebar */}
           <div>
             <div className="sticky top-[74px]">
-              <div className="bg-white rounded-[10px] p-6 mb-4 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] mb-3">In This Module</p>
+              <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-6 mb-4 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">In This Module</p>
                 <ul className="space-y-[6px] text-[0.875rem]">
                   {[
                     { href: "#objectives", label: "📌 Learning Objectives" },
@@ -247,7 +247,7 @@ export default function Module4Page() {
 
               <div className="bg-[#fef3e2] rounded-[10px] p-6 mb-4 border border-[#fcd69a]">
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#c2680a] mb-2">Assignment Due</p>
-                <p className="font-bold text-[#1b2537] text-[0.95rem] mb-1">Life Skills Inventory · 50 pts</p>
+                <p className="font-bold text-[#1b2537] dark:text-[#e2e8f0] text-[0.95rem] mb-1">Life Skills Inventory · 50 pts</p>
                 <p className="text-[0.82rem] text-[#8d9db5] mb-3">Checklist + 300–500 word reflection on your real skill gaps.</p>
                 <Link href="/assignments#a4" className="text-[0.875rem] font-semibold text-[#0d7c7e] hover:underline">View full assignment →</Link>
               </div>

@@ -44,12 +44,12 @@ export default function Module3Page() {
           {/* Main Content */}
           <div>
             {/* Objectives */}
-            <div id="objectives" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="objectives" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
                 Learning Objectives
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 By the End of This Module, You Will Be Able To:
@@ -63,17 +63,17 @@ export default function Module3Page() {
             </div>
 
             {/* Lesson */}
-            <div id="lesson" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="lesson" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">
                 Instructional Content
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Module 3 Lesson
               </h2>
-              <p className="text-[#5a6a82] text-[0.92rem] mb-4">
+              <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] mb-4">
                 The lesson for this module covers how to read a financial aid award letter, the difference between grants and loans, budgeting on a student income, and financial scams to avoid.
               </p>
               <Link
@@ -84,8 +84,8 @@ export default function Module3Page() {
               </Link>
 
               <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] mb-3">📊 How to Read an Award Letter — Visual Guide</h4>
-                <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] text-[0.92rem] min-h-[180px] flex flex-col items-center justify-center text-center">
+                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">📊 How to Read an Award Letter — Visual Guide</h4>
+                <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[180px] flex flex-col items-center justify-center text-center">
                   🖼 <strong>Embed your Canva infographic here</strong>
                   <br />
                   <small>
@@ -100,19 +100,19 @@ export default function Module3Page() {
             </div>
 
             {/* Activity */}
-            <div id="activity" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="activity" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
                 Learning Activity
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Activity: Read a Sample Award Letter
               </h2>
               <p className="text-[0.92rem] mb-4">Use the fictional award letter below to practice reading financial aid. Answer the four questions that follow.</p>
 
-              <div className="bg-[#f2f4f7] border border-[#dde2eb] rounded-[6px] p-5 my-4 text-[0.92rem]">
+              <div className="bg-[#f2f4f7] dark:bg-[#162032] border border-[#dde2eb] dark:border-[#334155] rounded-[6px] p-5 my-4 text-[0.92rem]">
                 <p className="font-bold mb-2">Riverside Community College — Financial Aid Award Letter</p>
                 <p className="mb-1">Student: Jordan A. | Academic Year: 2025–2026</p>
                 <hr className="border-[#dde2eb] my-3" />
@@ -135,16 +135,16 @@ export default function Module3Page() {
                 <li>If Jordan accepts both loans offered, what will the total borrowed amount be — and which loan is better to accept first, and why?</li>
                 <li>Jordan&apos;s net cost after all aid (including both loans) is $10,105. What are two ways Jordan could cover that gap without taking on additional loans?</li>
               </ol>
-              <p className="text-[0.85rem] text-[#8d9db5] mt-4">Keep your answers — they will help you complete the budget worksheet assessment.</p>
+              <p className="text-[0.85rem] text-[#8d9db5] dark:text-[#64748b] mt-4">Keep your answers — they will help you complete the budget worksheet assessment.</p>
             </div>
 
             {/* Assessment */}
-            <div id="assessment" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="assessment" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
                 Assessment
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Budget Worksheet — Assignment 3 (75 pts)
@@ -169,12 +169,12 @@ export default function Module3Page() {
             </div>
 
             {/* Model Response */}
-            <div id="model" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="model" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
                 Model Response
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Example Budget — See What Proficient Looks Like
@@ -185,41 +185,41 @@ export default function Module3Page() {
                   <thead>
                     <tr>
                       {["Category", "Type", "Monthly Amount"].map((h) => (
-                        <th key={h} className="bg-[#f2f4f7] text-[#5a6a82] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb]">{h}</th>
+                        <th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>
                       ))}
                     </tr>
                   </thead>
                   <tbody>
                     <tr><td colSpan={3} className="px-[14px] py-[8px] bg-[#d4f1e3] font-bold text-[#16723d]">INCOME</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Pell Grant (divided over 8 months)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">$616</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Institutional Grant (divided over 8 months)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">$417</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Subsidized Loan (divided over 8 months)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">$292</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Part-time campus job (10 hrs/wk at $13/hr)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Variable</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">$520</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]"><strong>Total Income</strong></td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]"></td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]"><strong>$1,845</strong></td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Pell Grant (divided over 8 months)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">$616</td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Institutional Grant (divided over 8 months)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">$417</td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Subsidized Loan (divided over 8 months)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">$292</td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Part-time campus job (10 hrs/wk at $13/hr)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Variable</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">$520</td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]"><strong>Total Income</strong></td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]"></td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]"><strong>$1,845</strong></td></tr>
                     <tr><td colSpan={3} className="px-[14px] py-[8px] bg-[#fde4ec] font-bold text-[#b0264a]">EXPENSES</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Housing (dorm, meal plan included)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">$1,100</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Phone bill</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">$45</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Transportation (bus pass)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">$30</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Groceries / extra food</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Variable</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">$150</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Personal care / hygiene</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Variable</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">$40</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Books and supplies</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Variable</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">$80</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Entertainment</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">Variable</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]">$60</td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4]"><strong>Total Expenses</strong></td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]"></td><td className="px-[14px] py-[10px] border-b border-[#edf0f4]"><strong>$1,505</strong></td></tr>
-                    <tr className="hover:bg-[#fafbfd]"><td className="px-[14px] py-[10px]"><strong>Monthly Gap</strong></td><td className="px-[14px] py-[10px]"></td><td className="px-[14px] py-[10px]"><strong className="text-[#16723d]">+$340</strong></td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Housing (dorm, meal plan included)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">$1,100</td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Phone bill</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">$45</td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Transportation (bus pass)</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Fixed</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">$30</td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Groceries / extra food</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Variable</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">$150</td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Personal care / hygiene</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Variable</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">$40</td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Books and supplies</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Variable</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">$80</td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Entertainment</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">Variable</td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]">$60</td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]"><strong>Total Expenses</strong></td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]"></td><td className="px-[14px] py-[10px] border-b border-[#edf0f4] dark:border-[#243044]"><strong>$1,505</strong></td></tr>
+                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[10px]"><strong>Monthly Gap</strong></td><td className="px-[14px] py-[10px]"></td><td className="px-[14px] py-[10px]"><strong className="text-[#16723d]">+$340</strong></td></tr>
                   </tbody>
                 </table>
               </div>
               <p className="mt-4 text-[0.92rem]"><strong>If my gap were negative:</strong> I would reduce entertainment first, then look into whether I qualify for the campus food pantry to cut grocery costs. I would also visit the financial aid office to ask about work-study options.</p>
-              <p className="text-[0.82rem] text-[#8d9db5] mt-2">Proficient: all categories completed, fixed vs. variable correctly labeled, and the gap analysis includes a specific and realistic plan.</p>
+              <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">Proficient: all categories completed, fixed vs. variable correctly labeled, and the gap analysis includes a specific and realistic plan.</p>
             </div>
 
             {/* Tools */}
-            <div id="tools" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="tools" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#f2f4f7] text-[#5a6a82]">
                 Tools Used in This Module
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Technological Tools
@@ -228,7 +228,7 @@ export default function Module3Page() {
                 <thead>
                   <tr>
                     {["Tool", "Purpose", "Privacy Policy", "Cost"].map((h) => (
-                      <th key={h} className="bg-[#f2f4f7] text-[#5a6a82] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb]">{h}</th>
+                      <th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -239,11 +239,11 @@ export default function Module3Page() {
                     ["StudentAid.gov", "Official FAFSA and loan information", "https://studentaid.gov/privacy"],
                     ["Canva", "Award letter infographic", "https://www.canva.com/policies/privacy-policy/"],
                   ].map(([tool, purpose, privacy]) => (
-                    <tr key={tool} className="hover:bg-[#fafbfd]">
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">{tool}</td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">{purpose}</td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]"><a href={privacy} target="_blank" rel="noopener noreferrer" className="text-[#0d7c7e] hover:underline">View</a></td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">Free</td>
+                    <tr key={tool} className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{tool}</td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{purpose}</td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]"><a href={privacy} target="_blank" rel="noopener noreferrer" className="text-[#0d7c7e] hover:underline">View</a></td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">Free</td>
                     </tr>
                   ))}
                 </tbody>
@@ -251,13 +251,13 @@ export default function Module3Page() {
             </div>
 
             {/* Prev/Next Nav */}
-            <div className="flex justify-between items-start py-5 border-t border-[#dde2eb] mt-2">
+            <div className="flex justify-between items-start py-5 border-t border-[#dde2eb] dark:border-[#334155] mt-2">
               <div>
-                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] font-semibold mb-1">← Previous</p>
+                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-semibold mb-1">← Previous</p>
                 <Link href="/module-2" className="text-[0.95rem] font-semibold text-[#0d7c7e] hover:underline">Module 2: Campus Resources</Link>
               </div>
               <div className="text-right">
-                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] font-semibold mb-1">Next →</p>
+                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-semibold mb-1">Next →</p>
                 <Link href="/module-4" className="text-[0.95rem] font-semibold text-[#0d7c7e] hover:underline">Module 4: Essential Life Skills</Link>
               </div>
             </div>
@@ -266,8 +266,8 @@ export default function Module3Page() {
           {/* Sidebar */}
           <div>
             <div className="sticky top-[74px]">
-              <div className="bg-white rounded-[10px] p-6 mb-4 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] mb-3">In This Module</p>
+              <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-6 mb-4 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">In This Module</p>
                 <ul className="space-y-[6px] text-[0.875rem]">
                   {[
                     { href: "#objectives", label: "📌 Learning Objectives" },
@@ -286,19 +286,19 @@ export default function Module3Page() {
 
               <div className="bg-[#fef3e2] rounded-[10px] p-6 mb-4 border border-[#fcd69a]">
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#c2680a] mb-2">Assignment Due</p>
-                <p className="font-bold text-[#1b2537] text-[0.95rem] mb-1">Budget Worksheet · 75 pts</p>
+                <p className="font-bold text-[#1b2537] dark:text-[#e2e8f0] text-[0.95rem] mb-1">Budget Worksheet · 75 pts</p>
                 <p className="text-[0.82rem] text-[#8d9db5] mb-3">Build a monthly budget using your real aid info and school costs.</p>
                 <Link href="/assignments#a3" className="text-[0.875rem] font-semibold text-[#0d7c7e] hover:underline">View full rubric →</Link>
               </div>
 
-              <div className="bg-white rounded-[10px] p-6 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] mb-3">Course Progress</p>
+              <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-6 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">Course Progress</p>
                 <div className="flex flex-col gap-[6px] text-[0.82rem]">
-                  <div className="flex items-center gap-2 text-[#8d9db5]"><span>✓</span><Link href="/module-1" className="text-[#8d9db5] hover:underline">Module 1</Link></div>
-                  <div className="flex items-center gap-2 text-[#8d9db5]"><span>✓</span><Link href="/module-2" className="text-[#8d9db5] hover:underline">Module 2</Link></div>
-                  <div className="flex items-center gap-2"><span className="text-[#0d7c7e] font-bold">●</span><span className="font-semibold text-[#1b2537]">Module 3 — Current</span></div>
-                  <div className="flex items-center gap-2 text-[#8d9db5]"><span>○</span><Link href="/module-4" className="text-[#8d9db5] hover:underline">Module 4: Life Skills</Link></div>
-                  <div className="flex items-center gap-2 text-[#8d9db5]"><span>○</span><span>Modules 5–7…</span></div>
+                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>✓</span><Link href="/module-1" className="text-[#8d9db5] hover:underline">Module 1</Link></div>
+                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>✓</span><Link href="/module-2" className="text-[#8d9db5] hover:underline">Module 2</Link></div>
+                  <div className="flex items-center gap-2"><span className="text-[#0d7c7e] font-bold">●</span><span className="font-semibold text-[#1b2537] dark:text-[#e2e8f0]">Module 3 — Current</span></div>
+                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>○</span><Link href="/module-4" className="text-[#8d9db5] hover:underline">Module 4: Life Skills</Link></div>
+                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>○</span><span>Modules 5–7…</span></div>
                 </div>
               </div>
             </div>

@@ -15,15 +15,15 @@ const addieSteps = [
 export default function FrameworkPage() {
   return (
     <main>
-      <section className="bg-white border-b border-[#dde2eb] py-[38px] pb-8">
+      <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
         <div className="container mx-auto px-4">
           <h1
-            className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#1b2537] mb-[0.4rem] tracking-[-0.025em] leading-[1.2]"
+            className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem] tracking-[-0.025em] leading-[1.2]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Instructional Design Framework
           </h1>
-          <p className="text-[#5a6a82] text-[0.97rem] m-0 max-w-[580px]">
+          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] m-0 max-w-[580px]">
             The theoretical foundation and design process behind this course.
           </p>
         </div>
@@ -31,17 +31,17 @@ export default function FrameworkPage() {
 
       <div className="container mx-auto px-4 my-8">
         {/* Framework Diagram */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Visual
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Framework Diagram
           </h2>
-          <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] text-[0.92rem] min-h-[280px] flex flex-col items-center justify-center text-center">
+          <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[280px] flex flex-col items-center justify-center text-center">
             🖼 <strong>Embed Your Framework Diagram Here</strong>
             <br />
             <br />
@@ -67,12 +67,12 @@ export default function FrameworkPage() {
         </div>
 
         {/* ADDIE Steps */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Process
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-2 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-2 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Design Process Overview
@@ -89,7 +89,7 @@ export default function FrameworkPage() {
                   {step.letter}
                 </div>
                 <div>
-                  <h5 className="text-[0.97rem] font-bold text-[#1b2537] mb-[0.2rem]">
+                  <h5 className="text-[0.97rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-[0.2rem]">
                     {step.title}
                   </h5>
                   <p className="text-[0.88rem] text-[#5a6a82] m-0">
@@ -102,20 +102,20 @@ export default function FrameworkPage() {
         </div>
 
         {/* Commentary */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Commentary
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-2 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-2 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Design Framework Commentary
           </h2>
-          <p className="text-[#5a6a82] text-[0.88rem] mb-4">
+          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.88rem] mb-4">
             500–1,000 words | 5+ scholarly sources in APA format
           </p>
-          <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] text-[0.92rem] text-left min-h-[300px]">
+          <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-left min-h-[300px]">
             <strong>
               Write your 500–1,000 word commentary here. Cover all five areas:
             </strong>
@@ -152,20 +152,20 @@ export default function FrameworkPage() {
         </div>
 
         {/* References */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
             References
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-2 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-2 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             References
           </h2>
-          <p className="text-[#5a6a82] text-[0.88rem] mb-4">
+          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.88rem] mb-4">
             APA format | Minimum 5 scholarly sources
           </p>
-          <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] text-[0.92rem] text-left">
+          <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-left">
             <p className="mb-3">
               <strong>Suggested citations (replace with your actual list):</strong>
             </p>

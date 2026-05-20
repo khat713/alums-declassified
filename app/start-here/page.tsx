@@ -8,15 +8,15 @@ export const metadata: Metadata = {
 export default function StartHerePage() {
   return (
     <main>
-      <section className="bg-white border-b border-[#dde2eb] py-[38px] pb-8">
+      <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
         <div className="container mx-auto px-4">
           <h1
-            className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#1b2537] mb-[0.4rem] tracking-[-0.025em] leading-[1.2]"
+            className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem] tracking-[-0.025em] leading-[1.2]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Start Here — Course Syllabus
           </h1>
-          <p className="text-[#5a6a82] text-[0.97rem] m-0 max-w-[580px]">
+          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] m-0 max-w-[580px]">
             Everything you need to know before you begin. Read this page first.
           </p>
         </div>
@@ -24,12 +24,12 @@ export default function StartHerePage() {
 
       <div className="container mx-auto px-4 my-8">
         {/* Welcome */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Welcome
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Welcome to Alum&apos;s Declassified
@@ -65,12 +65,12 @@ export default function StartHerePage() {
         </div>
 
         {/* Course Info */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Course Info
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Course at a Glance
@@ -87,10 +87,10 @@ export default function StartHerePage() {
                   ["Contact", <a key="contact" href="mailto:your-email@example.com" className="text-[#0d7c7e] hover:underline">your-email@example.com</a>],
                 ].map(([label, value], i) => (
                   <tr key={i}>
-                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] align-top font-semibold text-[#1b2537] w-1/4">
+                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top font-semibold text-[#1b2537] dark:text-[#e2e8f0] w-1/4">
                       {label}
                     </td>
-                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] align-top">
+                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">
                       {value}
                     </td>
                   </tr>
@@ -101,12 +101,12 @@ export default function StartHerePage() {
         </div>
 
         {/* Navigation Guide */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
             Navigation Guide
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             How to Navigate This Course
@@ -143,12 +143,12 @@ export default function StartHerePage() {
         </div>
 
         {/* Module Overview Table */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Schedule
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-2 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-2 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Module Overview &amp; Suggested Pacing
@@ -163,7 +163,7 @@ export default function StartHerePage() {
                   {["Week", "Module", "Topics", "Assessment"].map((h) => (
                     <th
                       key={h}
-                      className="bg-[#f2f4f7] text-[#5a6a82] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb]"
+                      className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]"
                     >
                       {h}
                     </th>
@@ -181,18 +181,18 @@ export default function StartHerePage() {
                   { week: 7, href: "/module-7", title: "Emotional Resilience", topics: "Homesickness, identity, mental health, belonging", assessment: "Self-care plan" },
                 ].map((row) => (
                   <tr key={row.week}>
-                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] align-top">
+                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">
                       {row.week}
                     </td>
-                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] align-top">
+                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">
                       <Link href={row.href} className="text-[#0d7c7e] hover:underline">
                         {row.title}
                       </Link>
                     </td>
-                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] align-top">
+                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">
                       {row.topics}
                     </td>
-                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] align-top">
+                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">
                       {row.assessment}
                     </td>
                   </tr>
@@ -203,12 +203,12 @@ export default function StartHerePage() {
         </div>
 
         {/* Learning Outcomes */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">
             Learning Outcomes
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             By the End of This Course, You Will Be Able To:
@@ -225,12 +225,12 @@ export default function StartHerePage() {
         </div>
 
         {/* Tech Requirements */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
             Technology
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Technology Requirements
@@ -251,18 +251,18 @@ export default function StartHerePage() {
         </div>
 
         {/* Policies */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
             Policies
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Course Policies
           </h2>
 
-          <h5 className="font-bold mt-4 text-[#1b2537]" style={{ fontFamily: "var(--font-display)" }}>
+          <h5 className="font-bold mt-4 text-[#1b2537] dark:text-[#e2e8f0]" style={{ fontFamily: "var(--font-display)" }}>
             Pacing &amp; Deadlines
           </h5>
           <p>
@@ -273,7 +273,7 @@ export default function StartHerePage() {
             week.
           </p>
 
-          <h5 className="font-bold mt-4 text-[#1b2537]" style={{ fontFamily: "var(--font-display)" }}>
+          <h5 className="font-bold mt-4 text-[#1b2537] dark:text-[#e2e8f0]" style={{ fontFamily: "var(--font-display)" }}>
             Netiquette
           </h5>
           <p>
@@ -283,7 +283,7 @@ export default function StartHerePage() {
             something makes you uncomfortable.
           </p>
 
-          <h5 className="font-bold mt-4 text-[#1b2537]" style={{ fontFamily: "var(--font-display)" }}>
+          <h5 className="font-bold mt-4 text-[#1b2537] dark:text-[#e2e8f0]" style={{ fontFamily: "var(--font-display)" }}>
             Generative AI
           </h5>
           <p>
@@ -292,7 +292,7 @@ export default function StartHerePage() {
             clearly generic will be returned for revision.
           </p>
 
-          <h5 className="font-bold mt-4 text-[#1b2537]" style={{ fontFamily: "var(--font-display)" }}>
+          <h5 className="font-bold mt-4 text-[#1b2537] dark:text-[#e2e8f0]" style={{ fontFamily: "var(--font-display)" }}>
             Late Work &amp; Revisions
           </h5>
           <p>

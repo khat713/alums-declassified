@@ -18,15 +18,15 @@ const modules = [
 export default function ModulesPage() {
   return (
     <main>
-      <section className="bg-white border-b border-[#dde2eb] py-[38px] pb-8">
+      <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
         <div className="container mx-auto px-4">
           <h1
-            className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#1b2537] mb-[0.4rem] tracking-[-0.025em] leading-[1.2]"
+            className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem] tracking-[-0.025em] leading-[1.2]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Course Modules
           </h1>
-          <p className="text-[#5a6a82] text-[0.97rem] m-0 max-w-[580px]">
+          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] m-0 max-w-[580px]">
             Seven modules. One for each domain of the first-gen experience. Work
             through them in order or jump to what you need.
           </p>
@@ -34,7 +34,7 @@ export default function ModulesPage() {
       </section>
 
       <div className="container mx-auto px-4 my-8 mb-16">
-        <div className="bg-[#eff8ff] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6">
+        <div className="bg-[#eff8ff] dark:bg-[#0f2744] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6">
           <p className="m-0 text-[0.9rem]">
             📋 <strong>New here?</strong> Start with{" "}
             <Link href="/start-here" className="text-[#0d7c7e] font-semibold hover:underline">
@@ -49,29 +49,29 @@ export default function ModulesPage() {
           {modules.map((mod) => (
             <div
               key={mod.href}
-              className="border border-[#dde2eb] rounded-[16px] shadow-[0_2px_6px_rgba(27,37,55,0.08)] hover:shadow-[0_4px_16px_rgba(27,37,55,0.09)] hover:-translate-y-[3px] hover:border-[#b2e3e3] transition-all bg-white overflow-hidden flex flex-col h-full"
+              className="border border-[#dde2eb] dark:border-[#334155] rounded-[16px] shadow-[0_2px_6px_rgba(27,37,55,0.08)] hover:shadow-[0_4px_16px_rgba(27,37,55,0.09)] hover:-translate-y-[3px] hover:border-[#b2e3e3] dark:hover:border-[#0d7c7e] transition-all bg-white dark:bg-[#1e293b] overflow-hidden flex flex-col h-full"
             >
               <div className="p-[1.4rem_1.5rem_1.5rem] flex flex-col flex-1">
                 <p className="text-[0.7rem] font-bold tracking-[0.09em] uppercase text-[#0d7c7e] mb-[0.35rem]">
                   {mod.num}
                 </p>
                 <h5
-                  className="text-[1.05rem] font-bold text-[#1b2537] mb-2 tracking-[-0.015em] leading-[1.25]"
+                  className="text-[1.05rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-2 tracking-[-0.015em] leading-[1.25]"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {mod.title}
                 </h5>
-                <p className="text-[0.875rem] text-[#5a6a82] mb-5 leading-[1.58] flex-1">
+                <p className="text-[0.875rem] text-[#5a6a82] dark:text-[#94a3b8] mb-5 leading-[1.58] flex-1">
                   {mod.desc}
                 </p>
                 <div className="flex justify-between items-center">
                   <Link
                     href={mod.href}
-                    className="bg-[#1b2537] text-white no-underline rounded-[5px] py-[7px] px-[18px] text-[0.83rem] font-bold inline-block hover:bg-[#0d7c7e] transition-all"
+                    className="bg-[#1b2537] dark:bg-[#334155] text-white no-underline rounded-[5px] py-[7px] px-[18px] text-[0.83rem] font-bold inline-block hover:bg-[#0d7c7e] transition-all"
                   >
                     Start →
                   </Link>
-                  <span className="text-[0.75rem] text-[#8d9db5] font-medium">
+                  <span className="text-[0.75rem] text-[#8d9db5] dark:text-[#64748b] font-medium">
                     {mod.status}
                   </span>
                 </div>
@@ -81,7 +81,7 @@ export default function ModulesPage() {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-[#5a6a82] mb-4 text-[0.93rem]">
+          <p className="text-[#5a6a82] dark:text-[#94a3b8] mb-4 text-[0.93rem]">
             Ready to start from the beginning?
           </p>
           <Link

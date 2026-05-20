@@ -5,6 +5,7 @@
 @layer base {
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  .dark html { color-scheme: dark; }
 
   body {
     font-family: var(--font-body);
@@ -14,6 +15,11 @@
     line-height: 1.68;
     -webkit-font-smoothing: antialiased;
     margin: 0;
+  }
+
+  .dark body {
+    background: #0f172a;
+    color: #e2e8f0;
   }
 
   a { color: #0d7c7e; text-decoration: none; transition: color 0.15s; }

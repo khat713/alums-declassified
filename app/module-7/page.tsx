@@ -51,12 +51,12 @@ export default function Module7Page() {
             </div>
 
             {/* Objectives */}
-            <div id="objectives" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="objectives" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
                 Learning Objectives
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 By the End of This Module, You Will Be Able To:
@@ -70,17 +70,17 @@ export default function Module7Page() {
             </div>
 
             {/* Lesson */}
-            <div id="lesson" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="lesson" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">
                 Instructional Content
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Module 7 Lesson
               </h2>
-              <p className="text-[#5a6a82] text-[0.92rem] mb-4">
+              <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] mb-4">
                 The lesson for this module covers imposter syndrome, code-switching, homesickness, the difference between stress and crisis, and when and how to use campus counseling.
               </p>
               <Link
@@ -91,8 +91,8 @@ export default function Module7Page() {
               </Link>
 
               <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] mb-3">🧠 Normal Stress vs. When to Reach Out</h4>
-                <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] text-[0.92rem] min-h-[180px] flex flex-col items-center justify-center text-center">
+                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">🧠 Normal Stress vs. When to Reach Out</h4>
+                <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[180px] flex flex-col items-center justify-center text-center">
                   🖼 <strong>Embed your Canva infographic here</strong>
                   <br />
                   <small>
@@ -103,17 +103,17 @@ export default function Module7Page() {
                     <code>{`<img src="images/module7-infographic.png" alt="Normal stress vs. when to seek support" style="width:100%; border-radius:8px;" />`}</code>
                   </small>
                 </div>
-                <p className="text-[0.82rem] text-[#8d9db5] mt-2">Normal college stress vs. signs it&apos;s time to reach out for support.</p>
+                <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">Normal college stress vs. signs it&apos;s time to reach out for support.</p>
               </div>
             </div>
 
             {/* Activity */}
-            <div id="activity" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="activity" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
                 Learning Activity
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Activity: Write a Letter to Future You
@@ -137,16 +137,16 @@ export default function Module7Page() {
                   Send to Future Me (FutureMe.org — free) →
                 </a>
               </div>
-              <p className="text-[0.82rem] text-[#8d9db5] mt-3">FutureMe lets you write a letter and schedule it to be delivered to your own email on a future date. No account required. Your letter is private.</p>
+              <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-3">FutureMe lets you write a letter and schedule it to be delivered to your own email on a future date. No account required. Your letter is private.</p>
             </div>
 
             {/* Assessment */}
-            <div id="assessment" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="assessment" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
                 Assessment
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Self-Care Plan + Reflection Essay — Assignment 7 (75 pts)
@@ -179,18 +179,18 @@ export default function Module7Page() {
             </div>
 
             {/* Model Response */}
-            <div id="model" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="model" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
                 Model Response
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-3 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Example Reflection Essay — See What Proficient Looks Like
               </h2>
               <p className="font-bold text-[0.92rem] mb-3">Example Reflection Essay — a student named Alex:</p>
-              <blockquote className="border-l-[3px] border-l-[#0d7c7e] pl-4 my-4 text-[#2e3f5c] space-y-3 text-[0.92rem]">
+              <blockquote className="border-l-[3px] border-l-[#0d7c7e] pl-4 my-4 text-[#2e3f5c] dark:text-[#94a3b8] space-y-3 text-[0.92rem]">
                 <p>The thing I am most worried about going into my first semester is not the coursework. It is the feeling I already have when I walk into certain rooms: that everyone else knows something I do not. I noticed it at orientation when other students were talking to professors like it was easy, asking questions I would not have known to ask. I felt like there was a whole set of rules for how college works that they already understood and I was still trying to learn. This course named it as imposter syndrome, and that helped — having a word for it made it feel less like a personal deficiency and more like something documented and common. But I am still worried that the feeling will get worse once classes start and the stakes feel higher.</p>
                 <p>What I have going for me is harder to see but I know it is there. I have worked a part-time job since I was sixteen and managed my own schedule without much supervision. I know how to ask for help when I actually need it — I just have to learn who to ask here. I also know why I am doing this, which I think matters more than it sounds: I am the first in my family to go to college, and that feels like both a weight and a reason. On the days when it feels like a weight, I want to remember that it is also a reason.</p>
                 <p>One strategy I am committing to: I am going to visit my school&apos;s first-gen student office in the first two weeks. I looked it up and my campus has one. I want to know it exists before I need it.</p>
@@ -199,12 +199,12 @@ export default function Module7Page() {
             </div>
 
             {/* Tools */}
-            <div id="tools" className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="tools" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#f2f4f7] text-[#5a6a82]">
                 Tools Used in This Module
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Technological Tools
@@ -213,7 +213,7 @@ export default function Module7Page() {
                 <thead>
                   <tr>
                     {["Tool", "Purpose", "Privacy Policy", "Cost"].map((h) => (
-                      <th key={h} className="bg-[#f2f4f7] text-[#5a6a82] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb]">{h}</th>
+                      <th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -223,11 +223,11 @@ export default function Module7Page() {
                     ["FutureMe.org", "Optional: send letter to future self via email", "https://www.futureme.org/privacy", "Free"],
                     ["Canva", "Normal stress vs. seek help comparison infographic", "https://www.canva.com/policies/privacy-policy/", "Free"],
                   ].map(([tool, purpose, privacy, cost]) => (
-                    <tr key={tool} className="hover:bg-[#fafbfd]">
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">{tool}</td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">{purpose}</td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]"><a href={privacy} target="_blank" rel="noopener noreferrer" className="text-[#0d7c7e] hover:underline">View</a></td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4]">{cost}</td>
+                    <tr key={tool} className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{tool}</td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{purpose}</td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]"><a href={privacy} target="_blank" rel="noopener noreferrer" className="text-[#0d7c7e] hover:underline">View</a></td>
+                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{cost}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -252,13 +252,13 @@ export default function Module7Page() {
             </div>
 
             {/* Prev/Next Nav */}
-            <div className="flex justify-between items-start py-5 border-t border-[#dde2eb] mt-2">
+            <div className="flex justify-between items-start py-5 border-t border-[#dde2eb] dark:border-[#334155] mt-2">
               <div>
-                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] font-semibold mb-1">← Previous</p>
+                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-semibold mb-1">← Previous</p>
                 <Link href="/module-6" className="text-[0.95rem] font-semibold text-[#0d7c7e] hover:underline">Module 6: Career Preparation</Link>
               </div>
               <div className="text-right">
-                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] font-semibold mb-1">Final Step</p>
+                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-semibold mb-1">Final Step</p>
                 <Link href="/assignments#a9" className="text-[0.95rem] font-semibold text-[#0d7c7e] hover:underline">College Readiness Portfolio</Link>
               </div>
             </div>
@@ -267,8 +267,8 @@ export default function Module7Page() {
           {/* Sidebar */}
           <div>
             <div className="sticky top-[74px]">
-              <div className="bg-white rounded-[10px] p-6 mb-4 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] mb-3">In This Module</p>
+              <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-6 mb-4 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">In This Module</p>
                 <ul className="space-y-[6px] text-[0.875rem]">
                   {[
                     { href: "#objectives", label: "📌 Learning Objectives" },
@@ -287,7 +287,7 @@ export default function Module7Page() {
 
               <div className="bg-[#fef3e2] rounded-[10px] p-6 mb-4 border border-[#fcd69a]">
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#c2680a] mb-2">Assignment Due</p>
-                <p className="font-bold text-[#1b2537] text-[0.95rem] mb-1">Self-Care Plan + Reflection Essay · 75 pts</p>
+                <p className="font-bold text-[#1b2537] dark:text-[#e2e8f0] text-[0.95rem] mb-1">Self-Care Plan + Reflection Essay · 75 pts</p>
                 <p className="text-[0.82rem] text-[#8d9db5] mb-3">Three coping strategies, one resource, and a 400–600 word essay.</p>
                 <Link href="/assignments#a7" className="text-[0.875rem] font-semibold text-[#0d7c7e] hover:underline">View full rubric →</Link>
               </div>
@@ -295,14 +295,14 @@ export default function Module7Page() {
               <div className="bg-[#e0f4f4] rounded-[10px] p-6 mb-4 border border-[#b2e3e3]">
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#0d7c7e] mb-3">Course Progress</p>
                 <div className="flex flex-col gap-[6px] text-[0.82rem]">
-                  <div className="flex items-center gap-2 text-[#8d9db5]"><span>✓</span><span>Modules 1–6</span></div>
-                  <div className="flex items-center gap-2"><span className="text-[#0d7c7e] font-bold">●</span><span className="font-semibold text-[#1b2537]">Module 7 — Final Module</span></div>
+                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>✓</span><span>Modules 1–6</span></div>
+                  <div className="flex items-center gap-2"><span className="text-[#0d7c7e] font-bold">●</span><span className="font-semibold text-[#1b2537] dark:text-[#e2e8f0]">Module 7 — Final Module</span></div>
                   <div className="flex items-center gap-2 text-[#0d7c7e] font-semibold"><span>→</span><Link href="/assignments#a9" className="text-[#0d7c7e] hover:underline">Final Portfolio</Link></div>
                 </div>
               </div>
 
               <div className="bg-white rounded-[10px] p-6 border-l-[3px] border-l-[#c2680a] border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] mb-3">Crisis Resources</p>
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">Crisis Resources</p>
                 <p className="text-[0.83rem] text-[#1b2537]">
                   📞 <strong>988</strong> — Suicide &amp; Crisis Lifeline<br />
                   📱 Text <strong>HOME</strong> to <strong>741741</strong><br />

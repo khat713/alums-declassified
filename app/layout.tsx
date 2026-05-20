@@ -31,8 +31,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${plusJakartaSans.variable}`}>
-      <body className="bg-[#f2f4f7] text-[#1b2537] font-body">
+    <html lang="en" className={`${fraunces.variable} ${plusJakartaSans.variable}`} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(_){}`,
+          }}
+        />
+      </head>
+      <body className="bg-[#f2f4f7] dark:bg-[#0f172a] text-[#1b2537] dark:text-[#e2e8f0] font-body transition-colors duration-200">
         <Navbar />
         {children}
         <Footer />

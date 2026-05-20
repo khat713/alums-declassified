@@ -8,22 +8,22 @@ export const metadata: Metadata = {
 export default function TechHelpPage() {
   return (
     <main>
-      <section className="bg-white border-b border-[#dde2eb] py-[38px] pb-8">
+      <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
         <div className="container mx-auto px-4">
           <h1
-            className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#1b2537] mb-[0.4rem] tracking-[-0.025em] leading-[1.2]"
+            className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem] tracking-[-0.025em] leading-[1.2]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Tech Help
           </h1>
-          <p className="text-[#5a6a82] text-[0.97rem] m-0 max-w-[580px]">
+          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] m-0 max-w-[580px]">
             Something not working? Find your issue below or contact me directly.
           </p>
         </div>
       </section>
 
       <div className="container mx-auto px-4 my-8">
-        <div className="bg-[#eff8ff] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6">
+        <div className="bg-[#eff8ff] dark:bg-[#0f2744] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6">
           <p className="m-0 text-[0.9rem]">
             📧 <strong>Can&apos;t find your answer below?</strong> Email me at{" "}
             <a href="mailto:your-email@example.com" className="text-[#0d7c7e] font-semibold hover:underline">
@@ -35,12 +35,12 @@ export default function TechHelpPage() {
         </div>
 
         {/* Common Issues */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
             Common Issues
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Solve It Yourself — Common Problems
@@ -97,12 +97,12 @@ export default function TechHelpPage() {
         </div>
 
         {/* Supported Browsers */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
             Compatibility
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Supported Browsers &amp; Devices
@@ -111,7 +111,7 @@ export default function TechHelpPage() {
             <thead>
               <tr>
                 {["Browser / Device", "Status", "Notes"].map((h) => (
-                  <th key={h} className="bg-[#f2f4f7] text-[#5a6a82] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb]">{h}</th>
+                  <th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>
                 ))}
               </tr>
             </thead>
@@ -124,10 +124,10 @@ export default function TechHelpPage() {
                 ["Internet Explorer", "❌ Not supported", "Use any modern browser instead"],
                 ["Smartphone", "✅ All modules work on mobile", "No app download required"],
               ].map(([browser, status, notes], i) => (
-                <tr key={i} className="hover:bg-[#fafbfd]">
-                  <td className="px-[14px] py-[11px] border-b border-[#edf0f4] align-top">{browser}</td>
-                  <td className="px-[14px] py-[11px] border-b border-[#edf0f4] align-top">{status}</td>
-                  <td className="px-[14px] py-[11px] border-b border-[#edf0f4] align-top">{notes}</td>
+                <tr key={i} className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
+                  <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">{browser}</td>
+                  <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">{status}</td>
+                  <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">{notes}</td>
                 </tr>
               ))}
             </tbody>
@@ -135,12 +135,12 @@ export default function TechHelpPage() {
         </div>
 
         {/* Contact */}
-        <div className="bg-white rounded-[10px] p-7 mb-5 border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
             Contact
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] mb-4 pb-[0.65rem] border-b border-[#edf0f4] tracking-[-0.015em] leading-[1.3]"
+            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Still Stuck? Contact the Instructor
@@ -161,7 +161,7 @@ export default function TechHelpPage() {
           <p>
             I respond within <strong>48 hours on weekdays</strong>.
           </p>
-          <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] text-[0.92rem] text-center">
+          <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-center">
             📬 <strong>Optional: Embed a contact form here</strong>
             <br />
             <small>

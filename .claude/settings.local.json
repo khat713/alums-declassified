@@ -9,7 +9,15 @@
       "Bash(Select-Object FullName, PSIsContainer)",
       "Bash(Sort-Object FullName)",
       "Bash(npm install *)",
-      "Bash(npx next *)"
+      "Bash(npx next *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3847/)",
+      "Bash(curl -s http://localhost:3847/module-3)",
+      "Bash(curl -s http://localhost:3847/lesson-1)",
+      "Bash(curl -s http://localhost:3847/assignments)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
