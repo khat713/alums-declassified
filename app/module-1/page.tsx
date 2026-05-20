@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
   title: "Module 1: College Expectations | Alum's Declassified",
@@ -38,6 +39,7 @@ export default function Module1Page() {
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
           {/* MAIN */}
           <div>
+            <FadeIn delay={0}>
             <div id="objectives" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">Learning Objectives</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>By the End of This Module, You Will Be Able To:</h2>
@@ -48,14 +50,18 @@ export default function Module1Page() {
                 <li>Apply your school&apos;s academic integrity policy to realistic scenarios you might encounter as a first-semester student.</li>
               </ol>
             </div>
+            </FadeIn>
 
+            <FadeIn delay={0.1}>
             <div id="lesson" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">Instructional Content</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Module 1 Lesson</h2>
               <p>The lesson for this module covers the unwritten rules of college, how to read a syllabus, office hours, professor communication, and academic integrity.</p>
               <Link href="/lesson-1" className="bg-[#0d7c7e] text-white no-underline py-[11px] px-[28px] text-[0.95rem] rounded-[5px] font-bold inline-block hover:bg-[#096163] transition-all mt-2">Read the Lesson →</Link>
             </div>
+            </FadeIn>
 
+            <FadeIn delay={0.2}>
             <div id="activity" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">Learning Activity</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Activity: Campus Policy Scavenger Hunt</h2>
@@ -73,7 +79,9 @@ export default function Module1Page() {
                 <p className="mt-3 text-[0.85rem] text-[#5a6a82]">Write down where you found each answer. Keep this — it&apos;ll be useful all semester.</p>
               </div>
             </div>
+            </FadeIn>
 
+            <FadeIn delay={0.3}>
             <div id="assessment" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assessment</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Reflection: One Unwritten Rule I Didn&apos;t Know Before</h2>
@@ -88,7 +96,9 @@ export default function Module1Page() {
                 <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = specific, situational, tied to your own school. Proficient = on-topic and clear. Emerging = vague or generic. Incomplete = missing.</p>
               </div>
             </div>
+            </FadeIn>
 
+            <FadeIn delay={0.4}>
             <div id="model" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">Model Response</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Example Response — See What Proficient Looks Like</h2>
@@ -98,7 +108,9 @@ export default function Module1Page() {
                 Complete the reflection yourself as if you were a student — use a fictional name like &ldquo;Alex&rdquo; if you prefer. This should be immediately visible on this page (not hidden behind a link). Label it clearly: <em>&ldquo;Example Response from a student named Alex:&rdquo;</em>
               </div>
             </div>
+            </FadeIn>
 
+            <FadeIn delay={0.5}>
             <div id="tools" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">Tools Used in This Module</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Technological Tools</h2>
@@ -112,6 +124,7 @@ export default function Module1Page() {
                 </table>
               </div>
             </div>
+            </FadeIn>
 
             <div className="bg-white dark:bg-[#1e293b] border border-[#dde2eb] dark:border-[#334155] rounded-[10px] py-5 px-7 shadow-[0_1px_2px_rgba(27,37,55,0.06)] flex justify-between items-center flex-wrap gap-4 mt-2">
               <div>

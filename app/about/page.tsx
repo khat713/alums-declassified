@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
   title: "About | Alum's Declassified",
@@ -24,6 +25,7 @@ export default function AboutPage() {
 
       <div className="container mx-auto px-4 my-12">
         {/* Instructor Bio */}
+        <FadeIn delay={0}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Instructor
@@ -73,8 +75,10 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+        </FadeIn>
 
         {/* Why This Course */}
+        <FadeIn delay={0.1}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Purpose
@@ -91,8 +95,10 @@ export default function AboutPage() {
             adult life without family guidance. You can draw from your abstract.
           </div>
         </div>
+        </FadeIn>
 
         {/* Student Intro */}
+        <FadeIn delay={0.2}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
             Student Introduction
@@ -119,8 +125,10 @@ export default function AboutPage() {
             </small>
           </div>
         </div>
+        </FadeIn>
 
         {/* CTA */}
+        <FadeIn delay={0.3}>
         <div className="text-center mt-4">
           <Link
             href="/start-here"
@@ -135,6 +143,7 @@ export default function AboutPage() {
             Jump to Module 1 →
           </Link>
         </div>
+        </FadeIn>
       </div>
     </main>
   );

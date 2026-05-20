@@ -1,13 +1,16 @@
-"use client";
+﻿"use client";
+import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Typewriter } from "@/components/ui/typewriter";
 import { Counter } from "@/components/ui/animated-counter";
-import { motion } from "motion/react";
-import { Card3DList } from "@/components/ui/animated-3d-card";
+import { motion, useScroll, useTransform } from "motion/react";
+import { Card3D } from "@/components/ui/animated-3d-card";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart } from "lucide-react";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/components/ui/fade-in";
 
 
 export default function HomePage() {
@@ -21,6 +24,10 @@ export default function HomePage() {
     { id: "module-6", title: "Career Preparation", description: "Resumes, LinkedIn, internships, networking without feeling awkward, and what employers look for.", icon: <Briefcase size={28} />, gradient: "from-rose-700 via-rose-800 to-rose-900", onClick: () => router.push("/module-6") },
     { id: "module-7", title: "Emotional Resilience", description: "Homesickness, code-switching, mental health, coping strategies, and the work of belonging.", icon: <Heart size={28} />, gradient: "from-cyan-700 via-cyan-800 to-cyan-900", onClick: () => router.push("/module-7") },
   ];
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
+  const rotateX = useTransform(scrollYProgress, [0, 1], [20, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0.5, 1]);
   return (
     <main>
       {/* HERO */}
@@ -87,6 +94,7 @@ export default function HomePage() {
           {/* Modules — animated counter */}
           <motion.div
             className="flex items-center gap-2"
+            suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.0 }}
@@ -104,6 +112,7 @@ export default function HomePage() {
           {/* Time per module */}
           <motion.div
             className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
@@ -116,6 +125,7 @@ export default function HomePage() {
           {/* Free */}
           <motion.div
             className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
@@ -128,6 +138,7 @@ export default function HomePage() {
           {/* Mobile friendly */}
           <motion.div
             className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
@@ -140,6 +151,7 @@ export default function HomePage() {
           {/* Certificate */}
           <motion.div
             className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.4 }}
@@ -152,12 +164,45 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* CONTAINER SCROLL */}
+      <section ref={containerRef} className="relative py-20 bg-[#1b2537] overflow-hidden">
+        <div className="container mx-auto px-4 text-center mb-10">
+          <h2
+            className="text-[clamp(1.8rem,4vw,3rem)] font-bold text-white mb-4"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            See what&apos;s inside
+          </h2>
+          <p className="text-neutral-300 text-lg">
+            Seven modules. Everything documented. Nothing gatekept.
+          </p>
+        </div>
+        <motion.div
+          suppressHydrationWarning
+          style={{ rotateX, opacity }}
+          className="container mx-auto px-4"
+        >
+          <div className="relative rounded-xl overflow-hidden shadow-2xl">
+            <Image
+              src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1400&q=75"
+              alt="Student studying at a desk"
+              width={1400}
+              height={800}
+              className="w-full"
+              unoptimized={true}
+            />
+          </div>
+        </motion.div>
+      </section>
+
       <div className="container mx-auto px-4 my-12">
         {/* WHAT THIS COURSE IS */}
+        <FadeIn delay={0}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             What This Is
           </span>
+          <FadeIn delay={0}>
           <h2
             className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
@@ -170,20 +215,30 @@ export default function HomePage() {
             experience — not theory, not inspiration, but practical information
             you can use immediately.
           </p>
+          </FadeIn>
 
           <div className="mt-5">
-            <Card3DList
-              cards={moduleCards}
-              columns={3}
-              gap="lg"
-              size="md"
-              variant="premium"
-              animated={true}
-            />
+            <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {moduleCards.map((card) => (
+                <FadeInStaggerItem key={card.id}>
+                  <Card3D
+                    title={card.title}
+                    description={card.description}
+                    icon={card.icon}
+                    gradient={card.gradient}
+                    onClick={card.onClick}
+                    size="md"
+                    variant="premium"
+                  />
+                </FadeInStaggerItem>
+              ))}
+            </FadeInStagger>
           </div>
         </div>
+        </FadeIn>
 
         {/* WHO THIS IS FOR */}
+        <FadeIn delay={0.1}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">
             Who This Is For
@@ -224,8 +279,10 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+        </FadeIn>
 
         {/* INTRODUCE YOURSELF */}
+        <FadeIn delay={0.2}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
             Before You Begin
@@ -249,8 +306,10 @@ export default function HomePage() {
             </small>
           </div>
         </div>
+        </FadeIn>
 
         {/* CTA */}
+        <FadeIn delay={0.3}>
         <div className="text-center mt-4 mb-2">
           <Link
             href="/start-here"
@@ -265,6 +324,7 @@ export default function HomePage() {
             View All Modules →
           </Link>
         </div>
+        </FadeIn>
       </div>
     </main>
   );

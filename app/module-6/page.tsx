@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
   title: "Module 6: Career Preparation | Alum's Declassified",
@@ -47,6 +48,7 @@ export default function Module6Page() {
           {/* Main Content */}
           <div>
             {/* Objectives */}
+            <FadeIn delay={0}>
             <div id="objectives" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
                 Learning Objectives
@@ -64,8 +66,10 @@ export default function Module6Page() {
                 <li>Identify one specific next step for your career development and explain why you chose it.</li>
               </ol>
             </div>
+            </FadeIn>
 
             {/* Lesson */}
+            <FadeIn delay={0.1}>
             <div id="lesson" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">
                 Instructional Content
@@ -86,8 +90,10 @@ export default function Module6Page() {
                 Read the Lesson →
               </Link>
             </div>
+            </FadeIn>
 
             {/* Activity */}
+            <FadeIn delay={0.2}>
             <div id="activity" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
                 Learning Activity
@@ -107,8 +113,10 @@ export default function Module6Page() {
               <p className="text-[0.92rem] mt-3">Each pitch must include: your name, year and major, one relevant experience or interest, and one specific goal or question.</p>
               <p className="text-[0.85rem] text-[#8d9db5] mt-3">💡 Read each pitch out loud. If it sounds like a cover letter, rewrite it to sound like you talking.</p>
             </div>
+            </FadeIn>
 
             {/* Assessment */}
+            <FadeIn delay={0.3}>
             <div id="assessment" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
                 Assessment
@@ -131,8 +139,10 @@ export default function Module6Page() {
                 <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = all sections, quantified bullets, honest specific self-assessment. Proficient = all sections, adequate bullets, concrete next step. Emerging = missing sections or vague note. Incomplete = missing.</p>
               </div>
             </div>
+            </FadeIn>
 
             {/* Model Response */}
+            <FadeIn delay={0.4}>
             <div id="model" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
                 Model Response
@@ -148,8 +158,10 @@ export default function Module6Page() {
               <p className="text-[0.92rem] mb-3"><strong>Alex&apos;s self-assessment note:</strong> &ldquo;I am not sure how to handle the fact that most of my work experience is at the same place (FoodMart) and I do not have any internships or campus involvement yet. My next step is visiting the career center in week two to ask how to build experience during my first semester — whether that is a work-study position, a club, or something else they recommend.&rdquo;</p>
               <p className="text-[0.82rem] text-[#8d9db5]">The self-assessment identifies a specific gap with a concrete next step — not a vague plan.</p>
             </div>
+            </FadeIn>
 
             {/* Tools */}
+            <FadeIn delay={0.5}>
             <div id="tools" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#f2f4f7] text-[#5a6a82]">
                 Tools Used in This Module
@@ -184,6 +196,7 @@ export default function Module6Page() {
                 </tbody>
               </table>
             </div>
+            </FadeIn>
 
             {/* Prev/Next Nav */}
             <div className="flex justify-between items-start py-5 border-t border-[#dde2eb] dark:border-[#334155] mt-2">

@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Card3DList } from "@/components/ui/animated-3d-card";
+import { Card3D } from "@/components/ui/animated-3d-card";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart } from "lucide-react";
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/components/ui/fade-in";
 
 export default function ModulesPage() {
   const router = useRouter();
@@ -20,6 +21,7 @@ export default function ModulesPage() {
     <main>
       <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
         <div className="container mx-auto px-4">
+          <FadeIn delay={0}>
           <h1
             className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem] tracking-[-0.025em] leading-[1.2]"
             style={{ fontFamily: "var(--font-display)" }}
@@ -30,10 +32,12 @@ export default function ModulesPage() {
             Seven modules. One for each domain of the first-gen experience. Work
             through them in order or jump to what you need.
           </p>
+          </FadeIn>
         </div>
       </section>
 
       <div className="container mx-auto px-4 my-8 mb-16">
+        <FadeIn delay={0}>
         <div className="bg-[#eff8ff] dark:bg-[#0f2744] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6">
           <p className="m-0 text-[0.9rem]">
             📋 <strong>New here?</strong> Start with{" "}
@@ -44,16 +48,25 @@ export default function ModulesPage() {
             roughly 40–50 minutes.
           </p>
         </div>
+        </FadeIn>
 
-        <Card3DList
-          cards={moduleCards}
-          columns={3}
-          gap="lg"
-          size="md"
-          variant="premium"
-          animated={true}
-        />
+        <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {moduleCards.map((card) => (
+            <FadeInStaggerItem key={card.id}>
+              <Card3D
+                title={card.title}
+                description={card.description}
+                icon={card.icon}
+                gradient={card.gradient}
+                onClick={card.onClick}
+                size="md"
+                variant="premium"
+              />
+            </FadeInStaggerItem>
+          ))}
+        </FadeInStagger>
 
+        <FadeIn delay={0.2}>
         <div className="text-center mt-12">
           <p className="text-[#5a6a82] dark:text-[#94a3b8] mb-4 text-[0.93rem]">
             Ready to start from the beginning?
@@ -65,6 +78,7 @@ export default function ModulesPage() {
             Start Module 1 →
           </Link>
         </div>
+        </FadeIn>
       </div>
     </main>
   );

@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
   title: "Module 2: Campus Resources | Alum's Declassified",
@@ -37,6 +38,7 @@ export default function Module2Page() {
       <div className="container mx-auto px-4 my-8">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
           <div>
+            <FadeIn delay={0}>
             <div id="objectives" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">Learning Objectives</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>By the End of This Module, You Will Be Able To:</h2>
@@ -47,7 +49,9 @@ export default function Module2Page() {
                 <li>Describe common barriers first-gen students face when accessing campus support — and how to overcome them.</li>
               </ol>
             </div>
+            </FadeIn>
 
+            <FadeIn delay={0.1}>
             <div id="lesson" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">Instructional Content</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Module 2 Lesson</h2>
@@ -64,7 +68,9 @@ export default function Module2Page() {
                 </div>
               </div>
             </div>
+            </FadeIn>
 
+            <FadeIn delay={0.2}>
             <div id="activity" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">Learning Activity</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Activity: Write Your First Professional Email</h2>
@@ -78,7 +84,9 @@ export default function Module2Page() {
               <p>Your email must include: a clear subject line, a greeting with the office name, your name and year, one specific question, and a polite close.</p>
               <p className="text-[0.85rem] text-[#5a6a82]">💡 <strong>Tip:</strong> You can actually send this email. Offices respond faster than most students expect.</p>
             </div>
+            </FadeIn>
 
+            <FadeIn delay={0.3}>
             <div id="assessment" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assessment</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Campus Resource Map — Assignment 2 (75 pts)</h2>
@@ -92,7 +100,9 @@ export default function Module2Page() {
                 <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = all 6 resources with specific contact info and realistic personal scenarios. Proficient = all 6 fields complete. Emerging = fewer than 6 or missing fields. Incomplete = missing.</p>
               </div>
             </div>
+            </FadeIn>
 
+            <FadeIn delay={0.4}>
             <div id="model" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">Model Response</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Example Resource Map — See What Proficient Looks Like</h2>
@@ -118,7 +128,9 @@ export default function Module2Page() {
               </div>
               <p className="text-[0.82rem] text-[#5a6a82] mt-3">This response scores at <strong>Proficient</strong>: all six resources identified with specific contact info, and each scenario is realistic and personal rather than generic.</p>
             </div>
+            </FadeIn>
 
+            <FadeIn delay={0.5}>
             <div id="tools" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">Tools Used in This Module</span>
               <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Technological Tools</h2>
@@ -132,6 +144,7 @@ export default function Module2Page() {
                 </table>
               </div>
             </div>
+            </FadeIn>
 
             <div className="bg-white dark:bg-[#1e293b] border border-[#dde2eb] dark:border-[#334155] rounded-[10px] py-5 px-7 shadow-[0_1px_2px_rgba(27,37,55,0.06)] flex justify-between items-center flex-wrap gap-4 mt-2">
               <div><p className="text-[0.72rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-bold mb-[0.2rem]">← Previous</p><p className="text-[0.93rem] font-semibold m-0"><Link href="/module-1" className="text-[#1b2537] dark:text-[#e2e8f0] hover:text-[#0d7c7e] hover:underline">Module 1: College Expectations</Link></p></div>

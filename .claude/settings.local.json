@@ -20,7 +20,8 @@
       "Bash(git push *)",
       "Bash(npx tsc *)",
       "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\(JSON.stringify\\({...p.dependencies,...p.devDependencies}, null, 2\\)\\)\")",
-      "Bash(node -e \"const p=require\\('./package.json'\\); const d={...p.dependencies,...p.devDependencies}; console.log\\('@radix-ui/react-accordion:', d['@radix-ui/react-accordion']||'NOT INSTALLED'\\); console.log\\('@radix-ui/react-icons:', d['@radix-ui/react-icons']||'NOT INSTALLED'\\);\")"
+      "Bash(node -e \"const p=require\\('./package.json'\\); const d={...p.dependencies,...p.devDependencies}; console.log\\('@radix-ui/react-accordion:', d['@radix-ui/react-accordion']||'NOT INSTALLED'\\); console.log\\('@radix-ui/react-icons:', d['@radix-ui/react-icons']||'NOT INSTALLED'\\);\")",
+      "Bash(grep -n '{/\\\\*' C:/Users/khat2/OneDrive/Desktop/alums-declassified/app/module-__TRACKED_VAR__/page.tsx)"
     ]
   }
 }

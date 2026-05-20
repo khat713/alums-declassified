@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
   title: "ID Framework | Alum's Declassified",
@@ -31,6 +32,7 @@ export default function FrameworkPage() {
 
       <div className="container mx-auto px-4 my-8">
         {/* Framework Diagram */}
+        <FadeIn delay={0}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Visual
@@ -65,8 +67,10 @@ export default function FrameworkPage() {
             </small>
           </div>
         </div>
+        </FadeIn>
 
         {/* ADDIE Steps */}
+        <FadeIn delay={0.1}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Process
@@ -100,8 +104,10 @@ export default function FrameworkPage() {
             ))}
           </div>
         </div>
+        </FadeIn>
 
         {/* Commentary */}
+        <FadeIn delay={0.2}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Commentary
@@ -150,8 +156,10 @@ export default function FrameworkPage() {
             </p>
           </div>
         </div>
+        </FadeIn>
 
         {/* References */}
+        <FadeIn delay={0.3}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
             References
@@ -189,6 +197,7 @@ export default function FrameworkPage() {
             </p>
           </div>
         </div>
+        </FadeIn>
       </div>
     </main>
   );

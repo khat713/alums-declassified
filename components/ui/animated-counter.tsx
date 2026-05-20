@@ -52,5 +52,5 @@ function Number({ mv, number }: { mv: MotionValue; number: number }) {
     if (offset > 5) { memo -= 10 * height; }
     return memo;
   });
-  return (<motion.span style={{ y }} className="absolute inset-0 flex items-center justify-center">{number}</motion.span>);
+  return (<motion.span suppressHydrationWarning style={{ y }} className="absolute inset-0 flex items-center justify-center">{number}</motion.span>);
 }

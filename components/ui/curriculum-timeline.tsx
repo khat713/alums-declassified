@@ -20,6 +20,7 @@ export function CurriculumTimeline() {
       <div className="space-y-6">
         {weeks.map((week, index) => (
           <motion.div
+            suppressHydrationWarning
             key={week.week}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}

@@ -65,7 +65,7 @@ const Card3D = React.forwardRef<HTMLDivElement, Card3DProps>(({ title, descripti
   const handleLeave = useCallback(() => { if (!disabled) { setHovered(false); setMousePos({ x: 0, y: 0 }); } }, [disabled]);
   const handleClick = useCallback(() => { if (!disabled && !loading && onClick) onClick(); }, [disabled, loading, onClick]);
   return (
-    <motion.div ref={ref} className={cn("group relative w-full overflow-hidden rounded-2xl transform-gpu transition-all duration-500 ease-out", SIZES[size], VARIANTS[variant], onClick && !disabled && !loading && "cursor-pointer", disabled && "opacity-50 cursor-not-allowed", loading && "pointer-events-none", className)}
+    <motion.div ref={ref} suppressHydrationWarning className={cn("group relative w-full overflow-hidden rounded-2xl transform-gpu transition-all duration-500 ease-out", SIZES[size], VARIANTS[variant], onClick && !disabled && !loading && "cursor-pointer", disabled && "opacity-50 cursor-not-allowed", loading && "pointer-events-none", className)}
       onMouseMove={handleMove} onMouseEnter={handleEnter} onMouseLeave={handleLeave}
       animate={{ rotateX: disabled ? 0 : mousePos.y, rotateY: disabled ? 0 : mousePos.x, z: disabled ? 0 : hovered ? 30 : 0 }}
       transition={{ type: "spring", stiffness: 400, damping: 35, mass: 0.8 }}

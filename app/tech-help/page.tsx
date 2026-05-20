@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
   title: "Tech Help | Alum's Declassified",
@@ -23,6 +24,7 @@ export default function TechHelpPage() {
       </section>
 
       <div className="container mx-auto px-4 my-8">
+        <FadeIn delay={0}>
         <div className="bg-[#eff8ff] dark:bg-[#0f2744] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6">
           <p className="m-0 text-[0.9rem]">
             📧 <strong>Can&apos;t find your answer below?</strong> Email me at{" "}
@@ -33,8 +35,10 @@ export default function TechHelpPage() {
             respond within 48 hours on weekdays.
           </p>
         </div>
+        </FadeIn>
 
         {/* Common Issues */}
+        <FadeIn delay={0.1}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
             Common Issues
@@ -112,8 +116,10 @@ export default function TechHelpPage() {
             </AccordionItem>
           </Accordion>
         </div>
+        </FadeIn>
 
         {/* Supported Browsers */}
+        <FadeIn delay={0.2}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
             Compatibility
@@ -150,8 +156,10 @@ export default function TechHelpPage() {
             </tbody>
           </table>
         </div>
+        </FadeIn>
 
         {/* Contact */}
+        <FadeIn delay={0.3}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
             Contact
@@ -187,6 +195,7 @@ export default function TechHelpPage() {
             </small>
           </div>
         </div>
+        </FadeIn>
       </div>
     </main>
   );

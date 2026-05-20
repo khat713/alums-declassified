@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { CurriculumTimeline } from "@/components/ui/curriculum-timeline";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
   title: "Start Here | Alum's Declassified",
@@ -25,6 +26,7 @@ export default function StartHerePage() {
 
       <div className="container mx-auto px-4 my-8">
         {/* Welcome */}
+        <FadeIn delay={0}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Welcome
@@ -64,8 +66,10 @@ export default function StartHerePage() {
             </div>
           </div>
         </div>
+        </FadeIn>
 
         {/* Course Info */}
+        <FadeIn delay={0.1}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Course Info
@@ -100,8 +104,10 @@ export default function StartHerePage() {
             </table>
           </div>
         </div>
+        </FadeIn>
 
         {/* Navigation Guide */}
+        <FadeIn delay={0.2}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
             Navigation Guide
@@ -142,8 +148,10 @@ export default function StartHerePage() {
             </li>
           </ol>
         </div>
+        </FadeIn>
 
         {/* Module Overview Table */}
+        <FadeIn delay={0} direction="none">
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Schedule
@@ -159,8 +167,10 @@ export default function StartHerePage() {
           </p>
           <CurriculumTimeline />
         </div>
+        </FadeIn>
 
         {/* Learning Outcomes */}
+        <FadeIn delay={0.4}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">
             Learning Outcomes
@@ -181,8 +191,10 @@ export default function StartHerePage() {
             <li>Build emotional resilience — coping strategies, when to seek support, how to belong.</li>
           </ol>
         </div>
+        </FadeIn>
 
         {/* Tech Requirements */}
+        <FadeIn delay={0.5}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
             Technology
@@ -207,8 +219,10 @@ export default function StartHerePage() {
             if anything isn&apos;t working.
           </p>
         </div>
+        </FadeIn>
 
         {/* Policies */}
+        <FadeIn delay={0.6}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
             Policies
@@ -259,7 +273,9 @@ export default function StartHerePage() {
             revised grade replaces the original.
           </p>
         </div>
+        </FadeIn>
 
+        <FadeIn delay={0.7}>
         <div className="text-center mt-4 mb-2">
           <Link
             href="/module-1"
@@ -268,6 +284,7 @@ export default function StartHerePage() {
             I&apos;m Ready — Start Module 1 →
           </Link>
         </div>
+        </FadeIn>
       </div>
     </main>
   );

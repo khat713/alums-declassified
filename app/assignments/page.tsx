@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
   title: "Assignments | Alum's Declassified",
@@ -25,6 +26,7 @@ export default function AssignmentsPage() {
 
       <div className="container mx-auto px-4 my-8">
         {/* Overview Table */}
+        <FadeIn delay={0}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
             Overview
@@ -85,8 +87,10 @@ export default function AssignmentsPage() {
             </table>
           </div>
         </div>
+        </FadeIn>
 
         {/* Grading Scale */}
+        <FadeIn delay={0.1}>
         <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
             Grading
@@ -132,8 +136,10 @@ export default function AssignmentsPage() {
             changed and why.
           </p>
         </div>
+        </FadeIn>
 
         {/* Individual Assignments */}
+        <FadeIn delay={0}>
         <div id="a1" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
             Assignment 1 · 50 pts
@@ -146,7 +152,9 @@ export default function AssignmentsPage() {
             <span className="text-[0.88rem] text-[#5a6a82]">Complete Module 1 first, then return here for the quiz.</span>
           </div>
         </div>
+        </FadeIn>
 
+        <FadeIn delay={0.1}>
         <div id="a2" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 2 · 75 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Campus Resource Map</h2>
@@ -154,7 +162,9 @@ export default function AssignmentsPage() {
           <p>Identify at least six campus resources across three categories — academic support, financial resources, and health/wellbeing — specific to <em>your school</em>. For each resource: name, location, contact info, and one realistic scenario in which you would actually use it.</p>
           <div className="flex gap-3 flex-wrap mt-3"><Link href="/module-2" className="bg-[#1b2537] text-white no-underline rounded-[5px] py-[7px] px-[18px] text-[0.83rem] font-bold inline-block hover:bg-[#0d7c7e] transition-all">Go to Module 2 →</Link></div>
         </div>
+        </FadeIn>
 
+        <FadeIn delay={0.2}>
         <div id="a3" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 3 · 75 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Budget Worksheet</h2>
@@ -162,7 +172,9 @@ export default function AssignmentsPage() {
           <p>Build a monthly budget for your first semester using your school&apos;s actual cost of attendance and your financial aid information. Categorize each expense as fixed or variable, identify two areas where you could reduce spending, and complete a gap analysis.</p>
           <div className="flex gap-3 flex-wrap mt-3"><Link href="/module-3" className="bg-[#1b2537] text-white no-underline rounded-[5px] py-[7px] px-[18px] text-[0.83rem] font-bold inline-block hover:bg-[#0d7c7e] transition-all">Go to Module 3 →</Link></div>
         </div>
+        </FadeIn>
 
+        <FadeIn delay={0.3}>
         <div id="a4" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 4 · 50 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Life Skills Inventory</h2>
@@ -170,7 +182,9 @@ export default function AssignmentsPage() {
           <p>After completing Module 4, write a reflection answering three questions: Which skills do you feel confident about and why? Which are you uncertain about? Pick one uncertain skill and describe the specific steps you&apos;d take to get better at it before your first semester.</p>
           <div className="flex gap-3 flex-wrap mt-3"><Link href="/module-4" className="bg-[#1b2537] text-white no-underline rounded-[5px] py-[7px] px-[18px] text-[0.83rem] font-bold inline-block hover:bg-[#0d7c7e] transition-all">Go to Module 4 →</Link></div>
         </div>
+        </FadeIn>
 
+        <FadeIn delay={0.4}>
         <div id="a5" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 5 · 75 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Study Plan</h2>
@@ -178,7 +192,9 @@ export default function AssignmentsPage() {
           <p>Build a realistic Week 1 study schedule for your first college semester — class times, study blocks, meals, sleep, and any work or family commitments. Then write a rationale explaining which study strategies from Module 5 you built into the schedule and why they work.</p>
           <div className="flex gap-3 flex-wrap mt-3"><Link href="/module-5" className="bg-[#1b2537] text-white no-underline rounded-[5px] py-[7px] px-[18px] text-[0.83rem] font-bold inline-block hover:bg-[#0d7c7e] transition-all">Go to Module 5 →</Link></div>
         </div>
+        </FadeIn>
 
+        <FadeIn delay={0.5}>
         <div id="a6" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 6 · 100 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Career Document Draft</h2>
@@ -186,7 +202,9 @@ export default function AssignmentsPage() {
           <p>Submit either a resume draft or a completed LinkedIn profile — whichever is more relevant to your goals right now. Also submit a 100–150 word note on one thing you&apos;re still unsure about and what your next step is. This is the highest-stakes individual assignment before the final project.</p>
           <div className="flex gap-3 flex-wrap mt-3"><Link href="/module-6" className="bg-[#1b2537] text-white no-underline rounded-[5px] py-[7px] px-[18px] text-[0.83rem] font-bold inline-block hover:bg-[#0d7c7e] transition-all">Go to Module 6 →</Link></div>
         </div>
+        </FadeIn>
 
+        <FadeIn delay={0.6}>
         <div id="a7" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 7 · 75 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Reflection Essay</h2>
@@ -194,7 +212,9 @@ export default function AssignmentsPage() {
           <p>Prompt: What are you most worried about going into your first college semester — and what do you already have going for you that will help you handle it? Address at least one specific concern from Module 7 and connect it to at least one concrete strategy or resource.</p>
           <div className="flex gap-3 flex-wrap mt-3"><Link href="/module-7" className="bg-[#1b2537] text-white no-underline rounded-[5px] py-[7px] px-[18px] text-[0.83rem] font-bold inline-block hover:bg-[#0d7c7e] transition-all">Go to Module 7 →</Link></div>
         </div>
+        </FadeIn>
 
+        <FadeIn delay={0.7}>
         <div id="a8" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 8 · 50 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Midpoint Check-In Discussion Post</h2>
@@ -208,7 +228,9 @@ export default function AssignmentsPage() {
             </div>
           </div>
         </div>
+        </FadeIn>
 
+        <FadeIn delay={0.8}>
         <div id="a9" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 9 · 150 pts · Final</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>College Readiness Portfolio</h2>
@@ -221,6 +243,7 @@ export default function AssignmentsPage() {
             </div>
           </div>
         </div>
+        </FadeIn>
       </div>
     </main>
   );

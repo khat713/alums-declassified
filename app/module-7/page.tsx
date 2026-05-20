@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export const metadata: Metadata = {
   title: "Module 7: Emotional Resilience | Alum's Declassified",
@@ -54,6 +55,7 @@ export default function Module7Page() {
             </div>
 
             {/* Objectives */}
+            <FadeIn delay={0}>
             <div id="objectives" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
                 Learning Objectives
@@ -71,8 +73,10 @@ export default function Module7Page() {
                 <li>Distinguish between normal college stress and signs that it is time to reach out for professional support.</li>
               </ol>
             </div>
+            </FadeIn>
 
             {/* Lesson */}
+            <FadeIn delay={0.1}>
             <div id="lesson" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">
                 Instructional Content
@@ -109,8 +113,10 @@ export default function Module7Page() {
                 <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">Normal college stress vs. signs it&apos;s time to reach out for support.</p>
               </div>
             </div>
+            </FadeIn>
 
             {/* Activity */}
+            <FadeIn delay={0.2}>
             <div id="activity" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
                 Learning Activity
@@ -142,8 +148,10 @@ export default function Module7Page() {
               </div>
               <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-3">FutureMe lets you write a letter and schedule it to be delivered to your own email on a future date. No account required. Your letter is private.</p>
             </div>
+            </FadeIn>
 
             {/* Assessment */}
+            <FadeIn delay={0.3}>
             <div id="assessment" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
                 Assessment
@@ -180,8 +188,10 @@ export default function Module7Page() {
                 <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = specific coping strategies, real resource with contact info, essay addresses both halves with honest detail and ties to module content. Proficient = all parts complete with relevant specifics. Emerging = vague or missing parts. Incomplete = missing.</p>
               </div>
             </div>
+            </FadeIn>
 
             {/* Model Response */}
+            <FadeIn delay={0.4}>
             <div id="model" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
                 Model Response
@@ -200,8 +210,10 @@ export default function Module7Page() {
               </blockquote>
               <p className="text-[0.82rem] text-[#8d9db5]">Proficient: addresses both halves of the prompt with specific, honest detail. One concern is directly tied to module content (imposter syndrome). One strength is named specifically and feels genuine. The plan at the end is concrete.</p>
             </div>
+            </FadeIn>
 
             {/* Tools */}
+            <FadeIn delay={0.5}>
             <div id="tools" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#f2f4f7] text-[#5a6a82]">
                 Tools Used in This Module
@@ -236,6 +248,7 @@ export default function Module7Page() {
                 </tbody>
               </table>
             </div>
+            </FadeIn>
 
             {/* Completion Callout */}
             <div className="bg-[#e0f4f4] rounded-[10px] p-7 mb-5 border border-[#b2e3e3] text-center">
