@@ -17,7 +17,8 @@
       "Bash(curl -s http://localhost:3847/assignments)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(npx tsc *)"
     ]
   }
 }
