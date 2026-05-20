@@ -1,13 +1,26 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Typewriter } from "@/components/ui/typewriter";
 import { Counter } from "@/components/ui/animated-counter";
 import { motion } from "motion/react";
+import { Card3DList } from "@/components/ui/animated-3d-card";
+import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart } from "lucide-react";
 
 
 export default function HomePage() {
+  const router = useRouter();
+  const moduleCards = [
+    { id: "module-1", title: "College Expectations", description: "The unwritten rules, syllabi, office hours, professor relationships, and what nobody tells you before the first day.", icon: <BookOpen size={28} />, gradient: "from-teal-700 via-teal-800 to-teal-900", onClick: () => router.push("/module-1") },
+    { id: "module-2", title: "Campus Resources", description: "Financial aid, tutoring centers, counseling, food pantries — and how to actually walk into an office for the first time.", icon: <MapPin size={28} />, gradient: "from-blue-700 via-blue-800 to-blue-900", onClick: () => router.push("/module-2") },
+    { id: "module-3", title: "Financial Literacy", description: "FAFSA, award letters, loans vs. grants, budgeting on a student income, banking basics, and scams to avoid.", icon: <DollarSign size={28} />, gradient: "from-emerald-700 via-emerald-800 to-emerald-900", onClick: () => router.push("/module-3") },
+    { id: "module-4", title: "Essential Life Skills", description: "Grocery shopping, laundry, health insurance, leases — managing adult life without a manual.", icon: <CheckSquare size={28} />, gradient: "from-amber-700 via-amber-800 to-amber-900", onClick: () => router.push("/module-4") },
+    { id: "module-5", title: "Academic Success", description: "Note-taking strategies, study schedules, managing deadlines, and beating imposter syndrome.", icon: <GraduationCap size={28} />, gradient: "from-purple-700 via-purple-800 to-purple-900", onClick: () => router.push("/module-5") },
+    { id: "module-6", title: "Career Preparation", description: "Resumes, LinkedIn, internships, networking without feeling awkward, and what employers look for.", icon: <Briefcase size={28} />, gradient: "from-rose-700 via-rose-800 to-rose-900", onClick: () => router.push("/module-6") },
+    { id: "module-7", title: "Emotional Resilience", description: "Homesickness, code-switching, mental health, coping strategies, and the work of belonging.", icon: <Heart size={28} />, gradient: "from-cyan-700 via-cyan-800 to-cyan-900", onClick: () => router.push("/module-7") },
+  ];
   return (
     <main>
       {/* HERO */}
@@ -158,28 +171,15 @@ export default function HomePage() {
             you can use immediately.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-5">
-            {[
-              { emoji: "🎓", title: "Module 1 — College Expectations", desc: "The unwritten rules, how to read a syllabus, office hours, and academic integrity." },
-              { emoji: "🏛", title: "Module 2 — Campus Resources", desc: "Financial aid, tutoring, counseling, food pantries — and how to actually walk in." },
-              { emoji: "💵", title: "Module 3 — Financial Literacy", desc: "Award letters, loans vs. grants, budgeting, and financial scams to avoid." },
-              { emoji: "🛒", title: "Module 4 — Essential Life Skills", desc: "Groceries, laundry, health insurance cards, leases — adulting without a guide." },
-              { emoji: "📚", title: "Module 5 — Academic Success", desc: "Study strategies that actually work, Cornell notes, and beating imposter syndrome." },
-              { emoji: "💼", title: "Module 6 — Career Preparation", desc: "Resumes, LinkedIn, networking without the awkwardness, and the career center." },
-              { emoji: "🧠", title: "Module 7 — Emotional Resilience", desc: "Imposter syndrome, homesickness, code-switching, and when to ask for help." },
-              { emoji: "🏆", title: "Final Project — College Readiness Portfolio", desc: "Compile your best work from every module into one document you'll actually keep and use." },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="border border-[#dde2eb] dark:border-[#334155] rounded-[10px] p-5 h-full"
-              >
-                <p className="text-[1.4rem] mb-[0.4rem]">{item.emoji}</p>
-                <strong className="text-[#1b2537] dark:text-[#e2e8f0]">{item.title}</strong>
-                <p className="text-[0.88rem] text-[#5a6a82] dark:text-[#94a3b8] mt-[0.3rem] mb-0">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          <div className="mt-5">
+            <Card3DList
+              cards={moduleCards}
+              columns={3}
+              gap="lg"
+              size="md"
+              variant="premium"
+              animated={true}
+            />
           </div>
         </div>
 

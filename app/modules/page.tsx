@@ -1,21 +1,21 @@
-import type { Metadata } from "next";
+"use client";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  title: "Modules | Alum's Declassified",
-};
-
-const modules = [
-  { num: "Week 1 · Module 1", title: "College Expectations", desc: "The unwritten rules, syllabi, office hours, professor relationships, and what nobody tells you before the first day.", href: "/module-1", status: "📝 Reflection" },
-  { num: "Week 2 · Module 2", title: "Campus Resources", desc: "Financial aid, tutoring centers, counseling, food pantries — and how to actually walk into an office for the first time.", href: "/module-2", status: "🗺 Resource Map" },
-  { num: "Week 3 · Module 3", title: "Financial Literacy", desc: "FAFSA, award letters, loans vs. grants, budgeting on a student income, banking basics, and scams to avoid.", href: "/module-3", status: "💰 Budget Worksheet" },
-  { num: "Week 4 · Module 4", title: "Essential Life Skills", desc: "Grocery shopping, laundry, health insurance, leases, and managing adult life without a parent doing it for you.", href: "/module-4", status: "✅ Skills Checklist" },
-  { num: "Week 5 · Module 5", title: "Academic Success", desc: "Note-taking strategies, study schedules, managing deadlines, and beating imposter syndrome in the classroom.", href: "/module-5", status: "📅 Study Plan" },
-  { num: "Week 6 · Module 6", title: "Career Preparation", desc: "Resumes, LinkedIn, internships, networking without feeling awkward, and what employers actually look for.", href: "/module-6", status: "💼 Career Document" },
-  { num: "Week 7 · Module 7", title: "Emotional Resilience", desc: "Homesickness, code-switching, mental health, coping strategies, and the ongoing work of belonging somewhere new.", href: "/module-7", status: "💙 Self-Care Plan" },
-];
+import { useRouter } from "next/navigation";
+import { Card3DList } from "@/components/ui/animated-3d-card";
+import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart } from "lucide-react";
 
 export default function ModulesPage() {
+  const router = useRouter();
+  const moduleCards = [
+    { id: "module-1", title: "College Expectations", description: "The unwritten rules, syllabi, office hours, professor relationships, and what nobody tells you before the first day.", icon: <BookOpen size={28} />, gradient: "from-teal-700 via-teal-800 to-teal-900", onClick: () => router.push("/module-1") },
+    { id: "module-2", title: "Campus Resources", description: "Financial aid, tutoring centers, counseling, food pantries — and how to actually walk into an office for the first time.", icon: <MapPin size={28} />, gradient: "from-blue-700 via-blue-800 to-blue-900", onClick: () => router.push("/module-2") },
+    { id: "module-3", title: "Financial Literacy", description: "FAFSA, award letters, loans vs. grants, budgeting on a student income, banking basics, and scams to avoid.", icon: <DollarSign size={28} />, gradient: "from-emerald-700 via-emerald-800 to-emerald-900", onClick: () => router.push("/module-3") },
+    { id: "module-4", title: "Essential Life Skills", description: "Grocery shopping, laundry, health insurance, leases — managing adult life without a manual.", icon: <CheckSquare size={28} />, gradient: "from-amber-700 via-amber-800 to-amber-900", onClick: () => router.push("/module-4") },
+    { id: "module-5", title: "Academic Success", description: "Note-taking strategies, study schedules, managing deadlines, and beating imposter syndrome.", icon: <GraduationCap size={28} />, gradient: "from-purple-700 via-purple-800 to-purple-900", onClick: () => router.push("/module-5") },
+    { id: "module-6", title: "Career Preparation", description: "Resumes, LinkedIn, internships, networking without feeling awkward, and what employers look for.", icon: <Briefcase size={28} />, gradient: "from-rose-700 via-rose-800 to-rose-900", onClick: () => router.push("/module-6") },
+    { id: "module-7", title: "Emotional Resilience", description: "Homesickness, code-switching, mental health, coping strategies, and the work of belonging.", icon: <Heart size={28} />, gradient: "from-cyan-700 via-cyan-800 to-cyan-900", onClick: () => router.push("/module-7") },
+  ];
+
   return (
     <main>
       <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
@@ -45,40 +45,14 @@ export default function ModulesPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-          {modules.map((mod) => (
-            <div
-              key={mod.href}
-              className="border border-[#dde2eb] dark:border-[#334155] rounded-[16px] shadow-[0_2px_6px_rgba(27,37,55,0.08)] hover:shadow-[0_4px_16px_rgba(27,37,55,0.09)] hover:-translate-y-[3px] hover:border-[#b2e3e3] dark:hover:border-[#0d7c7e] transition-all bg-white dark:bg-[#1e293b] overflow-hidden flex flex-col h-full"
-            >
-              <div className="p-[1.4rem_1.5rem_1.5rem] flex flex-col flex-1">
-                <p className="text-[0.7rem] font-bold tracking-[0.09em] uppercase text-[#0d7c7e] mb-[0.35rem]">
-                  {mod.num}
-                </p>
-                <h5
-                  className="text-[1.05rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-2 tracking-[-0.015em] leading-[1.25]"
-                  style={{ fontFamily: "var(--font-display)" }}
-                >
-                  {mod.title}
-                </h5>
-                <p className="text-[0.875rem] text-[#5a6a82] dark:text-[#94a3b8] mb-5 leading-[1.58] flex-1">
-                  {mod.desc}
-                </p>
-                <div className="flex justify-between items-center">
-                  <Link
-                    href={mod.href}
-                    className="bg-[#1b2537] dark:bg-[#334155] text-white no-underline rounded-[5px] py-[7px] px-[18px] text-[0.83rem] font-bold inline-block hover:bg-[#0d7c7e] transition-all"
-                  >
-                    Start →
-                  </Link>
-                  <span className="text-[0.75rem] text-[#8d9db5] dark:text-[#64748b] font-medium">
-                    {mod.status}
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Card3DList
+          cards={moduleCards}
+          columns={3}
+          gap="lg"
+          size="md"
+          variant="premium"
+          animated={true}
+        />
 
         <div className="text-center mt-12">
           <p className="text-[#5a6a82] dark:text-[#94a3b8] mb-4 text-[0.93rem]">
