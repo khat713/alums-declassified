@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
+"use client";
 import Link from "next/link";
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Typewriter } from "@/components/ui/typewriter";
+import { Counter } from "@/components/ui/animated-counter";
+import { motion } from "motion/react";
 
-export const metadata: Metadata = {
-  title: "Home | Alum's Declassified",
-};
 
 export default function HomePage() {
   return (
@@ -69,12 +68,74 @@ export default function HomePage() {
       </section>
 
       {/* COURSE META BAR */}
-      <div className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-3">
-        <div className="container mx-auto px-4 flex flex-wrap gap-x-8 gap-y-2 items-center justify-center md:justify-start text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]">
-          <span>📅 7 modules</span>
-          <span>⏱ ~45 min per module</span>
-          <span>💸 Completely free</span>
-          <span>📱 Works on your phone</span>
+      <div className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-4">
+        <div className="container mx-auto px-4 flex flex-wrap gap-x-10 gap-y-3 items-center justify-center md:justify-start">
+
+          {/* Modules — animated counter */}
+          <motion.div
+            className="flex items-center gap-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.0 }}
+            viewport={{ once: true }}
+          >
+            <Counter
+              end={7}
+              duration={2}
+              fontSize={22}
+              className="text-[#0d7c7e] px-0"
+            />
+            <span className="text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8] font-medium">Modules</span>
+          </motion.div>
+
+          {/* Time per module */}
+          <motion.div
+            className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <span>⏱</span>
+            <span className="font-medium">40–50 min per module</span>
+          </motion.div>
+
+          {/* Free */}
+          <motion.div
+            className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <span className="text-[#16723d]">✓</span>
+            <span className="font-medium">Completely free</span>
+          </motion.div>
+
+          {/* Mobile friendly */}
+          <motion.div
+            className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <span>📱</span>
+            <span className="font-medium">Mobile friendly</span>
+          </motion.div>
+
+          {/* Certificate */}
+          <motion.div
+            className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <span>🏆</span>
+            <span className="font-medium">Certificate on completion</span>
+          </motion.div>
+
         </div>
       </div>
 
