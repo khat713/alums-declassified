@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
+import { ModuleStepper } from "@/components/ModuleStepper";
 
 export const metadata: Metadata = {
   title: "Module 5: Academic Success | Alum's Declassified",
@@ -16,6 +17,8 @@ export default function Module5Page() {
           { label: "Module 5: Academic Success" },
         ]}
       />
+
+      <ModuleStepper currentStep={5} />
 
       <section className="bg-[#1b2537] text-white py-[38px] pb-8">
         <div className="container mx-auto px-4">

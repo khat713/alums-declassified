@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
+import { ModuleStepper } from "@/components/ModuleStepper";
 
 export const metadata: Metadata = {
   title: "Module 4: Essential Life Skills | Alum's Declassified",
@@ -16,6 +17,8 @@ export default function Module4Page() {
           { label: "Module 4: Essential Life Skills" },
         ]}
       />
+
+      <ModuleStepper currentStep={4} />
 
       <section className="bg-[#1b2537] text-white py-[38px] pb-8">
         <div className="container mx-auto px-4">

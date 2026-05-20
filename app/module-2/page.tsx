@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ModuleStepper } from "@/components/ModuleStepper";
 
 export const metadata: Metadata = {
   title: "Module 2: Campus Resources | Alum's Declassified",
@@ -17,6 +18,8 @@ export default function Module2Page() {
           <span className="text-[#1b2537] dark:text-[#e2e8f0] font-medium">Module 2: Campus Resources</span>
         </div>
       </div>
+
+      <ModuleStepper currentStep={2} />
 
       <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-9 pb-7">
         <div className="container mx-auto px-4">
