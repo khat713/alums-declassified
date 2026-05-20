@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
+import { Typewriter } from "@/components/ui/typewriter";
 
 export const metadata: Metadata = {
   title: "Home | Alum's Declassified",
@@ -20,12 +21,20 @@ export default function HomePage() {
               Free · Asynchronous · Built for You
             </p>
             <h1
-              className="text-[clamp(1.9rem,3.8vw,3rem)] font-bold leading-[1.1] tracking-[-0.025em] mb-5"
+              className="text-[clamp(1.9rem,3.8vw,3rem)] font-bold leading-[1.1] tracking-[-0.025em] mb-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent min-h-[3.5em]"
               style={{ fontFamily: "var(--font-display)" }}
             >
-              <span className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent">
-                Everything they forgot to tell you about college — documented.
-              </span>
+              <Typewriter
+                words={[
+                  "Everything they forgot to tell you about college — documented.",
+                  "Free. Self-paced. Built for first-gen students.",
+                  "7 modules. Nothing gatekept.",
+                ]}
+                speed={80}
+                delayBetweenWords={3000}
+                cursor={true}
+                cursorChar="|"
+              />
             </h1>
             <p className="text-neutral-300 text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
               Alum&apos;s Declassified is a free seven-week course for
