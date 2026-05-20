@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
 import { FadeIn } from "@/components/ui/fade-in";
+import { ModuleToastInit } from "@/components/ui/module-toast-init";
+import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 
 export const metadata: Metadata = {
   title: "Module 1: College Expectations | Alum's Declassified",
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
 export default function Module1Page() {
   return (
     <main>
+      <ModuleToastInit message="Welcome to Module 1 — College Expectations. This module takes about 45 minutes to complete." />
       <div className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[10px] text-[0.82rem]">
         <div className="container mx-auto px-4">
           <Link href="/" className="text-[#5a6a82] dark:text-[#94a3b8] hover:text-[#0d7c7e] hover:underline">Home</Link>
@@ -93,6 +96,7 @@ export default function Module1Page() {
                 <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1rem_1.5rem] text-center mt-2">
                   📝 Embed a Google Form or submission link here
                 </div>
+                <AssessmentSubmitButton />
                 <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = specific, situational, tied to your own school. Proficient = on-topic and clear. Emerging = vague or generic. Incomplete = missing.</p>
               </div>
             </div>

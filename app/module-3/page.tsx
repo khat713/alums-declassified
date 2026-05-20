@@ -3,6 +3,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
 import { FadeIn } from "@/components/ui/fade-in";
+import { ModuleToastInit } from "@/components/ui/module-toast-init";
+import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 
 export const metadata: Metadata = {
   title: "Module 3: Financial Literacy | Alum's Declassified",
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
 export default function Module3Page() {
   return (
     <main>
+      <ModuleToastInit message="Welcome to Module 3 — Financial Literacy. Know the difference between free money and debt before you accept anything." />
       <Breadcrumb
         items={[
           { label: "Home", href: "/" },
@@ -175,6 +178,7 @@ export default function Module3Page() {
                   <br />
                   <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_FORM_LINK" target="_blank">Submit Completed Budget →</a>`}</code>
                 </div>
+                <AssessmentSubmitButton />
                 <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = all categories complete, correctly labeled fixed/variable, gap analysis includes a specific realistic plan. Proficient = all categories with required labels. Emerging = missing categories or labels. Incomplete = missing.</p>
               </div>
             </div>

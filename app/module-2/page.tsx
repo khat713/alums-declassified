@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
 import { FadeIn } from "@/components/ui/fade-in";
+import { ModuleToastInit } from "@/components/ui/module-toast-init";
+import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 
 export const metadata: Metadata = {
   title: "Module 2: Campus Resources | Alum's Declassified",
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
 export default function Module2Page() {
   return (
     <main>
+      <ModuleToastInit message="Welcome to Module 2 — Campus Resources. Identify 6 support resources specific to your school." />
       <div className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[10px] text-[0.82rem]">
         <div className="container mx-auto px-4">
           <Link href="/" className="text-[#5a6a82] dark:text-[#94a3b8] hover:text-[#0d7c7e] hover:underline">Home</Link>
@@ -97,6 +100,7 @@ export default function Module2Page() {
                   📝 Create a Google Form with 6 resource sections, then replace this with:<br />
                   <code className="text-[0.8rem]">&lt;a href=&quot;YOUR_GOOGLE_FORM_LINK&quot; target=&quot;_blank&quot;&gt;Submit Your Resource Map →&lt;/a&gt;</code>
                 </div>
+                <AssessmentSubmitButton />
                 <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = all 6 resources with specific contact info and realistic personal scenarios. Proficient = all 6 fields complete. Emerging = fewer than 6 or missing fields. Incomplete = missing.</p>
               </div>
             </div>

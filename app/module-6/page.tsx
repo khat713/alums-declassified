@@ -3,6 +3,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
 import { FadeIn } from "@/components/ui/fade-in";
+import { ModuleToastInit } from "@/components/ui/module-toast-init";
+import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 
 export const metadata: Metadata = {
   title: "Module 6: Career Preparation | Alum's Declassified",
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
 export default function Module6Page() {
   return (
     <main>
+      <ModuleToastInit message="Welcome to Module 6 — Career Preparation. You already have more to put on a resume than you think." />
       <Breadcrumb
         items={[
           { label: "Home", href: "/" },
@@ -136,6 +139,7 @@ export default function Module6Page() {
                   <br />
                   <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_FORM_LINK" target="_blank">Submit Resume or LinkedIn Profile →</a>`}</code>
                 </div>
+                <AssessmentSubmitButton />
                 <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = all sections, quantified bullets, honest specific self-assessment. Proficient = all sections, adequate bullets, concrete next step. Emerging = missing sections or vague note. Incomplete = missing.</p>
               </div>
             </div>

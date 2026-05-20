@@ -3,6 +3,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
 import { FadeIn } from "@/components/ui/fade-in";
+import { ModuleToastInit } from "@/components/ui/module-toast-init";
+import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 
 export const metadata: Metadata = {
   title: "Module 7: Emotional Resilience | Alum's Declassified",
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
 export default function Module7Page() {
   return (
     <main>
+      <ModuleToastInit message="Welcome to Module 7 — Emotional Resilience. You've made it to the final module." />
       <Breadcrumb
         items={[
           { label: "Home", href: "/" },
@@ -185,6 +188,7 @@ export default function Module7Page() {
                   <br />
                   <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_FORM_LINK" target="_blank">Submit Self-Care Plan + Reflection Essay →</a>`}</code>
                 </div>
+                <AssessmentSubmitButton />
                 <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = specific coping strategies, real resource with contact info, essay addresses both halves with honest detail and ties to module content. Proficient = all parts complete with relevant specifics. Emerging = vague or missing parts. Incomplete = missing.</p>
               </div>
             </div>

@@ -3,6 +3,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
 import { FadeIn } from "@/components/ui/fade-in";
+import { ModuleToastInit } from "@/components/ui/module-toast-init";
+import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 
 export const metadata: Metadata = {
   title: "Module 5: Academic Success | Alum's Declassified",
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
 export default function Module5Page() {
   return (
     <main>
+      <ModuleToastInit message="Welcome to Module 5 — Academic Success. Re-reading your notes is not studying." />
       <Breadcrumb
         items={[
           { label: "Home", href: "/" },
@@ -150,6 +153,7 @@ export default function Module5Page() {
                   <br />
                   <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_FORM_LINK" target="_blank">Submit Study Plan + Rationale →</a>`}</code>
                 </div>
+                <AssessmentSubmitButton />
                 <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = schedule includes all commitments, rationale names specific strategies with research-backed explanation. Proficient = all required elements, rationale connects to module content. Emerging = missing elements or generic rationale. Incomplete = missing.</p>
               </div>
             </div>

@@ -3,6 +3,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
 import { FadeIn } from "@/components/ui/fade-in";
+import { ModuleToastInit } from "@/components/ui/module-toast-init";
+import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 
 export const metadata: Metadata = {
   title: "Module 4: Essential Life Skills | Alum's Declassified",
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
 export default function Module4Page() {
   return (
     <main>
+      <ModuleToastInit message="Welcome to Module 4 — Essential Life Skills. Today: groceries, laundry, health insurance, and leases." />
       <Breadcrumb
         items={[
           { label: "Home", href: "/" },
@@ -165,6 +168,7 @@ export default function Module4Page() {
                 <br />
                 <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_FORM_LINK" target="_blank">Complete Checklist + Reflection →</a>`}</code>
               </div>
+              <AssessmentSubmitButton />
             </div>
             </FadeIn>
 
