@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CurriculumTimeline } from "@/components/ui/curriculum-timeline";
 
 export const metadata: Metadata = {
   title: "Start Here | Alum's Declassified",
@@ -156,50 +157,7 @@ export default function StartHerePage() {
           <p className="text-[#5a6a82] text-[0.9rem] mb-4">
             No hard deadlines — but aim to finish before move-in week.
           </p>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-[0.875rem]">
-              <thead>
-                <tr>
-                  {["Week", "Module", "Topics", "Assessment"].map((h) => (
-                    <th
-                      key={h}
-                      className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]"
-                    >
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { week: 1, href: "/module-1", title: "College Expectations", topics: "Syllabi, office hours, unwritten rules", assessment: "Reflection prompt" },
-                  { week: 2, href: "/module-2", title: "Campus Resources", topics: "Financial aid, tutoring, counseling, food pantry", assessment: "Resource map" },
-                  { week: 3, href: "/module-3", title: "Financial Literacy", topics: "FAFSA, loans vs. grants, budgeting, banking", assessment: "Budget worksheet" },
-                  { week: 4, href: "/module-4", title: "Essential Life Skills", topics: "Grocery shopping, laundry, health insurance, leases", assessment: "Life skills checklist" },
-                  { week: 5, href: "/module-5", title: "Academic Success", topics: "Note-taking, study schedules, imposter syndrome", assessment: "Week 1 study plan" },
-                  { week: 6, href: "/module-6", title: "Career Preparation", topics: "Resume, LinkedIn, networking, career fairs", assessment: "LinkedIn profile draft" },
-                  { week: 7, href: "/module-7", title: "Emotional Resilience", topics: "Homesickness, identity, mental health, belonging", assessment: "Self-care plan" },
-                ].map((row) => (
-                  <tr key={row.week}>
-                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">
-                      {row.week}
-                    </td>
-                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">
-                      <Link href={row.href} className="text-[#0d7c7e] hover:underline">
-                        {row.title}
-                      </Link>
-                    </td>
-                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">
-                      {row.topics}
-                    </td>
-                    <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">
-                      {row.assessment}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <CurriculumTimeline />
         </div>
 
         {/* Learning Outcomes */}
