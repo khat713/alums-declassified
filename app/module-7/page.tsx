@@ -5,6 +5,7 @@ import { ModuleStepper } from "@/components/ModuleStepper";
 import { FadeIn } from "@/components/ui/fade-in";
 import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
+import { ReadingProgress } from "@/components/ui/reading-progress";
 
 export const metadata: Metadata = {
   title: "Module 7: Emotional Resilience | Alum's Declassified",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function Module7Page() {
   return (
     <main>
+      <ReadingProgress />
       <ModuleToastInit message="Welcome to Module 7 — Emotional Resilience. You've made it to the final module." />
       <Breadcrumb
         items={[

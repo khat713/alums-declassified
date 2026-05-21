@@ -5,6 +5,7 @@ import { ModuleStepper } from "@/components/ModuleStepper";
 import { FadeIn } from "@/components/ui/fade-in";
 import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
+import { ReadingProgress } from "@/components/ui/reading-progress";
 
 export const metadata: Metadata = {
   title: "Module 3: Financial Literacy | Alum's Declassified",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function Module3Page() {
   return (
     <main>
+      <ReadingProgress />
       <ModuleToastInit message="Welcome to Module 3 — Financial Literacy. Know the difference between free money and debt before you accept anything." />
       <Breadcrumb
         items={[

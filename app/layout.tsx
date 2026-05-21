@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ToastContainer } from "@/components/ui/toast-notification";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { PageTransition } from "@/components/ui/page-transition";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -42,9 +44,10 @@ export default function RootLayout({
       </head>
       <body className="bg-[#f2f4f7] dark:bg-[#0f172a] text-[#1b2537] dark:text-[#e2e8f0] font-body transition-colors duration-200">
         <Navbar />
-        {children}
+        <PageTransition>{children}</PageTransition>
         <Footer />
         <ToastContainer />
+        <ScrollToTop />
       </body>
     </html>
   );

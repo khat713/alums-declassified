@@ -5,6 +5,7 @@ import { ModuleStepper } from "@/components/ModuleStepper";
 import { FadeIn } from "@/components/ui/fade-in";
 import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
+import { ReadingProgress } from "@/components/ui/reading-progress";
 
 export const metadata: Metadata = {
   title: "Module 4: Essential Life Skills | Alum's Declassified",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function Module4Page() {
   return (
     <main>
+      <ReadingProgress />
       <ModuleToastInit message="Welcome to Module 4 — Essential Life Skills. Today: groceries, laundry, health insurance, and leases." />
       <Breadcrumb
         items={[
