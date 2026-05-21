@@ -8,7 +8,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 import { Typewriter } from "@/components/ui/typewriter";
 import { Counter } from "@/components/ui/animated-counter";
 import { motion, useScroll, useTransform } from "motion/react";
-import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart } from "lucide-react";
+import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Clock, CheckCircle, Smartphone, Award } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { FreddieGreeter } from "@/components/ui/freddie-greeter";
 
@@ -206,7 +206,7 @@ export default function HomePage() {
             transition={{ duration: 0.4, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <span>⏱</span>
+            <Clock size={15} style={{ color: '#0d7c7e' }} />
             <span className="font-medium">40–50 min per module</span>
           </motion.div>
 
@@ -219,7 +219,7 @@ export default function HomePage() {
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <span className="text-[#16723d]">✓</span>
+            <CheckCircle size={15} style={{ color: '#16723d' }} />
             <span className="font-medium">Completely free</span>
           </motion.div>
 
@@ -232,7 +232,7 @@ export default function HomePage() {
             transition={{ duration: 0.4, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <span>📱</span>
+            <Smartphone size={15} style={{ color: '#5a6a82' }} />
             <span className="font-medium">Mobile friendly</span>
           </motion.div>
 
@@ -245,14 +245,13 @@ export default function HomePage() {
             transition={{ duration: 0.4, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <span>🏆</span>
+            <Award size={15} style={{ color: '#5a6a82' }} />
             <span className="font-medium">Certificate on completion</span>
           </motion.div>
 
         </div>
       </div>
 
-      <div style={{ height: '3px', background: 'linear-gradient(90deg, transparent, #0d7c7e, #d97706, #0d7c7e, transparent)', opacity: 0.4 }} />
 
       {/* CONTAINER SCROLL */}
       <section ref={containerRef} className="relative py-20 bg-[#f2f4f7] dark:bg-[#1b2537] overflow-hidden">
@@ -358,7 +357,7 @@ export default function HomePage() {
               { val: "7", label: "Modules" },
               { val: "~45", label: "Min per module" },
               { val: "$0", label: "Cost" },
-              { val: "📱", label: "Mobile-friendly" },
+              { val: "Yes", label: "Mobile-friendly" },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <p className="text-[2.8rem] font-extrabold text-[#0d7c7e] m-0 leading-none">
@@ -390,7 +389,7 @@ export default function HomePage() {
             on length or format — just tell me something true.
           </p>
           <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] leading-relaxed text-center">
-            📝 <strong>Embed your Google Form or Padlet here</strong>
+            <strong>Embed your Google Form or Padlet here</strong>
             <br />
             <small>
               Suggested prompt: &ldquo;What&apos;s one thing you&apos;re hoping

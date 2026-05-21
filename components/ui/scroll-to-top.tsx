@@ -23,8 +23,8 @@ export function ScrollToTop() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           style={{
             position: 'fixed',
-            bottom: '24px',
-            left: '24px',
+            bottom: '80px',
+            right: '24px',
             zIndex: 9998,
             width: '44px',
             height: '44px',

@@ -28,7 +28,7 @@ export default function AssignmentsPage() {
       <div className="container mx-auto px-4 my-8">
         {/* Overview Table */}
         <FadeIn delay={0}>
-        <div className="content-block p-7 mb-5">
+        <div className="content-block p-7 mb-8">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
             Overview
           </span>
@@ -92,10 +92,7 @@ export default function AssignmentsPage() {
 
         {/* Grading Scale */}
         <FadeIn delay={0.1}>
-        <div className="content-block p-7 mb-5">
-          <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
-            Grading
-          </span>
+        <div className="mb-8 py-4">
           <h2
             className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
             style={{ fontFamily: "var(--font-display)" }}
@@ -141,7 +138,7 @@ export default function AssignmentsPage() {
 
         {/* Individual Assignments */}
         <FadeIn delay={0}>
-        <div id="a1" className="content-block p-7 mb-5" style={{ borderLeft: '4px solid #d97706', borderRadius: '0 16px 16px 0' }}>
+        <div id="a1" className="content-block p-7 mb-8" style={{ borderLeft: '3px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
             Assignment 1 · 50 pts
           </span>
@@ -156,7 +153,7 @@ export default function AssignmentsPage() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-        <div id="a2" className="content-block p-7 mb-5" style={{ borderLeft: '4px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
+        <div id="a2" className="content-block p-7 mb-8" style={{ borderLeft: '3px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 2 · 75 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] " style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Campus Resource Map</h2>
           <p><strong>Format:</strong> Completed template (Google Doc or Word) | 1–2 pages</p>
@@ -166,7 +163,7 @@ export default function AssignmentsPage() {
         </FadeIn>
 
         <FadeIn delay={0.2}>
-        <div id="a3" className="content-block p-7 mb-5" style={{ borderLeft: '4px solid #d97706', borderRadius: '0 16px 16px 0' }}>
+        <div id="a3" className="content-block p-7 mb-8" style={{ borderLeft: '3px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 3 · 75 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] " style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Budget Worksheet</h2>
           <p><strong>Format:</strong> Completed spreadsheet or template | PDF, Google Sheet, or Word</p>
@@ -176,7 +173,7 @@ export default function AssignmentsPage() {
         </FadeIn>
 
         <FadeIn delay={0.3}>
-        <div id="a4" className="content-block p-7 mb-5" style={{ borderLeft: '4px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
+        <div id="a4" className="content-block p-7 mb-8" style={{ borderLeft: '3px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 4 · 50 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] " style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Life Skills Inventory</h2>
           <p><strong>Format:</strong> Written reflection | 300–500 words</p>
@@ -186,7 +183,7 @@ export default function AssignmentsPage() {
         </FadeIn>
 
         <FadeIn delay={0.4}>
-        <div id="a5" className="content-block p-7 mb-5" style={{ borderLeft: '4px solid #d97706', borderRadius: '0 16px 16px 0' }}>
+        <div id="a5" className="content-block p-7 mb-8" style={{ borderLeft: '3px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 5 · 75 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] " style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Study Plan</h2>
           <p><strong>Format:</strong> Schedule template + written rationale | 1 schedule page + 150–250 words</p>
@@ -196,7 +193,7 @@ export default function AssignmentsPage() {
         </FadeIn>
 
         <FadeIn delay={0.5}>
-        <div id="a6" className="content-block p-7 mb-5" style={{ borderLeft: '4px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
+        <div id="a6" className="content-block p-7 mb-8" style={{ borderLeft: '3px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 6 · 100 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] " style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Career Document Draft</h2>
           <p><strong>Format:</strong> Resume OR LinkedIn profile (4 sections minimum) | PDF or link</p>
@@ -206,7 +203,7 @@ export default function AssignmentsPage() {
         </FadeIn>
 
         <FadeIn delay={0.6}>
-        <div id="a7" className="content-block p-7 mb-5" style={{ borderLeft: '4px solid #d97706', borderRadius: '0 16px 16px 0' }}>
+        <div id="a7" className="content-block p-7 mb-8" style={{ borderLeft: '3px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 7 · 75 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] " style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Reflection Essay</h2>
           <p><strong>Format:</strong> Written essay | 400–600 words</p>
@@ -216,14 +213,14 @@ export default function AssignmentsPage() {
         </FadeIn>
 
         <FadeIn delay={0.7}>
-        <div id="a8" className="content-block p-7 mb-5" style={{ borderLeft: '4px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
+        <div id="a8" className="content-block p-7 mb-8" style={{ borderLeft: '3px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 8 · 50 pts</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] " style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Midpoint Check-In Discussion Post</h2>
           <p><strong>Format:</strong> Discussion post + one reply to a peer | ~200 words per post</p>
           <p>Complete this after Module 3 or 4. Prompt: What is one thing you&apos;ve learned so far that surprised you, changed how you think about something, or that you wish you had known earlier? After posting, reply meaningfully to at least one peer&apos;s post.</p>
           <div className="mt-3">
             <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-left">
-              📬 <strong>Discussion thread link goes here</strong>
+              <strong>Discussion thread link goes here</strong>
               <br />
               <small>Embed a Padlet, Google Form discussion, or link to your discussion platform.</small>
             </div>
@@ -232,7 +229,7 @@ export default function AssignmentsPage() {
         </FadeIn>
 
         <FadeIn delay={0.8}>
-        <div id="a9" className="content-block p-7 mb-5" style={{ borderLeft: '4px solid #d97706', borderRadius: '0 16px 16px 0' }}>
+        <div id="a9" className="content-block p-7 mb-8" style={{ borderLeft: '4px solid #0d7c7e', background: 'linear-gradient(135deg, #f0fdfc 0%, #ffffff 100%)', borderRadius: '0 16px 16px 0' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 9 · 150 pts · Final</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] " style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>College Readiness Portfolio</h2>
           <p><strong>Format:</strong> Portfolio document (Google Doc, Word, or PDF) + 3–5 minute recorded introduction</p>
@@ -240,7 +237,7 @@ export default function AssignmentsPage() {
           <p>Also record a 3–5 minute video or audio introduction addressed to a first-gen student who is about to take this course next summer. Tell them what the course covers, which module was most useful, and one piece of advice. You can record on your phone.</p>
           <div className="mt-3">
             <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-left">
-              📎 <strong>Final portfolio template and submission link goes here</strong>
+              <strong>Final portfolio template and submission link goes here</strong>
             </div>
           </div>
         </div>

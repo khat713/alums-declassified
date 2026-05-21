@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 import { ReadingProgress } from "@/components/ui/reading-progress";
+import { Target, BookOpen, ShoppingCart, PenLine, Lightbulb, Wrench, Clock, CheckCircle, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Module 4: Essential Life Skills | Alum's Declassified",
@@ -43,9 +44,9 @@ export default function Module4Page() {
             Grocery shopping, laundry, health insurance, leases, and managing adult life without a parent doing it for you.
           </p>
           <div className="flex flex-wrap gap-4 text-[0.88rem]">
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">⏱ <strong>~45 minutes</strong></span>
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">✅ <strong>Assessment:</strong> Life Skills Inventory</span>
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">🏆 <strong>50 points</strong></span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Clock size={14} style={{ color: '#7ec8ca' }} /> <strong>~45 minutes</strong></span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><CheckCircle size={14} style={{ color: '#7ec8ca' }} /> <strong>Assessment:</strong> Life Skills Inventory</span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Award size={14} style={{ color: '#7ec8ca' }} /> <strong>50 points</strong></span>
           </div>
         </div>
       </section>
@@ -56,7 +57,7 @@ export default function Module4Page() {
           <div>
             {/* Objectives */}
             <FadeIn delay={0}>
-            <div id="objectives" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
+            <div id="objectives" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
                 Learning Objectives
               </span>
@@ -92,7 +93,7 @@ export default function Module4Page() {
               </p>
               <Link
                 href="/lesson-4"
-                className="inline-block bg-[#c2345a] hover:bg-[#a01e40] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
+                className="inline-block bg-[#0d7c7e] hover:bg-[#096163] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
               >
                 Read the Lesson →
               </Link>
@@ -118,7 +119,7 @@ export default function Module4Page() {
                 <li>Check whether your total is under $30. If not, swap one item for a cheaper alternative and note what you swapped.</li>
                 <li>Identify one ingredient that appears in multiple meals — this is the principle of buying ingredients, not single-use items.</li>
               </ol>
-              <p className="text-[0.85rem] text-[#8d9db5] dark:text-[#64748b] mt-4">💡 <strong>Tip:</strong> Rice and eggs are two of the most versatile and affordable grocery items.</p>
+              <p className="text-[0.85rem] text-[#8d9db5] dark:text-[#64748b] mt-4"><strong>Tip:</strong> Rice and eggs are two of the most versatile and affordable grocery items.</p>
             </div>
             </FadeIn>
 
@@ -138,7 +139,7 @@ export default function Module4Page() {
                 Complete a self-assessment checklist, then write a 300–500 word reflection answering three questions: which skills you feel confident about and why, which skills you are uncertain about, and one specific plan to improve an uncertain skill before your first semester.
               </p>
               <div className="my-5">
-                <p className="font-bold text-[0.9rem] mb-3">📋 How Your Work Will Be Evaluated:</p>
+                <p className="font-bold text-[0.9rem] mb-3">How Your Work Will Be Evaluated:</p>
                 <table className="w-full text-[0.875rem] border-collapse">
                   <thead>
                     <tr>
@@ -168,7 +169,7 @@ export default function Module4Page() {
                 </table>
               </div>
               <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-4 text-center text-[0.92rem]">
-                📝 Create a Google Form, then replace this with:
+                Create a Google Form, then replace this with:
                 <br />
                 <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_FORM_LINK" target="_blank">Complete Checklist + Reflection →</a>`}</code>
               </div>
@@ -200,7 +201,7 @@ export default function Module4Page() {
 
             {/* Tools */}
             <FadeIn delay={0.5}>
-            <div id="tools" className="content-block p-7 mb-5">
+            <div id="tools" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#f2f4f7] text-[#5a6a82]">
                 Tools Used in This Module
               </span>
@@ -255,15 +256,15 @@ export default function Module4Page() {
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">In This Module</p>
                 <ul className="space-y-[6px] text-[0.875rem]">
                   {[
-                    { href: "#objectives", label: "📌 Learning Objectives" },
-                    { href: "#lesson", label: "📖 Lesson" },
-                    { href: "#activity", label: "🛒 Activity: $30 Grocery Run" },
-                    { href: "#assessment", label: "✏️ Assessment" },
-                    { href: "#model", label: "💡 Model Response" },
-                    { href: "#tools", label: "🛠 Tools" },
-                  ].map(({ href, label }) => (
+                    { href: "#objectives", icon: <Target size={14} />, label: "Learning Objectives" },
+                    { href: "#lesson", icon: <BookOpen size={14} />, label: "Lesson" },
+                    { href: "#activity", icon: <ShoppingCart size={14} />, label: "Activity: $30 Grocery Run" },
+                    { href: "#assessment", icon: <PenLine size={14} />, label: "Assessment" },
+                    { href: "#model", icon: <Lightbulb size={14} />, label: "Model Response" },
+                    { href: "#tools", icon: <Wrench size={14} />, label: "Tools" },
+                  ].map(({ href, icon, label }) => (
                     <li key={href}>
-                      <a href={href} className="text-[#0d7c7e] hover:underline">{label}</a>
+                      <a href={href} className="flex items-center gap-[6px] text-[#0d7c7e] hover:underline">{icon}{label}</a>
                     </li>
                   ))}
                 </ul>

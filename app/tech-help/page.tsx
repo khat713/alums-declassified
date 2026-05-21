@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { FadeIn } from "@/components/ui/fade-in";
+import { Mail } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Tech Help | Alum's Declassified",
@@ -25,9 +26,10 @@ export default function TechHelpPage() {
 
       <div className="container mx-auto px-4 my-8">
         <FadeIn delay={0}>
-        <div className="bg-[#eff8ff] dark:bg-[#0f2744] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6">
+        <div className="bg-[#eff8ff] dark:bg-[#0f2744] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6 flex items-start gap-[10px]">
+          <Mail size={15} style={{ color: '#0d7c7e', marginTop: '2px', flexShrink: 0 }} />
           <p className="m-0 text-[0.9rem]">
-            📧 <strong>Can&apos;t find your answer below?</strong> Email me at{" "}
+            <strong>Can&apos;t find your answer below?</strong> Email me at{" "}
             <a href="mailto:your-email@example.com" className="text-[#0d7c7e] font-semibold hover:underline">
               your-email@example.com
             </a>{" "}
@@ -52,7 +54,7 @@ export default function TechHelpPage() {
 
           <Accordion type="single" collapsible={true}>
             <AccordionItem value="item-1">
-              <AccordionTrigger>🎥 A video won&apos;t load or play</AccordionTrigger>
+              <AccordionTrigger>A video won&apos;t load or play</AccordionTrigger>
               <AccordionContent>
                 <ol className="ml-5 space-y-1">
                   <li>Refresh the page (F5 or Ctrl+R).</li>
@@ -66,7 +68,7 @@ export default function TechHelpPage() {
             </AccordionItem>
 
             <AccordionItem value="item-2">
-              <AccordionTrigger>🔗 A link is broken or leads to a 404 page</AccordionTrigger>
+              <AccordionTrigger>A link is broken or leads to a 404 page</AccordionTrigger>
               <AccordionContent>
                 <ol className="ml-5 space-y-1">
                   <li>Copy the URL from the broken link and paste it into a new tab.</li>
@@ -78,7 +80,7 @@ export default function TechHelpPage() {
             </AccordionItem>
 
             <AccordionItem value="item-3">
-              <AccordionTrigger>📝 A form or submission won&apos;t go through</AccordionTrigger>
+              <AccordionTrigger>A form or submission won&apos;t go through</AccordionTrigger>
               <AccordionContent>
                 <ol className="ml-5 space-y-1">
                   <li>Make sure all required fields are filled in (look for red borders or asterisks).</li>
@@ -91,7 +93,7 @@ export default function TechHelpPage() {
             </AccordionItem>
 
             <AccordionItem value="item-4">
-              <AccordionTrigger>📱 The site looks broken on my phone</AccordionTrigger>
+              <AccordionTrigger>The site looks broken on my phone</AccordionTrigger>
               <AccordionContent>
                 <ol className="ml-5 space-y-1">
                   <li>Make sure you&apos;re using an up-to-date browser (Chrome or Safari on mobile).</li>
@@ -104,7 +106,7 @@ export default function TechHelpPage() {
             </AccordionItem>
 
             <AccordionItem value="item-5">
-              <AccordionTrigger>📄 I can&apos;t download or open a template file</AccordionTrigger>
+              <AccordionTrigger>I can&apos;t download or open a template file</AccordionTrigger>
               <AccordionContent>
                 <ol className="ml-5 space-y-1">
                   <li>Right-click the download link and choose &ldquo;Save link as...&rdquo;</li>
@@ -187,7 +189,7 @@ export default function TechHelpPage() {
             I respond within <strong>48 hours on weekdays</strong>.
           </p>
           <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-center">
-            📬 <strong>Optional: Embed a contact form here</strong>
+            <strong>Optional: Embed a contact form here</strong>
             <br />
             <small>
               Google Form with fields: Name, Email, Issue Description, Device,

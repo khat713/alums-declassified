@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 import { ReadingProgress } from "@/components/ui/reading-progress";
+import { Target, BookOpen, FileText, DollarSign, Lightbulb, Wrench, Clock, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Module 3: Financial Literacy | Alum's Declassified",
@@ -43,9 +44,9 @@ export default function Module3Page() {
             Your award letter is not a gift card. Some of that money is free — and some of it you will be paying back for years. Know the difference before you accept anything.
           </p>
           <div className="flex flex-wrap gap-4 text-[0.88rem]">
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">⏱ <strong>~50 minutes</strong></span>
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">💰 <strong>Assessment:</strong> Budget Worksheet</span>
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">🏆 <strong>75 points</strong></span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Clock size={14} style={{ color: '#7ec8ca' }} /> <strong>~50 minutes</strong></span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><DollarSign size={14} style={{ color: '#7ec8ca' }} /> <strong>Assessment:</strong> Budget Worksheet</span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Award size={14} style={{ color: '#7ec8ca' }} /> <strong>75 points</strong></span>
           </div>
         </div>
       </section>
@@ -56,7 +57,7 @@ export default function Module3Page() {
           <div>
             {/* Objectives */}
             <FadeIn delay={0}>
-            <div id="objectives" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
+            <div id="objectives" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
                 Learning Objectives
               </span>
@@ -92,15 +93,15 @@ export default function Module3Page() {
               </p>
               <Link
                 href="/lesson-3"
-                className="inline-block bg-[#c2345a] hover:bg-[#a01e40] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
+                className="inline-block bg-[#0d7c7e] hover:bg-[#096163] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
               >
                 Read the Lesson →
               </Link>
 
               <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">📊 How to Read an Award Letter — Visual Guide</h4>
+                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">How to Read an Award Letter — Visual Guide</h4>
                 <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[180px] flex flex-col items-center justify-center text-center">
-                  🖼 <strong>Embed your Canva infographic here</strong>
+                  <strong>Embed your Canva infographic here</strong>
                   <br />
                   <small>
                     Annotated sample award letter with grants/loans color-coded
@@ -173,12 +174,12 @@ export default function Module3Page() {
               <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[0.92rem]">
                 <strong>Two-part submission:</strong>
                 <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-4 text-center mt-3 mb-3">
-                  📊 Create a Google Sheet budget template, then replace this with:
+                  Create a Google Sheet budget template, then replace this with:
                   <br />
                   <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_SHEET_LINK" target="_blank">Download Budget Template →</a>`}</code>
                 </div>
                 <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-4 text-center mt-3">
-                  📝 Create a Google Form for submission, then replace this with:
+                  Create a Google Form for submission, then replace this with:
                   <br />
                   <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_FORM_LINK" target="_blank">Submit Completed Budget →</a>`}</code>
                 </div>
@@ -237,7 +238,7 @@ export default function Module3Page() {
 
             {/* Tools */}
             <FadeIn delay={0.5}>
-            <div id="tools" className="content-block p-7 mb-5">
+            <div id="tools" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#f2f4f7] text-[#5a6a82]">
                 Tools Used in This Module
               </span>
@@ -294,15 +295,15 @@ export default function Module3Page() {
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">In This Module</p>
                 <ul className="space-y-[6px] text-[0.875rem]">
                   {[
-                    { href: "#objectives", label: "📌 Learning Objectives" },
-                    { href: "#lesson", label: "📖 Lesson" },
-                    { href: "#activity", label: "📄 Activity" },
-                    { href: "#assessment", label: "💰 Assessment" },
-                    { href: "#model", label: "💡 Model Response" },
-                    { href: "#tools", label: "🛠 Tools" },
-                  ].map(({ href, label }) => (
+                    { href: "#objectives", icon: <Target size={14} />, label: "Learning Objectives" },
+                    { href: "#lesson", icon: <BookOpen size={14} />, label: "Lesson" },
+                    { href: "#activity", icon: <FileText size={14} />, label: "Activity" },
+                    { href: "#assessment", icon: <DollarSign size={14} />, label: "Assessment" },
+                    { href: "#model", icon: <Lightbulb size={14} />, label: "Model Response" },
+                    { href: "#tools", icon: <Wrench size={14} />, label: "Tools" },
+                  ].map(({ href, icon, label }) => (
                     <li key={href}>
-                      <a href={href} className="text-[#0d7c7e] hover:underline">{label}</a>
+                      <a href={href} className="flex items-center gap-[6px] text-[#0d7c7e] hover:underline">{icon}{label}</a>
                     </li>
                   ))}
                 </ul>
@@ -315,16 +316,6 @@ export default function Module3Page() {
                 <Link href="/assignments#a3" className="text-[0.875rem] font-semibold text-[#0d7c7e] hover:underline">View full rubric →</Link>
               </div>
 
-              <div className="sidebar-block p-6">
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">Course Progress</p>
-                <div className="flex flex-col gap-[6px] text-[0.82rem]">
-                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>✓</span><Link href="/module-1" className="text-[#8d9db5] hover:underline">Module 1</Link></div>
-                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>✓</span><Link href="/module-2" className="text-[#8d9db5] hover:underline">Module 2</Link></div>
-                  <div className="flex items-center gap-2"><span className="text-[#0d7c7e] font-bold">●</span><span className="font-semibold text-[#1b2537] dark:text-[#e2e8f0]">Module 3 — Current</span></div>
-                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>○</span><Link href="/module-4" className="text-[#8d9db5] hover:underline">Module 4: Life Skills</Link></div>
-                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>○</span><span>Modules 5–7…</span></div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

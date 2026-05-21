@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 import { ReadingProgress } from "@/components/ui/reading-progress";
+import { Target, BookOpen, Mail, Heart, Lightbulb, Wrench, Clock, Award, Phone, Smartphone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Module 7: Emotional Resilience | Alum's Declassified",
@@ -43,9 +44,9 @@ export default function Module7Page() {
             This one is different. Every other module gave you information you could look up. This one is about something that does not have a Wikipedia page: what it actually feels like to be first.
           </p>
           <div className="flex flex-wrap gap-4 text-[0.88rem]">
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">⏱ <strong>~45 minutes</strong></span>
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">💙 <strong>Assessment:</strong> Self-Care Plan + Reflection Essay</span>
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">🏆 <strong>75 points</strong></span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Clock size={14} /><strong>~45 minutes</strong></span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Heart size={14} /><strong>Assessment:</strong> Self-Care Plan + Reflection Essay</span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Award size={14} /><strong>75 points</strong></span>
           </div>
         </div>
       </section>
@@ -55,15 +56,16 @@ export default function Module7Page() {
           {/* Main Content */}
           <div>
             {/* Crisis Banner */}
-            <div className="bg-[#fff8f0] border-l-4 border-l-[#c2680a] rounded-r-[5px] py-[13px] px-[18px] mb-5">
+            <div className="bg-[#fff8f0] border-l-4 border-l-[#c2680a] rounded-r-[5px] py-[13px] px-[18px] mb-5 flex items-start gap-[10px]">
+              <Phone size={15} style={{ color: '#c2680a', marginTop: '2px', flexShrink: 0 }} />
               <p className="m-0 text-[0.9rem]">
-                📞 <strong>If you are in crisis right now:</strong> Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline). Text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line). Your campus counseling center also offers crisis walk-in hours — check their website.
+                <strong>If you are in crisis right now:</strong> Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline). Text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line). Your campus counseling center also offers crisis walk-in hours — check their website.
               </p>
             </div>
 
             {/* Objectives */}
             <FadeIn delay={0}>
-            <div id="objectives" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
+            <div id="objectives" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
                 Learning Objectives
               </span>
@@ -99,15 +101,15 @@ export default function Module7Page() {
               </p>
               <Link
                 href="/lesson-7"
-                className="inline-block bg-[#c2345a] hover:bg-[#a01e40] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
+                className="inline-block bg-[#0d7c7e] hover:bg-[#096163] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
               >
                 Read the Lesson →
               </Link>
 
               <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">🧠 Normal Stress vs. When to Reach Out</h4>
+                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">Normal Stress vs. When to Reach Out</h4>
                 <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[180px] flex flex-col items-center justify-center text-center">
-                  🖼 <strong>Embed your Canva infographic here</strong>
+                  <strong>Embed your Canva infographic here</strong>
                   <br />
                   <small>
                     Two-column: &ldquo;Normal College Stress&rdquo; vs. &ldquo;Time to Reach Out&rdquo;
@@ -188,7 +190,7 @@ export default function Module7Page() {
               <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[0.92rem]">
                 <strong>Submission:</strong>
                 <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-4 text-center mt-3">
-                  📝 Create a Google Form with both parts, then replace with:
+                  Create a Google Form with both parts, then replace with:
                   <br />
                   <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_FORM_LINK" target="_blank">Submit Self-Care Plan + Reflection Essay →</a>`}</code>
                 </div>
@@ -222,7 +224,7 @@ export default function Module7Page() {
 
             {/* Tools */}
             <FadeIn delay={0.5}>
-            <div id="tools" className="content-block p-7 mb-5">
+            <div id="tools" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#f2f4f7] text-[#5a6a82]">
                 Tools Used in This Module
               </span>
@@ -264,12 +266,12 @@ export default function Module7Page() {
                 className="text-[1.1rem] font-bold text-[#1b2537] mb-2"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                🎓 You made it through all 7 modules.
+                You made it through all 7 modules.
               </h2>
               <p className="text-[#2e3f5c] mt-2 mb-4">Complete the final portfolio (Assignment 9) to receive your certificate of completion.</p>
               <Link
                 href="/assignments#a9"
-                className="inline-block bg-[#c2345a] hover:bg-[#a01e40] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
+                className="inline-block bg-[#0d7c7e] hover:bg-[#096163] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
               >
                 View Final Portfolio Assignment →
               </Link>
@@ -293,17 +295,17 @@ export default function Module7Page() {
             <div className="sticky top-[74px]">
               <div className="sidebar-block p-6 mb-4">
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">In This Module</p>
-                <ul className="space-y-[6px] text-[0.875rem]">
+                <ul className="space-y-0">
                   {[
-                    { href: "#objectives", label: "📌 Learning Objectives" },
-                    { href: "#lesson", label: "📖 Lesson" },
-                    { href: "#activity", label: "✉️ Activity" },
-                    { href: "#assessment", label: "💙 Assessment" },
-                    { href: "#model", label: "💡 Model Response" },
-                    { href: "#tools", label: "🛠 Tools" },
-                  ].map(({ href, label }) => (
-                    <li key={href}>
-                      <a href={href} className="text-[#0d7c7e] hover:underline">{label}</a>
+                    { href: "#objectives", icon: <Target size={14} />, label: "Learning Objectives" },
+                    { href: "#lesson", icon: <BookOpen size={14} />, label: "Lesson" },
+                    { href: "#activity", icon: <Mail size={14} />, label: "Activity" },
+                    { href: "#assessment", icon: <Heart size={14} />, label: "Assessment" },
+                    { href: "#model", icon: <Lightbulb size={14} />, label: "Model Response" },
+                    { href: "#tools", icon: <Wrench size={14} />, label: "Tools" },
+                  ].map(({ href, icon, label }) => (
+                    <li key={href} className="border-b border-[#edf0f4] dark:border-[#243044] last:border-b-0">
+                      <a href={href} className="flex items-center gap-[6px] py-[7px] text-[0.85rem] text-[#5a6a82] dark:text-[#94a3b8] hover:text-[#0d7c7e] no-underline transition-colors">{icon}{label}</a>
                     </li>
                   ))}
                 </ul>
@@ -316,22 +318,13 @@ export default function Module7Page() {
                 <Link href="/assignments#a7" className="text-[0.875rem] font-semibold text-[#0d7c7e] hover:underline">View full rubric →</Link>
               </div>
 
-              <div className="bg-[#e0f4f4] rounded-[10px] p-6 mb-4 border border-[#b2e3e3]">
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#0d7c7e] mb-3">Course Progress</p>
-                <div className="flex flex-col gap-[6px] text-[0.82rem]">
-                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>✓</span><span>Modules 1–6</span></div>
-                  <div className="flex items-center gap-2"><span className="text-[#0d7c7e] font-bold">●</span><span className="font-semibold text-[#1b2537] dark:text-[#e2e8f0]">Module 7 — Final Module</span></div>
-                  <div className="flex items-center gap-2 text-[#0d7c7e] font-semibold"><span>→</span><Link href="/assignments#a9" className="text-[#0d7c7e] hover:underline">Final Portfolio</Link></div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-[10px] p-6 border-l-[3px] border-l-[#c2680a] border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+<div className="bg-white rounded-[10px] p-6 border-l-[3px] border-l-[#c2680a] border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">Crisis Resources</p>
-                <p className="text-[0.83rem] text-[#1b2537]">
-                  📞 <strong>988</strong> — Suicide &amp; Crisis Lifeline<br />
-                  📱 Text <strong>HOME</strong> to <strong>741741</strong><br />
-                  🏥 Campus CAPS — check your school&apos;s website
-                </p>
+                <div className="flex flex-col gap-[8px] text-[0.83rem] text-[#1b2537]">
+                  <div className="flex items-center gap-[8px]"><Phone size={13} style={{ color: '#c2680a', flexShrink: 0 }} /><span><strong>988</strong> — Suicide &amp; Crisis Lifeline</span></div>
+                  <div className="flex items-center gap-[8px]"><Smartphone size={13} style={{ color: '#c2680a', flexShrink: 0 }} /><span>Text <strong>HOME</strong> to <strong>741741</strong></span></div>
+                  <div className="flex items-center gap-[8px]"><Heart size={13} style={{ color: '#c2680a', flexShrink: 0 }} /><span>Campus CAPS — check your school&apos;s website</span></div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart } from "lucide-react";
+import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Info } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 
 export default function ModulesPage() {
@@ -37,9 +37,10 @@ export default function ModulesPage() {
 
       <div className="container mx-auto px-4 my-8 mb-16">
         <FadeIn delay={0}>
-        <div className="bg-[#eff8ff] dark:bg-[#0f2744] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6">
+        <div className="bg-[#eff8ff] dark:bg-[#0f2744] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6 flex items-start gap-[10px]">
+          <Info size={15} style={{ color: '#0d7c7e', marginTop: '2px', flexShrink: 0 }} />
           <p className="m-0 text-[0.9rem]">
-            📋 <strong>New here?</strong> Start with{" "}
+            <strong>New here?</strong> Start with{" "}
             <Link href="/start-here" className="text-[#0d7c7e] font-semibold hover:underline">
               Start Here
             </Link>{" "}

@@ -45,7 +45,7 @@ export default function FrameworkPage() {
             Framework Diagram
           </h2>
           <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[280px] flex flex-col items-center justify-center text-center">
-            🖼 <strong>Embed Your Framework Diagram Here</strong>
+            <strong>Embed Your Framework Diagram Here</strong>
             <br />
             <br />
             <small>
@@ -90,7 +90,7 @@ export default function FrameworkPage() {
           <div className="flex flex-col gap-4">
             {addieSteps.map((step, i) => (
               <div key={i} className="flex gap-4 items-start">
-                <div className="flex-shrink-0 w-9 h-9 text-white rounded-full flex items-center justify-center text-[0.83rem] font-bold mt-[2px]" style={{ background: i % 2 === 0 ? '#0d7c7e' : '#d97706' }}>
+                <div className="flex-shrink-0 w-9 h-9 text-white rounded-full flex items-center justify-center text-[0.83rem] font-bold mt-[2px]" style={{ background: '#0d7c7e' }}>
                   {step.letter}
                 </div>
                 <div>

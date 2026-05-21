@@ -22,7 +22,7 @@ export function ReadingProgress() {
       className="fixed top-0 left-0 right-0 z-[9999] h-[3px] origin-left"
       style={{
         scaleX: springProgress,
-        background: 'linear-gradient(90deg, #0d7c7e 0%, #14b8a6 50%, #d97706 100%)'
+        background: '#0d7c7e'
       }}
     />
   );

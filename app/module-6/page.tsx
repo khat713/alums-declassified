@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 import { ReadingProgress } from "@/components/ui/reading-progress";
+import { Target, BookOpen, Mic, Briefcase, Lightbulb, Wrench, Clock, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Module 6: Career Preparation | Alum's Declassified",
@@ -43,9 +44,9 @@ export default function Module6Page() {
             You already have more to put on a resume than you think. The goal is not to look like you have ten years of experience. It is to show you show up and can communicate that in writing.
           </p>
           <div className="flex flex-wrap gap-4 text-[0.88rem]">
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">⏱ <strong>~50 minutes</strong></span>
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">💼 <strong>Assessment:</strong> Resume or LinkedIn Draft</span>
-            <span className="bg-white/10 rounded-full px-4 py-[6px]">🏆 <strong>100 points</strong></span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Clock size={14} style={{ color: '#7ec8ca' }} /> <strong>~50 minutes</strong></span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Briefcase size={14} style={{ color: '#7ec8ca' }} /> <strong>Assessment:</strong> Resume or LinkedIn Draft</span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Award size={14} style={{ color: '#7ec8ca' }} /> <strong>100 points</strong></span>
           </div>
         </div>
       </section>
@@ -56,7 +57,7 @@ export default function Module6Page() {
           <div>
             {/* Objectives */}
             <FadeIn delay={0}>
-            <div id="objectives" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
+            <div id="objectives" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
                 Learning Objectives
               </span>
@@ -92,7 +93,7 @@ export default function Module6Page() {
               </p>
               <Link
                 href="/lesson-6"
-                className="inline-block bg-[#c2345a] hover:bg-[#a01e40] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
+                className="inline-block bg-[#0d7c7e] hover:bg-[#096163] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
               >
                 Read the Lesson →
               </Link>
@@ -118,7 +119,7 @@ export default function Module6Page() {
                 <li><strong>Networking event:</strong> You introduce yourself to a group. 30 seconds.</li>
               </ol>
               <p className="text-[0.92rem] mt-3">Each pitch must include: your name, year and major, one relevant experience or interest, and one specific goal or question.</p>
-              <p className="text-[0.85rem] text-[#8d9db5] mt-3">💡 Read each pitch out loud. If it sounds like a cover letter, rewrite it to sound like you talking.</p>
+              <p className="text-[0.85rem] text-[#8d9db5] mt-3">Read each pitch out loud. If it sounds like a cover letter, rewrite it to sound like you talking.</p>
             </div>
             </FadeIn>
 
@@ -139,7 +140,7 @@ export default function Module6Page() {
               </p>
               <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[0.92rem]">
                 <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-4 text-center">
-                  📝 Create a Google Form, then replace with:
+                  Create a Google Form, then replace with:
                   <br />
                   <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_FORM_LINK" target="_blank">Submit Resume or LinkedIn Profile →</a>`}</code>
                 </div>
@@ -170,7 +171,7 @@ export default function Module6Page() {
 
             {/* Tools */}
             <FadeIn delay={0.5}>
-            <div id="tools" className="content-block p-7 mb-5">
+            <div id="tools" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#f2f4f7] text-[#5a6a82]">
                 Tools Used in This Module
               </span>
@@ -226,15 +227,15 @@ export default function Module6Page() {
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">In This Module</p>
                 <ul className="space-y-[6px] text-[0.875rem]">
                   {[
-                    { href: "#objectives", label: "📌 Learning Objectives" },
-                    { href: "#lesson", label: "📖 Lesson" },
-                    { href: "#activity", label: "🎤 Activity" },
-                    { href: "#assessment", label: "💼 Assessment" },
-                    { href: "#model", label: "💡 Model Response" },
-                    { href: "#tools", label: "🛠 Tools" },
-                  ].map(({ href, label }) => (
+                    { href: "#objectives", icon: <Target size={14} />, label: "Learning Objectives" },
+                    { href: "#lesson", icon: <BookOpen size={14} />, label: "Lesson" },
+                    { href: "#activity", icon: <Mic size={14} />, label: "Activity" },
+                    { href: "#assessment", icon: <Briefcase size={14} />, label: "Assessment" },
+                    { href: "#model", icon: <Lightbulb size={14} />, label: "Model Response" },
+                    { href: "#tools", icon: <Wrench size={14} />, label: "Tools" },
+                  ].map(({ href, icon, label }) => (
                     <li key={href}>
-                      <a href={href} className="text-[#0d7c7e] hover:underline">{label}</a>
+                      <a href={href} className="flex items-center gap-[6px] text-[#0d7c7e] hover:underline">{icon}{label}</a>
                     </li>
                   ))}
                 </ul>
@@ -247,14 +248,6 @@ export default function Module6Page() {
                 <Link href="/assignments#a6" className="text-[0.875rem] font-semibold text-[#0d7c7e] hover:underline">View full rubric →</Link>
               </div>
 
-              <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-6 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">Course Progress</p>
-                <div className="flex flex-col gap-[6px] text-[0.82rem]">
-                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>✓</span><span>Modules 1–5</span></div>
-                  <div className="flex items-center gap-2"><span className="text-[#0d7c7e] font-bold">●</span><span className="font-semibold text-[#1b2537] dark:text-[#e2e8f0]">Module 6 — Current</span></div>
-                  <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>○</span><Link href="/module-7" className="text-[#8d9db5] hover:underline">Module 7: Emotional Resilience</Link></div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
