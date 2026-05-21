@@ -30,60 +30,147 @@ export default function HomePage() {
   return (
     <main>
       {/* HERO */}
-      <section className="relative bg-[#1b2537] overflow-hidden min-h-[500px] flex flex-col">
+      <section
+        className="relative overflow-hidden flex flex-col"
+        style={{
+          background: 'linear-gradient(160deg, #0a0f1e 0%, #0f172a 30%, #1b2537 65%, #1e3a3a 85%, #f2f4f7 100%)',
+          minHeight: '620px',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+      >
+        {/* Film grain overlay */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" style={{ opacity: 0.04 }} xmlns="http://www.w3.org/2000/svg">
+          <filter id="grain">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+            <feColorMatrix type="saturate" values="0"/>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain)"/>
+        </svg>
+
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         <div className="flex-1 flex flex-col md:flex-row items-center container mx-auto px-4 py-16 relative z-10">
           {/* Left: Text + CTAs */}
           <div className="flex-1 flex flex-col justify-center py-8 md:py-0 md:pr-12">
-            <p className="text-[0.75rem] font-bold tracking-[0.09em] uppercase text-[#7ec8ca] mb-4">
-              Free · Asynchronous · Built for You
-            </p>
-            <h1
-              className="font-bold leading-[1.05] mb-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent min-h-[3.5em]"
-              style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", letterSpacing: "-0.04em" }}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              style={{
+                fontSize: '0.78rem',
+                fontWeight: 700,
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                background: 'linear-gradient(90deg, #5eead4, #ffffff, #0d7c7e, #ffffff, #5eead4)',
+                backgroundSize: '200% auto',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                animation: 'shimmer 4s linear infinite',
+                marginBottom: '1rem'
+              }}
             >
-              <Typewriter
-                words={[
-                  "Everything they forgot to tell you about college — documented.",
-                  "Free. Self-paced. Built for first-gen students.",
-                  "7 modules. Nothing gatekept.",
-                ]}
-                speed={80}
-                delayBetweenWords={3000}
-                cursor={true}
-                cursorChar="|"
-              />
-            </h1>
-            <p className="text-neutral-300 text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
-              Alum&apos;s Declassified is a free seven-week course for
-              first-generation college students — covering everything from syllabi
-              and office hours to budgeting, mental health, and building a career.
-              The stuff nobody tells you out loud.
-            </p>
-            <div className="flex gap-4 flex-wrap">
-              <Link
-                href="/module-1"
-                className="bg-[#0d7c7e] text-white no-underline py-[13px] px-[30px] text-[0.95rem] rounded-[5px] font-bold inline-block hover:bg-[#096163] hover:-translate-y-px transition-all"
+              FREE · ASYNCHRONOUS · BUILT FOR YOU
+            </motion.p>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
+              <h1
+                className="font-bold leading-[1.05] mb-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent min-h-[3.5em]"
+                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", letterSpacing: "-0.04em" }}
               >
-                Start Module 1 →
-              </Link>
-              <Link
-                href="/start-here"
-                className="bg-transparent text-white border-[1.5px] border-white/40 no-underline py-[13px] px-[30px] text-[0.95rem] rounded-[5px] font-semibold inline-block hover:bg-white/10 transition-all"
-              >
-                Read the Syllabus →
-              </Link>
-            </div>
+                <Typewriter
+                  words={[
+                    "Everything they forgot to tell you about college — documented.",
+                    "Free. Self-paced. Built for first-gen students.",
+                    "7 modules. Nothing gatekept.",
+                  ]}
+                  speed={80}
+                  delayBetweenWords={3000}
+                  cursor={true}
+                  cursorChar="|"
+                />
+              </h1>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}>
+              <p className="text-neutral-300 text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
+                Alum&apos;s Declassified is a free seven-week course for
+                first-generation college students — covering everything from syllabi
+                and office hours to budgeting, mental health, and building a career.
+                The stuff nobody tells you out loud.
+              </p>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.7 }}>
+              <div className="flex gap-4 flex-wrap">
+                <motion.a
+                  href="/module-1"
+                  whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(13,124,126,0.4)' }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                  style={{
+                    background: 'linear-gradient(135deg, #0d7c7e, #0a6466)',
+                    color: '#ffffff',
+                    padding: '14px 32px',
+                    borderRadius: '8px',
+                    fontWeight: 700,
+                    fontSize: '0.97rem',
+                    display: 'inline-block',
+                    textDecoration: 'none',
+                    border: '1px solid rgba(255,255,255,0.15)'
+                  }}
+                >
+                  Start Module 1 →
+                </motion.a>
+                <motion.a
+                  href="/start-here"
+                  whileHover={{ scale: 1.03, background: 'rgba(255,255,255,0.08)' }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                  style={{
+                    background: 'transparent',
+                    color: 'rgba(255,255,255,0.85)',
+                    padding: '14px 32px',
+                    borderRadius: '8px',
+                    fontWeight: 600,
+                    fontSize: '0.97rem',
+                    display: 'inline-block',
+                    textDecoration: 'none',
+                    border: '1.5px solid rgba(255,255,255,0.25)'
+                  }}
+                >
+                  Read the Syllabus →
+                </motion.a>
+              </div>
+            </motion.div>
           </div>
 
           {/* Right: Spline Scene */}
-          <div className="flex-1 h-[300px] md:h-[420px] w-full">
+          <div className="flex-1 h-[300px] md:h-[420px] w-full relative">
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+              className="absolute pointer-events-none"
+              style={{ right: '-60px', top: '50%', transform: 'translateY(-50%)', width: '580px', height: '580px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.12)' }}
+            />
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
+              className="absolute pointer-events-none"
+              style={{ right: '-20px', top: '50%', transform: 'translateY(-50%)', width: '440px', height: '440px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.08)', background: 'radial-gradient(circle, rgba(13,124,126,0.04) 0%, transparent 70%)' }}
+            />
             <SplineScene
               scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
               className="w-full h-full"
             />
           </div>
         </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 pointer-events-none z-20"
+          style={{ color: 'rgba(255,255,255,0.3)', fontSize: '1.5rem' }}
+        >
+          ↓
+        </motion.div>
       </section>
 
       {/* COURSE META BAR */}
