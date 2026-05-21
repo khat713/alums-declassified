@@ -10,6 +10,7 @@ import { Counter } from "@/components/ui/animated-counter";
 import { motion, useScroll, useTransform } from "motion/react";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
+import { FreddieGreeter } from "@/components/ui/freddie-greeter";
 
 
 export default function HomePage() {
@@ -139,6 +140,7 @@ export default function HomePage() {
                 </motion.a>
               </div>
             </motion.div>
+            <FreddieGreeter />
           </div>
 
           {/* Right: Spline Scene */}
