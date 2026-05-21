@@ -89,7 +89,7 @@ export default function FrameworkPage() {
           <div className="flex flex-col gap-4">
             {addieSteps.map((step, i) => (
               <div key={i} className="flex gap-4 items-start">
-                <div className="flex-shrink-0 w-9 h-9 bg-[#0d7c7e] text-white rounded-full flex items-center justify-center text-[0.83rem] font-bold mt-[2px]">
+                <div className="flex-shrink-0 w-9 h-9 text-white rounded-full flex items-center justify-center text-[0.83rem] font-bold mt-[2px]" style={{ background: i % 2 === 0 ? '#0d7c7e' : '#d97706' }}>
                   {step.letter}
                 </div>
                 <div>

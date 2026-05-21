@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --cream: #fef7ed;
+  --cream-dark: #fde8c8;
+  --gold: #d97706;
+  --gold-light: #fef3c7;
+  --navy: #0f172a;
+  --teal-glow: rgba(13,124,126,0.15);
+}
+
 @layer base {
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -18,7 +27,8 @@
   }
 
   .dark body {
-    background: #0f172a;
+    background: linear-gradient(180deg, #0a0f1e 0%, #0f172a 100%);
+    background-attachment: fixed;
     color: #e2e8f0;
   }
 
@@ -89,6 +99,17 @@
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1.1;
+  }
+
+  .label-activity {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #92400e;
+    border: 1px solid rgba(217,119,6,0.2);
+  }
+
+  .info-banner {
+    border-left: 4px solid #0d7c7e;
+    background: linear-gradient(135deg, #eff8ff 0%, #f0fdfc 100%);
   }
 }
 

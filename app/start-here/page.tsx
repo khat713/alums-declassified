@@ -27,7 +27,7 @@ export default function StartHerePage() {
       <div className="container mx-auto px-4 my-8">
         {/* Welcome */}
         <FadeIn delay={0}>
-        <div className="content-block p-7 mb-5">
+        <div className="content-block p-7 mb-5" style={{ background: '#ffffff' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Welcome
           </span>
@@ -70,7 +70,7 @@ export default function StartHerePage() {
 
         {/* Course Info */}
         <FadeIn delay={0.1}>
-        <div className="content-block p-7 mb-5">
+        <div className="content-block p-7 mb-5" style={{ background: 'linear-gradient(135deg, #fef7ed 0%, #ffffff 100%)' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Course Info
           </span>
@@ -108,8 +108,8 @@ export default function StartHerePage() {
 
         {/* Navigation Guide */}
         <FadeIn delay={0.2}>
-        <div className="content-block p-7 mb-5">
-          <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
+        <div className="content-block p-7 mb-5" style={{ background: '#ffffff' }}>
+          <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 label-activity">
             Navigation Guide
           </span>
           <h2
@@ -152,7 +152,7 @@ export default function StartHerePage() {
 
         {/* Module Overview Table */}
         <FadeIn delay={0} direction="none">
-        <div className="content-block p-7 mb-5">
+        <div className="content-block p-7 mb-5" style={{ background: 'linear-gradient(135deg, #fef7ed 0%, #ffffff 100%)' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
             Schedule
           </span>
@@ -171,7 +171,7 @@ export default function StartHerePage() {
 
         {/* Learning Outcomes */}
         <FadeIn delay={0.4}>
-        <div className="content-block p-7 mb-5">
+        <div className="content-block p-7 mb-5" style={{ background: '#ffffff' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">
             Learning Outcomes
           </span>
@@ -195,7 +195,7 @@ export default function StartHerePage() {
 
         {/* Tech Requirements */}
         <FadeIn delay={0.5}>
-        <div className="content-block p-7 mb-5">
+        <div className="content-block p-7 mb-5" style={{ background: 'linear-gradient(135deg, #fef7ed 0%, #ffffff 100%)' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
             Technology
           </span>
@@ -223,7 +223,7 @@ export default function StartHerePage() {
 
         {/* Policies */}
         <FadeIn delay={0.6}>
-        <div className="content-block p-7 mb-5">
+        <div className="content-block p-7 mb-5" style={{ background: '#ffffff' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
             Policies
           </span>

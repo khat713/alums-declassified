@@ -113,7 +113,7 @@ export default function Module3Page() {
             {/* Activity */}
             <FadeIn delay={0.2}>
             <div id="activity" className="content-block p-7 mb-5">
-              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
+              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 label-activity">
                 Learning Activity
               </span>
               <h2

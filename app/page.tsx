@@ -250,6 +250,8 @@ export default function HomePage() {
         </div>
       </div>
 
+      <div style={{ height: '3px', background: 'linear-gradient(90deg, transparent, #0d7c7e, #d97706, #0d7c7e, transparent)', opacity: 0.4 }} />
+
       {/* CONTAINER SCROLL */}
       <section ref={containerRef} className="relative py-20 bg-[#f2f4f7] dark:bg-[#1b2537] overflow-hidden">
         <div className="container mx-auto px-4 text-center mb-10">
@@ -414,6 +416,22 @@ export default function HomePage() {
         </div>
         </FadeIn>
       </div>
+
+      <section style={{ background: 'linear-gradient(135deg, #fef7ed 0%, #fde8c8 100%)', padding: '80px 20px', textAlign: 'center' }}>
+        <div className="container mx-auto" style={{ maxWidth: '640px' }}>
+          <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#d97706', marginBottom: '1rem' }}>FOR EVERY FIRST-GEN STUDENT</p>
+          <h2 style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, letterSpacing: '-0.03em', color: '#1b2537', marginBottom: '1rem', lineHeight: 1.1 }}>You deserve the same information everyone else got at the dinner table.</h2>
+          <p style={{ color: '#5a6a82', fontSize: '1.05rem', marginBottom: '2rem', lineHeight: 1.7 }}>This course exists because the gap between first-gen students and their peers is not about intelligence. It is about access to information. Alum&apos;s Declassified closes that gap.</p>
+          <motion.a
+            href="/module-1"
+            whileHover={{ scale: 1.03, boxShadow: '0 8px 24px rgba(217,119,6,0.25)' }}
+            whileTap={{ scale: 0.97 }}
+            style={{ background: 'linear-gradient(135deg, #d97706, #b45309)', color: '#fff', padding: '14px 32px', borderRadius: '8px', fontWeight: 700, display: 'inline-block', textDecoration: 'none' }}
+          >
+            Start for Free →
+          </motion.a>
+        </div>
+      </section>
     </main>
   );
 }
