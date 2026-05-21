@@ -70,35 +70,45 @@ function StepperItem({ step, completed = false, disabled = false, className, chi
 
 function StepperIndicator({ children, className }: React.ComponentProps<'div'>) {
   const { state } = useStepItem();
+  const indicatorStyle: React.CSSProperties =
+    state === 'completed' ? { background: '#0f766e', color: '#ffffff' } :
+    state === 'active'    ? { background: '#0d7c7e', color: '#ffffff' } :
+                            { background: '#e2e8f0', color: '#475569' };
   return (
-    <div className={cn(
-      'relative flex items-center justify-center size-8 shrink-0 rounded-full text-xs font-bold transition-all duration-300',
-      state === 'completed' && 'bg-teal-600 text-white',
-      state === 'active' && 'bg-[#0d7c7e] text-white ring-4 ring-teal-200',
-      state === 'inactive' && 'bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400',
-      className
-    )}>
+    <div
+      className={cn(
+        'relative flex items-center justify-center size-8 shrink-0 rounded-full text-xs font-bold transition-all duration-300',
+        state === 'active' && 'ring-4 ring-teal-200',
+        className
+      )}
+      style={indicatorStyle}
+    >
       {state === 'completed' ? '✓' : children}
     </div>
   );
 }
 
-function StepperSeparator({ className }: React.ComponentProps<'div'>) {
+function StepperSeparator({ className, style }: React.ComponentProps<'div'>) {
   return (
-    <div className={cn('h-0.5 flex-1 mx-1 rounded-full bg-gray-200 dark:bg-gray-700 mt-4', className)} />
+    <div className={cn('h-0.5 flex-1 mx-1 rounded-full mt-4', className)} style={style} />
   );
 }
 
 function StepperTitle({ children, className }: React.ComponentProps<'p'>) {
   const { state } = useStepItem();
+  const titleStyle: React.CSSProperties =
+    state === 'active'    ? { color: '#0d7c7e' } :
+    state === 'completed' ? { color: '#0f766e' } :
+                            { color: '#475569' };
   return (
-    <p className={cn(
-      'text-xs font-medium mt-1 text-center transition-colors duration-300',
-      state === 'active' && 'text-[#0d7c7e] font-bold',
-      state === 'completed' && 'text-teal-600',
-      state === 'inactive' && 'text-gray-400',
-      className
-    )}>
+    <p
+      className={cn(
+        'text-xs font-medium mt-1 text-center transition-colors duration-300',
+        state === 'active' && 'font-bold',
+        className
+      )}
+      style={titleStyle}
+    >
       {children}
     </p>
   );

@@ -8,21 +8,20 @@ import { Spotlight } from "@/components/ui/spotlight";
 import { Typewriter } from "@/components/ui/typewriter";
 import { Counter } from "@/components/ui/animated-counter";
 import { motion, useScroll, useTransform } from "motion/react";
-import { Card3D } from "@/components/ui/animated-3d-card";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart } from "lucide-react";
-import { FadeIn, FadeInStagger, FadeInStaggerItem } from "@/components/ui/fade-in";
+import { FadeIn } from "@/components/ui/fade-in";
 
 
 export default function HomePage() {
   const router = useRouter();
   const moduleCards = [
-    { id: "module-1", title: "College Expectations", description: "The unwritten rules, syllabi, office hours, professor relationships, and what nobody tells you before the first day.", icon: <BookOpen size={28} />, gradient: "from-teal-700 via-teal-800 to-teal-900", onClick: () => router.push("/module-1") },
-    { id: "module-2", title: "Campus Resources", description: "Financial aid, tutoring centers, counseling, food pantries — and how to actually walk into an office for the first time.", icon: <MapPin size={28} />, gradient: "from-blue-700 via-blue-800 to-blue-900", onClick: () => router.push("/module-2") },
-    { id: "module-3", title: "Financial Literacy", description: "FAFSA, award letters, loans vs. grants, budgeting on a student income, banking basics, and scams to avoid.", icon: <DollarSign size={28} />, gradient: "from-emerald-700 via-emerald-800 to-emerald-900", onClick: () => router.push("/module-3") },
-    { id: "module-4", title: "Essential Life Skills", description: "Grocery shopping, laundry, health insurance, leases — managing adult life without a manual.", icon: <CheckSquare size={28} />, gradient: "from-amber-700 via-amber-800 to-amber-900", onClick: () => router.push("/module-4") },
-    { id: "module-5", title: "Academic Success", description: "Note-taking strategies, study schedules, managing deadlines, and beating imposter syndrome.", icon: <GraduationCap size={28} />, gradient: "from-purple-700 via-purple-800 to-purple-900", onClick: () => router.push("/module-5") },
-    { id: "module-6", title: "Career Preparation", description: "Resumes, LinkedIn, internships, networking without feeling awkward, and what employers look for.", icon: <Briefcase size={28} />, gradient: "from-rose-700 via-rose-800 to-rose-900", onClick: () => router.push("/module-6") },
-    { id: "module-7", title: "Emotional Resilience", description: "Homesickness, code-switching, mental health, coping strategies, and the work of belonging.", icon: <Heart size={28} />, gradient: "from-cyan-700 via-cyan-800 to-cyan-900", onClick: () => router.push("/module-7") },
+    { id: "module-1", title: "College Expectations", description: "The unwritten rules, syllabi, office hours, professor relationships, and what nobody tells you before the first day.", icon: <BookOpen size={28} />, bg: 'linear-gradient(135deg, #0f766e, #0d5f58)', onClick: () => router.push("/module-1") },
+    { id: "module-2", title: "Campus Resources", description: "Financial aid, tutoring centers, counseling, food pantries — and how to actually walk into an office for the first time.", icon: <MapPin size={28} />, bg: 'linear-gradient(135deg, #1d4ed8, #1e3a8a)', onClick: () => router.push("/module-2") },
+    { id: "module-3", title: "Financial Literacy", description: "FAFSA, award letters, loans vs. grants, budgeting on a student income, banking basics, and scams to avoid.", icon: <DollarSign size={28} />, bg: 'linear-gradient(135deg, #15803d, #14532d)', onClick: () => router.push("/module-3") },
+    { id: "module-4", title: "Essential Life Skills", description: "Grocery shopping, laundry, health insurance, leases — managing adult life without a manual.", icon: <CheckSquare size={28} />, bg: 'linear-gradient(135deg, #b45309, #92400e)', onClick: () => router.push("/module-4") },
+    { id: "module-5", title: "Academic Success", description: "Note-taking strategies, study schedules, managing deadlines, and beating imposter syndrome.", icon: <GraduationCap size={28} />, bg: 'linear-gradient(135deg, #7e22ce, #581c87)', onClick: () => router.push("/module-5") },
+    { id: "module-6", title: "Career Preparation", description: "Resumes, LinkedIn, internships, networking without feeling awkward, and what employers look for.", icon: <Briefcase size={28} />, bg: 'linear-gradient(135deg, #be123c, #9f1239)', onClick: () => router.push("/module-6") },
+    { id: "module-7", title: "Emotional Resilience", description: "Homesickness, code-switching, mental health, coping strategies, and the work of belonging.", icon: <Heart size={28} />, bg: 'linear-gradient(135deg, #0e7490, #164e63)', onClick: () => router.push("/module-7") },
   ];
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
@@ -165,15 +164,15 @@ export default function HomePage() {
       </div>
 
       {/* CONTAINER SCROLL */}
-      <section ref={containerRef} className="relative py-20 bg-[#1b2537] overflow-hidden">
+      <section ref={containerRef} className="relative py-20 bg-[#f2f4f7] dark:bg-[#1b2537] overflow-hidden">
         <div className="container mx-auto px-4 text-center mb-10">
           <h2
-            className="text-[clamp(1.8rem,4vw,3rem)] font-bold text-white mb-4"
+            className="text-[clamp(1.8rem,4vw,3rem)] font-bold text-[#1b2537] dark:text-white mb-4"
             style={{ fontFamily: "var(--font-display)" }}
           >
             See what&apos;s inside
           </h2>
-          <p className="text-neutral-300 text-lg">
+          <p className="text-[#5a6a82] dark:text-neutral-300 text-lg">
             Seven modules. Everything documented. Nothing gatekept.
           </p>
         </div>
@@ -218,21 +217,20 @@ export default function HomePage() {
           </FadeIn>
 
           <div className="mt-5">
-            <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {moduleCards.map((card) => (
-                <FadeInStaggerItem key={card.id}>
-                  <Card3D
-                    title={card.title}
-                    description={card.description}
-                    icon={card.icon}
-                    gradient={card.gradient}
-                    onClick={card.onClick}
-                    size="md"
-                    variant="premium"
-                  />
-                </FadeInStaggerItem>
+                <div
+                  key={card.id}
+                  style={{ background: card.bg }}
+                  className="rounded-2xl p-6 cursor-pointer hover:scale-105 transition-transform duration-300 shadow-lg"
+                  onClick={card.onClick}
+                >
+                  <div className="text-white mb-4">{card.icon}</div>
+                  <h3 className="text-white font-bold text-xl mb-2">{card.title}</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">{card.description}</p>
+                </div>
               ))}
-            </FadeInStagger>
+            </div>
           </div>
         </div>
         </FadeIn>

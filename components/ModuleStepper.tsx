@@ -27,7 +27,7 @@ export function ModuleStepper({ currentStep }: { currentStep: number }) {
                   <StepperTitle className="hidden md:block max-w-[80px] truncate">{s.title}</StepperTitle>
                 </StepperItem>
                 {index < steps.length - 1 && (
-                  <StepperSeparator className={currentStep > s.step ? 'bg-teal-600' : 'bg-gray-200 dark:bg-gray-700'} />
+                  <StepperSeparator style={currentStep > s.step ? { background: '#0f766e' } : { background: '#cbd5e1' }} />
                 )}
               </React.Fragment>
             ))}

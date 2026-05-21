@@ -5,13 +5,13 @@ import { cn } from "@/lib/utils";
 import { Code, Palette, Users, Zap, Globe, Heart, Star, Database, Shield } from "lucide-react";
 const THEMES = {
   primary: "from-slate-700 via-slate-800 to-slate-900",
-  secondary: "from-blue-600 via-blue-700 to-blue-800",
-  accent: "from-purple-600 via-purple-700 to-purple-800",
-  success: "from-emerald-600 via-emerald-700 to-emerald-800",
-  warning: "from-amber-600 via-amber-700 to-amber-800",
-  danger: "from-red-600 via-red-700 to-red-800",
-  info: "from-cyan-600 via-cyan-700 to-cyan-800",
-  neutral: "from-gray-600 via-gray-700 to-gray-800",
+  secondary: "from-blue-700 via-blue-800 to-blue-900",
+  accent: "from-purple-700 via-purple-800 to-purple-900",
+  success: "from-emerald-700 via-emerald-800 to-emerald-900",
+  warning: "from-amber-700 via-amber-800 to-amber-900",
+  danger: "from-red-700 via-red-800 to-red-900",
+  info: "from-cyan-700 via-cyan-800 to-cyan-900",
+  neutral: "from-gray-700 via-gray-800 to-gray-900",
 } as const;
 type ThemeType = keyof typeof THEMES;
 interface MousePos { readonly x: number; readonly y: number; }
