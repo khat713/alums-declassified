@@ -68,6 +68,8 @@ export default function StartHerePage() {
         </div>
         </FadeIn>
 
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent 0%, rgba(13,124,126,0.3) 30%, rgba(217,119,6,0.3) 70%, transparent 100%)', margin: '0.5rem 0' }} />
+
         {/* Course Info */}
         <FadeIn delay={0.1}>
         <div className="content-block p-7 mb-5" style={{ background: 'linear-gradient(135deg, #fef7ed 0%, #ffffff 100%)' }}>
@@ -105,6 +107,8 @@ export default function StartHerePage() {
           </div>
         </div>
         </FadeIn>
+
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent 0%, rgba(13,124,126,0.3) 30%, rgba(217,119,6,0.3) 70%, transparent 100%)', margin: '0.5rem 0' }} />
 
         {/* Navigation Guide */}
         <FadeIn delay={0.2}>
@@ -150,6 +154,8 @@ export default function StartHerePage() {
         </div>
         </FadeIn>
 
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent 0%, rgba(13,124,126,0.3) 30%, rgba(217,119,6,0.3) 70%, transparent 100%)', margin: '0.5rem 0' }} />
+
         {/* Module Overview Table */}
         <FadeIn delay={0} direction="none">
         <div className="content-block p-7 mb-5" style={{ background: 'linear-gradient(135deg, #fef7ed 0%, #ffffff 100%)' }}>
@@ -168,6 +174,8 @@ export default function StartHerePage() {
           <CurriculumTimeline />
         </div>
         </FadeIn>
+
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent 0%, rgba(13,124,126,0.3) 30%, rgba(217,119,6,0.3) 70%, transparent 100%)', margin: '0.5rem 0' }} />
 
         {/* Learning Outcomes */}
         <FadeIn delay={0.4}>
@@ -192,6 +200,8 @@ export default function StartHerePage() {
           </ol>
         </div>
         </FadeIn>
+
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent 0%, rgba(13,124,126,0.3) 30%, rgba(217,119,6,0.3) 70%, transparent 100%)', margin: '0.5rem 0' }} />
 
         {/* Tech Requirements */}
         <FadeIn delay={0.5}>
@@ -220,6 +230,8 @@ export default function StartHerePage() {
           </p>
         </div>
         </FadeIn>
+
+        <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent 0%, rgba(13,124,126,0.3) 30%, rgba(217,119,6,0.3) 70%, transparent 100%)', margin: '0.5rem 0' }} />
 
         {/* Policies */}
         <FadeIn delay={0.6}>

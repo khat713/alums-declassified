@@ -81,7 +81,7 @@ export default function Navbar() {
                     "block px-[0.8rem] py-[0.45rem] rounded-[5px] text-[0.865rem] font-medium transition-colors no-underline hover:no-underline",
                     active
                       ? "text-[#0d7c7e] font-semibold bg-[#e0f4f4] dark:bg-[#0d3538]"
-                      : "text-[#5a6a82] dark:text-[#94a3b8] hover:text-[#1b2537] dark:hover:text-[#e2e8f0] hover:bg-[#f2f4f7] dark:hover:bg-[#162032]"
+                      : "text-[#5a6a82] dark:text-[#94a3b8] hover:text-[#0d7c7e] dark:hover:text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032]"
                   )}
                   onClick={() => setOpen(false)}
                 >

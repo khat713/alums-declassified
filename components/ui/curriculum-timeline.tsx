@@ -27,7 +27,9 @@ export function CurriculumTimeline() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="relative flex gap-4 pl-14"
+            style={{ position: 'relative' }}
           >
+            <span style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Fraunces, serif', fontWeight: 900, fontSize: '5rem', color: 'rgba(13,124,126,0.05)', lineHeight: 1, pointerEvents: 'none', userSelect: 'none', zIndex: 0 }}>{week.week}</span>
             <div className={cn("absolute left-0 flex items-center justify-center size-12 rounded-full text-white shrink-0 shadow-md", week.color)}>
               {week.icon}
             </div>

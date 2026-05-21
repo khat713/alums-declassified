@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function AssignmentsPage() {
   return (
     <main>
+      <div style={{ position: 'fixed', inset: 0, zIndex: -1, backgroundImage: 'radial-gradient(circle, rgba(13,124,126,0.08) 1px, transparent 1px)', backgroundSize: '28px 28px', pointerEvents: 'none' }} />
       <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
         <div className="container mx-auto px-4">
           <h1

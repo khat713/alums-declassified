@@ -24,7 +24,9 @@ export default function Module6Page() {
 
       <ModuleStepper currentStep={6} />
 
-      <section className="bg-[#1b2537] text-white py-[38px] pb-8">
+      <section className="bg-[#1b2537] text-white py-[38px] pb-8 relative overflow-hidden">
+        <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '200px', height: '200px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.25)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '140px', height: '140px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.15)', pointerEvents: 'none' }} />
         <div className="container mx-auto px-4">
           <p className="text-[0.78rem] font-semibold uppercase tracking-[0.1em] text-[#7ec8ca] mb-2">
             Week 6 · Module 6
