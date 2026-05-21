@@ -39,8 +39,8 @@ export default function HomePage() {
               Free · Asynchronous · Built for You
             </p>
             <h1
-              className="text-[clamp(1.9rem,3.8vw,3rem)] font-bold leading-[1.1] tracking-[-0.025em] mb-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent min-h-[3.5em]"
-              style={{ fontFamily: "var(--font-display)" }}
+              className="font-bold leading-[1.05] mb-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent min-h-[3.5em]"
+              style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", letterSpacing: "-0.04em" }}
             >
               <Typewriter
                 words={[
@@ -87,7 +87,7 @@ export default function HomePage() {
       </section>
 
       {/* COURSE META BAR */}
-      <div className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-4">
+      <div className="bg-[#fafbfc] dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-4 shadow-[0_4px_16px_rgba(13,124,126,0.06)]">
         <div className="container mx-auto px-4 flex flex-wrap gap-x-10 gap-y-3 items-center justify-center md:justify-start">
 
           {/* Modules — animated counter */}
@@ -167,7 +167,7 @@ export default function HomePage() {
       <section ref={containerRef} className="relative py-20 bg-[#f2f4f7] dark:bg-[#1b2537] overflow-hidden">
         <div className="container mx-auto px-4 text-center mb-10">
           <h2
-            className="text-[clamp(1.8rem,4vw,3rem)] font-bold text-[#1b2537] dark:text-white mb-4"
+            className="text-[clamp(2.2rem,5vw,4rem)] font-bold text-[#1b2537] dark:text-white mb-4 tracking-[-0.04em] leading-[1.1]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             See what&apos;s inside
@@ -197,13 +197,13 @@ export default function HomePage() {
       <div className="container mx-auto px-4 my-12">
         {/* WHAT THIS COURSE IS */}
         <FadeIn delay={0}>
-        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
-          <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">
+        <div className="content-block p-8 mb-5">
+          <span className="inline-block text-[0.7rem] font-bold uppercase tracking-[0.09em] px-[10px] py-[4px] rounded-full mb-4 bg-[#d4f1e3] text-[#16723d]">
             What This Is
           </span>
           <FadeIn delay={0}>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
+            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.03em] leading-[1.2]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Seven Weeks. Seven Things You Actually Need to Know.
@@ -216,7 +216,10 @@ export default function HomePage() {
           </p>
           </FadeIn>
 
-          <div className="mt-5">
+          <div className="mt-5 relative">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden -z-10">
+              <span style={{ fontSize: 'clamp(8rem, 20vw, 20rem)', fontFamily: 'Fraunces, serif', fontWeight: 900, color: '#0d7c7e', opacity: 0.02, letterSpacing: '-0.05em', whiteSpace: 'nowrap' }}>LEARN</span>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {moduleCards.map((card) => (
                 <div
@@ -237,12 +240,12 @@ export default function HomePage() {
 
         {/* WHO THIS IS FOR */}
         <FadeIn delay={0.1}>
-        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
-          <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">
+        <div className="content-block p-8 mb-5">
+          <span className="inline-block text-[0.7rem] font-bold uppercase tracking-[0.09em] px-[10px] py-[4px] rounded-full mb-4 bg-[#deeafb] text-[#1a56a4]">
             Who This Is For
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
+            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.03em] leading-[1.2]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Built for First-Generation Students. Free for Everyone.
@@ -267,7 +270,7 @@ export default function HomePage() {
               { val: "📱", label: "Mobile-friendly" },
             ].map((stat, i) => (
               <div key={i} className="text-center">
-                <p className="text-[2rem] font-extrabold text-[#0d7c7e] m-0">
+                <p className="text-[2.8rem] font-extrabold text-[#0d7c7e] m-0 leading-none">
                   {stat.val}
                 </p>
                 <p className="text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8] m-0">
@@ -281,12 +284,12 @@ export default function HomePage() {
 
         {/* INTRODUCE YOURSELF */}
         <FadeIn delay={0.2}>
-        <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
-          <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
+        <div className="content-block p-8 mb-5">
+          <span className="inline-block text-[0.7rem] font-bold uppercase tracking-[0.09em] px-[10px] py-[4px] rounded-full mb-4 bg-[#fef3e2] text-[#c2680a]">
             Before You Begin
           </span>
           <h2
-            className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
+            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.03em] leading-[1.2]"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Introduce Yourself

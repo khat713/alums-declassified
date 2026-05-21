@@ -28,7 +28,7 @@ export default function Module2Page() {
       <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-9 pb-7">
         <div className="container mx-auto px-4">
           <p className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.09em] uppercase text-[#0d7c7e] mb-2">Week 2 · Module 2</p>
-          <h1 className="text-[clamp(1.5rem,3vw,1.95rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem] tracking-[-0.025em] leading-[1.2]" style={{ fontFamily: "var(--font-display)" }}>Campus Resources</h1>
+          <h1 className="text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}>Campus Resources</h1>
           <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] max-w-[600px] m-0">The resources exist. Most first-gen students never use them — not because they don&apos;t qualify, but because nobody told them they were there.</p>
           <div className="flex flex-wrap gap-4 mt-4 pt-4 border-t border-[#edf0f4] dark:border-[#243044]">
             <span className="flex items-center gap-[5px] text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]">⏱ <strong className="text-[#1b2537]">~45 minutes</strong></span>
@@ -42,9 +42,9 @@ export default function Module2Page() {
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
           <div>
             <FadeIn delay={0}>
-            <div id="objectives" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="objectives" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">Learning Objectives</span>
-              <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>By the End of This Module, You Will Be Able To:</h2>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>By the End of This Module, You Will Be Able To:</h2>
               <ol className="ml-5 leading-[2.1] mb-0">
                 <li>Identify at least six campus resources across academic, financial, and health/wellbeing categories specific to your school.</li>
                 <li>Explain the purpose of each resource and describe a realistic scenario in which you would use it.</li>
@@ -55,9 +55,9 @@ export default function Module2Page() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-            <div id="lesson" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="lesson" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">Instructional Content</span>
-              <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Module 2 Lesson</h2>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Module 2 Lesson</h2>
               <p>The lesson for this module covers campus resources across academic, financial, and health categories — and how to actually walk into an office for the first time.</p>
               <Link href="/lesson-2" className="bg-[#0d7c7e] text-white no-underline py-[11px] px-[28px] text-[0.95rem] rounded-[5px] font-bold inline-block hover:bg-[#096163] transition-all mt-2">Read the Lesson →</Link>
 
@@ -74,9 +74,9 @@ export default function Module2Page() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-            <div id="activity" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="activity" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">Learning Activity</span>
-              <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Activity: Write Your First Professional Email</h2>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Activity: Write Your First Professional Email</h2>
               <p>Before writing your resource map, practice the skill you will use most: reaching out to an office for the first time.</p>
               <p><strong>Instructions:</strong> Write a short professional email (3–5 sentences) to a campus office you have never contacted. Choose one of the following scenarios:</p>
               <ol className="ml-5 mb-4">
@@ -90,9 +90,9 @@ export default function Module2Page() {
             </FadeIn>
 
             <FadeIn delay={0.3}>
-            <div id="assessment" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="assessment" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assessment</span>
-              <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Campus Resource Map — Assignment 2 (75 pts)</h2>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Campus Resource Map — Assignment 2 (75 pts)</h2>
               <p>Identify at least six campus resources across three categories — academic support, financial resources, and health/wellbeing — specific to <em>your school</em>. For each: name, location, contact info, and one realistic scenario in which you would use it.</p>
               <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-left">
                 <strong>Submission:</strong>
@@ -107,9 +107,9 @@ export default function Module2Page() {
             </FadeIn>
 
             <FadeIn delay={0.4}>
-            <div id="model" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="model" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">Model Response</span>
-              <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Example Resource Map — See What Proficient Looks Like</h2>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Example Resource Map — See What Proficient Looks Like</h2>
               <p><strong>Example Resource Map — Jordan, First-Year Student at Riverside Community College:</strong></p>
               <div className="overflow-x-auto mt-2">
                 <table className="w-full border-collapse text-[0.875rem]">
@@ -135,9 +135,9 @@ export default function Module2Page() {
             </FadeIn>
 
             <FadeIn delay={0.5}>
-            <div id="tools" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="tools" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">Tools Used in This Module</span>
-              <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]" style={{ fontFamily: "var(--font-display)" }}>Technological Tools</h2>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Technological Tools</h2>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse text-[0.875rem]">
                   <thead><tr>{["Tool","Purpose","Privacy Policy","Cost"].map(h=><th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>)}</tr></thead>
@@ -150,7 +150,7 @@ export default function Module2Page() {
             </div>
             </FadeIn>
 
-            <div className="bg-white dark:bg-[#1e293b] border border-[#dde2eb] dark:border-[#334155] rounded-[10px] py-5 px-7 shadow-[0_1px_2px_rgba(27,37,55,0.06)] flex justify-between items-center flex-wrap gap-4 mt-2">
+            <div className="content-block py-5 px-7 flex justify-between items-center flex-wrap gap-4 mt-2">
               <div><p className="text-[0.72rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-bold mb-[0.2rem]">← Previous</p><p className="text-[0.93rem] font-semibold m-0"><Link href="/module-1" className="text-[#1b2537] dark:text-[#e2e8f0] hover:text-[#0d7c7e] hover:underline">Module 1: College Expectations</Link></p></div>
               <div className="text-right"><p className="text-[0.72rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-bold mb-[0.2rem]">Next →</p><p className="text-[0.93rem] font-semibold m-0"><Link href="/module-3" className="text-[#1b2537] dark:text-[#e2e8f0] hover:text-[#0d7c7e] hover:underline">Module 3: Financial Literacy</Link></p></div>
             </div>
@@ -159,7 +159,7 @@ export default function Module2Page() {
           {/* SIDEBAR */}
           <div>
             <div className="sticky top-[74px]">
-              <div className="bg-white dark:bg-[#1e293b] border border-[#dde2eb] dark:border-[#334155] rounded-[10px] p-[1.1rem_1.2rem] mb-4 shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+              <div className="sidebar-block p-[1.1rem_1.2rem] mb-4">
                 <p className="text-[0.7rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-[0.7rem]">In This Module</p>
                 <ul className="list-none p-0 m-0">
                   {[["#objectives","📌 Learning Objectives"],["#lesson","📖 Lesson"],["#activity","✉️ Activity"],["#assessment","🗺 Assessment"],["#model","💡 Model Response"],["#tools","🛠 Tools"]].map(([href,label])=>(
@@ -173,7 +173,7 @@ export default function Module2Page() {
                 <p className="text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8] mb-2">Identify 6 resources across 3 categories specific to your school.</p>
                 <Link href="/assignments#a2" className="text-[0.82rem] text-[#0d7c7e] hover:underline">View full rubric →</Link>
               </div>
-              <div className="bg-white dark:bg-[#1e293b] border border-[#dde2eb] dark:border-[#334155] rounded-[10px] p-[1.1rem_1.2rem] mb-4 shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+              <div className="sidebar-block p-[1.1rem_1.2rem] mb-4">
                 <p className="text-[0.7rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-[0.7rem]">Course Progress</p>
                 <div className="flex flex-col gap-[6px] text-[0.82rem]">
                   <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>✓</span><Link href="/module-1" className="text-[#8d9db5] hover:underline">Module 1: College Expectations</Link></div>

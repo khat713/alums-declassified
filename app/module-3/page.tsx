@@ -30,8 +30,8 @@ export default function Module3Page() {
             Week 3 · Module 3
           </p>
           <h1
-            className="text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold mb-3 tracking-[-0.025em] leading-[1.15]"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="mb-3"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}
           >
             Financial Literacy
           </h1>
@@ -52,13 +52,13 @@ export default function Module3Page() {
           <div>
             {/* Objectives */}
             <FadeIn delay={0}>
-            <div id="objectives" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="objectives" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
                 Learning Objectives
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
-                style={{ fontFamily: "var(--font-display)" }}
+                className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
+                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
                 By the End of This Module, You Will Be Able To:
               </h2>
@@ -73,13 +73,13 @@ export default function Module3Page() {
 
             {/* Lesson */}
             <FadeIn delay={0.1}>
-            <div id="lesson" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="lesson" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">
                 Instructional Content
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
-                style={{ fontFamily: "var(--font-display)" }}
+                className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
+                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
                 Module 3 Lesson
               </h2>
@@ -112,13 +112,13 @@ export default function Module3Page() {
 
             {/* Activity */}
             <FadeIn delay={0.2}>
-            <div id="activity" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="activity" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
                 Learning Activity
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
-                style={{ fontFamily: "var(--font-display)" }}
+                className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
+                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
                 Activity: Read a Sample Award Letter
               </h2>
@@ -153,13 +153,13 @@ export default function Module3Page() {
 
             {/* Assessment */}
             <FadeIn delay={0.3}>
-            <div id="assessment" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="assessment" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
                 Assessment
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
-                style={{ fontFamily: "var(--font-display)" }}
+                className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
+                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
                 Budget Worksheet — Assignment 3 (75 pts)
               </h2>
@@ -186,13 +186,13 @@ export default function Module3Page() {
 
             {/* Model Response */}
             <FadeIn delay={0.4}>
-            <div id="model" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="model" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
                 Model Response
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
-                style={{ fontFamily: "var(--font-display)" }}
+                className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
+                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
                 Example Budget — See What Proficient Looks Like
               </h2>
@@ -233,13 +233,13 @@ export default function Module3Page() {
 
             {/* Tools */}
             <FadeIn delay={0.5}>
-            <div id="tools" className="bg-white dark:bg-[#1e293b] rounded-[10px] p-7 mb-5 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+            <div id="tools" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#f2f4f7] text-[#5a6a82]">
                 Tools Used in This Module
               </span>
               <h2
-                className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.015em] leading-[1.3]"
-                style={{ fontFamily: "var(--font-display)" }}
+                className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
+                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
                 Technological Tools
               </h2>
@@ -286,7 +286,7 @@ export default function Module3Page() {
           {/* Sidebar */}
           <div>
             <div className="sticky top-[74px]">
-              <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-6 mb-4 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+              <div className="sidebar-block p-6 mb-4">
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">In This Module</p>
                 <ul className="space-y-[6px] text-[0.875rem]">
                   {[
@@ -311,7 +311,7 @@ export default function Module3Page() {
                 <Link href="/assignments#a3" className="text-[0.875rem] font-semibold text-[#0d7c7e] hover:underline">View full rubric →</Link>
               </div>
 
-              <div className="bg-white dark:bg-[#1e293b] rounded-[10px] p-6 border border-[#dde2eb] dark:border-[#334155] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+              <div className="sidebar-block p-6">
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">Course Progress</p>
                 <div className="flex flex-col gap-[6px] text-[0.82rem]">
                   <div className="flex items-center gap-2 text-[#8d9db5] dark:text-[#64748b]"><span>✓</span><Link href="/module-1" className="text-[#8d9db5] hover:underline">Module 1</Link></div>

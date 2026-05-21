@@ -22,8 +22,8 @@ export default function ModulesPage() {
         <div className="container mx-auto px-4">
           <FadeIn delay={0}>
           <h1
-            className="text-[clamp(1.5rem,3vw,2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem] tracking-[-0.025em] leading-[1.2]"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem]"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(3rem,6vw,5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}
           >
             Course Modules
           </h1>
