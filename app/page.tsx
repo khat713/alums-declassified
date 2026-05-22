@@ -1,13 +1,11 @@
 ﻿"use client";
-import { useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Typewriter } from "@/components/ui/typewriter";
 import { Counter } from "@/components/ui/animated-counter";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion } from "motion/react";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Clock, CheckCircle, Smartphone, Award } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { FreddieGreeter } from "@/components/ui/freddie-greeter";
@@ -24,12 +22,40 @@ export default function HomePage() {
     { id: "module-6", title: "Career Preparation", description: "Resumes, LinkedIn, internships, networking without feeling awkward, and what employers look for.", icon: <Briefcase size={28} />, bg: 'linear-gradient(135deg, #be123c, #9f1239)', onClick: () => router.push("/module-6") },
     { id: "module-7", title: "Emotional Resilience", description: "Homesickness, code-switching, mental health, coping strategies, and the work of belonging.", icon: <Heart size={28} />, bg: 'linear-gradient(135deg, #0e7490, #164e63)', onClick: () => router.push("/module-7") },
   ];
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
-  const rotateX = useTransform(scrollYProgress, [0, 1], [20, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0.5, 1]);
   return (
     <main>
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          zIndex: 0,
+          pointerEvents: 'none',
+          backgroundImage: `
+            radial-gradient(2px 2px at 20px 30px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 40px 70px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 60px 110px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 80px 50px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 100px 90px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 120px 130px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 140px 20px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 160px 80px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 180px 60px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 200px 140px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 220px 40px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 240px 100px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 260px 160px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 280px 70px, rgba(13,124,126,0.8), transparent),
+            radial-gradient(2px 2px at 300px 120px, rgba(13,124,126,0.8), transparent)
+          `,
+          backgroundSize: '300px 180px',
+          animation: 'fallingDots 8s linear infinite',
+        }}
+      />
+      <div style={{ position: 'relative', zIndex: 1 }}>
       {/* HERO */}
       <section
         className="relative overflow-hidden flex flex-col"
@@ -37,7 +63,8 @@ export default function HomePage() {
           background: 'linear-gradient(160deg, #0a0f1e 0%, #0f172a 30%, #1b2537 65%, #1e3a3a 85%, #f2f4f7 100%)',
           minHeight: '620px',
           position: 'relative',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          zIndex: 1
         }}
       >
         {/* Film grain overlay */}
@@ -176,7 +203,7 @@ export default function HomePage() {
       </section>
 
       {/* COURSE META BAR */}
-      <div className="bg-[#fafbfc] dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-4 shadow-[0_4px_16px_rgba(13,124,126,0.06)]">
+      <div className="bg-[#fafbfc] dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-4 shadow-[0_4px_16px_rgba(13,124,126,0.06)]" style={{ position: 'relative', zIndex: 1 }}>
         <div className="container mx-auto px-4 flex flex-wrap gap-x-10 gap-y-3 items-center justify-center md:justify-start">
 
           {/* Modules — animated counter */}
@@ -254,7 +281,7 @@ export default function HomePage() {
 
 
       {/* CONTAINER SCROLL */}
-      <section ref={containerRef} className="relative py-20 bg-[#f2f4f7] dark:bg-[#1b2537] overflow-hidden">
+      <section className="relative py-20 bg-[#f2f4f7] dark:bg-[#1b2537] overflow-hidden" style={{ position: 'relative', zIndex: 1 }}>
         <div className="container mx-auto px-4 text-center mb-10">
           <h2
             className="text-[clamp(2.2rem,5vw,4rem)] font-bold text-[#1b2537] dark:text-white mb-4 tracking-[-0.04em] leading-[1.1]"
@@ -266,25 +293,26 @@ export default function HomePage() {
             Seven modules. Everything documented. Nothing gatekept.
           </p>
         </div>
-        <motion.div
-          suppressHydrationWarning
-          style={{ rotateX, opacity }}
-          className="container mx-auto px-4"
-        >
-          <div className="relative rounded-xl overflow-hidden shadow-2xl">
-            <Image
-              src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1400&q=75"
-              alt="Student studying at a desk"
-              width={1400}
-              height={800}
-              className="w-full"
-              unoptimized={true}
-            />
+        <div className="container mx-auto px-4">
+          <div style={{
+            width: '100%',
+            height: '300px',
+            borderRadius: '16px',
+            background: 'linear-gradient(135deg, #e0f4f4 0%, #f2f4f7 100%)',
+            border: '2px dashed rgba(13,124,126,0.3)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '0.75rem'
+          }}>
+            <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.1rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>📸 Insert Screenshot Here</p>
+            <p style={{ fontSize: '0.85rem', color: '#5a6a82', margin: 0 }}>Replace with a screenshot of your course</p>
           </div>
-        </motion.div>
+        </div>
       </section>
 
-      <div className="container mx-auto px-4 my-12">
+      <div className="container mx-auto px-4 my-12" style={{ position: 'relative', zIndex: 1 }}>
         {/* WHAT THIS COURSE IS */}
         <FadeIn delay={0}>
         <div className="content-block p-8 mb-5">
@@ -418,7 +446,7 @@ export default function HomePage() {
         </FadeIn>
       </div>
 
-      <section style={{ background: 'linear-gradient(135deg, #fef7ed 0%, #fde8c8 100%)', padding: '80px 20px', textAlign: 'center' }}>
+      <section style={{ background: 'linear-gradient(135deg, #fef7ed 0%, #fde8c8 100%)', padding: '80px 20px', textAlign: 'center', position: 'relative', zIndex: 1 }}>
         <div className="container mx-auto" style={{ maxWidth: '640px' }}>
           <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#d97706', marginBottom: '1rem' }}>FOR EVERY FIRST-GEN STUDENT</p>
           <h2 style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, letterSpacing: '-0.03em', color: '#1b2537', marginBottom: '1rem', lineHeight: 1.1 }}>You deserve the same information everyone else got at the dinner table.</h2>
@@ -433,6 +461,7 @@ export default function HomePage() {
           </motion.a>
         </div>
       </section>
+      </div>
     </main>
   );
 }

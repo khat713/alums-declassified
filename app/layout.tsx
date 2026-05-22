@@ -42,10 +42,14 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-[#f2f4f7] dark:bg-[#0f172a] text-[#1b2537] dark:text-[#e2e8f0] font-body transition-colors duration-200">
-        <Navbar />
-        <PageTransition>{children}</PageTransition>
-        <Footer />
+      <body className="text-[#1b2537] dark:text-[#e2e8f0] font-body transition-colors duration-200">
+        <div
+          style={{ position: 'relative', zIndex: 0, minHeight: '100vh', background: 'var(--page-bg)' }}
+        >
+          <Navbar />
+          <PageTransition>{children}</PageTransition>
+          <Footer />
+        </div>
         <ToastContainer />
         <ScrollToTop />
       </body>

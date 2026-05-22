@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer style={{ background: 'linear-gradient(135deg, #0a0f1e 0%, #0f172a 100%)', borderTop: '1px solid rgba(13,124,126,0.15)', marginTop: '5rem' }}>
+    <footer style={{ background: 'linear-gradient(135deg, #0a0f1e 0%, #0f172a 100%)', borderTop: '1px solid rgba(13,124,126,0.15)', marginTop: '5rem', position: 'relative', zIndex: 1 }}>
       <div style={{ height: '3px', background: 'linear-gradient(90deg, #0d7c7e, #d97706, #0d7c7e)', opacity: 0.6 }} />
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

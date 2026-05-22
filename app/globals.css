@@ -11,11 +11,13 @@
   --teal-glow: rgba(13,124,126,0.15);
   --surface: #ffffff;
   --surface-cream: linear-gradient(135deg, #fef7ed 0%, #ffffff 100%);
+  --page-bg: #f2f4f7;
 }
 
 .dark {
   --surface: #1e293b;
   --surface-cream: #162032;
+  --page-bg: #0a0f1e;
 }
 
 @layer base {
@@ -25,7 +27,7 @@
 
   body {
     font-family: var(--font-body);
-    background: #f2f4f7;
+    background-color: #f2f4f7;
     color: #1b2537;
     font-size: 15.5px;
     line-height: 1.68;
@@ -34,8 +36,7 @@
   }
 
   .dark body {
-    background: linear-gradient(180deg, #0a0f1e 0%, #0f172a 100%);
-    background-attachment: fixed;
+    background-color: #0a0f1e;
     color: #e2e8f0;
   }
 
@@ -70,8 +71,8 @@
   }
 
   .dark .content-block {
-    background: #1e293b;
-    border: 1px solid rgba(13,124,126,0.15);
+    background: #1e293b !important;
+    border: 1px solid rgba(13,124,126,0.15) !important;
     box-shadow:
       0 1px 0 0 rgba(13,124,126,0.1),
       0 4px 6px -2px rgba(0,0,0,0.2),
@@ -190,4 +191,14 @@
 @keyframes shimmer {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fallingDots {
+  0% { background-position-y: 0px; }
+  100% { background-position-y: 180px; }
 }
