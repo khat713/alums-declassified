@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Info } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { ShaderAnimation } from "@/components/ui/shader-animation";
+import { BackgroundPaths } from "@/components/ui/background-paths";
 
 export default function ModulesPage() {
   const router = useRouter();
@@ -19,7 +19,7 @@ export default function ModulesPage() {
 
   return (
     <main>
-      <ShaderAnimation />
+      <BackgroundPaths />
       <div style={{ position: 'relative', zIndex: 1 }}>
       <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
         <div className="container mx-auto px-4">

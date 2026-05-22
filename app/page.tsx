@@ -417,8 +417,16 @@ export default function HomePage() {
         </FadeIn>
       </div>
 
-      <section style={{ background: 'linear-gradient(135deg, #fef7ed 0%, #fde8c8 100%)', padding: '80px 20px', textAlign: 'center', position: 'relative', zIndex: 1 }}>
-        <div className="container mx-auto" style={{ maxWidth: '640px' }}>
+      <section style={{ padding: '60px 20px', display: 'flex', justifyContent: 'center', background: 'transparent', position: 'relative', zIndex: 1 }}>
+        <div style={{
+          background: 'linear-gradient(135deg, #fef7ed 0%, #fde8c8 100%)',
+          borderRadius: '24px',
+          padding: '60px 48px',
+          maxWidth: '760px',
+          width: '100%',
+          textAlign: 'center',
+          boxShadow: '0 4px 32px rgba(217,119,6,0.08), 0 1px 0 rgba(217,119,6,0.1)'
+        }}>
           <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#d97706', marginBottom: '1rem' }}>FOR EVERY FIRST-GEN STUDENT</p>
           <h2 style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, letterSpacing: '-0.03em', color: '#1b2537', marginBottom: '1rem', lineHeight: 1.1 }}>You deserve the same information everyone else got at the dinner table.</h2>
           <p style={{ color: '#5a6a82', fontSize: '1.05rem', marginBottom: '2rem', lineHeight: 1.7 }}>This course exists because the gap between first-gen students and their peers is not about intelligence. It is about access to information. Alum&apos;s Declassified closes that gap.</p>
