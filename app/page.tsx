@@ -9,6 +9,7 @@ import { motion } from "motion/react";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Clock, CheckCircle, Smartphone, Award } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { FreddieGreeter } from "@/components/ui/freddie-greeter";
+import { ShaderAnimation } from '@/components/ui/shader-animation';
 
 
 export default function HomePage() {
@@ -24,37 +25,7 @@ export default function HomePage() {
   ];
   return (
     <main>
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100vw',
-          height: '100vh',
-          zIndex: 0,
-          pointerEvents: 'none',
-          backgroundImage: `
-            radial-gradient(2px 2px at 20px 30px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 40px 70px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 60px 110px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 80px 50px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 100px 90px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 120px 130px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 140px 20px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 160px 80px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 180px 60px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 200px 140px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 220px 40px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 240px 100px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 260px 160px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 280px 70px, rgba(13,124,126,0.8), transparent),
-            radial-gradient(2px 2px at 300px 120px, rgba(13,124,126,0.8), transparent)
-          `,
-          backgroundSize: '300px 180px',
-          animation: 'fallingDots 8s linear infinite',
-        }}
-      />
+      <ShaderAnimation />
       <div style={{ position: 'relative', zIndex: 1 }}>
       {/* HERO */}
       <section

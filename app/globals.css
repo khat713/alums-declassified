@@ -197,8 +197,3 @@
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
 }
-
-@keyframes fallingDots {
-  0% { background-position-y: 0px; }
-  100% { background-position-y: 180px; }
-}
