@@ -19,12 +19,9 @@ export function FreddieGreeter() {
   const [isTyping, setIsTyping] = useState(false);
   const [isDone, setIsDone] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
-  const [isSpeaking, setIsSpeaking] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
-  // Tracks which line has already had speech triggered to prevent double-firing
-  const spokenLine = useRef(-1);
 
   // Typewriter effect
   useEffect(() => {
@@ -35,31 +32,25 @@ export function FreddieGreeter() {
         setCharIndex(prev => prev + 1);
       }, 55);
       return () => clearTimeout(timer);
-    } else {
+    }
+    if (charIndex === FREDDIE_LINES[currentLine].length) {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      // Start speech once per line (spokenLine ref prevents re-triggering on re-renders)
-      if (!isMuted && !prefersReducedMotion && spokenLine.current !== currentLine) {
-        spokenLine.current = currentLine;
-        setIsSpeaking(true);
-        speakText(FREDDIE_LINES[currentLine]).finally(() => setIsSpeaking(false));
-        return; // Wait for isSpeaking to become false before advancing
+      if (!isMuted && !prefersReducedMotion) {
+        speakText(FREDDIE_LINES[currentLine]);
       }
-      // Advance only after speech finishes (or immediately if muted/reduced-motion)
-      if (!isSpeaking) {
-        if (currentLine < FREDDIE_LINES.length - 1) {
-          const timer = setTimeout(() => {
-            setCurrentLine(prev => prev + 1);
-            setDisplayText('');
-            setCharIndex(0);
-          }, 800);
-          return () => clearTimeout(timer);
-        } else {
-          setIsTyping(false);
-          setIsDone(true);
-        }
+      if (currentLine < FREDDIE_LINES.length - 1) {
+        const timer = setTimeout(() => {
+          setCurrentLine(prev => prev + 1);
+          setDisplayText('');
+          setCharIndex(0);
+        }, 2500);
+        return () => clearTimeout(timer);
+      } else {
+        setIsTyping(false);
+        setIsDone(true);
       }
     }
-  }, [isOpen, isTyping, charIndex, currentLine, isMuted, isSpeaking]);
+  }, [isOpen, isTyping, charIndex, currentLine, isMuted]);
 
   // Focus management for accessibility
   useEffect(() => {
@@ -92,15 +83,23 @@ export function FreddieGreeter() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen]);
 
+  const handleMuteToggle = () => {
+    setIsMuted(prev => {
+      const newMuted = !prev;
+      if (newMuted) {
+        window.speechSynthesis?.cancel();
+      }
+      return newMuted;
+    });
+  };
+
   const handleOpen = () => {
-    spokenLine.current = -1;
     setIsOpen(true);
     setCurrentLine(0);
     setDisplayText('');
     setCharIndex(0);
     setIsTyping(true);
     setIsDone(false);
-    setIsSpeaking(false);
   };
 
   const handleClose = () => {
@@ -204,7 +203,7 @@ export function FreddieGreeter() {
             >
               {/* Mute button */}
               <button
-                onClick={() => setIsMuted(prev => !prev)}
+                onClick={handleMuteToggle}
                 aria-label={isMuted ? 'Unmute Freddie' : 'Mute Freddie'}
                 aria-pressed={isMuted}
                 style={{
