@@ -12,12 +12,18 @@
   --surface: #ffffff;
   --surface-cream: linear-gradient(135deg, #fef7ed 0%, #ffffff 100%);
   --page-bg: #f2f4f7;
+  --hero-backdrop: rgba(255,255,255,0.15);
+  --meta-bar-bg: rgba(255,255,255,0.70);
+  --card-bg: rgba(255,255,255,0.92);
 }
 
 .dark {
   --surface: #1e293b;
   --surface-cream: #162032;
   --page-bg: #0a0f1e;
+  --hero-backdrop: rgba(4,10,28,0.78);
+  --meta-bar-bg: rgba(5,12,30,0.78);
+  --card-bg: rgba(5,12,35,0.88);
 }
 
 @layer base {
@@ -52,7 +58,7 @@
   }
 
   .content-block {
-    background: #ffffff;
+    background: var(--card-bg);
     border: 1px solid rgba(13,124,126,0.08);
     border-radius: 16px;
     padding: 2rem 2.25rem;
@@ -162,18 +168,6 @@
   .label-text { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; }
 }
 
-.homepage-forced-dark body {
-  background-color: #060d1f !important;
-}
-
-.homepage-forced-dark .content-block {
-  background: rgba(5,12,35,0.88) !important;
-  border: 1px solid rgba(255,255,255,0.08) !important;
-  box-shadow: none !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-}
-
 /* Non-homepage pages forced to dark */
 .page-forced-dark {
   --surface-cream: rgba(13,124,126,0.08);
@@ -214,9 +208,6 @@
 .page-forced-dark td { color: rgba(255,255,255,0.85) !important; border-color: rgba(255,255,255,0.08) !important; background: rgba(4,10,28,0.92) !important; }
 .page-forced-dark th { color: #ffffff !important; background: rgba(4,10,28,0.92) !important; }
 .page-forced-dark tr:hover td { background: rgba(13,124,126,0.12) !important; }
-.homepage-forced-dark td { color: rgba(255,255,255,0.85) !important; background: rgba(4,10,28,0.92) !important; }
-.homepage-forced-dark th { color: #ffffff !important; background: rgba(4,10,28,0.92) !important; }
-.homepage-forced-dark tr:hover td { background: rgba(13,124,126,0.12) !important; }
 .page-forced-dark p { color: rgba(255,255,255,0.8); }
 .page-forced-dark li { color: rgba(255,255,255,0.8); }
 .page-forced-dark strong { color: #ffffff; }

@@ -2,25 +2,48 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll } from 'framer-motion';
 
-const SCENES = [
+const DARK_SCENES = [
   {
-    sky: 'linear-gradient(180deg, rgba(2,8,24,0.75) 0%, rgba(4,15,45,0.75) 30%, rgba(7,20,40,0.75) 60%, rgba(10,22,40,0.75) 100%)',
+    sky: 'linear-gradient(180deg, #020818 0%, #040f2d 30%, #071428 60%, #0a1628 100%)',
     glow: 'rgba(99,179,237,0.12)',
     starOpacity: 1,
   },
   {
-    sky: 'linear-gradient(180deg, rgba(4,15,45,0.7) 0%, rgba(7,20,40,0.7) 30%, rgba(13,31,60,0.7) 50%, rgba(15,45,74,0.7) 80%, rgba(26,58,92,0.7) 100%)',
+    sky: 'linear-gradient(180deg, #040f2d 0%, #071428 30%, #0d1f3c 50%, #0f2d4a 80%, #1a3a5c 100%)',
     glow: 'rgba(13,124,126,0.2)',
     starOpacity: 0.7,
   },
   {
-    sky: 'linear-gradient(180deg, rgba(13,31,60,0.65) 0%, rgba(26,58,92,0.65) 25%, rgba(30,64,96,0.65) 50%, rgba(194,70,10,0.5) 85%, rgba(232,101,26,0.6) 100%)',
+    sky: 'linear-gradient(180deg, #0d1f3c 0%, #1a3a5c 25%, #c2460a 70%, #e8651a 100%)',
     glow: 'rgba(194,70,10,0.35)',
-    starOpacity: 0.3,
+    starOpacity: 0.2,
   },
   {
-    sky: 'linear-gradient(180deg, rgba(30,58,95,0.6) 0%, rgba(180,83,9,0.65) 40%, rgba(217,119,6,0.7) 70%, rgba(245,158,11,0.75) 100%)',
+    sky: 'linear-gradient(180deg, #1e3a5f 0%, #b45309 40%, #d97706 70%, #f59e0b 100%)',
     glow: 'rgba(245,158,11,0.4)',
+    starOpacity: 0,
+  },
+];
+
+const LIGHT_SCENES = [
+  {
+    sky: 'linear-gradient(180deg, #93c5fd 0%, #60a5fa 30%, #f97316 70%, #fbbf24 100%)',
+    glow: 'rgba(251,191,36,0.35)',
+    starOpacity: 0,
+  },
+  {
+    sky: 'linear-gradient(180deg, #60a5fa 0%, #f97316 40%, #fbbf24 70%, #fed7aa 100%)',
+    glow: 'rgba(249,115,22,0.45)',
+    starOpacity: 0,
+  },
+  {
+    sky: 'linear-gradient(180deg, #fbbf24 0%, #fde68a 40%, #fef9c3 100%)',
+    glow: 'rgba(251,191,36,0.5)',
+    starOpacity: 0,
+  },
+  {
+    sky: 'linear-gradient(180deg, #fed7aa 0%, #fdba74 30%, #f97316 70%, #ea580c 100%)',
+    glow: 'rgba(234,88,12,0.4)',
     starOpacity: 0,
   },
 ];
@@ -109,17 +132,28 @@ function FloatingShapes() {
 export function ScrollAtmosphere() {
   const { scrollY } = useScroll();
   const [sceneIndex, setSceneIndex] = useState(0);
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    const check = () => setIsDark(document.documentElement.classList.contains('dark'));
+    check();
+    const observer = new MutationObserver(check);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const unsubscribe = scrollY.on('change', (y) => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = totalHeight > 0 ? y / totalHeight : 0;
+      const SCENES = isDark ? DARK_SCENES : LIGHT_SCENES;
       const newScene = Math.min(Math.floor(progress * SCENES.length), SCENES.length - 1);
       setSceneIndex(newScene);
     });
     return unsubscribe;
-  }, [scrollY]);
+  }, [scrollY, isDark]);
 
+  const SCENES = isDark ? DARK_SCENES : LIGHT_SCENES;
   const scene = SCENES[sceneIndex];
 
   return (
@@ -129,28 +163,8 @@ export function ScrollAtmosphere() {
       transition={{ duration: 1.5, ease: 'easeInOut' }}
       style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none' }}
     >
-      <Stars opacity={scene.starOpacity} />
+      {isDark && <Stars opacity={scene.starOpacity} />}
       <FloatingShapes />
-
-      {/* Sun — rises in scenes 2 and 3 */}
-      <motion.div
-        animate={{
-          opacity: sceneIndex >= 2 ? 1 : 0,
-          bottom: sceneIndex === 2 ? '15%' : sceneIndex === 3 ? '25%' : '5%',
-        }}
-        transition={{ duration: 2, ease: 'easeInOut' }}
-        style={{
-          position: 'absolute',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '80px',
-          height: '80px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, #fef3c7 0%, #f59e0b 50%, #d97706 100%)',
-          boxShadow: '0 0 60px rgba(245,158,11,0.6), 0 0 120px rgba(245,158,11,0.3)',
-          pointerEvents: 'none',
-        }}
-      />
 
       <motion.div
         animate={{

@@ -17,12 +17,6 @@ import { ScrollPath } from '@/components/ui/scroll-path';
 export default function HomePage() {
   const router = useRouter();
 
-  useEffect(() => {
-    document.documentElement.classList.add('homepage-forced-dark')
-    return () => {
-      document.documentElement.classList.remove('homepage-forced-dark')
-    }
-  }, [])
 
   const { scrollY } = useScroll()
   const heroY = useTransform(scrollY, [0, 500], [0, -60])
@@ -70,29 +64,37 @@ export default function HomePage() {
           {/* Left: Text + CTAs — parallax wrapper */}
           <div className="flex-1 flex flex-col justify-center py-8 md:py-0 md:pr-12">
             <motion.div style={{ y: heroY, opacity: heroOpacity }}>
+              <div style={{
+                background: 'var(--hero-backdrop)',
+                backdropFilter: 'blur(4px)',
+                WebkitBackdropFilter: 'blur(4px)',
+                borderRadius: '16px',
+                padding: '2rem',
+              }}>
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                style={{
+                style={{ marginBottom: '1rem' }}
+              >
+                <span style={{
+                  background: 'rgba(0,0,0,0.4)',
+                  backdropFilter: 'blur(8px)',
+                  WebkitBackdropFilter: 'blur(8px)',
+                  padding: '4px 14px',
+                  borderRadius: '100px',
+                  display: 'inline-block',
                   fontSize: '0.78rem',
                   fontWeight: 700,
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
-                  background: 'linear-gradient(90deg, #5eead4, #ffffff, #0d7c7e, #ffffff, #5eead4)',
-                  backgroundSize: '200% auto',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  animation: 'shimmer 4s linear infinite',
-                  marginBottom: '1rem'
-                }}
-              >
-                FREE · ASYNCHRONOUS · BUILT FOR YOU
+                  color: '#5eead4',
+                }}>FREE · ASYNCHRONOUS · BUILT FOR YOU</span>
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
                 <h1
-                  className="font-bold leading-[1.05] mb-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent min-h-[3.5em]"
-                  style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", letterSpacing: "-0.04em" }}
+                  className="font-bold leading-[1.05] mb-5 dark:text-white text-[#1b2537] min-h-[3.5em]"
+                  style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", letterSpacing: "-0.04em", textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.7)' }}
                 >
                   <Typewriter
                     words={[
@@ -108,7 +110,7 @@ export default function HomePage() {
                 </h1>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}>
-                <p className="text-neutral-300 text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
+                <p className="dark:text-white/75 text-[#2e3f5c] text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
                   Alum&apos;s Declassified is a free seven-week course for
                   first-generation college students — covering everything from syllabi
                   and office hours to budgeting, mental health, and building a career.
@@ -157,6 +159,7 @@ export default function HomePage() {
                   </motion.a>
                 </div>
               </motion.div>
+              </div>{/* end hero-backdrop */}
             </motion.div>
           </div>
 
@@ -197,7 +200,7 @@ export default function HomePage() {
       {/* COURSE META BAR */}
       <div
         style={{
-          background: 'rgba(5,12,35,0.90)',
+          background: 'var(--meta-bar-bg)',
           backdropFilter: 'blur(12px)',
           WebkitBackdropFilter: 'blur(12px)',
           borderBottom: '1px solid rgba(255,255,255,0.08)',

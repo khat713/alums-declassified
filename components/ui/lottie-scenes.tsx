@@ -57,12 +57,33 @@ function LottieScene({ src, opacity, position = 'right', size = 400, bottom = 0 
 
 export function LottieSceneLayer() {
   const { scrollYProgress } = useScroll();
+  const [isDark, setIsDark] = useState(true);
 
-  const cityOpacity    = useTransform(scrollYProgress, [0, 0.7, 0.9],            [0.9, 0.5, 0.2]);
-  const nightOpacity   = useTransform(scrollYProgress, [0, 0.25, 0.40],          [1,   1,   0]);
-  const sunnyOpacity   = useTransform(scrollYProgress, [0.20, 0.30, 0.55, 0.65], [0,   1,   1,   0]);
-  const studyOpacity   = useTransform(scrollYProgress, [0.25, 0.35, 0.65, 0.75], [0,   1,   1,   0]);
-  const gradOpacity    = useTransform(scrollYProgress, [0.60, 0.70, 0.95, 1],    [0,   1,   1,   0]);
+  useEffect(() => {
+    const check = () => setIsDark(document.documentElement.classList.contains('dark'));
+    check();
+    const observer = new MutationObserver(check);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
+
+  const cityOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.7, 0.9],
+    isDark ? [0.9, 0.5, 0.2] : [0.7, 0.4, 0.15]
+  );
+  const nightOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.25, 0.40],
+    isDark ? [1, 1, 0] : [0, 0, 0]
+  );
+  const sunnyOpacity = useTransform(
+    scrollYProgress,
+    isDark ? [0.20, 0.30, 0.55, 0.65] : [0, 0.05, 0.50, 0.62],
+    [0, 1, 1, 0]
+  );
+  const studyOpacity   = useTransform(scrollYProgress, [0.25, 0.35, 0.65, 0.75], [0, 1, 1, 0]);
+  const gradOpacity    = useTransform(scrollYProgress, [0.60, 0.70, 0.95, 1],    [0, 1, 1, 0]);
 
   return (
     <div
@@ -93,15 +114,15 @@ export function LottieSceneLayer() {
         src={`${BASE}/animations/Exams_Preparation_.json`}
         opacity={studyOpacity}
         position="left"
-        size={440}
-        bottom={80}
+        size={520}
+        bottom={160}
       />
       <LottieScene
         src={`${BASE}/animations/graduation.json`}
         opacity={gradOpacity}
-        position="center"
-        size={500}
-        bottom={60}
+        position="right"
+        size={540}
+        bottom={160}
       />
     </div>
   );
