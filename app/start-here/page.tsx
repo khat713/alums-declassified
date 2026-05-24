@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { CurriculumTimeline } from "@/components/ui/curriculum-timeline";
 import { FadeIn } from "@/components/ui/fade-in";
-import { ShaderAnimation } from "@/components/ui/shader-animation";
+import { ScrollAtmosphereSubtle } from "@/components/ui/scroll-atmosphere";
+import { ForceDark } from "@/components/ui/force-dark";
 
 export const metadata: Metadata = {
   title: "Start Here | Alum's Declassified",
@@ -11,7 +12,8 @@ export const metadata: Metadata = {
 export default function StartHerePage() {
   return (
     <main>
-      <ShaderAnimation />
+      <ForceDark />
+      <ScrollAtmosphereSubtle />
       <div style={{ position: 'relative', zIndex: 1 }}>
       <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
         <div className="container mx-auto px-4">

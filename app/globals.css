@@ -163,6 +163,57 @@
   .label-text { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; }
 }
 
+.homepage-forced-dark body {
+  background-color: #060d1f !important;
+}
+
+.homepage-forced-dark .content-block {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow: none !important;
+}
+
+/* Non-homepage pages forced to dark */
+.page-forced-dark {
+  --surface-cream: rgba(13,124,126,0.08);
+  --surface: rgba(255,255,255,0.06);
+  --page-bg: #0a1628;
+}
+
+.page-forced-dark body {
+  background-color: #0a1628 !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.page-forced-dark .content-block {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow: none !important;
+}
+
+.page-forced-dark .bg-white {
+  background-color: rgba(255,255,255,0.04) !important;
+}
+
+.page-forced-dark .text-\[\#1b2537\] { color: #ffffff !important; }
+.page-forced-dark .text-\[\#5a6a82\] { color: rgba(255,255,255,0.65) !important; }
+.page-forced-dark .page-h1 { color: #ffffff !important; }
+.page-forced-dark .content-h2 { color: #ffffff !important; border-color: rgba(255,255,255,0.1) !important; }
+.page-forced-dark .body-text { color: rgba(255,255,255,0.85) !important; }
+.page-forced-dark .muted-text { color: rgba(255,255,255,0.55) !important; }
+
+.page-forced-dark .border-\[\#dde2eb\] { border-color: rgba(255,255,255,0.08) !important; }
+.page-forced-dark .border-\[\#edf0f4\] { border-color: rgba(255,255,255,0.08) !important; }
+
+.page-forced-dark .bg-\[\#f2f4f7\] { background-color: rgba(255,255,255,0.04) !important; }
+.page-forced-dark .bg-\[\#eff8ff\] { background-color: rgba(13,124,126,0.1) !important; }
+
+.page-forced-dark td { color: rgba(255,255,255,0.85) !important; border-color: rgba(255,255,255,0.08) !important; }
+.page-forced-dark th { color: #ffffff !important; }
+.page-forced-dark p { color: rgba(255,255,255,0.8); }
+.page-forced-dark li { color: rgba(255,255,255,0.8); }
+.page-forced-dark strong { color: #ffffff; }
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

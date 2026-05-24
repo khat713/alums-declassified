@@ -1,12 +1,18 @@
 "use client";
+import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Info } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { BackgroundPaths } from "@/components/ui/background-paths";
+import { ScrollAtmosphereSubtle } from "@/components/ui/scroll-atmosphere";
 
 export default function ModulesPage() {
   const router = useRouter();
+
+  useEffect(() => {
+    document.documentElement.classList.add('page-forced-dark');
+    return () => { document.documentElement.classList.remove('page-forced-dark'); };
+  }, []);
   const moduleCards = [
     { id: "module-1", title: "College Expectations", description: "The unwritten rules, syllabi, office hours, professor relationships, and what nobody tells you before the first day.", icon: <BookOpen size={28} />, bg: 'linear-gradient(135deg, #0f766e, #0d5f58)', onClick: () => router.push("/module-1") },
     { id: "module-2", title: "Campus Resources", description: "Financial aid, tutoring centers, counseling, food pantries — and how to actually walk into an office for the first time.", icon: <MapPin size={28} />, bg: 'linear-gradient(135deg, #1d4ed8, #1e3a8a)', onClick: () => router.push("/module-2") },
@@ -19,7 +25,7 @@ export default function ModulesPage() {
 
   return (
     <main>
-      <BackgroundPaths />
+      <ScrollAtmosphereSubtle />
       <div style={{ position: 'relative', zIndex: 1 }}>
       <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
         <div className="container mx-auto px-4">

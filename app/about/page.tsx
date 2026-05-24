@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
-import { BackgroundPaths } from "@/components/ui/background-paths";
+import { ScrollAtmosphereSubtle } from "@/components/ui/scroll-atmosphere";
+import { ForceDark } from "@/components/ui/force-dark";
 
 export const metadata: Metadata = {
   title: "About | Alum's Declassified",
@@ -10,7 +11,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <BackgroundPaths />
+      <ForceDark />
+      <ScrollAtmosphereSubtle />
       <div style={{ position: 'relative', zIndex: 1 }}>
       <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
         <div className="container mx-auto px-4">

@@ -1,18 +1,32 @@
-﻿"use client";
+"use client";
+import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Typewriter } from "@/components/ui/typewriter";
 import { Counter } from "@/components/ui/animated-counter";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Clock, CheckCircle, Smartphone, Award } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { ShaderAnimation } from '@/components/ui/shader-animation';
+import { ScrollAtmosphere } from '@/components/ui/scroll-atmosphere';
+import { StudentJourney } from '@/components/ui/student-journey';
 
 
 export default function HomePage() {
   const router = useRouter();
+
+  useEffect(() => {
+    document.documentElement.classList.add('homepage-forced-dark')
+    return () => {
+      document.documentElement.classList.remove('homepage-forced-dark')
+    }
+  }, [])
+
+  const { scrollY } = useScroll()
+  const heroY = useTransform(scrollY, [0, 500], [0, -60])
+  const heroOpacity = useTransform(scrollY, [0, 400], [1, 0.4])
+
   const moduleCards = [
     { id: "module-1", title: "College Expectations", description: "The unwritten rules, syllabi, office hours, professor relationships, and what nobody tells you before the first day.", icon: <BookOpen size={28} />, bg: 'linear-gradient(135deg, #0f766e, #0d5f58)', onClick: () => router.push("/module-1") },
     { id: "module-2", title: "Campus Resources", description: "Financial aid, tutoring centers, counseling, food pantries — and how to actually walk into an office for the first time.", icon: <MapPin size={28} />, bg: 'linear-gradient(135deg, #1d4ed8, #1e3a8a)', onClick: () => router.push("/module-2") },
@@ -22,15 +36,18 @@ export default function HomePage() {
     { id: "module-6", title: "Career Preparation", description: "Resumes, LinkedIn, internships, networking without feeling awkward, and what employers look for.", icon: <Briefcase size={28} />, bg: 'linear-gradient(135deg, #be123c, #9f1239)', onClick: () => router.push("/module-6") },
     { id: "module-7", title: "Emotional Resilience", description: "Homesickness, code-switching, mental health, coping strategies, and the work of belonging.", icon: <Heart size={28} />, bg: 'linear-gradient(135deg, #0e7490, #164e63)', onClick: () => router.push("/module-7") },
   ];
+
   return (
     <main>
-      <ShaderAnimation />
+      <ScrollAtmosphere />
+      <StudentJourney />
       <div style={{ position: 'relative', zIndex: 1 }}>
+
       {/* HERO */}
       <section
         className="relative overflow-hidden flex flex-col"
         style={{
-          background: 'linear-gradient(160deg, #0a0f1e 0%, #0f172a 30%, #1b2537 65%, #1e3a3a 85%, #f2f4f7 100%)',
+          background: 'transparent',
           minHeight: '620px',
           position: 'relative',
           overflow: 'hidden',
@@ -48,99 +65,101 @@ export default function HomePage() {
 
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         <div className="flex-1 flex flex-col md:flex-row items-center container mx-auto px-4 py-16 relative z-10">
-          {/* Left: Text + CTAs */}
+          {/* Left: Text + CTAs — parallax wrapper */}
           <div className="flex-1 flex flex-col justify-center py-8 md:py-0 md:pr-12">
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              style={{
-                fontSize: '0.78rem',
-                fontWeight: 700,
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                background: 'linear-gradient(90deg, #5eead4, #ffffff, #0d7c7e, #ffffff, #5eead4)',
-                backgroundSize: '200% auto',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                animation: 'shimmer 4s linear infinite',
-                marginBottom: '1rem'
-              }}
-            >
-              FREE · ASYNCHRONOUS · BUILT FOR YOU
-            </motion.p>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
-              <h1
-                className="font-bold leading-[1.05] mb-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent min-h-[3.5em]"
-                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", letterSpacing: "-0.04em" }}
+            <motion.div style={{ y: heroY, opacity: heroOpacity }}>
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                style={{
+                  fontSize: '0.78rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  background: 'linear-gradient(90deg, #5eead4, #ffffff, #0d7c7e, #ffffff, #5eead4)',
+                  backgroundSize: '200% auto',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  animation: 'shimmer 4s linear infinite',
+                  marginBottom: '1rem'
+                }}
               >
-                <Typewriter
-                  words={[
-                    "Everything they forgot to tell you about college — documented.",
-                    "Free. Self-paced. Built for first-gen students.",
-                    "7 modules. Nothing gatekept.",
-                  ]}
-                  speed={80}
-                  delayBetweenWords={3000}
-                  cursor={true}
-                  cursorChar="|"
-                />
-              </h1>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}>
-              <p className="text-neutral-300 text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
-                Alum&apos;s Declassified is a free seven-week course for
-                first-generation college students — covering everything from syllabi
-                and office hours to budgeting, mental health, and building a career.
-                The stuff nobody tells you out loud.
-              </p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.7 }}>
-              <div className="flex gap-4 flex-wrap">
-                <motion.a
-                  href="/module-1"
-                  whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(13,124,126,0.4)' }}
-                  whileTap={{ scale: 0.97 }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-                  style={{
-                    background: 'linear-gradient(135deg, #0d7c7e, #0a6466)',
-                    color: '#ffffff',
-                    padding: '14px 32px',
-                    borderRadius: '8px',
-                    fontWeight: 700,
-                    fontSize: '0.97rem',
-                    display: 'inline-block',
-                    textDecoration: 'none',
-                    border: '1px solid rgba(255,255,255,0.15)'
-                  }}
+                FREE · ASYNCHRONOUS · BUILT FOR YOU
+              </motion.p>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
+                <h1
+                  className="font-bold leading-[1.05] mb-5 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent min-h-[3.5em]"
+                  style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", letterSpacing: "-0.04em" }}
                 >
-                  Start Module 1 →
-                </motion.a>
-                <motion.a
-                  href="/start-here"
-                  whileHover={{ scale: 1.03, background: 'rgba(255,255,255,0.08)' }}
-                  whileTap={{ scale: 0.97 }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-                  style={{
-                    background: 'transparent',
-                    color: 'rgba(255,255,255,0.85)',
-                    padding: '14px 32px',
-                    borderRadius: '8px',
-                    fontWeight: 600,
-                    fontSize: '0.97rem',
-                    display: 'inline-block',
-                    textDecoration: 'none',
-                    border: '1.5px solid rgba(255,255,255,0.25)'
-                  }}
-                >
-                  Read the Syllabus →
-                </motion.a>
-              </div>
+                  <Typewriter
+                    words={[
+                      "Everything they forgot to tell you about college — documented.",
+                      "Free. Self-paced. Built for first-gen students.",
+                      "7 modules. Nothing gatekept.",
+                    ]}
+                    speed={80}
+                    delayBetweenWords={3000}
+                    cursor={true}
+                    cursorChar="|"
+                  />
+                </h1>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}>
+                <p className="text-neutral-300 text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
+                  Alum&apos;s Declassified is a free seven-week course for
+                  first-generation college students — covering everything from syllabi
+                  and office hours to budgeting, mental health, and building a career.
+                  The stuff nobody tells you out loud.
+                </p>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.7 }}>
+                <div className="flex gap-4 flex-wrap">
+                  <motion.a
+                    href="/module-1"
+                    whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(13,124,126,0.4)' }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                    style={{
+                      background: 'linear-gradient(135deg, #0d7c7e, #0a6466)',
+                      color: '#ffffff',
+                      padding: '14px 32px',
+                      borderRadius: '8px',
+                      fontWeight: 700,
+                      fontSize: '0.97rem',
+                      display: 'inline-block',
+                      textDecoration: 'none',
+                      border: '1px solid rgba(255,255,255,0.15)'
+                    }}
+                  >
+                    Start Module 1 →
+                  </motion.a>
+                  <motion.a
+                    href="/start-here"
+                    whileHover={{ scale: 1.03, background: 'rgba(255,255,255,0.08)' }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                    style={{
+                      background: 'transparent',
+                      color: 'rgba(255,255,255,0.85)',
+                      padding: '14px 32px',
+                      borderRadius: '8px',
+                      fontWeight: 600,
+                      fontSize: '0.97rem',
+                      display: 'inline-block',
+                      textDecoration: 'none',
+                      border: '1.5px solid rgba(255,255,255,0.25)'
+                    }}
+                  >
+                    Read the Syllabus →
+                  </motion.a>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
 
-          {/* Right: Spline Scene */}
-          <div className="flex-1 h-[300px] md:h-[420px] w-full relative">
+          {/* Right: Spline Scene — no parallax */}
+          <div className="flex-1 h-[300px] md:h-[420px] w-full relative" style={{ zIndex: 2 }}>
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
@@ -172,10 +191,17 @@ export default function HomePage() {
       </section>
 
       {/* COURSE META BAR */}
-      <div className="bg-[#fafbfc] dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-4 shadow-[0_4px_16px_rgba(13,124,126,0.06)]" style={{ position: 'relative', zIndex: 1 }}>
+      <div
+        style={{
+          background: 'rgba(255,255,255,0.05)',
+          borderBottom: '1px solid rgba(255,255,255,0.08)',
+          padding: '1rem 0',
+          position: 'relative',
+          zIndex: 1,
+        }}
+      >
         <div className="container mx-auto px-4 flex flex-wrap gap-x-10 gap-y-3 items-center justify-center md:justify-start">
 
-          {/* Modules — animated counter */}
           <motion.div
             className="flex items-center gap-2"
             suppressHydrationWarning
@@ -190,58 +216,58 @@ export default function HomePage() {
               fontSize={22}
               className="text-[#0d7c7e] px-0"
             />
-            <span className="text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8] font-medium">Modules</span>
+            <span style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.8)', fontWeight: 500 }}>Modules</span>
           </motion.div>
 
-          {/* Time per module */}
           <motion.div
-            className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            className="flex items-center gap-2"
             suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
             viewport={{ once: true }}
+            style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.8)' }}
           >
             <Clock size={15} style={{ color: '#0d7c7e' }} />
             <span className="font-medium">40–50 min per module</span>
           </motion.div>
 
-          {/* Free */}
           <motion.div
-            className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            className="flex items-center gap-2"
             suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
+            style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.8)' }}
           >
-            <CheckCircle size={15} style={{ color: '#16723d' }} />
+            <CheckCircle size={15} style={{ color: '#4ade80' }} />
             <span className="font-medium">Completely free</span>
           </motion.div>
 
-          {/* Mobile friendly */}
           <motion.div
-            className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            className="flex items-center gap-2"
             suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
             viewport={{ once: true }}
+            style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.8)' }}
           >
-            <Smartphone size={15} style={{ color: '#5a6a82' }} />
+            <Smartphone size={15} style={{ color: 'rgba(255,255,255,0.5)' }} />
             <span className="font-medium">Mobile friendly</span>
           </motion.div>
 
-          {/* Certificate */}
           <motion.div
-            className="flex items-center gap-2 text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"
+            className="flex items-center gap-2"
             suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.4 }}
             viewport={{ once: true }}
+            style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.8)' }}
           >
-            <Award size={15} style={{ color: '#5a6a82' }} />
+            <Award size={15} style={{ color: 'rgba(255,255,255,0.5)' }} />
             <span className="font-medium">Certificate on completion</span>
           </motion.div>
 
@@ -249,16 +275,24 @@ export default function HomePage() {
       </div>
 
 
-      {/* CONTAINER SCROLL */}
-      <section className="relative py-20 bg-[#f2f4f7] dark:bg-[#1b2537] overflow-hidden" style={{ position: 'relative', zIndex: 1 }}>
+      {/* SEE WHAT'S INSIDE */}
+      <section
+        style={{
+          background: 'rgba(255,255,255,0.04)',
+          padding: '5rem 0',
+          position: 'relative',
+          zIndex: 1,
+          overflow: 'hidden',
+        }}
+      >
         <div className="container mx-auto px-4 text-center mb-10">
           <h2
-            className="text-[clamp(2.2rem,5vw,4rem)] font-bold text-[#1b2537] dark:text-white mb-4 tracking-[-0.04em] leading-[1.1]"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="text-[clamp(2.2rem,5vw,4rem)] font-bold mb-4 tracking-[-0.04em] leading-[1.1]"
+            style={{ fontFamily: "var(--font-display)", color: '#ffffff' }}
           >
             See what&apos;s inside
           </h2>
-          <p className="text-[#5a6a82] dark:text-neutral-300 text-lg">
+          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.125rem' }}>
             Seven modules. Everything documented. Nothing gatekept.
           </p>
         </div>
@@ -267,7 +301,7 @@ export default function HomePage() {
             width: '100%',
             height: '300px',
             borderRadius: '16px',
-            background: 'linear-gradient(135deg, #e0f4f4 0%, #f2f4f7 100%)',
+            background: 'rgba(13,124,126,0.08)',
             border: '2px dashed rgba(13,124,126,0.3)',
             display: 'flex',
             flexDirection: 'column',
@@ -276,7 +310,7 @@ export default function HomePage() {
             gap: '0.75rem'
           }}>
             <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.1rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>📸 Insert Screenshot Here</p>
-            <p style={{ fontSize: '0.85rem', color: '#5a6a82', margin: 0 }}>Replace with a screenshot of your course</p>
+            <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)', margin: 0 }}>Replace with a screenshot of your course</p>
           </div>
         </div>
       </section>
@@ -290,12 +324,12 @@ export default function HomePage() {
           </span>
           <FadeIn delay={0}>
           <h2
-            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.03em] leading-[1.2]"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-4 pb-[0.65rem] border-b border-white/10 tracking-[-0.03em] leading-[1.2]"
+            style={{ fontFamily: "var(--font-display)", color: '#ffffff' }}
           >
             Seven Weeks. Seven Things You Actually Need to Know.
           </h2>
-          <p>
+          <p style={{ color: 'rgba(255,255,255,0.75)' }}>
             This course runs the summer before your first college semester. Each
             module takes about 45 minutes and covers one domain of the first-gen
             experience — not theory, not inspiration, but practical information
@@ -332,19 +366,19 @@ export default function HomePage() {
             Who This Is For
           </span>
           <h2
-            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.03em] leading-[1.2]"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-4 pb-[0.65rem] border-b border-white/10 tracking-[-0.03em] leading-[1.2]"
+            style={{ fontFamily: "var(--font-display)", color: '#ffffff' }}
           >
             Built for First-Generation Students. Free for Everyone.
           </h2>
-          <p>
+          <p style={{ color: 'rgba(255,255,255,0.75)' }}>
             If you&apos;re the first in your family to go to college, you
             didn&apos;t get the unofficial orientation — the dinner-table
             conversations about how college actually works, what professors
             expect, or what financial aid really means. This course is that
             conversation.
           </p>
-          <p>
+          <p style={{ color: 'rgba(255,255,255,0.75)' }}>
             It&apos;s completely free, fully asynchronous, and designed to work
             on your phone. No account required. No deadlines. Start whenever
             you&apos;re ready.
@@ -360,7 +394,7 @@ export default function HomePage() {
                 <p className="text-[2.8rem] font-extrabold text-[#0d7c7e] m-0 leading-none">
                   {stat.val}
                 </p>
-                <p className="text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8] m-0">
+                <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.65)', margin: 0 }}>
                   {stat.label}
                 </p>
               </div>
@@ -376,17 +410,17 @@ export default function HomePage() {
             Before You Begin
           </span>
           <h2
-            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] tracking-[-0.03em] leading-[1.2]"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-4 pb-[0.65rem] border-b border-white/10 tracking-[-0.03em] leading-[1.2]"
+            style={{ fontFamily: "var(--font-display)", color: '#ffffff' }}
           >
             Introduce Yourself
           </h2>
-          <p>
+          <p style={{ color: 'rgba(255,255,255,0.75)' }}>
             Before you start Module 1, take a second to say hello. No pressure
             on length or format — just tell me something true.
           </p>
-          <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] leading-relaxed text-center">
-            <strong>Embed your Google Form or Padlet here</strong>
+          <div style={{ background: 'rgba(255,255,255,0.06)', border: '1.5px dashed rgba(255,255,255,0.15)', borderRadius: '5px', padding: '1.4rem 1.5rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.92rem', lineHeight: 1.6, textAlign: 'center' }}>
+            <strong style={{ color: 'rgba(255,255,255,0.7)' }}>Embed your Google Form or Padlet here</strong>
             <br />
             <small>
               Suggested prompt: &ldquo;What&apos;s one thing you&apos;re hoping
@@ -401,13 +435,33 @@ export default function HomePage() {
         <div className="text-center mt-4 mb-2">
           <Link
             href="/start-here"
-            className="bg-[#0d7c7e] text-white no-underline py-[11px] px-[28px] text-[0.95rem] rounded-[5px] font-bold inline-block hover:bg-[#096163] transition-all mr-2"
+            style={{
+              background: 'linear-gradient(135deg, #0d7c7e, #096163)',
+              color: '#ffffff',
+              textDecoration: 'none',
+              padding: '11px 28px',
+              fontSize: '0.95rem',
+              borderRadius: '5px',
+              fontWeight: 700,
+              display: 'inline-block',
+              marginRight: '0.5rem',
+            }}
           >
             Read the Syllabus →
           </Link>
           <Link
             href="/modules"
-            className="bg-transparent text-[#1b2537] dark:text-[#e2e8f0] border-[1.5px] border-[#1b2537] dark:border-[#e2e8f0] no-underline py-[11px] px-[28px] text-[0.95rem] rounded-[5px] font-semibold inline-block hover:bg-[#1b2537] dark:hover:bg-[#e2e8f0] hover:text-white dark:hover:text-[#1b2537] transition-all"
+            style={{
+              background: 'transparent',
+              color: 'rgba(255,255,255,0.85)',
+              border: '1.5px solid rgba(255,255,255,0.3)',
+              textDecoration: 'none',
+              padding: '11px 28px',
+              fontSize: '0.95rem',
+              borderRadius: '5px',
+              fontWeight: 600,
+              display: 'inline-block',
+            }}
           >
             View All Modules →
           </Link>
@@ -415,29 +469,33 @@ export default function HomePage() {
         </FadeIn>
       </div>
 
+      {/* EMOTIONAL COPY CARD */}
       <section style={{ padding: '60px 20px', display: 'flex', justifyContent: 'center', background: 'transparent', position: 'relative', zIndex: 1 }}>
         <div style={{
-          background: 'linear-gradient(135deg, #fef7ed 0%, #fde8c8 100%)',
+          background: 'rgba(13,124,126,0.25)',
+          backdropFilter: 'blur(12px)',
+          border: '1px solid rgba(13,124,126,0.4)',
           borderRadius: '24px',
           padding: '60px 48px',
           maxWidth: '760px',
           width: '100%',
           textAlign: 'center',
-          boxShadow: '0 4px 32px rgba(217,119,6,0.08), 0 1px 0 rgba(217,119,6,0.1)'
+          boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
         }}>
-          <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#d97706', marginBottom: '1rem' }}>FOR EVERY FIRST-GEN STUDENT</p>
-          <h2 style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, letterSpacing: '-0.03em', color: '#1b2537', marginBottom: '1rem', lineHeight: 1.1 }}>You deserve the same information everyone else got at the dinner table.</h2>
-          <p style={{ color: '#5a6a82', fontSize: '1.05rem', marginBottom: '2rem', lineHeight: 1.7 }}>This course exists because the gap between first-gen students and their peers is not about intelligence. It is about access to information. Alum&apos;s Declassified closes that gap.</p>
+          <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(13,124,126,0.9)', marginBottom: '1rem' }}>FOR EVERY FIRST-GEN STUDENT</p>
+          <h2 style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, letterSpacing: '-0.03em', color: '#ffffff', marginBottom: '1rem', lineHeight: 1.1 }}>You deserve the same information everyone else got at the dinner table.</h2>
+          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '1.05rem', marginBottom: '2rem', lineHeight: 1.7 }}>This course exists because the gap between first-gen students and their peers is not about intelligence. It is about access to information. Alum&apos;s Declassified closes that gap.</p>
           <motion.a
             href="/module-1"
-            whileHover={{ scale: 1.03, boxShadow: '0 8px 24px rgba(217,119,6,0.25)' }}
+            whileHover={{ scale: 1.03, boxShadow: '0 8px 24px rgba(13,124,126,0.4)' }}
             whileTap={{ scale: 0.97 }}
-            style={{ background: 'linear-gradient(135deg, #d97706, #b45309)', color: '#fff', padding: '14px 32px', borderRadius: '8px', fontWeight: 700, display: 'inline-block', textDecoration: 'none' }}
+            style={{ background: 'linear-gradient(135deg, #0d7c7e, #096163)', color: '#fff', padding: '14px 32px', borderRadius: '8px', fontWeight: 700, display: 'inline-block', textDecoration: 'none' }}
           >
             Start for Free →
           </motion.a>
         </div>
       </section>
+
       </div>
     </main>
   );
