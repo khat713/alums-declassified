@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Info } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { ScrollAtmosphereSubtle } from "@/components/ui/scroll-atmosphere";
+import { SceneBackgrounds } from "@/components/ui/scene-backgrounds";
 
 export default function ModulesPage() {
   const router = useRouter();
@@ -26,17 +27,18 @@ export default function ModulesPage() {
   return (
     <main>
       <ScrollAtmosphereSubtle />
+      <SceneBackgrounds />
       <div style={{ position: 'relative', zIndex: 1 }}>
-      <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
+      <section style={{ background: 'rgba(5,12,30,0.55)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
         <div className="container mx-auto px-4">
           <FadeIn delay={0}>
           <h1
-            className="text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem]"
-            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(3rem,6vw,5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}
+            className="mb-[0.4rem]"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(3rem,6vw,5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05, color: '#ffffff' }}
           >
             Course Modules
           </h1>
-          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] m-0 max-w-[580px]">
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.97rem', margin: 0, maxWidth: '580px' }}>
             Seven modules. One for each domain of the first-gen experience. Work
             through them in order or jump to what you need.
           </p>
@@ -44,13 +46,13 @@ export default function ModulesPage() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 my-8 mb-16">
+      <div className="container mx-auto px-4 my-8 mb-16" style={{ position: 'relative' }}>
         <FadeIn delay={0}>
-        <div className="bg-[#eff8ff] dark:bg-[#0f2744] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6 flex items-start gap-[10px]">
+        <div style={{ background: 'rgba(13,124,126,0.18)', borderLeft: '4px solid rgba(13,124,126,0.8)', borderRadius: '0 5px 5px 0', padding: '13px 18px', marginBottom: '1.5rem', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
           <Info size={15} style={{ color: '#0d7c7e', marginTop: '2px', flexShrink: 0 }} />
-          <p className="m-0 text-[0.9rem]">
-            <strong>New here?</strong> Start with{" "}
-            <Link href="/start-here" className="text-[#0d7c7e] font-semibold hover:underline">
+          <p style={{ margin: 0, fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)' }}>
+            <strong style={{ color: '#ffffff' }}>New here?</strong> Start with{" "}
+            <Link href="/start-here" style={{ color: '#5eead4', fontWeight: 600 }}>
               Start Here
             </Link>{" "}
             to read the syllabus before jumping into modules. Each module takes
@@ -76,7 +78,7 @@ export default function ModulesPage() {
 
         <FadeIn delay={0.2}>
         <div className="text-center mt-12">
-          <p className="text-[#5a6a82] dark:text-[#94a3b8] mb-4 text-[0.93rem]">
+          <p style={{ color: 'rgba(255,255,255,0.65)', marginBottom: '1rem', fontSize: '0.93rem' }}>
             Ready to start from the beginning?
           </p>
           <Link

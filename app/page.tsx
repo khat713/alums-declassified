@@ -172,10 +172,12 @@ export default function HomePage() {
               className="absolute pointer-events-none"
               style={{ right: '-20px', top: '50%', transform: 'translateY(-50%)', width: '440px', height: '440px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.08)', background: 'radial-gradient(circle, rgba(13,124,126,0.04) 0%, transparent 70%)' }}
             />
-            <SplineScene
-              scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
-              className="w-full h-full"
-            />
+            <div style={{ mixBlendMode: 'screen', width: '100%', height: '100%' }}>
+              <SplineScene
+                scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
+                className="w-full h-full"
+              />
+            </div>
           </div>
         </div>
 

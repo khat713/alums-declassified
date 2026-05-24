@@ -4,309 +4,434 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 export function SceneBackgrounds() {
   const { scrollYProgress } = useScroll();
 
-  const nightOpacity    = useTransform(scrollYProgress, [0, 0.15, 0.28], [1, 1, 0]);
-  const morningOpacity  = useTransform(scrollYProgress, [0.22, 0.32, 0.52, 0.62], [0, 1, 1, 0]);
-  const studyOpacity    = useTransform(scrollYProgress, [0.55, 0.65, 0.82, 0.90], [0, 1, 1, 0]);
-  const gradOpacity     = useTransform(scrollYProgress, [0.85, 0.93, 1], [0, 1, 1]);
+  const nightOpacity = useTransform(scrollYProgress, [0, 0.2, 0.28], [1, 1, 0]);
+  const walkOpacity = useTransform(scrollYProgress, [0.22, 0.32, 0.52, 0.60], [0, 1, 1, 0]);
+  const studyOpacity = useTransform(scrollYProgress, [0.54, 0.64, 0.80, 0.88], [0, 1, 1, 0]);
+  const gradOpacity = useTransform(scrollYProgress, [0.84, 0.92, 1], [0, 1, 1]);
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '-12%']);
 
-  const slowY  = useTransform(scrollYProgress, [0, 1], ['0%', '-15%']);
-  const medY   = useTransform(scrollYProgress, [0, 1], ['0%', '-25%']);
-  const fastY  = useTransform(scrollYProgress, [0, 1], ['0%', '-40%']);
+  const FlatBuilding = ({ x, y, w, h, color, windows }: {
+    x: number; y: number; w: number; h: number; color: string; windows: boolean;
+  }) => (
+    <g>
+      <rect x={x} y={y} width={w} height={h} rx="6" fill={color} />
+      {windows && Array.from({ length: Math.floor(h / 50) }, (_, row) =>
+        Array.from({ length: Math.floor(w / 22) }, (_, col) => (
+          <rect
+            key={`${row}-${col}`}
+            x={x + 8 + col * 22}
+            y={y + 12 + row * 50}
+            width={12}
+            height={16}
+            rx="3"
+            fill="rgba(245,220,100,0.55)"
+          />
+        ))
+      )}
+    </g>
+  );
 
   return (
     <div
       aria-hidden="true"
       style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}
     >
-      {/* ─── SCENE 1: NIGHT CAMPUS ─── */}
+
+      {/* ===== SCENE 1: NIGHT CAMPUS ===== */}
       <motion.div style={{ opacity: nightOpacity, position: 'absolute', inset: 0 }}>
-        {/* Stars */}
-        <motion.div style={{ y: slowY, position: 'absolute', inset: 0 }}>
-          <svg width="100%" height="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-            {Array.from({ length: 120 }, (_, i) => (
+        <motion.div style={{ y: bgY, position: 'absolute', bottom: 0, left: 0, right: 0 }}>
+          <svg width="100%" height="100%" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+            {/* Stars */}
+            {Array.from({ length: 60 }, (_, i) => (
               <motion.circle
                 key={i}
-                cx={(i * 137.5) % 1440}
-                cy={(i * 73.3) % 400}
-                r={0.5 + (i % 3) * 0.5}
+                cx={(i * 233) % 1440}
+                cy={(i * 97) % 320}
+                r={i % 3 === 0 ? 2 : 1}
                 fill="white"
-                animate={{ opacity: [0.4, 1, 0.4] }}
-                transition={{ duration: 2 + (i % 4), repeat: Infinity, delay: (i % 8) * 0.3 }}
+                animate={{ opacity: [0.3, 0.9, 0.3] }}
+                transition={{ duration: 2 + (i % 5), repeat: Infinity, delay: (i % 7) * 0.4 }}
               />
             ))}
-          </svg>
-        </motion.div>
 
-        {/* Moon */}
-        <motion.div
-          style={{
-            y: slowY,
-            position: 'absolute',
-            top: '8%',
-            right: '12%',
-            width: '90px',
-            height: '90px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle at 35% 35%, #f8fafc, #cbd5e1)',
-            boxShadow: '0 0 60px rgba(226,232,240,0.4), 0 0 120px rgba(226,232,240,0.15)',
-          }}
-        />
+            {/* Back buildings */}
+            <FlatBuilding x={0}    y={220} w={140} h={400} color="rgba(10,18,45,0.9)"  windows={true} />
+            <FlatBuilding x={120}  y={160} w={160} h={460} color="rgba(12,22,55,0.9)"  windows={true} />
+            <FlatBuilding x={260}  y={200} w={120} h={420} color="rgba(8,16,42,0.9)"   windows={true} />
+            <FlatBuilding x={360}  y={120} w={180} h={500} color="rgba(14,26,60,0.9)"  windows={true} />
+            <FlatBuilding x={800}  y={140} w={160} h={480} color="rgba(12,22,55,0.9)"  windows={true} />
+            <FlatBuilding x={940}  y={180} w={140} h={440} color="rgba(8,16,42,0.9)"   windows={true} />
+            <FlatBuilding x={1060} y={100} w={200} h={520} color="rgba(14,26,60,0.9)"  windows={true} />
+            <FlatBuilding x={1240} y={170} w={150} h={460} color="rgba(10,18,45,0.9)"  windows={true} />
+            <FlatBuilding x={1370} y={210} w={100} h={420} color="rgba(12,22,55,0.9)"  windows={true} />
 
-        {/* Buildings + dorm */}
-        <motion.div style={{ y: slowY, position: 'absolute', bottom: 0, left: 0, right: 0 }}>
-          <svg width="100%" height="60%" viewBox="0 0 1440 500" preserveAspectRatio="xMidYMax slice">
-            <rect x="0" y="200" width="1440" height="300" fill="rgba(10,22,50,0.9)" />
-            {[
-              {x:50,y:150,w:80,h:200},{x:150,y:100,w:100,h:250},{x:270,y:130,w:70,h:220},
-              {x:360,y:80,w:120,h:270},{x:500,y:120,w:90,h:230},{x:610,y:60,w:140,h:290},
-              {x:770,y:90,w:110,h:260},{x:900,y:140,w:80,h:210},{x:1000,y:70,w:130,h:280},
-              {x:1150,y:110,w:100,h:240},{x:1270,y:130,w:90,h:220},{x:1380,y:160,w:70,h:190},
-            ].map((b, i) => (
-              <g key={i}>
-                <rect x={b.x} y={b.y} width={b.w} height={b.h} fill={`rgba(15,28,60,${0.7 + i * 0.02})`} />
-                {Array.from({ length: 6 }, (_, wi) =>
-                  Array.from({ length: 4 }, (_, hi) => (
-                    <motion.rect
-                      key={`${i}-${wi}-${hi}`}
-                      x={b.x + 8 + wi * (b.w / 6.5)}
-                      y={b.y + 15 + hi * 40}
-                      width={b.w / 8}
-                      height={18}
-                      fill="rgba(245,220,100,0.7)"
-                      animate={{ opacity: [0.7, 0.3, 0.7] }}
-                      transition={{ duration: 3 + (wi + hi) % 5, repeat: Infinity, delay: (wi * hi) % 4 }}
+            {/* Main dorm building */}
+            <rect x="480" y="280" width="400" height="380" rx="8" fill="rgba(8,16,42,0.95)" />
+            <rect x="460" y="268" width="440" height="18" rx="9" fill="rgba(13,124,126,0.7)" />
+
+            {/* Dorm windows grid */}
+            {Array.from({ length: 4 }, (_, col) =>
+              Array.from({ length: 4 }, (_, row) => {
+                const isLit = col === 2 && row === 0;
+                return (
+                  <g key={`dw-${col}-${row}`}>
+                    <rect
+                      x={500 + col * 88}
+                      y={296 + row * 72}
+                      width={60}
+                      height={48}
+                      rx="5"
+                      fill={isLit ? 'rgba(245,220,100,0.22)' : 'rgba(15,30,70,0.8)'}
+                      stroke="rgba(13,124,126,0.2)"
+                      strokeWidth="1"
                     />
-                  ))
-                )}
-              </g>
-            ))}
-            {/* Dorm foreground */}
-            <rect x="500" y="250" width="440" height="250" fill="rgba(8,18,42,0.95)" />
-            <rect x="480" y="240" width="480" height="20" fill="rgba(13,124,126,0.6)" />
-            {Array.from({ length: 5 }, (_, col) =>
-              Array.from({ length: 3 }, (_, row) => (
-                <g key={`dorm-${col}-${row}`}>
-                  <rect
-                    x={520 + col * 84} y={270 + row * 65} width={60} height={50}
-                    fill={row === 0 && col === 2 ? 'rgba(245,220,100,0.15)' : 'rgba(20,40,80,0.8)'}
-                    stroke="rgba(13,124,126,0.3)" strokeWidth="1"
-                  />
-                  {row === 0 && col === 2 && (
-                    <>
-                      <ellipse cx="550" cy="308" rx="20" ry="6" fill="rgba(0,0,0,0.5)" />
-                      <circle cx="530" cy="304" r="5" fill="rgba(0,0,0,0.5)" />
-                      <motion.text x="558" fontSize="10" fill="rgba(255,255,255,0.5)"
-                        animate={{ opacity: [0.5, 0, 0.5], y: [295, 288, 295] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >z</motion.text>
-                      <motion.text x="566" fontSize="13" fill="rgba(255,255,255,0.4)"
-                        animate={{ opacity: [0.4, 0, 0.4], y: [287, 278, 287] }}
-                        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                      >Z</motion.text>
-                    </>
-                  )}
-                </g>
-              ))
+                    {isLit && (
+                      <>
+                        <ellipse cx="543" cy="328" rx="14" ry="5" fill="rgba(13,124,126,0.5)" />
+                        <circle cx="530" cy="324" r="6" fill="rgba(255,200,140,0.7)" />
+                        <motion.text x="552" y="318" fontSize="9" fill="rgba(255,255,255,0.5)"
+                          animate={{ opacity: [0.5, 0, 0.5], y: [318, 312, 318] }}
+                          transition={{ duration: 2.5, repeat: Infinity }}
+                        >z</motion.text>
+                        <motion.text x="560" y="310" fontSize="12" fill="rgba(255,255,255,0.4)"
+                          animate={{ opacity: [0.4, 0, 0.4], y: [310, 302, 310] }}
+                          transition={{ duration: 2.5, repeat: Infinity, delay: 0.6 }}
+                        >Z</motion.text>
+                      </>
+                    )}
+                  </g>
+                );
+              })
             )}
-            <rect x="0" y="480" width="1440" height="20" fill="rgba(13,124,126,0.2)" />
-            <ellipse cx="720" cy="490" rx="300" ry="8" fill="rgba(13,124,126,0.15)" />
+
+            <ellipse cx="720" cy="660" rx="320" ry="12" fill="rgba(13,124,126,0.18)" />
+            <rect x="0" y="650" width="1440" height="150" fill="rgba(6,12,30,0.95)" />
           </svg>
         </motion.div>
       </motion.div>
 
-      {/* ─── SCENE 2: DAWN CAMPUS ─── */}
-      <motion.div style={{ opacity: morningOpacity, position: 'absolute', inset: 0 }}>
-        <motion.div style={{ y: medY, position: 'absolute', bottom: 0, left: 0, right: 0 }}>
-          <svg width="100%" height="55%" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMax slice">
-            <rect x="0" y="380" width="1440" height="100" fill="rgba(15,40,30,0.8)" />
-            <path d="M500 380 L600 480 L840 480 L940 380 Z" fill="rgba(30,60,50,0.6)" />
-            {[100, 250, 380, 1060, 1190, 1320].map((x, i) => (
+      {/* ===== SCENE 2: DAWN — WALKING TO CLASS ===== */}
+      <motion.div style={{ opacity: walkOpacity, position: 'absolute', inset: 0 }}>
+        <motion.div style={{ y: bgY, position: 'absolute', bottom: 0, left: 0, right: 0 }}>
+          <svg width="100%" height="100%" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+            {/* Ground */}
+            <rect x="0" y="620" width="1440" height="180" fill="rgba(10,30,20,0.85)" />
+            {/* Path */}
+            <rect x="580" y="600" width="280" height="200" fill="rgba(20,50,35,0.7)" />
+            <rect x="700" y="600" width="40"  height="200" fill="rgba(30,70,45,0.5)" />
+
+            {/* Trees — flat overlapping circles */}
+            {[80, 220, 380, 1020, 1160, 1320].map((tx, i) => (
               <g key={i}>
-                <rect x={x+20} y="290" width="8" height="90" fill="rgba(40,30,20,0.7)" />
-                <motion.ellipse
-                  cx={x+24} cy="260" rx="30" ry="40" fill="rgba(13,80,50,0.7)"
-                  animate={{ scaleX: [1, 1.02, 1] }}
-                  transition={{ duration: 3 + i, repeat: Infinity, ease: 'easeInOut' }}
-                />
+                <rect x={tx + 14} y={480} width={12} height={140} rx="6" fill="rgba(50,30,15,0.7)" />
+                <circle cx={tx + 20} cy={455} r={38} fill="rgba(13,80,45,0.8)" />
+                <circle cx={tx + 38} cy={470} r={28} fill="rgba(16,100,55,0.7)" />
+                <circle cx={tx + 4}  cy={472} r={26} fill="rgba(10,70,40,0.7)" />
               </g>
             ))}
+
             {/* University building */}
-            <rect x="580" y="180" width="280" height="200" fill="rgba(20,40,80,0.85)" />
-            <rect x="560" y="170" width="320" height="20" fill="rgba(13,124,126,0.5)" />
-            {[600, 640, 680, 720, 760, 800, 840].map((x, i) => (
-              <rect key={i} x={x} y="170" width="12" height="210" fill="rgba(30,60,100,0.5)" />
+            <rect x="540" y="280" width="360" height="340" rx="10" fill="rgba(16,32,70,0.9)" />
+            <rect x="520" y="268" width="400" height="20"  rx="10" fill="rgba(13,124,126,0.8)" />
+            {[560, 610, 660, 710, 760, 810, 860].map((cx, i) => (
+              <rect key={i} x={cx} y={268} width={16} height={352} rx="6" fill="rgba(20,45,90,0.5)" />
             ))}
-            {[600, 660, 720, 780].map((x, i) => (
-              <g key={i}>
-                <rect x={x} y="200" width="40" height="50" fill="rgba(245,220,100,0.3)" stroke="rgba(13,124,126,0.4)" strokeWidth="1" />
-                <rect x={x} y="270" width="40" height="50" fill="rgba(245,220,100,0.25)" stroke="rgba(13,124,126,0.4)" strokeWidth="1" />
-              </g>
-            ))}
-            <rect x="650" y="330" width="140" height="30" fill="rgba(13,124,126,0.7)" rx="3" />
-            <text x="720" y="351" textAnchor="middle" fontSize="11" fill="white" fontFamily="sans-serif">FIRST-GEN HALL</text>
-            {/* Walking student */}
-            <motion.g
-              animate={{ x: [-200, 1600] }}
-              transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
-            >
-              <circle cx="300" cy="338" r="14" fill="rgba(255,210,160,0.9)" />
-              <rect x="290" y="352" width="20" height="28" rx="4" fill="rgba(13,124,126,0.8)" />
-              <rect x="308" y="354" width="12" height="18" rx="3" fill="rgba(217,119,6,0.8)" />
-              <motion.rect x="291" y="378" width="8" height="22" rx="4"
-                fill="rgba(30,60,100,0.8)"
-                animate={{ rotate: [15, -15, 15] }}
-                transition={{ duration: 0.6, repeat: Infinity }}
-                style={{ transformOrigin: '295px 378px' }}
-              />
-              <motion.rect x="303" y="378" width="8" height="22" rx="4"
-                fill="rgba(30,60,100,0.8)"
-                animate={{ rotate: [-15, 15, -15] }}
-                transition={{ duration: 0.6, repeat: Infinity }}
-                style={{ transformOrigin: '307px 378px' }}
-              />
-            </motion.g>
-            {/* Rising sun */}
-            <ellipse cx="720" cy="400" rx="200" ry="20" fill="rgba(245,158,11,0.15)" />
-            <circle cx="720" cy="385" r="28" fill="rgba(245,158,11,0.8)" style={{ filter: 'blur(2px)' }} />
-          </svg>
-        </motion.div>
-      </motion.div>
-
-      {/* ─── SCENE 3: AFTERNOON LIBRARY ─── */}
-      <motion.div style={{ opacity: studyOpacity, position: 'absolute', inset: 0 }}>
-        <motion.div style={{ y: medY, position: 'absolute', bottom: 0, left: 0, right: 0 }}>
-          <svg width="100%" height="65%" viewBox="0 0 1440 550" preserveAspectRatio="xMidYMax slice">
-            <rect x="0" y="0" width="1440" height="550" fill="rgba(15,30,50,0.5)" />
-            {/* Bookshelves left */}
-            {[0, 1, 2].map(col => (
-              <g key={col}>
-                <rect x={col * 160} y="50" width="140" height="400" fill="rgba(40,25,15,0.8)" rx="4" />
-                {Array.from({ length: 8 }, (_, row) =>
-                  Array.from({ length: 6 }, (_, book) => (
-                    <rect key={`${col}-${row}-${book}`}
-                      x={col * 160 + 8 + book * 21} y={60 + row * 48}
-                      width={18} height={38} rx="2"
-                      fill={['rgba(13,124,126,0.8)','rgba(217,119,6,0.7)','rgba(99,102,241,0.7)','rgba(239,68,68,0.6)','rgba(34,197,94,0.7)','rgba(168,85,247,0.6)'][book]}
-                    />
-                  ))
-                )}
-              </g>
-            ))}
-            {/* Bookshelves right */}
-            {[0, 1, 2].map(col => (
-              <g key={col}>
-                <rect x={960 + col * 160} y="50" width="140" height="400" fill="rgba(40,25,15,0.8)" rx="4" />
-                {Array.from({ length: 8 }, (_, row) =>
-                  Array.from({ length: 6 }, (_, book) => (
-                    <rect key={`r-${col}-${row}-${book}`}
-                      x={968 + col * 160 + book * 21} y={60 + row * 48}
-                      width={18} height={38} rx="2"
-                      fill={['rgba(245,158,11,0.7)','rgba(13,124,126,0.8)','rgba(239,68,68,0.6)','rgba(99,102,241,0.7)','rgba(217,119,6,0.7)','rgba(34,197,94,0.6)'][book]}
-                    />
-                  ))
-                )}
-              </g>
-            ))}
-            {/* Study table */}
-            <rect x="480" y="340" width="480" height="16" rx="4" fill="rgba(80,50,20,0.9)" />
-            <rect x="500" y="356" width="12" height="80" rx="3" fill="rgba(60,35,15,0.8)" />
-            <rect x="948" y="356" width="12" height="80" rx="3" fill="rgba(60,35,15,0.8)" />
-            {/* Books */}
-            <rect x="540" y="316" width="80" height="28" rx="2" fill="rgba(240,240,220,0.3)" />
-            <rect x="620" y="316" width="80" height="28" rx="2" fill="rgba(240,240,220,0.25)" />
-            <line x1="620" y1="316" x2="620" y2="344" stroke="rgba(200,200,180,0.4)" strokeWidth="1" />
-            {/* Laptop */}
-            <rect x="730" y="300" width="100" height="44" rx="3" fill="rgba(30,30,40,0.8)" />
-            <rect x="720" y="338" width="120" height="6" rx="2" fill="rgba(40,40,50,0.7)" />
-            <rect x="735" y="305" width="88" height="32" rx="2" fill="rgba(13,124,126,0.25)" />
-            {/* Student */}
-            <circle cx="660" cy="295" r="18" fill="rgba(255,210,160,0.9)" />
-            <ellipse cx="660" cy="326" rx="22" ry="14" fill="rgba(13,124,126,0.7)" />
-            {/* Light bulb */}
-            <motion.g
-              animate={{ opacity: [0, 1, 0], scale: [0.8, 1.2, 0.8] }}
-              transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
-              style={{ transformOrigin: '695px 268px' }}
-            >
-              <circle cx="695" cy="268" r="14" fill="rgba(245,220,50,0.2)" />
-              <circle cx="695" cy="268" r="8" fill="rgba(245,220,50,0.5)" />
-            </motion.g>
-            {/* Desk lamp */}
-            <line x1="840" y1="340" x2="840" y2="280" stroke="rgba(200,200,200,0.5)" strokeWidth="3" />
-            <line x1="840" y1="280" x2="870" y2="300" stroke="rgba(200,200,200,0.5)" strokeWidth="3" />
-            <motion.ellipse cx="875" cy="305" rx="20" ry="12"
-              fill="rgba(245,220,100,0.3)"
-              animate={{ opacity: [0.3, 0.5, 0.3] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-            <rect x="0" y="440" width="1440" height="110" fill="rgba(20,30,50,0.7)" />
-          </svg>
-        </motion.div>
-      </motion.div>
-
-      {/* ─── SCENE 4: GRADUATION ─── */}
-      <motion.div style={{ opacity: gradOpacity, position: 'absolute', inset: 0 }}>
-        <motion.div style={{ y: fastY, position: 'absolute', bottom: 0, left: 0, right: 0 }}>
-          <svg width="100%" height="70%" viewBox="0 0 1440 580" preserveAspectRatio="xMidYMax slice">
-            {/* Stage */}
-            <rect x="400" y="350" width="640" height="20" fill="rgba(13,124,126,0.6)" rx="4" />
-            <rect x="380" y="368" width="680" height="12" rx="3" fill="rgba(13,124,126,0.4)" />
-            {/* Podium */}
-            <rect x="680" y="290" width="80" height="60" fill="rgba(13,80,70,0.8)" rx="3" />
-            <rect x="670" y="283" width="100" height="12" fill="rgba(13,124,126,0.7)" rx="2" />
-            {/* Audience */}
-            {[0, 1, 2].map(row =>
-              Array.from({ length: 18 }, (_, i) => (
-                <g key={`aud-${row}-${i}`}>
-                  <circle cx={150 + i * 64 + row * 8} cy={440 + row * 35} r="10"
-                    fill={`rgba(${220 + i % 30},${180 + (i * row) % 40},${150 + i % 30},0.7)`} />
-                  <rect x={144 + i * 64 + row * 8} y={450 + row * 35} width="12" height="20" rx="3"
-                    fill={['rgba(13,124,126,0.6)','rgba(217,119,6,0.6)','rgba(99,102,241,0.6)'][i % 3]} />
-                  <rect x={140 + i * 64 + row * 8} y={430 + row * 35} width="20" height="4" rx="1" fill="rgba(20,20,30,0.8)" />
-                  <rect x={146 + i * 64 + row * 8} y={425 + row * 35} width="8" height="6" rx="1" fill="rgba(20,20,30,0.8)" />
-                </g>
+            {[560, 630, 700, 770, 840].map((wx, wi) =>
+              [296, 366, 436].map((wy, hi) => (
+                <rect key={`w-${wi}-${hi}`} x={wx} y={wy} width={50} height={48} rx="5"
+                  fill="rgba(245,220,100,0.3)" stroke="rgba(13,124,126,0.3)" strokeWidth="1" />
               ))
             )}
-            {/* Graduate */}
-            <circle cx="720" cy="295" r="20" fill="rgba(255,210,160,0.9)" />
-            <rect x="700" y="315" width="40" height="35" rx="4" fill="rgba(13,124,126,0.8)" />
-            <rect x="695" y="283" width="50" height="8" rx="2" fill="rgba(20,20,30,0.9)" />
-            <rect x="708" y="276" width="24" height="10" rx="2" fill="rgba(20,20,30,0.9)" />
-            <motion.line x1="745" y1="283" x2="752" y2="308"
-              stroke="rgba(245,158,11,0.9)" strokeWidth="2"
-              animate={{ x1: [745, 748, 745], x2: [752, 755, 752] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-            <motion.circle cx="752" cy="311" r="4" fill="rgba(245,158,11,0.9)"
-              animate={{ cx: [752, 755, 752] } as Record<string, number[]>}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-            <line x1="700" y1="325" x2="675" y2="300" stroke="rgba(255,210,160,0.9)" strokeWidth="7" strokeLinecap="round" />
-            <line x1="740" y1="325" x2="765" y2="300" stroke="rgba(255,210,160,0.9)" strokeWidth="7" strokeLinecap="round" />
-            {/* Confetti */}
-            {Array.from({ length: 40 }, (_, i) => (
-              <motion.rect
-                key={i}
-                x={(i * 137) % 1440} y={-20}
-                width={6 + (i % 4)} height={6 + (i % 3)} rx="1"
-                fill={['rgba(13,124,126,0.9)','rgba(245,158,11,0.9)','rgba(255,255,255,0.8)','rgba(99,102,241,0.8)','rgba(239,68,68,0.7)'][i % 5]}
-                animate={{
-                  y: [-20, 600],
-                  rotate: [0, 360 * (i % 2 === 0 ? 1 : -1)],
-                  x: [(i * 137) % 1440, ((i * 137) % 1440) + (i % 2 === 0 ? 80 : -80)],
-                }}
-                transition={{ duration: 4 + (i % 5), repeat: Infinity, delay: (i % 8) * 0.4, ease: 'linear' }}
+            <rect x="618" y="500" width="204" height="34" rx="8" fill="rgba(13,124,126,0.85)" />
+            <text x="720" y="523" textAnchor="middle" fontSize="12" fill="white" fontFamily="sans-serif" fontWeight="bold">FIRST-GEN HALL</text>
+
+            {/* Walking student — flat Memphis */}
+            <motion.g animate={{ x: [-180, 1620] }} transition={{ duration: 16, repeat: Infinity, ease: 'linear' }}>
+              <rect x="286" y="542" width="32" height="40" rx="10" fill="rgba(13,124,126,0.95)" />
+              <rect x="314" y="546" width="18" height="28" rx="6"  fill="rgba(245,158,11,0.95)" />
+              <ellipse cx="302" cy="527" rx="15" ry="16" fill="rgba(255,200,140,0.95)" />
+              <circle cx="297" cy="524" r="2" fill="rgba(60,30,10,0.7)" />
+              <circle cx="307" cy="524" r="2" fill="rgba(60,30,10,0.7)" />
+              <motion.rect x="288" y="580" width="12" height="28" rx="6"
+                fill="rgba(30,60,120,0.9)"
+                animate={{ rotate: [18, -18, 18] }}
+                transition={{ duration: 0.55, repeat: Infinity }}
+                style={{ transformOrigin: '294px 580px' }}
               />
+              <motion.rect x="304" y="580" width="12" height="28" rx="6"
+                fill="rgba(30,60,120,0.9)"
+                animate={{ rotate: [-18, 18, -18] }}
+                transition={{ duration: 0.55, repeat: Infinity }}
+                style={{ transformOrigin: '310px 580px' }}
+              />
+              <motion.rect x="270" y="548" width="12" height="24" rx="6"
+                fill="rgba(255,200,140,0.9)"
+                animate={{ rotate: [20, -20, 20] }}
+                transition={{ duration: 0.55, repeat: Infinity }}
+                style={{ transformOrigin: '276px 548px' }}
+              />
+            </motion.g>
+
+            {/* Rising sun */}
+            <circle cx="720" cy="640" r="52" fill="rgba(245,158,11,0.88)" />
+            <circle cx="720" cy="640" r="80" fill="rgba(245,158,11,0.12)" />
+          </svg>
+        </motion.div>
+      </motion.div>
+
+      {/* ===== SCENE 3: AFTERNOON — LIBRARY STUDYING ===== */}
+      <motion.div style={{ opacity: studyOpacity, position: 'absolute', inset: 0 }}>
+        <motion.div style={{ y: bgY, position: 'absolute', bottom: 0, left: 0, right: 0 }}>
+          <svg width="100%" height="100%" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+            <rect x="0" y="620" width="1440" height="180" fill="rgba(15,25,50,0.9)" />
+
+            {/* Left bookshelves */}
+            {[0, 1, 2].map(shelf => (
+              <g key={`ls-${shelf}`}>
+                <rect x={shelf * 180} y={200} width={165} height={430} rx="8" fill="rgba(35,22,12,0.85)" />
+                {Array.from({ length: 7 }, (_, row) =>
+                  Array.from({ length: 5 }, (_, book) => (
+                    <rect key={`lb-${shelf}-${row}-${book}`}
+                      x={shelf * 180 + 10 + book * 30}
+                      y={210 + row * 58}
+                      width={24} height={46} rx="4"
+                      fill={[
+                        'rgba(13,124,126,0.9)', 'rgba(245,158,11,0.85)',
+                        'rgba(239,68,68,0.8)',   'rgba(99,102,241,0.85)',
+                        'rgba(34,197,94,0.8)',
+                      ][book]}
+                    />
+                  ))
+                )}
+              </g>
             ))}
+
+            {/* Right bookshelves */}
+            {[0, 1, 2].map(shelf => (
+              <g key={`rs-${shelf}`}>
+                <rect x={900 + shelf * 180} y={200} width={165} height={430} rx="8" fill="rgba(35,22,12,0.85)" />
+                {Array.from({ length: 7 }, (_, row) =>
+                  Array.from({ length: 5 }, (_, book) => (
+                    <rect key={`rb-${shelf}-${row}-${book}`}
+                      x={910 + shelf * 180 + book * 30}
+                      y={210 + row * 58}
+                      width={24} height={46} rx="4"
+                      fill={[
+                        'rgba(168,85,247,0.85)', 'rgba(13,124,126,0.9)',
+                        'rgba(245,158,11,0.8)',   'rgba(239,68,68,0.85)',
+                        'rgba(99,102,241,0.8)',
+                      ][book]}
+                    />
+                  ))
+                )}
+              </g>
+            ))}
+
+            {/* Study table */}
+            <rect x="420" y="530" width="600" height="20" rx="10" fill="rgba(70,45,20,0.9)" />
+            <rect x="440" y="548" width="14" height="80" rx="7" fill="rgba(55,35,15,0.8)" />
+            <rect x="966" y="548" width="14" height="80" rx="7" fill="rgba(55,35,15,0.8)" />
+
+            {/* Open book */}
+            <rect x="480" y="498" width="70" height="34" rx="4" fill="rgba(245,235,210,0.25)" />
+            <rect x="550" y="498" width="70" height="34" rx="4" fill="rgba(245,235,210,0.2)"  />
+            <line x1="550" y1="498" x2="550" y2="532" stroke="rgba(200,190,160,0.4)" strokeWidth="1.5" />
+
+            {/* Laptop */}
+            <rect x="680" y="488" width="110" height="44" rx="5" fill="rgba(25,25,35,0.9)" />
+            <rect x="668" y="530" width="134" height="8"  rx="4" fill="rgba(35,35,50,0.8)" />
+            <rect x="684" y="493" width="96"  height="34" rx="3" fill="rgba(13,124,126,0.3)" />
+
+            {/* Studying student — flat Memphis */}
+            <rect x="586" y="480" width="36" height="46" rx="10" fill="rgba(245,158,11,0.9)" />
+            <ellipse cx="604" cy="463" rx="18" ry="19" fill="rgba(180,120,70,0.95)" />
+            <circle cx="598" cy="460" r="2.5" fill="rgba(60,30,10,0.8)" />
+            <circle cx="610" cy="460" r="2.5" fill="rgba(60,30,10,0.8)" />
+            <rect x="560" y="498" width="30" height="12" rx="6" fill="rgba(220,160,100,0.85)" />
+
+            {/* Pencil */}
+            <motion.rect x="834" y="480" width="6" height="52" rx="3"
+              fill="rgba(245,200,60,0.95)"
+              animate={{ rotate: [-6, 6, -6] }}
+              transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+              style={{ transformOrigin: '837px 506px' }}
+            />
+
+            {/* Light-bulb moment */}
+            <motion.g
+              animate={{ opacity: [0, 1, 0], scale: [0.7, 1.15, 0.7] }}
+              transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+              style={{ transformOrigin: '640px 420px' }}
+            >
+              <circle cx="640" cy="420" r="22" fill="rgba(245,220,50,0.3)"  />
+              <circle cx="640" cy="420" r="14" fill="rgba(245,220,50,0.62)" />
+              <rect x="634" y="434" width="12" height="8" rx="3" fill="rgba(180,160,40,0.7)" />
+            </motion.g>
+
+            {/* Desk lamp */}
+            <rect x="840" y="430" width="8"  height="100" rx="4" fill="rgba(160,160,180,0.6)" />
+            <rect x="840" y="428" width="50" height="8"   rx="4" fill="rgba(160,160,180,0.6)" />
+            <motion.ellipse cx="892" cy="432" rx="24" ry="14"
+              fill="rgba(245,220,100,0.35)"
+              animate={{ opacity: [0.35, 0.55, 0.35] }}
+              transition={{ duration: 2.5, repeat: Infinity }}
+            />
+          </svg>
+        </motion.div>
+      </motion.div>
+
+      {/* ===== SCENE 4: GRADUATION ===== */}
+      <motion.div style={{ opacity: gradOpacity, position: 'absolute', inset: 0 }}>
+        <motion.div style={{ y: bgY, position: 'absolute', bottom: 0, left: 0, right: 0 }}>
+          <svg width="100%" height="100%" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+            {/* Stage */}
+            <rect x="260" y="480" width="920" height="30" rx="15" fill="rgba(13,124,126,0.9)" />
+            <rect x="240" y="506" width="960" height="16" rx="8"  fill="rgba(9,97,99,0.75)"   />
+
+            {/* Podium */}
+            <rect x="672" y="410" width="96"  height="72" rx="12" fill="rgba(13,124,126,0.9)" />
+            <rect x="658" y="400" width="124" height="18" rx="9"  fill="rgba(94,234,212,0.75)" />
+
+            {/* GRADUATE — flat Memphis */}
+            <g transform="translate(720, 390)">
+              {/* Gown */}
+              <path d="M-22 0 Q-28 20 -32 56 Q0 66 32 56 Q28 20 22 0 Z" fill="rgba(13,124,126,0.95)" />
+              <rect x="-16" y="-8" width="32" height="14" rx="7" fill="rgba(13,124,126,0.9)" />
+              {/* Head */}
+              <ellipse cx="0" cy="-28" rx="20" ry="22" fill="rgba(255,200,140,0.95)" />
+              <circle cx="-7" cy="-30" r="3" fill="rgba(60,30,10,0.7)" />
+              <circle cx="7"  cy="-30" r="3" fill="rgba(60,30,10,0.7)" />
+              <path d="M-8 -20 Q0 -14 8 -20" stroke="rgba(60,30,10,0.7)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+              {/* Flat cap — wide board + short top block */}
+              <rect x="-22" y="-53" width="44" height="8"  rx="4" fill="rgba(15,20,40,1)" />
+              <rect x="-10" y="-63" width="20" height="12" rx="4" fill="rgba(15,20,40,1)" />
+              {/* Animated tassel */}
+              <motion.g
+                animate={{ rotate: [-15, 20, -15] }}
+                transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
+                style={{ transformOrigin: '22px -49px' }}
+              >
+                <line x1="22" y1="-49" x2="30" y2="-22" stroke="#f59e0b" strokeWidth="3" strokeLinecap="round" />
+                <circle cx="30" cy="-18" r="5.5" fill="#f59e0b" />
+              </motion.g>
+              {/* Sausage arms raised — thick rounded paths */}
+              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+              <motion.path
+                d="M-20 -2 Q-42 -18 -54 -36"
+                stroke="rgba(255,200,140,0.95)" strokeWidth="16" strokeLinecap="round" fill="none"
+                animate={{ d: [
+                  'M-20 -2 Q-42 -18 -54 -36',
+                  'M-20 -2 Q-44 -22 -58 -44',
+                  'M-20 -2 Q-42 -18 -54 -36',
+                ] } as any}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              />
+              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+              <motion.path
+                d="M20 -2 Q42 -18 54 -36"
+                stroke="rgba(255,200,140,0.95)" strokeWidth="16" strokeLinecap="round" fill="none"
+                animate={{ d: [
+                  'M20 -2 Q42 -18 54 -36',
+                  'M20 -2 Q44 -22 58 -44',
+                  'M20 -2 Q42 -18 54 -36',
+                ] } as any}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              />
+              {/* Diploma */}
+              <motion.g
+                animate={{ rotate: [-10, 10, -10] }}
+                transition={{ duration: 2.5, repeat: Infinity }}
+                style={{ transformOrigin: '68px -30px' }}
+              >
+                <rect x="54" y="-40" width="30" height="20" rx="5" fill="rgba(255,250,220,0.9)" />
+                <line x1="59" y1="-34" x2="79" y2="-34" stroke="rgba(13,124,126,0.5)" strokeWidth="2" />
+                <line x1="59" y1="-28" x2="79" y2="-28" stroke="rgba(13,124,126,0.4)" strokeWidth="1.5" />
+              </motion.g>
+            </g>
+
+            {/* AUDIENCE BACK ROW — 15 people, flat caps (wide board + short cylinder) */}
+            {Array.from({ length: 15 }, (_, i) => {
+              const skins  = ['rgba(255,200,140,0.9)','rgba(200,140,80,0.9)','rgba(160,100,50,0.9)','rgba(240,180,120,0.9)','rgba(120,75,35,0.9)'];
+              const bodies = ['rgba(13,124,126,0.85)','rgba(245,158,11,0.85)','rgba(99,102,241,0.85)','rgba(239,68,68,0.8)','rgba(168,85,247,0.8)','rgba(34,197,94,0.8)'];
+              const x = 100 + i * 84;
+              const y = 538;
+              return (
+                <g key={`ba-${i}`}>
+                  {/* Body */}
+                  <rect x={x - 15} y={y + 14} width={30} height={40} rx="10" fill={bodies[i % 6]} />
+                  {/* Head — small oval */}
+                  <ellipse cx={x} cy={y + 7} rx={14} ry={15} fill={skins[i % 5]} />
+                  {/* Flat mortarboard: wide board + short block on top */}
+                  <rect x={x - 17} y={y - 11} width={34} height={7}  rx="3.5" fill="rgba(15,20,40,0.95)" />
+                  <rect x={x - 8}  y={y - 20} width={16} height={11} rx="4"   fill="rgba(15,20,40,0.95)" />
+                  {/* Tassel */}
+                  <line x1={x + 17} y1={y - 7} x2={x + 22} y2={y + 6} stroke="#f59e0b" strokeWidth="2" strokeLinecap="round" />
+                  <circle cx={x + 22} cy={y + 9} r={3.5} fill="#f59e0b" />
+                </g>
+              );
+            })}
+
+            {/* AUDIENCE FRONT ROW — 13 people, flat caps */}
+            {Array.from({ length: 13 }, (_, i) => {
+              const skins  = ['rgba(255,200,140,0.95)','rgba(200,140,80,0.95)','rgba(160,100,50,0.95)','rgba(240,180,120,0.95)','rgba(120,75,35,0.95)'];
+              const bodies = ['rgba(13,124,126,0.9)','rgba(245,158,11,0.9)','rgba(99,102,241,0.9)','rgba(239,68,68,0.85)','rgba(168,85,247,0.85)','rgba(34,197,94,0.85)'];
+              const x = 130 + i * 92;
+              const y = 594;
+              return (
+                <g key={`fa-${i}`}>
+                  {/* Body */}
+                  <rect x={x - 17} y={y + 16} width={34} height={48} rx="11" fill={bodies[i % 6]} />
+                  {/* Head */}
+                  <ellipse cx={x} cy={y + 8} rx={16} ry={17} fill={skins[i % 5]} />
+                  {/* Eye dots */}
+                  <circle cx={x - 5} cy={y + 5} r={2.5} fill="rgba(50,25,8,0.6)" />
+                  <circle cx={x + 5} cy={y + 5} r={2.5} fill="rgba(50,25,8,0.6)" />
+                  {/* Flat mortarboard */}
+                  <rect x={x - 20} y={y - 12} width={40} height={8}  rx="4" fill="rgba(15,20,40,0.95)" />
+                  <rect x={x - 9}  y={y - 22} width={18} height={12} rx="4" fill="rgba(15,20,40,0.95)" />
+                  {/* Tassel */}
+                  <line x1={x + 20} y1={y - 8} x2={x + 26} y2={y + 8} stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" />
+                  <circle cx={x + 26} cy={y + 12} r={4} fill="#f59e0b" />
+                </g>
+              );
+            })}
+
+            {/* CONFETTI — 50 pieces, circles + rectangles */}
+            {Array.from({ length: 50 }, (_, i) => {
+              const colors = [
+                'rgba(13,124,126,1)',  'rgba(245,158,11,1)',  'rgba(255,255,255,0.9)',
+                'rgba(99,102,241,1)',  'rgba(239,68,68,0.9)', 'rgba(168,85,247,0.9)',
+                'rgba(34,197,94,0.9)',
+              ];
+              const color  = colors[i % 7];
+              const startX = (i * 151) % 1440;
+              const drift  = i % 2 === 0 ? 70 : -70;
+              const size   = 5 + (i % 6);
+              return i % 3 === 0 ? (
+                <motion.circle key={i} cx={startX} cy={-8} r={size / 2} fill={color}
+                  animate={{ cy: [-8, 820], cx: [startX, startX + drift], opacity: [1, 0.5, 0] } as any}
+                  transition={{ duration: 3 + (i % 5), repeat: Infinity, delay: (i % 10) * 0.28, ease: 'easeIn' }}
+                />
+              ) : (
+                <motion.rect key={i} x={startX} y={-8} width={size} height={size * 0.6} rx={2} fill={color}
+                  animate={{ y: [-8, 820], x: [startX, startX + drift], rotate: [0, i % 2 === 0 ? 360 : -360], opacity: [1, 0.4, 0] }}
+                  transition={{ duration: 4 + (i % 5), repeat: Infinity, delay: (i % 11) * 0.25, ease: 'linear' }}
+                />
+              );
+            })}
+
             {/* Banner */}
-            <rect x="480" y="240" width="480" height="35" fill="rgba(13,124,126,0.4)" rx="4" />
-            <text x="720" y="264" textAnchor="middle" fontSize="18" fill="rgba(255,255,255,0.9)" fontFamily="Fraunces, serif" fontWeight="bold">
+            <rect x="420" y="310" width="600" height="50" rx="14" fill="rgba(13,124,126,0.8)"  />
+            <rect x="418" y="308" width="604" height="54" rx="16" stroke="rgba(94,234,212,0.4)" strokeWidth="2" fill="none" />
+            <text x="720" y="343" textAnchor="middle" fontSize="21" fill="white" fontFamily="Fraunces, serif" fontWeight="bold" letterSpacing="-0.3">
               CONGRATULATIONS, CLASS OF 2025
             </text>
-            <rect x="0" y="540" width="1440" height="40" fill="rgba(10,20,40,0.8)" />
+
+            <rect x="0" y="760" width="1440" height="40" fill="rgba(8,16,40,0.9)" />
           </svg>
         </motion.div>
       </motion.div>
+
     </div>
   );
 }
