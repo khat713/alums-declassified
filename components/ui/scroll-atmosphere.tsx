@@ -4,22 +4,22 @@ import { motion, useScroll } from 'framer-motion';
 
 const SCENES = [
   {
-    sky: 'linear-gradient(180deg, #020818 0%, #040f2d 30%, #071428 60%, #0a1628 100%)',
+    sky: 'linear-gradient(180deg, rgba(2,8,24,0.75) 0%, rgba(4,15,45,0.75) 30%, rgba(7,20,40,0.75) 60%, rgba(10,22,40,0.75) 100%)',
     glow: 'rgba(99,179,237,0.12)',
     starOpacity: 1,
   },
   {
-    sky: 'linear-gradient(180deg, #040f2d 0%, #071428 30%, #0d1f3c 50%, #0f2d4a 80%, #1a3a5c 100%)',
+    sky: 'linear-gradient(180deg, rgba(4,15,45,0.7) 0%, rgba(7,20,40,0.7) 30%, rgba(13,31,60,0.7) 50%, rgba(15,45,74,0.7) 80%, rgba(26,58,92,0.7) 100%)',
     glow: 'rgba(13,124,126,0.2)',
     starOpacity: 0.7,
   },
   {
-    sky: 'linear-gradient(180deg, #0d1f3c 0%, #1a3a5c 25%, #1e4060 50%, #c2460a 85%, #e8651a 100%)',
+    sky: 'linear-gradient(180deg, rgba(13,31,60,0.65) 0%, rgba(26,58,92,0.65) 25%, rgba(30,64,96,0.65) 50%, rgba(194,70,10,0.5) 85%, rgba(232,101,26,0.6) 100%)',
     glow: 'rgba(194,70,10,0.35)',
     starOpacity: 0.3,
   },
   {
-    sky: 'linear-gradient(180deg, #1e3a5f 0%, #b45309 40%, #d97706 70%, #f59e0b 100%)',
+    sky: 'linear-gradient(180deg, rgba(30,58,95,0.6) 0%, rgba(180,83,9,0.65) 40%, rgba(217,119,6,0.7) 70%, rgba(245,158,11,0.75) 100%)',
     glow: 'rgba(245,158,11,0.4)',
     starOpacity: 0,
   },

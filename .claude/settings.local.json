@@ -24,7 +24,8 @@
       "Bash(grep -n '{/\\\\*' C:/Users/khat2/OneDrive/Desktop/alums-declassified/app/module-__TRACKED_VAR__/page.tsx)",
       "Bash(del *)",
       "Bash(node -e \"require.resolve\\('framer-motion'\\)\")",
-      "Bash(node -e \"require.resolve\\('three'\\)\")"
+      "Bash(node -e \"require.resolve\\('three'\\)\")",
+      "Bash(Remove-Item *)"
     ]
   }
 }

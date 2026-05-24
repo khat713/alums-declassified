@@ -10,7 +10,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Clock, CheckCircle, Smartphone, Award } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { ScrollAtmosphere } from '@/components/ui/scroll-atmosphere';
-import { StudentJourney } from '@/components/ui/student-journey';
+import { SceneBackgrounds } from '@/components/ui/scene-backgrounds';
 
 
 export default function HomePage() {
@@ -40,7 +40,7 @@ export default function HomePage() {
   return (
     <main>
       <ScrollAtmosphere />
-      <StudentJourney />
+      <SceneBackgrounds />
       <div style={{ position: 'relative', zIndex: 1 }}>
 
       {/* HERO */}
@@ -193,7 +193,9 @@ export default function HomePage() {
       {/* COURSE META BAR */}
       <div
         style={{
-          background: 'rgba(255,255,255,0.05)',
+          background: 'rgba(5,15,35,0.5)',
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
           borderBottom: '1px solid rgba(255,255,255,0.08)',
           padding: '1rem 0',
           position: 'relative',
@@ -278,7 +280,9 @@ export default function HomePage() {
       {/* SEE WHAT'S INSIDE */}
       <section
         style={{
-          background: 'rgba(255,255,255,0.04)',
+          background: 'rgba(5,15,35,0.45)',
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
           padding: '5rem 0',
           position: 'relative',
           zIndex: 1,
@@ -301,8 +305,8 @@ export default function HomePage() {
             width: '100%',
             height: '300px',
             borderRadius: '16px',
-            background: 'rgba(13,124,126,0.08)',
-            border: '2px dashed rgba(13,124,126,0.3)',
+            background: 'rgba(255,255,255,0.06)',
+            border: '2px dashed rgba(255,255,255,0.15)',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
