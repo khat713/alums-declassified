@@ -29,7 +29,8 @@
       "Bash(Write-Host \"Deleted\")",
       "Bash(node -e \"const p = require\\('./node_modules/@lottiefiles/dotlottie-react/package.json'\\); console.log\\('version:', p.version\\); console.log\\('main:', p.main\\); console.log\\('exports:', JSON.stringify\\(p.exports, null, 2\\)\\);\")",
       "Bash(node *)",
-      "Bash(npm uninstall *)"
+      "Bash(npm uninstall *)",
+      "Bash(echo \"exit: $?\")"
     ]
   }
 }
