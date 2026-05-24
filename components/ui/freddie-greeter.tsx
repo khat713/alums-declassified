@@ -119,40 +119,75 @@ export function FreddieGreeter() {
   return (
     <>
       {/* Trigger button */}
-      <motion.button
-        ref={triggerRef}
-        onClick={handleOpen}
-        whileHover={{ scale: 1.05, boxShadow: '0 0 24px rgba(13,124,126,0.5)' }}
-        whileTap={{ scale: 0.96 }}
-        aria-label="Meet First-Gen Freddie, your course guide"
-        aria-expanded={isOpen}
-        aria-haspopup="dialog"
-        style={{
-          background: 'rgba(13,124,126,0.15)',
-          border: '1.5px solid rgba(13,124,126,0.4)',
-          color: '#5eead4',
-          padding: '10px 22px',
-          borderRadius: '100px',
-          fontWeight: 600,
-          fontSize: '0.875rem',
-          cursor: 'pointer',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          marginTop: '1rem',
-          backdropFilter: 'blur(8px)',
-          transition: 'all 0.2s ease'
-        }}
-      >
-        <motion.span
-          animate={{ rotate: [0, 15, -15, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 2 }}
-          aria-hidden="true"
+      <div style={{ position: 'relative' }}>
+        <motion.button
+          ref={triggerRef}
+          onClick={handleOpen}
+          whileHover={{ scale: 1.1, boxShadow: '0 0 32px rgba(13,124,126,0.6)' }}
+          whileTap={{ scale: 0.92 }}
+          aria-label="Chat with First-Gen Freddie, your course guide"
+          aria-expanded={isOpen}
+          aria-haspopup="dialog"
+          style={{
+            width: '56px',
+            height: '56px',
+            borderRadius: '50%',
+            background: 'linear-gradient(135deg, #0d7c7e, #096163)',
+            border: '2px solid rgba(13,124,126,0.4)',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '1.5rem',
+            boxShadow: '0 4px 20px rgba(13,124,126,0.4)',
+            position: 'relative',
+          }}
         >
-          👋
-        </motion.span>
-        Meet First-Gen Freddie
-      </motion.button>
+          {/* Pulsing ring */}
+          <motion.div
+            animate={{ scale: [1, 1.4, 1], opacity: [0.4, 0, 0.4] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+            style={{
+              position: 'absolute',
+              inset: -4,
+              borderRadius: '50%',
+              border: '2px solid rgba(13,124,126,0.5)',
+              pointerEvents: 'none',
+            }}
+          />
+          <motion.span
+            animate={{ rotate: [0, 15, -10, 15, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 3 }}
+            style={{ fontSize: '1.4rem', lineHeight: 1 }}
+          >
+            🎓
+          </motion.span>
+        </motion.button>
+
+        {/* Tooltip */}
+        <motion.div
+          initial={{ opacity: 0, y: 5 }}
+          whileHover={{ opacity: 1, y: 0 }}
+          style={{
+            position: 'absolute',
+            bottom: '64px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            background: '#1b2537',
+            color: '#ffffff',
+            fontSize: '0.75rem',
+            fontWeight: 600,
+            padding: '6px 12px',
+            borderRadius: '8px',
+            whiteSpace: 'nowrap',
+            pointerEvents: 'none',
+            border: '1px solid rgba(13,124,126,0.3)',
+          }}
+        >
+          Chat with Freddie
+          <div style={{ position: 'absolute', bottom: '-4px', left: '50%', transform: 'translateX(-50%)', width: '8px', height: '8px', background: '#1b2537', borderRight: '1px solid rgba(13,124,126,0.3)', borderBottom: '1px solid rgba(13,124,126,0.3)', rotate: '45deg' }} />
+        </motion.div>
+      </div>
 
       {/* Dialog overlay */}
       <AnimatePresence>
