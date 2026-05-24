@@ -225,58 +225,58 @@ export default function HomePage() {
               fontSize={22}
               className="text-[#0d7c7e] px-0"
             />
-            <span style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.8)', fontWeight: 500 }}>Modules</span>
+            <span className="dark:text-white/80 text-[#1b2537]" style={{ fontSize: '0.82rem', fontWeight: 500 }}>Modules</span>
           </motion.div>
 
           <motion.div
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 dark:text-white/80 text-[#1b2537]"
             suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
             viewport={{ once: true }}
-            style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.8)' }}
+            style={{ fontSize: '0.82rem' }}
           >
             <Clock size={15} style={{ color: '#0d7c7e' }} />
             <span className="font-medium">40–50 min per module</span>
           </motion.div>
 
           <motion.div
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 dark:text-white/80 text-[#1b2537]"
             suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
-            style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.8)' }}
+            style={{ fontSize: '0.82rem' }}
           >
             <CheckCircle size={15} style={{ color: '#4ade80' }} />
             <span className="font-medium">Completely free</span>
           </motion.div>
 
           <motion.div
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 dark:text-white/80 text-[#1b2537]"
             suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
             viewport={{ once: true }}
-            style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.8)' }}
+            style={{ fontSize: '0.82rem' }}
           >
-            <Smartphone size={15} style={{ color: 'rgba(255,255,255,0.5)' }} />
+            <Smartphone size={15} className="dark:text-white/50 text-[#6b7280]" />
             <span className="font-medium">Mobile friendly</span>
           </motion.div>
 
           <motion.div
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 dark:text-white/80 text-[#1b2537]"
             suppressHydrationWarning
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.4 }}
             viewport={{ once: true }}
-            style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.8)' }}
+            style={{ fontSize: '0.82rem' }}
           >
-            <Award size={15} style={{ color: 'rgba(255,255,255,0.5)' }} />
+            <Award size={15} className="dark:text-white/50 text-[#6b7280]" />
             <span className="font-medium">Certificate on completion</span>
           </motion.div>
 
@@ -287,7 +287,7 @@ export default function HomePage() {
       {/* SEE WHAT'S INSIDE */}
       <section
         style={{
-          background: 'rgba(5,12,35,0.88)',
+          background: 'var(--card-bg)',
           backdropFilter: 'blur(12px)',
           WebkitBackdropFilter: 'blur(12px)',
           padding: '5rem 0',
@@ -298,12 +298,12 @@ export default function HomePage() {
       >
         <div className="container mx-auto px-4 text-center mb-10">
           <h2
-            className="text-[clamp(2.2rem,5vw,4rem)] font-bold mb-4 tracking-[-0.04em] leading-[1.1]"
-            style={{ fontFamily: "var(--font-display)", color: '#ffffff' }}
+            className="text-[clamp(2.2rem,5vw,4rem)] font-bold mb-4 tracking-[-0.04em] leading-[1.1] dark:text-white text-[#1b2537]"
+            style={{ fontFamily: "var(--font-display)" }}
           >
             See what&apos;s inside
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.125rem' }}>
+          <p className="dark:text-white/65 text-[#4a5568]" style={{ fontSize: '1.125rem' }}>
             Seven modules. Everything documented. Nothing gatekept.
           </p>
         </div>
@@ -312,8 +312,8 @@ export default function HomePage() {
             width: '100%',
             height: '300px',
             borderRadius: '16px',
-            background: 'rgba(255,255,255,0.06)',
-            border: '2px dashed rgba(255,255,255,0.15)',
+            background: 'rgba(128,128,128,0.07)',
+            border: '2px dashed rgba(128,128,128,0.25)',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -321,7 +321,7 @@ export default function HomePage() {
             gap: '0.75rem'
           }}>
             <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.1rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>📸 Insert Screenshot Here</p>
-            <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.5)', margin: 0 }}>Replace with a screenshot of your course</p>
+            <p className="dark:text-white/50 text-[#6b7280]" style={{ fontSize: '0.85rem', margin: 0 }}>Replace with a screenshot of your course</p>
           </div>
         </div>
       </section>
@@ -335,12 +335,12 @@ export default function HomePage() {
           </span>
           <FadeIn delay={0}>
           <h2
-            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-4 pb-[0.65rem] border-b border-white/10 tracking-[-0.03em] leading-[1.2]"
-            style={{ fontFamily: "var(--font-display)", color: '#ffffff' }}
+            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-4 pb-[0.65rem] border-b dark:border-white/10 border-black/10 tracking-[-0.03em] leading-[1.2] dark:text-white text-[#1b2537]"
+            style={{ fontFamily: "var(--font-display)" }}
           >
             Seven Weeks. Seven Things You Actually Need to Know.
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="dark:text-white/75 text-[#2e3f5c]">
             This course runs the summer before your first college semester. Each
             module takes about 45 minutes and covers one domain of the first-gen
             experience — not theory, not inspiration, but practical information
@@ -377,19 +377,19 @@ export default function HomePage() {
             Who This Is For
           </span>
           <h2
-            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-4 pb-[0.65rem] border-b border-white/10 tracking-[-0.03em] leading-[1.2]"
-            style={{ fontFamily: "var(--font-display)", color: '#ffffff' }}
+            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-4 pb-[0.65rem] border-b dark:border-white/10 border-black/10 tracking-[-0.03em] leading-[1.2] dark:text-white text-[#1b2537]"
+            style={{ fontFamily: "var(--font-display)" }}
           >
             Built for First-Generation Students. Free for Everyone.
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="dark:text-white/75 text-[#2e3f5c]">
             If you&apos;re the first in your family to go to college, you
             didn&apos;t get the unofficial orientation — the dinner-table
             conversations about how college actually works, what professors
             expect, or what financial aid really means. This course is that
             conversation.
           </p>
-          <p style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="dark:text-white/75 text-[#2e3f5c]">
             It&apos;s completely free, fully asynchronous, and designed to work
             on your phone. No account required. No deadlines. Start whenever
             you&apos;re ready.
@@ -405,7 +405,7 @@ export default function HomePage() {
                 <p className="text-[2.8rem] font-extrabold text-[#0d7c7e] m-0 leading-none">
                   {stat.val}
                 </p>
-                <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.65)', margin: 0 }}>
+                <p className="dark:text-white/65 text-[#4a5568]" style={{ fontSize: '0.82rem', margin: 0 }}>
                   {stat.label}
                 </p>
               </div>
@@ -421,17 +421,17 @@ export default function HomePage() {
             Before You Begin
           </span>
           <h2
-            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-4 pb-[0.65rem] border-b border-white/10 tracking-[-0.03em] leading-[1.2]"
-            style={{ fontFamily: "var(--font-display)", color: '#ffffff' }}
+            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-4 pb-[0.65rem] border-b dark:border-white/10 border-black/10 tracking-[-0.03em] leading-[1.2] dark:text-white text-[#1b2537]"
+            style={{ fontFamily: "var(--font-display)" }}
           >
             Introduce Yourself
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="dark:text-white/75 text-[#2e3f5c]">
             Before you start Module 1, take a second to say hello. No pressure
             on length or format — just tell me something true.
           </p>
-          <div style={{ background: 'rgba(255,255,255,0.06)', border: '1.5px dashed rgba(255,255,255,0.15)', borderRadius: '5px', padding: '1.4rem 1.5rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.92rem', lineHeight: 1.6, textAlign: 'center' }}>
-            <strong style={{ color: 'rgba(255,255,255,0.7)' }}>Embed your Google Form or Padlet here</strong>
+          <div className="dark:text-white/50 text-[#6b7280]" style={{ background: 'rgba(128,128,128,0.06)', border: '1.5px dashed rgba(128,128,128,0.2)', borderRadius: '5px', padding: '1.4rem 1.5rem', fontSize: '0.92rem', lineHeight: 1.6, textAlign: 'center' }}>
+            <strong className="dark:text-white/70 text-[#374151]">Embed your Google Form or Padlet here</strong>
             <br />
             <small>
               Suggested prompt: &ldquo;What&apos;s one thing you&apos;re hoping
@@ -464,8 +464,8 @@ export default function HomePage() {
             href="/modules"
             style={{
               background: 'transparent',
-              color: 'rgba(255,255,255,0.85)',
-              border: '1.5px solid rgba(255,255,255,0.3)',
+              color: '#0d7c7e',
+              border: '1.5px solid rgba(13,124,126,0.5)',
               textDecoration: 'none',
               padding: '11px 28px',
               fontSize: '0.95rem',

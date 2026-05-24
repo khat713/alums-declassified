@@ -3,6 +3,14 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { speakText } from '@/lib/elevenlabs';
 
+function stripEmoji(text: string): string {
+  return text
+    .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
+    .replace(/[\u{2600}-\u{26FF}]/gu, '')
+    .replace(/[\u{2700}-\u{27BF}]/gu, '')
+    .trim();
+}
+
 const FREDDIE_LINES = [
   "Hey there! I'm First-Gen Freddie 👋",
   "I'm a first-gen grad myself, and I know how overwhelming this all feels.",
@@ -36,7 +44,7 @@ export function FreddieGreeter() {
     if (charIndex === FREDDIE_LINES[currentLine].length) {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (!isMuted && !prefersReducedMotion) {
-        speakText(FREDDIE_LINES[currentLine]);
+        speakText(stripEmoji(FREDDIE_LINES[currentLine]));
       }
       if (currentLine < FREDDIE_LINES.length - 1) {
         const timer = setTimeout(() => {
