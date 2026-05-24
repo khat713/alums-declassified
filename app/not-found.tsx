@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center px-4" style={{ background: 'linear-gradient(135deg, #f2f4f7 0%, #e0f4f4 100%)' }}>
+    <div className="min-h-screen flex flex-col items-center justify-center text-center px-4" style={{ background: 'linear-gradient(135deg, #faf8f5 0%, #f0f7f4 100%)' }}>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

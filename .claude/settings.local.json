@@ -30,7 +30,9 @@
       "Bash(node -e \"const p = require\\('./node_modules/@lottiefiles/dotlottie-react/package.json'\\); console.log\\('version:', p.version\\); console.log\\('main:', p.main\\); console.log\\('exports:', JSON.stringify\\(p.exports, null, 2\\)\\);\")",
       "Bash(node *)",
       "Bash(npm uninstall *)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Bash(grep -n 'bg-white dark:bg-\\\\[#1e293b\\\\].*py-9\\\\|<h1 ' 'C:\\\\Projects\\\\alums-declassified\\\\app\\\\module-__TRACKED_VAR__\\\\page.tsx')",
+      "Bash(grep -n 'section\\\\|<h1\\\\|bg-white\\\\|bg-\\\\[' 'C:\\\\Projects\\\\alums-declassified\\\\app\\\\module-__TRACKED_VAR__\\\\page.tsx')"
     ]
   }
 }

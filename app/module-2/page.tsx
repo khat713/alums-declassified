@@ -28,7 +28,7 @@ export default function Module2Page() {
 
       <ModuleStepper currentStep={2} />
 
-      <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-9 pb-7 relative overflow-hidden">
+      <section className="module-header border-b py-9 pb-7 relative overflow-hidden">
         <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '200px', height: '200px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.12)', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '140px', height: '140px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.08)', pointerEvents: 'none' }} />
         <div className="container mx-auto px-4">

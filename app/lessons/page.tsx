@@ -26,7 +26,7 @@ export default function LessonsPage() {
         </div>
       </div>
 
-      <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-9 pb-7">
+      <section className="module-header border-b py-9 pb-7">
         <div className="container mx-auto px-4">
           <p className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.09em] uppercase text-[#0d7c7e] mb-2">
             All 7 Weeks
