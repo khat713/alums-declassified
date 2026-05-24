@@ -132,26 +132,6 @@ export function ScrollAtmosphere() {
       <Stars opacity={scene.starOpacity} />
       <FloatingShapes />
 
-      {/* Moon — visible in scenes 0 and 1 */}
-      <motion.div
-        animate={{
-          opacity: sceneIndex <= 1 ? 0.9 : 0,
-          y: sceneIndex === 0 ? '15vh' : sceneIndex === 1 ? '10vh' : '0vh',
-        }}
-        transition={{ duration: 2, ease: 'easeInOut' }}
-        style={{
-          position: 'absolute',
-          right: '15%',
-          top: '8%',
-          width: '60px',
-          height: '60px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, #e2e8f0 0%, #cbd5e1 60%, transparent 100%)',
-          boxShadow: '0 0 40px rgba(226,232,240,0.3), 0 0 80px rgba(226,232,240,0.1)',
-          pointerEvents: 'none',
-        }}
-      />
-
       {/* Sun — rises in scenes 2 and 3 */}
       <motion.div
         animate={{

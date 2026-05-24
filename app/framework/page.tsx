@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/fade-in";
+import { ForceDark } from "@/components/ui/force-dark";
+import { ScrollAtmosphere } from "@/components/ui/scroll-atmosphere";
+import { LottieSceneLayer } from "@/components/ui/lottie-scenes";
+import { ScrollPath } from "@/components/ui/scroll-path";
 
 export const metadata: Metadata = {
   title: "ID Framework | Alum's Declassified",
@@ -16,16 +20,19 @@ const addieSteps = [
 export default function FrameworkPage() {
   return (
     <main>
-      <div style={{ position: 'fixed', inset: 0, zIndex: -1, backgroundImage: 'radial-gradient(circle, rgba(13,124,126,0.08) 1px, transparent 1px)', backgroundSize: '28px 28px', pointerEvents: 'none' }} />
-      <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
+      <ForceDark />
+      <ScrollAtmosphere />
+      <LottieSceneLayer />
+      <ScrollPath />
+      <div style={{ position: 'relative', zIndex: 1 }}>
+      <section style={{ background: 'rgba(5,12,35,0.90)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
         <div className="container mx-auto px-4">
           <h1
-            className="text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem]"
-            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,4rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,4rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05, color: '#ffffff', marginBottom: '0.4rem' }}
           >
             Instructional Design Framework
           </h1>
-          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] m-0 max-w-[580px]">
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.97rem', margin: 0, maxWidth: '580px' }}>
             The theoretical foundation and design process behind this course.
           </p>
         </div>
@@ -199,6 +206,7 @@ export default function FrameworkPage() {
           </div>
         </div>
         </FadeIn>
+      </div>
       </div>
     </main>
   );

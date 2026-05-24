@@ -7,6 +7,7 @@ import { ToastContainer } from "@/components/ui/toast-notification";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { PageTransition } from "@/components/ui/page-transition";
 import { FreddieGreeter } from "@/components/ui/freddie-greeter";
+import ReactLenis from 'lenis/react';
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -44,13 +45,15 @@ export default function RootLayout({
         />
       </head>
       <body className="text-[#1b2537] dark:text-[#e2e8f0] font-body transition-colors duration-200">
-        <div
-          style={{ position: 'relative', zIndex: 0, minHeight: '100vh', background: 'var(--page-bg)' }}
-        >
-          <Navbar />
-          <PageTransition>{children}</PageTransition>
-          <Footer />
-        </div>
+        <ReactLenis root options={{ lerp: 0.08, duration: 1.2, smoothWheel: true }}>
+          <div
+            style={{ position: 'relative', zIndex: 0, minHeight: '100vh', background: 'var(--page-bg)' }}
+          >
+            <Navbar />
+            <PageTransition>{children}</PageTransition>
+            <Footer />
+          </div>
+        </ReactLenis>
         <ToastContainer />
         <ScrollToTop />
         <div style={{ position: 'fixed', bottom: '24px', left: '24px', zIndex: 9999 }}>

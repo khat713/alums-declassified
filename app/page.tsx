@@ -10,7 +10,8 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Clock, CheckCircle, Smartphone, Award } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { ScrollAtmosphere } from '@/components/ui/scroll-atmosphere';
-import { SceneBackgrounds } from '@/components/ui/scene-backgrounds';
+import { LottieSceneLayer } from '@/components/ui/lottie-scenes';
+import { ScrollPath } from '@/components/ui/scroll-path';
 
 
 export default function HomePage() {
@@ -40,7 +41,8 @@ export default function HomePage() {
   return (
     <main>
       <ScrollAtmosphere />
-      <SceneBackgrounds />
+      <LottieSceneLayer />
+      <ScrollPath />
       <div style={{ position: 'relative', zIndex: 1 }}>
 
       {/* HERO */}
@@ -195,9 +197,9 @@ export default function HomePage() {
       {/* COURSE META BAR */}
       <div
         style={{
-          background: 'rgba(5,15,35,0.5)',
-          backdropFilter: 'blur(8px)',
-          WebkitBackdropFilter: 'blur(8px)',
+          background: 'rgba(5,12,35,0.90)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
           borderBottom: '1px solid rgba(255,255,255,0.08)',
           padding: '1rem 0',
           position: 'relative',
@@ -282,9 +284,9 @@ export default function HomePage() {
       {/* SEE WHAT'S INSIDE */}
       <section
         style={{
-          background: 'rgba(5,15,35,0.45)',
-          backdropFilter: 'blur(8px)',
-          WebkitBackdropFilter: 'blur(8px)',
+          background: 'rgba(5,12,35,0.88)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
           padding: '5rem 0',
           position: 'relative',
           zIndex: 1,
@@ -478,7 +480,7 @@ export default function HomePage() {
       {/* EMOTIONAL COPY CARD */}
       <section style={{ padding: '60px 20px', display: 'flex', justifyContent: 'center', background: 'transparent', position: 'relative', zIndex: 1 }}>
         <div style={{
-          background: 'rgba(13,124,126,0.25)',
+          background: 'rgba(5,40,40,0.90)',
           backdropFilter: 'blur(12px)',
           border: '1px solid rgba(13,124,126,0.4)',
           borderRadius: '24px',

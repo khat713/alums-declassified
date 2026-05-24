@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
+import { ForceDark } from "@/components/ui/force-dark";
+import { ScrollAtmosphere } from "@/components/ui/scroll-atmosphere";
+import { LottieSceneLayer } from "@/components/ui/lottie-scenes";
+import { ScrollPath } from "@/components/ui/scroll-path";
 
 export const metadata: Metadata = {
   title: "Assignments | Alum's Declassified",
@@ -9,16 +13,19 @@ export const metadata: Metadata = {
 export default function AssignmentsPage() {
   return (
     <main>
-      <div style={{ position: 'fixed', inset: 0, zIndex: -1, backgroundImage: 'radial-gradient(circle, rgba(13,124,126,0.08) 1px, transparent 1px)', backgroundSize: '28px 28px', pointerEvents: 'none' }} />
-      <section className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[38px] pb-8">
+      <ForceDark />
+      <ScrollAtmosphere />
+      <LottieSceneLayer />
+      <ScrollPath />
+      <div style={{ position: 'relative', zIndex: 1 }}>
+      <section style={{ background: 'rgba(5,12,35,0.90)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
         <div className="container mx-auto px-4">
           <h1
-            className="text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem]"
-            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,4rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,4rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05, color: '#ffffff', marginBottom: '0.4rem' }}
           >
             Assignments
           </h1>
-          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] m-0 max-w-[580px]">
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.97rem', margin: 0, maxWidth: '580px' }}>
             Nine assignments across seven modules. Each one produces something
             you&apos;ll actually use.
           </p>
@@ -229,7 +236,7 @@ export default function AssignmentsPage() {
         </FadeIn>
 
         <FadeIn delay={0.8}>
-        <div id="a9" className="content-block p-7 mb-8" style={{ borderLeft: '4px solid #0d7c7e', background: 'linear-gradient(135deg, #f0fdfc 0%, #ffffff 100%)', borderRadius: '0 16px 16px 0' }}>
+        <div id="a9" className="content-block p-7 mb-8" style={{ borderLeft: '4px solid #0d7c7e', borderRadius: '0 16px 16px 0' }}>
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assignment 9 · 150 pts · Final</span>
           <h2 className="text-[1.1rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044] " style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>College Readiness Portfolio</h2>
           <p><strong>Format:</strong> Portfolio document (Google Doc, Word, or PDF) + 3–5 minute recorded introduction</p>
@@ -242,6 +249,7 @@ export default function AssignmentsPage() {
           </div>
         </div>
         </FadeIn>
+      </div>
       </div>
     </main>
   );

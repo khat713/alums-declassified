@@ -2,9 +2,10 @@
 import Link from "next/link";
 import { CurriculumTimeline } from "@/components/ui/curriculum-timeline";
 import { FadeIn } from "@/components/ui/fade-in";
-import { ScrollAtmosphereSubtle } from "@/components/ui/scroll-atmosphere";
+import { ScrollAtmosphere } from "@/components/ui/scroll-atmosphere";
 import { ForceDark } from "@/components/ui/force-dark";
-import { SceneBackgrounds } from "@/components/ui/scene-backgrounds";
+import { LottieSceneLayer } from "@/components/ui/lottie-scenes";
+import { ScrollPath } from "@/components/ui/scroll-path";
 
 export const metadata: Metadata = {
   title: "Start Here | Alum's Declassified",
@@ -14,10 +15,11 @@ export default function StartHerePage() {
   return (
     <main>
       <ForceDark />
-      <ScrollAtmosphereSubtle />
-      <SceneBackgrounds />
+      <ScrollAtmosphere />
+      <LottieSceneLayer />
+      <ScrollPath />
       <div style={{ position: 'relative', zIndex: 1 }}>
-      <section style={{ background: 'rgba(5,12,30,0.55)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
+      <section style={{ background: 'rgba(5,12,35,0.90)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
         <div className="container mx-auto px-4">
           <h1
             style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,4rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05, color: '#ffffff', marginBottom: '0.4rem' }}

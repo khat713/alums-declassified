@@ -4,8 +4,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Info } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { ScrollAtmosphereSubtle } from "@/components/ui/scroll-atmosphere";
-import { SceneBackgrounds } from "@/components/ui/scene-backgrounds";
+import { ScrollAtmosphere } from "@/components/ui/scroll-atmosphere";
+import { LottieSceneLayer } from "@/components/ui/lottie-scenes";
+import { ScrollPath } from "@/components/ui/scroll-path";
 
 export default function ModulesPage() {
   const router = useRouter();
@@ -26,10 +27,11 @@ export default function ModulesPage() {
 
   return (
     <main>
-      <ScrollAtmosphereSubtle />
-      <SceneBackgrounds />
+      <ScrollAtmosphere />
+      <LottieSceneLayer />
+      <ScrollPath />
       <div style={{ position: 'relative', zIndex: 1 }}>
-      <section style={{ background: 'rgba(5,12,30,0.55)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
+      <section style={{ background: 'rgba(5,12,35,0.90)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
         <div className="container mx-auto px-4">
           <FadeIn delay={0}>
           <h1
@@ -48,7 +50,7 @@ export default function ModulesPage() {
 
       <div className="container mx-auto px-4 my-8 mb-16" style={{ position: 'relative' }}>
         <FadeIn delay={0}>
-        <div style={{ background: 'rgba(13,124,126,0.18)', borderLeft: '4px solid rgba(13,124,126,0.8)', borderRadius: '0 5px 5px 0', padding: '13px 18px', marginBottom: '1.5rem', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+        <div style={{ background: 'rgba(13,60,60,0.85)', borderLeft: '4px solid rgba(13,124,126,0.9)', borderRadius: '0 5px 5px 0', padding: '13px 18px', marginBottom: '1.5rem', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
           <Info size={15} style={{ color: '#0d7c7e', marginTop: '2px', flexShrink: 0 }} />
           <p style={{ margin: 0, fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)' }}>
             <strong style={{ color: '#ffffff' }}>New here?</strong> Start with{" "}
