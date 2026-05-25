@@ -81,7 +81,7 @@ export default function Navbar() {
                     "nav-link block px-[0.8rem] rounded-[5px] text-[0.865rem] font-medium transition-colors no-underline hover:no-underline",
                     active
                       ? "text-[#0d7c7e] font-semibold bg-[#e0f4f4] dark:bg-[#0d3538]"
-                      : "text-[#4a5568] dark:text-[#94a3b8] hover:text-[#0d7c7e] dark:hover:text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032]"
+                      : "text-[#1b2537] dark:text-[#94a3b8] hover:text-[#0d7c7e] dark:hover:text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032]"
                   )}
                   onClick={() => setOpen(false)}
                   aria-current={active ? 'page' : undefined}

@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Info } from "lucide-react";
@@ -7,11 +6,6 @@ import { FadeIn } from "@/components/ui/fade-in";
 
 export default function ModulesPage() {
   const router = useRouter();
-
-  useEffect(() => {
-    document.documentElement.classList.add('page-forced-dark');
-    return () => { document.documentElement.classList.remove('page-forced-dark'); };
-  }, []);
   const moduleCards = [
     { id: "module-1", title: "College Expectations", description: "The unwritten rules, syllabi, office hours, professor relationships, and what nobody tells you before the first day.", icon: <BookOpen size={28} />, bg: 'linear-gradient(135deg, #0f766e, #0d5f58)', onClick: () => router.push("/module-1") },
     { id: "module-2", title: "Campus Resources", description: "Financial aid, tutoring centers, counseling, food pantries — and how to actually walk into an office for the first time.", icon: <MapPin size={28} />, bg: 'linear-gradient(135deg, #1d4ed8, #1e3a8a)', onClick: () => router.push("/module-2") },
@@ -25,16 +19,16 @@ export default function ModulesPage() {
   return (
     <main>
       <div style={{ position: 'relative', zIndex: 1 }}>
-      <section style={{ background: 'rgba(5,12,35,0.90)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
+      <section className="module-header border-b py-9 pb-7">
         <div className="container mx-auto px-4">
           <FadeIn delay={0}>
           <h1
             className="mb-[0.4rem]"
-            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(3rem,6vw,5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05, color: '#ffffff' }}
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(3rem,6vw,5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}
           >
             Course Modules
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.97rem', margin: 0, maxWidth: '580px' }}>
+          <p style={{ fontSize: '0.97rem', margin: 0, maxWidth: '580px' }}>
             Seven modules. One for each domain of the first-gen experience. Work
             through them in order or jump to what you need.
           </p>
@@ -44,11 +38,11 @@ export default function ModulesPage() {
 
       <div className="container mx-auto px-4 my-8 mb-16" style={{ position: 'relative' }}>
         <FadeIn delay={0}>
-        <div style={{ background: 'rgba(13,60,60,0.85)', borderLeft: '4px solid rgba(13,124,126,0.9)', borderRadius: '0 5px 5px 0', padding: '13px 18px', marginBottom: '1.5rem', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+        <div className="bg-[#eff8ff] dark:bg-[#0f2744] border-l-4 border-l-[#0d7c7e] rounded-r-[5px] py-[13px] px-[18px] mb-6 flex items-start gap-[10px]">
           <Info size={15} style={{ color: '#0d7c7e', marginTop: '2px', flexShrink: 0 }} />
-          <p style={{ margin: 0, fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)' }}>
-            <strong style={{ color: '#ffffff' }}>New here?</strong> Start with{" "}
-            <Link href="/start-here" style={{ color: '#5eead4', fontWeight: 600 }}>
+          <p className="m-0 text-[0.9rem] text-[#1b2537] dark:text-[#e2e8f0]">
+            <strong>New here?</strong> Start with{" "}
+            <Link href="/start-here" className="text-[#0d7c7e] dark:text-[#5eead4] font-semibold">
               Start Here
             </Link>{" "}
             to read the syllabus before jumping into modules. Each module takes
@@ -74,7 +68,7 @@ export default function ModulesPage() {
 
         <FadeIn delay={0.2}>
         <div className="text-center mt-12">
-          <p style={{ color: 'rgba(255,255,255,0.65)', marginBottom: '1rem', fontSize: '0.93rem' }}>
+          <p className="text-[#5a6a82] dark:text-white/65 mb-4 text-[0.93rem]">
             Ready to start from the beginning?
           </p>
           <Link

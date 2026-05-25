@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/fade-in";
-import { ForceDark } from "@/components/ui/force-dark";
 
 export const metadata: Metadata = {
   title: "ID Framework | Alum's Declassified",
@@ -17,16 +16,15 @@ const addieSteps = [
 export default function FrameworkPage() {
   return (
     <main>
-      <ForceDark />
       <div style={{ position: 'relative', zIndex: 1 }}>
-      <section style={{ background: 'rgba(5,12,35,0.90)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
+      <section className="module-header border-b py-9 pb-7">
         <div className="container mx-auto px-4">
           <h1
-            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,4rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05, color: '#ffffff', marginBottom: '0.4rem' }}
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,4rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05, marginBottom: '0.4rem' }}
           >
             Instructional Design Framework
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.97rem', margin: 0, maxWidth: '580px' }}>
+          <p style={{ fontSize: '0.97rem', margin: 0, maxWidth: '580px' }}>
             The theoretical foundation and design process behind this course.
           </p>
         </div>

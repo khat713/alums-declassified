@@ -164,13 +164,14 @@ export default function HomePage() {
           </div>
 
           {/* Right: Spline Scene — no parallax */}
-          <div className="flex-1 h-[300px] md:h-[420px] w-full relative" style={{ zIndex: 2 }}>
-            <div style={{ mixBlendMode: 'screen', position: 'relative', zIndex: 2, width: '100%', height: '100%' }}>
-              <SplineScene
-                scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
-                className="w-full h-full"
-              />
-            </div>
+          <div
+            className="flex-1 h-[300px] md:h-[420px] w-full relative"
+            style={{ mixBlendMode: 'screen' }}
+          >
+            <SplineScene
+              scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
+              className="w-full h-full"
+            />
           </div>
         </div>
 
