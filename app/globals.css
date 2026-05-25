@@ -16,7 +16,7 @@
   --surface-cream: linear-gradient(135deg, #ede5d8 0%, #faf6f0 100%);
   --border: #e0d8ce;
   --page-bg: #f2ede6;
-  --hero-backdrop: rgba(255,255,255,0.15);
+  --hero-backdrop: rgba(255,255,255,0.88);
   --meta-bar-bg: rgba(255,255,255,0.70);
   --card-bg: rgba(255,255,255,0.92);
   --text-primary: #1b2537;
@@ -34,7 +34,7 @@
   --surface-cream: #162032;
   --border: #334155;
   --page-bg: #0a0f1e;
-  --hero-backdrop: rgba(4,10,28,0.78);
+  --hero-backdrop: rgba(4,10,28,0.82);
   --meta-bar-bg: rgba(5,12,30,0.78);
   --card-bg: rgba(5,12,35,0.88);
   --text-primary: #f1f5f9;

@@ -110,7 +110,7 @@ export default function HomePage() {
                 </h1>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}>
-                <p className="dark:text-white/75 text-[#2e3f5c] text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
+                <p className="dark:text-white/80 text-[#374151] text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
                   Alum&apos;s Declassified is a free seven-week course for
                   first-generation college students — covering everything from syllabi
                   and office hours to budgeting, mental health, and building a career.
@@ -165,19 +165,7 @@ export default function HomePage() {
 
           {/* Right: Spline Scene — no parallax */}
           <div className="flex-1 h-[300px] md:h-[420px] w-full relative" style={{ zIndex: 2 }}>
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-              className="absolute pointer-events-none"
-              style={{ right: '-60px', top: '50%', transform: 'translateY(-50%)', width: '580px', height: '580px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.12)' }}
-            />
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
-              className="absolute pointer-events-none"
-              style={{ right: '-20px', top: '50%', transform: 'translateY(-50%)', width: '440px', height: '440px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.08)', background: 'radial-gradient(circle, rgba(13,124,126,0.04) 0%, transparent 70%)' }}
-            />
-            <div style={{ mixBlendMode: 'screen', width: '100%', height: '100%' }}>
+            <div style={{ mixBlendMode: 'screen', position: 'relative', zIndex: 2, width: '100%', height: '100%' }}>
               <SplineScene
                 scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
                 className="w-full h-full"

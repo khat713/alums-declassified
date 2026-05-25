@@ -118,42 +118,51 @@ export default function StartHerePage() {
 
         {/* Navigation Guide */}
         <FadeIn delay={0.2}>
-        <div className="mb-10 py-4">
-          <h2
-            className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
-            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
-          >
-            How to Navigate This Course
-          </h2>
-          <ol className="leading-[2.1] ml-5">
-            <li>
-              Start on the <strong>Home page</strong> — it shows all 7 modules
-              in order.
-            </li>
-            <li>
-              Click <strong>Start →</strong> on any module card to open that
-              module.
-            </li>
-            <li>
-              Each module has: learning objectives, instructional content, a
-              learning activity, and an assessment.
-            </li>
-            <li>
-              Complete the assessment at the end of each module before moving to
-              the next.
-            </li>
-            <li>
-              Use the <strong>← Prev / Next →</strong> buttons at the bottom of
-              each module to navigate.
-            </li>
-            <li>
-              Need help? Visit the{" "}
-              <Link href="/tech-help" className="text-[#0d7c7e] hover:underline">
-                Tech Help
-              </Link>{" "}
-              page at any time.
-            </li>
-          </ol>
+        <div className="mb-10">
+          <div style={{
+            background: 'rgba(5,12,35,0.82)',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            borderRadius: '16px',
+            padding: '2rem 2.25rem',
+            border: '1px solid rgba(13,124,126,0.2)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
+          }}>
+            <h2
+              style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1, color: '#ffffff', marginBottom: '1rem', paddingBottom: '0.65rem', borderBottom: '1px solid rgba(255,255,255,0.1)' }}
+            >
+              How to Navigate This Course
+            </h2>
+            <ol style={{ lineHeight: 2.1, marginLeft: '1.25rem', color: 'rgba(255,255,255,0.85)' }}>
+              <li>
+                Start on the <strong style={{ color: '#ffffff' }}>Home page</strong> — it shows all 7 modules
+                in order.
+              </li>
+              <li>
+                Click <strong style={{ color: '#ffffff' }}>Start →</strong> on any module card to open that
+                module.
+              </li>
+              <li>
+                Each module has: learning objectives, instructional content, a
+                learning activity, and an assessment.
+              </li>
+              <li>
+                Complete the assessment at the end of each module before moving to
+                the next.
+              </li>
+              <li>
+                Use the <strong style={{ color: '#ffffff' }}>← Prev / Next →</strong> buttons at the bottom of
+                each module to navigate.
+              </li>
+              <li>
+                Need help? Visit the{" "}
+                <Link href="/tech-help" style={{ color: '#5eead4', textDecoration: 'underline' }}>
+                  Tech Help
+                </Link>{" "}
+                page at any time.
+              </li>
+            </ol>
+          </div>
         </div>
         </FadeIn>
 
