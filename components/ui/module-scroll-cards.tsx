@@ -56,14 +56,38 @@ function ModuleCard({ module, i, progress }: { module: typeof modules[0]; i: num
           </span>
         </div>
 
-        {/* Content */}
-        <div style={{ flex: 1 }}>
-          <h2 style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: '1.25rem' }}>
-            {module.title}
-          </h2>
-          <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 'clamp(1rem, 1.5vw, 1.15rem)', lineHeight: 1.75, maxWidth: '600px', marginBottom: '2.5rem' }}>
-            {module.desc}
-          </p>
+        {/* Content + image row */}
+        <div style={{ flex: 1, display: 'flex', gap: '2rem', alignItems: 'flex-start' }}>
+          <div style={{ flex: 1 }}>
+            <h2 style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: '1.25rem' }}>
+              {module.title}
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 'clamp(1rem, 1.5vw, 1.15rem)', lineHeight: 1.75, marginBottom: '0' }}>
+              {module.desc}
+            </p>
+          </div>
+          {/* Image placeholder — replace src with actual image when ready */}
+          <div style={{
+            flexShrink: 0,
+            width: 'clamp(140px, 20vw, 220px)',
+            aspectRatio: '4/3',
+            borderRadius: '16px',
+            border: '2px dashed rgba(255,255,255,0.25)',
+            background: 'rgba(255,255,255,0.08)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '0.5rem',
+            color: 'rgba(255,255,255,0.35)',
+            fontSize: '0.72rem',
+            fontWeight: 600,
+            textAlign: 'center',
+            padding: '1rem',
+          }}>
+            <span style={{ fontSize: '1.5rem' }}>📸</span>
+            <span>Add image here</span>
+          </div>
         </div>
 
         {/* CTA */}
