@@ -4,9 +4,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Info } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { ScrollAtmosphere } from "@/components/ui/scroll-atmosphere";
-import { LottieSceneLayer } from "@/components/ui/lottie-scenes";
-import { ScrollPath } from "@/components/ui/scroll-path";
 
 export default function ModulesPage() {
   const router = useRouter();
@@ -27,9 +24,6 @@ export default function ModulesPage() {
 
   return (
     <main>
-      <ScrollAtmosphere />
-      <LottieSceneLayer />
-      <ScrollPath />
       <div style={{ position: 'relative', zIndex: 1 }}>
       <section style={{ background: 'rgba(5,12,35,0.90)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
         <div className="container mx-auto px-4">

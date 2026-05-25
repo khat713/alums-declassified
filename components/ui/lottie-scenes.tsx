@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -13,9 +13,11 @@ interface LottieSceneProps {
   position?: 'left' | 'right' | 'center' | 'full';
   size?: number;
   bottom?: number;
+  lottieRef?: React.MutableRefObject<any>;
+  onDOMLoaded?: () => void;
 }
 
-function LottieScene({ src, opacity, position = 'right', size = 400, bottom = 0 }: LottieSceneProps) {
+function LottieScene({ src, opacity, position = 'right', size = 400, bottom = 0, lottieRef, onDOMLoaded }: LottieSceneProps) {
   const [animationData, setAnimationData] = useState<any>(null);
 
   useEffect(() => {
@@ -49,6 +51,8 @@ function LottieScene({ src, opacity, position = 'right', size = 400, bottom = 0 
         animationData={animationData}
         loop
         autoplay
+        lottieRef={lottieRef}
+        onDOMLoaded={onDOMLoaded}
         style={{ width: '100%', height: '100%' }}
       />
     </motion.div>
@@ -58,6 +62,7 @@ function LottieScene({ src, opacity, position = 'right', size = 400, bottom = 0 
 export function LottieSceneLayer() {
   const { scrollYProgress } = useScroll();
   const [isDark, setIsDark] = useState(true);
+  const cityLottieRef = useRef<any>(null);
 
   useEffect(() => {
     const check = () => setIsDark(document.documentElement.classList.contains('dark'));
@@ -95,6 +100,8 @@ export function LottieSceneLayer() {
         opacity={cityOpacity}
         position="full"
         bottom={0}
+        lottieRef={cityLottieRef}
+        onDOMLoaded={() => { if (cityLottieRef.current) cityLottieRef.current.setSpeed(0.25); }}
       />
       <LottieScene
         src={`${BASE}/animations/Weather-night.json`}

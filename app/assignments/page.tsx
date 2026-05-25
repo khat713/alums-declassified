@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
 import { ForceDark } from "@/components/ui/force-dark";
-import { ScrollAtmosphere } from "@/components/ui/scroll-atmosphere";
-import { LottieSceneLayer } from "@/components/ui/lottie-scenes";
-import { ScrollPath } from "@/components/ui/scroll-path";
 
 export const metadata: Metadata = {
   title: "Assignments | Alum's Declassified",
@@ -14,9 +11,6 @@ export default function AssignmentsPage() {
   return (
     <main>
       <ForceDark />
-      <ScrollAtmosphere />
-      <LottieSceneLayer />
-      <ScrollPath />
       <div style={{ position: 'relative', zIndex: 1 }}>
       <section style={{ background: 'rgba(5,12,35,0.90)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
         <div className="container mx-auto px-4">
