@@ -1,19 +1,49 @@
+const VOICE_ID = 'nPczCjzI2devNBz1zQrb';
+
 export async function speakText(text: string): Promise<void> {
+  const apiKey = process.env.NEXT_PUBLIC_ELEVENLABS_API_KEY;
+
+  const cleanText = text
+    .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
+    .replace(/[\u{2600}-\u{26FF}]/gu, '')
+    .replace(/[\u{2700}-\u{27BF}]/gu, '')
+    .trim();
+
+  if (!apiKey) {
+    console.warn('No API key, using Web Speech API');
+    const utterance = new SpeechSynthesisUtterance(cleanText);
+    utterance.rate = 0.92;
+    utterance.pitch = 1.1;
+    utterance.volume = 1;
+    window.speechSynthesis.speak(utterance);
+    return;
+  }
+
   try {
-    const response = await fetch('/api/speak', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text }),
-    });
+    const response = await fetch(
+      `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}/stream`,
+      {
+        method: 'POST',
+        headers: {
+          'xi-api-key': apiKey,
+          'Content-Type': 'application/json',
+          'Accept': 'audio/mpeg',
+        },
+        body: JSON.stringify({
+          text: cleanText,
+          model_id: 'eleven_turbo_v2',
+          voice_settings: {
+            stability: 0.4,
+            similarity_boost: 0.85,
+            style: 0.6,
+            use_speaker_boost: true,
+          },
+        }),
+      }
+    );
 
     if (!response.ok) {
-      console.warn('Speech API error, falling back to Web Speech API');
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.rate = 0.92;
-      utterance.pitch = 1.1;
-      utterance.volume = 1;
-      window.speechSynthesis.speak(utterance);
-      return;
+      throw new Error(`ElevenLabs error: ${response.status}`);
     }
 
     const audioBlob = await response.blob();
@@ -28,8 +58,8 @@ export async function speakText(text: string): Promise<void> {
       };
     });
   } catch (error) {
-    console.error('Speech error, falling back to Web Speech API:', error);
-    const utterance = new SpeechSynthesisUtterance(text);
+    console.error('ElevenLabs error, falling back:', error);
+    const utterance = new SpeechSynthesisUtterance(cleanText);
     utterance.rate = 0.92;
     utterance.pitch = 1.1;
     utterance.volume = 1;

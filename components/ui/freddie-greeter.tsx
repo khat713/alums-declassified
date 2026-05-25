@@ -1,15 +1,10 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { speakText } from '@/lib/elevenlabs';
 
-function stripEmoji(text: string): string {
-  return text
-    .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
-    .replace(/[\u{2600}-\u{26FF}]/gu, '')
-    .replace(/[\u{2700}-\u{27BF}]/gu, '')
-    .trim();
-}
+const MotionLink = motion(Link);
 
 const FREDDIE_LINES = [
   "Hey there! I'm First-Gen Freddie 👋",
@@ -44,7 +39,7 @@ export function FreddieGreeter() {
     if (charIndex === FREDDIE_LINES[currentLine].length) {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (!isMuted && !prefersReducedMotion) {
-        speakText(stripEmoji(FREDDIE_LINES[currentLine]));
+        speakText(FREDDIE_LINES[currentLine]);
       }
       if (currentLine < FREDDIE_LINES.length - 1) {
         const timer = setTimeout(() => {
@@ -433,7 +428,7 @@ export function FreddieGreeter() {
                   </button>
                 )}
                 {isDone && (
-                  <motion.a
+                  <MotionLink
                     href="/module-1"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -453,7 +448,7 @@ export function FreddieGreeter() {
                     }}
                   >
                     Let&apos;s Go, Freddie! →
-                  </motion.a>
+                  </MotionLink>
                 )}
                 <button
                   onClick={handleClose}
