@@ -18,13 +18,13 @@ export default function AnimatedThemeToggler() {
     localStorage.setItem("theme", next ? "dark" : "light");
   };
 
-  if (!mounted) return <div className="w-9 h-9" />;
+  if (!mounted) return <div className="w-11 h-11" />;
 
   return (
     <button
       onClick={toggle}
       aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-      className="relative w-9 h-9 flex items-center justify-center rounded-[5px] text-[#5a6a82] dark:text-[#94a3b8] hover:bg-[#f2f4f7] dark:hover:bg-[#162032] transition-all"
+      className="relative w-11 h-11 flex items-center justify-center rounded-[5px] text-[#5a6a82] dark:text-[#94a3b8] hover:bg-[#f2f4f7] dark:hover:bg-[#162032] transition-all"
     >
       {/* Sun */}
       <svg

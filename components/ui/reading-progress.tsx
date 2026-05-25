@@ -24,6 +24,11 @@ export function ReadingProgress() {
         scaleX: springProgress,
         background: '#0d7c7e'
       }}
+      role="progressbar"
+      aria-label="Reading progress"
+      aria-valuenow={Math.round(progress)}
+      aria-valuemin={0}
+      aria-valuemax={100}
     />
   );
 }

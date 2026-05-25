@@ -63,6 +63,11 @@ export function LottieSceneLayer() {
   const { scrollYProgress } = useScroll();
   const [isDark, setIsDark] = useState(true);
   const cityLottieRef = useRef<any>(null);
+  const [prefersReducedMotion] = useState(() =>
+    typeof window !== 'undefined'
+      ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      : false
+  );
 
   useEffect(() => {
     const check = () => setIsDark(document.documentElement.classList.contains('dark'));
@@ -89,6 +94,8 @@ export function LottieSceneLayer() {
   );
   const studyOpacity   = useTransform(scrollYProgress, [0.25, 0.35, 0.65, 0.75], [0, 1, 1, 0]);
   const gradOpacity    = useTransform(scrollYProgress, [0.60, 0.70, 0.95, 1],    [0, 1, 1, 0]);
+
+  if (prefersReducedMotion) return null;
 
   return (
     <div

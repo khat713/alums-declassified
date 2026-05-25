@@ -250,7 +250,7 @@ export function FreddieGreeter() {
                   right: '3.5rem',
                   background: 'rgba(255,255,255,0.08)',
                   border: '1px solid rgba(255,255,255,0.12)',
-                  color: isMuted ? 'rgba(255,255,255,0.3)' : '#0d7c7e',
+                  color: isMuted ? 'rgba(255,255,255,0.55)' : '#0d7c7e',
                   width: '32px',
                   height: '32px',
                   borderRadius: '50%',
@@ -276,7 +276,7 @@ export function FreddieGreeter() {
                   right: '1rem',
                   background: 'rgba(255,255,255,0.08)',
                   border: '1px solid rgba(255,255,255,0.12)',
-                  color: 'rgba(255,255,255,0.6)',
+                  color: 'rgba(255,255,255,0.85)',
                   width: '32px',
                   height: '32px',
                   borderRadius: '50%',
@@ -293,7 +293,7 @@ export function FreddieGreeter() {
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
-                  e.currentTarget.style.color = 'rgba(255,255,255,0.6)';
+                  e.currentTarget.style.color = 'rgba(255,255,255,0.85)';
                 }}
               >
                 ✕
@@ -380,10 +380,10 @@ export function FreddieGreeter() {
 
               {/* Transcript */}
               <details style={{ marginTop: '0.75rem' }}>
-                <summary style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.35)', cursor: 'pointer', userSelect: 'none' }}>
+                <summary style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.70)', cursor: 'pointer', userSelect: 'none' }}>
                   View full transcript
                 </summary>
-                <div style={{ marginTop: '0.5rem', padding: '0.75rem', background: 'rgba(255,255,255,0.04)', borderRadius: '8px', fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.7 }}>
+                <div style={{ marginTop: '0.5rem', padding: '0.75rem', background: 'rgba(255,255,255,0.06)', borderRadius: '8px', fontSize: '0.82rem', color: 'rgba(255,255,255,0.80)', lineHeight: 1.7 }}>
                   {FREDDIE_LINES.join(' ')}
                 </div>
               </details>
@@ -412,7 +412,7 @@ export function FreddieGreeter() {
                     style={{
                       background: 'rgba(255,255,255,0.06)',
                       border: '1px solid rgba(255,255,255,0.12)',
-                      color: 'rgba(255,255,255,0.5)',
+                      color: 'rgba(255,255,255,0.80)',
                       padding: '10px 20px',
                       borderRadius: '8px',
                       cursor: 'pointer',
@@ -421,8 +421,8 @@ export function FreddieGreeter() {
                       transition: 'all 0.15s ease'
                     }}
                     aria-label="Skip to end of Freddie's message"
-                    onMouseEnter={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.8)'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
+                    onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.80)'}
                   >
                     Skip →
                   </button>
@@ -455,7 +455,7 @@ export function FreddieGreeter() {
                   style={{
                     background: 'transparent',
                     border: '1px solid rgba(255,255,255,0.12)',
-                    color: 'rgba(255,255,255,0.4)',
+                    color: 'rgba(255,255,255,0.75)',
                     padding: '10px 20px',
                     borderRadius: '8px',
                     cursor: 'pointer',
@@ -464,8 +464,8 @@ export function FreddieGreeter() {
                     transition: 'all 0.15s ease'
                   }}
                   aria-label="Close dialog"
-                  onMouseEnter={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.75)'}
                 >
                   Maybe later
                 </button>

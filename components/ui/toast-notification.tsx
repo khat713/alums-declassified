@@ -39,8 +39,8 @@ function ToastItem({ toast, onRemove }: ToastProps) {
     >
       {styles[toast.type].icon}
       <span className="flex-1">{toast.message}</span>
-      <button onClick={() => onRemove(toast.id)} className="opacity-70 hover:opacity-100 transition-opacity">
-        <X size={16} />
+      <button onClick={() => onRemove(toast.id)} className="opacity-70 hover:opacity-100 transition-opacity" aria-label="Dismiss notification">
+        <X size={16} aria-hidden="true" />
       </button>
     </motion.div>
   );
@@ -72,7 +72,13 @@ export function ToastContainer() {
   }, [addToast]);
 
   return (
-    <div className="fixed bottom-4 right-4 z-[9999] flex flex-col gap-2">
+    <div
+      className="fixed bottom-4 right-4 z-[9999] flex flex-col gap-2"
+      role="status"
+      aria-live="polite"
+      aria-atomic="false"
+      aria-label="Notifications"
+    >
       <AnimatePresence mode="popLayout">
         {toasts.map(t => <ToastItem key={t.id} toast={t} onRemove={removeToast} />)}
       </AnimatePresence>

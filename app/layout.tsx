@@ -45,6 +45,7 @@ export default function RootLayout({
         />
       </head>
       <body className="text-[#1b2537] dark:text-[#e2e8f0] font-body transition-colors duration-200">
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <ReactLenis root options={{ lerp: 0.08, duration: 1.2, smoothWheel: true }}>
           <div
             style={{ position: 'relative', zIndex: 0, minHeight: '100vh', background: 'var(--page-bg)' }}

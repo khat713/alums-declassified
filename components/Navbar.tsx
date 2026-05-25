@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 min-h-[60px] flex flex-wrap items-center justify-between">
         <Link
           href="/"
-          className="font-bold text-base text-[#1b2537] dark:text-[#e2e8f0] tracking-[-0.01em] no-underline hover:no-underline flex items-center gap-[7px] py-2"
+          className="nav-link font-bold text-base text-[#1b2537] dark:text-[#e2e8f0] tracking-[-0.01em] no-underline hover:no-underline flex items-center gap-[7px]"
         >
           🎓 Alum&apos;s Declassified
         </Link>
@@ -78,12 +78,13 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "block px-[0.8rem] py-[0.45rem] rounded-[5px] text-[0.865rem] font-medium transition-colors no-underline hover:no-underline",
+                    "nav-link block px-[0.8rem] rounded-[5px] text-[0.865rem] font-medium transition-colors no-underline hover:no-underline",
                     active
                       ? "text-[#0d7c7e] font-semibold bg-[#e0f4f4] dark:bg-[#0d3538]"
-                      : "text-[#5a6a82] dark:text-[#94a3b8] hover:text-[#0d7c7e] dark:hover:text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032]"
+                      : "text-[#4a5568] dark:text-[#94a3b8] hover:text-[#0d7c7e] dark:hover:text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032]"
                   )}
                   onClick={() => setOpen(false)}
+                  aria-current={active ? 'page' : undefined}
                 >
                   {link.label}
                 </Link>

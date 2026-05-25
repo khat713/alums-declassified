@@ -19,6 +19,11 @@
   --hero-backdrop: rgba(255,255,255,0.15);
   --meta-bar-bg: rgba(255,255,255,0.70);
   --card-bg: rgba(255,255,255,0.92);
+  --text-primary: #1b2537;
+  --text-secondary: #374151;
+  --text-muted: #4a5568;
+  --text-light: #6b7280;
+  --link-color: #0d6b6d;
 }
 
 .dark {
@@ -32,6 +37,11 @@
   --hero-backdrop: rgba(4,10,28,0.78);
   --meta-bar-bg: rgba(5,12,30,0.78);
   --card-bg: rgba(5,12,35,0.88);
+  --text-primary: #f1f5f9;
+  --text-secondary: rgba(255,255,255,0.85);
+  --text-muted: rgba(255,255,255,0.75);
+  --text-light: rgba(255,255,255,0.65);
+  --link-color: #5eead4;
 }
 
 @layer base {
@@ -220,7 +230,7 @@
 .page-forced-dark .page-h1 { color: #ffffff !important; }
 .page-forced-dark .content-h2 { color: #ffffff !important; border-color: rgba(255,255,255,0.1) !important; }
 .page-forced-dark .body-text { color: rgba(255,255,255,0.85) !important; }
-.page-forced-dark .muted-text { color: rgba(255,255,255,0.55) !important; }
+.page-forced-dark .muted-text { color: rgba(255,255,255,0.75) !important; }
 
 .page-forced-dark .border-\[\#dde2eb\] { border-color: rgba(255,255,255,0.08) !important; }
 .page-forced-dark .border-\[\#edf0f4\] { border-color: rgba(255,255,255,0.08) !important; }
@@ -236,17 +246,86 @@
 .page-forced-dark strong { color: #ffffff; }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
 *:focus-visible {
-  outline: 2px solid #0d7c7e;
+  outline: 3px solid #0d7c7e;
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid #0d7c7e;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(13,124,126,0.2);
+  border-radius: 6px;
+}
+
+.dark *:focus-visible {
+  outline-color: #5eead4;
+}
+
+.dark button:focus-visible,
+.dark a:focus-visible,
+.dark [role="button"]:focus-visible {
+  outline-color: #5eead4;
+  box-shadow: 0 0 0 6px rgba(94,234,212,0.2);
+}
+
+button,
+[role="button"],
+input[type="checkbox"],
+input[type="radio"] {
+  min-height: 24px;
+  min-width: 24px;
+}
+
+.nav-link {
+  min-height: 44px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Skip to main content — WCAG 2.4.1 */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 999999;
+  background: #0d7c7e;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
 }
 
 @keyframes spotlight {

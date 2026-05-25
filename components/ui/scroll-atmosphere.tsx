@@ -133,6 +133,11 @@ export function ScrollAtmosphere() {
   const { scrollY } = useScroll();
   const [sceneIndex, setSceneIndex] = useState(0);
   const [isDark, setIsDark] = useState(true);
+  const [prefersReducedMotion] = useState(() =>
+    typeof window !== 'undefined'
+      ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      : false
+  );
 
   useEffect(() => {
     const check = () => setIsDark(document.documentElement.classList.contains('dark'));
@@ -155,6 +160,15 @@ export function ScrollAtmosphere() {
 
   const SCENES = isDark ? DARK_SCENES : LIGHT_SCENES;
   const scene = SCENES[sceneIndex];
+
+  if (prefersReducedMotion) {
+    return (
+      <div
+        aria-hidden="true"
+        style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none', background: scene.sky }}
+      />
+    );
+  }
 
   return (
     <motion.div
