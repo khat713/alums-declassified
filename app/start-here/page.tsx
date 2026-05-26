@@ -3,7 +3,6 @@ import Link from "next/link";
 import { CurriculumTimeline } from "@/components/ui/curriculum-timeline";
 import { FadeIn } from "@/components/ui/fade-in";
 import { ScrollAtmosphere } from "@/components/ui/scroll-atmosphere";
-import { ForceDark } from "@/components/ui/force-dark";
 import { LottieSceneLayer } from "@/components/ui/lottie-scenes";
 import { ScrollPath } from "@/components/ui/scroll-path";
 
@@ -14,19 +13,18 @@ export const metadata: Metadata = {
 export default function StartHerePage() {
   return (
     <main>
-      <ForceDark />
       <ScrollAtmosphere />
       <LottieSceneLayer />
       <ScrollPath />
       <div style={{ position: 'relative', zIndex: 1 }}>
-      <section style={{ background: 'rgba(5,12,35,0.90)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', borderBottom: '1px solid rgba(255,255,255,0.08)', padding: '38px 0 2rem' }}>
+      <section className="module-header border-b py-9 pb-7">
         <div className="container mx-auto px-4">
           <h1
-            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,4rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05, color: '#ffffff', marginBottom: '0.4rem' }}
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,4rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05, marginBottom: '0.4rem' }}
           >
             Start Here — Course Syllabus
           </h1>
-          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.97rem', margin: 0, maxWidth: '580px' }}>
+          <p style={{ fontSize: '0.97rem', margin: 0, maxWidth: '580px' }}>
             Everything you need to know before you begin. Read this page first.
           </p>
         </div>
@@ -120,26 +118,27 @@ export default function StartHerePage() {
         <FadeIn delay={0.2}>
         <div className="mb-10">
           <div style={{
-            background: 'rgba(5,12,35,0.82)',
+            background: 'var(--card-bg)',
             backdropFilter: 'blur(10px)',
             WebkitBackdropFilter: 'blur(10px)',
             borderRadius: '16px',
             padding: '2rem 2.25rem',
-            border: '1px solid rgba(13,124,126,0.2)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
+            border: '1px solid var(--card-border)',
+            boxShadow: 'var(--card-shadow)',
           }}>
             <h2
-              style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1, color: '#ffffff', marginBottom: '1rem', paddingBottom: '0.65rem', borderBottom: '1px solid rgba(255,255,255,0.1)' }}
+              className="dark:text-white text-[#1b2537]"
+              style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1, marginBottom: '1rem', paddingBottom: '0.65rem', borderBottom: '1px solid var(--card-border)' }}
             >
               How to Navigate This Course
             </h2>
-            <ol style={{ lineHeight: 2.1, marginLeft: '1.25rem', color: 'rgba(255,255,255,0.85)' }}>
+            <ol className="dark:text-white/85 text-[#374151]" style={{ lineHeight: 2.1, marginLeft: '1.25rem' }}>
               <li>
-                Start on the <strong style={{ color: '#ffffff' }}>Home page</strong> — it shows all 7 modules
+                Start on the <strong className="dark:text-white text-[#1b2537]">Home page</strong> — it shows all 7 modules
                 in order.
               </li>
               <li>
-                Click <strong style={{ color: '#ffffff' }}>Start →</strong> on any module card to open that
+                Click <strong className="dark:text-white text-[#1b2537]">Start →</strong> on any module card to open that
                 module.
               </li>
               <li>
@@ -151,12 +150,12 @@ export default function StartHerePage() {
                 the next.
               </li>
               <li>
-                Use the <strong style={{ color: '#ffffff' }}>← Prev / Next →</strong> buttons at the bottom of
+                Use the <strong className="dark:text-white text-[#1b2537]">← Prev / Next →</strong> buttons at the bottom of
                 each module to navigate.
               </li>
               <li>
                 Need help? Visit the{" "}
-                <Link href="/tech-help" style={{ color: '#5eead4', textDecoration: 'underline' }}>
+                <Link href="/tech-help" className="dark:text-[#5eead4] text-[#0d7c7e] underline">
                   Tech Help
                 </Link>{" "}
                 page at any time.

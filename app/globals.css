@@ -16,10 +16,17 @@
   --surface-cream: linear-gradient(135deg, #ede5d8 0%, #faf6f0 100%);
   --border: #e0d8ce;
   --page-bg: #f2ede6;
+  --page-header-bg: linear-gradient(135deg, #f2ede6 0%, #e8e0d6 100%);
+  --page-header-text: #1b2537;
+  --page-header-sub: #4a5568;
+  --page-header-border: rgba(0,0,0,0.08);
   --hero-backdrop: rgba(255,255,255,0.88);
   --moon-cutout: #f2ede6;
   --meta-bar-bg: rgba(255,255,255,0.70);
   --card-bg: rgba(255,255,255,0.92);
+  --card-border: rgba(0,0,0,0.06);
+  --card-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  --emotional-card-bg: rgba(240,247,244,0.95);
   --text-primary: #1b2537;
   --text-secondary: #374151;
   --text-muted: #4a5568;
@@ -35,10 +42,17 @@
   --surface-cream: #162032;
   --border: #334155;
   --page-bg: #0a0f1e;
+  --page-header-bg: linear-gradient(135deg, #1b2537 0%, #2e3f5c 100%);
+  --page-header-text: #ffffff;
+  --page-header-sub: rgba(255,255,255,0.7);
+  --page-header-border: rgba(255,255,255,0.1);
   --hero-backdrop: rgba(4,10,28,0.82);
   --moon-cutout: #020818;
   --meta-bar-bg: rgba(5,12,30,0.78);
   --card-bg: rgba(5,12,35,0.88);
+  --card-border: rgba(255,255,255,0.08);
+  --card-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --emotional-card-bg: rgba(8,20,35,0.78);
   --text-primary: #f1f5f9;
   --text-secondary: rgba(255,255,255,0.85);
   --text-muted: rgba(255,255,255,0.75);
@@ -121,17 +135,17 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.2);
   }
 
-  /* Dark navy header used on module pages — consistent across light/dark mode */
+  /* Page header — cream in light mode, dark navy in dark mode */
   .module-header {
-    background: linear-gradient(135deg, #1b2537 0%, #2e3f5c 100%);
-    border-bottom-color: rgba(255,255,255,0.1);
+    background: var(--page-header-bg);
+    border-bottom-color: var(--page-header-border);
   }
-  .module-header h1 { color: #ffffff; }
-  .module-header p:not(.inline-flex) { color: rgba(255,255,255,0.72); }
-  .module-header p.inline-flex { color: rgba(94,234,212,0.85); }
-  .module-header strong { color: rgba(255,255,255,0.9); }
-  .module-header span { color: rgba(255,255,255,0.72); }
-  .module-header .border-t { border-top-color: rgba(255,255,255,0.1); }
+  .module-header h1 { color: var(--page-header-text); }
+  .module-header p:not(.inline-flex) { color: var(--page-header-sub); }
+  .module-header p.inline-flex { color: var(--page-header-sub); }
+  .module-header strong { color: var(--page-header-text); }
+  .module-header span { color: var(--page-header-sub); }
+  .module-header .border-t { border-top-color: var(--page-header-border); }
 
   .display-heading {
     font-family: var(--font-display);

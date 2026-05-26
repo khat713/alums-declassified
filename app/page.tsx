@@ -192,7 +192,7 @@ export default function HomePage() {
           background: 'var(--meta-bar-bg)',
           backdropFilter: 'blur(12px)',
           WebkitBackdropFilter: 'blur(12px)',
-          borderBottom: '1px solid rgba(255,255,255,0.08)',
+          borderBottom: '1px solid var(--card-border)',
           padding: '1rem 0',
           position: 'relative',
           zIndex: 1,
@@ -472,7 +472,7 @@ export default function HomePage() {
       {/* EMOTIONAL COPY CARD */}
       <section style={{ padding: '60px 20px', display: 'flex', justifyContent: 'center', background: 'transparent', position: 'relative', zIndex: 1 }}>
         <div style={{
-          background: 'rgba(5,40,40,0.90)',
+          background: 'var(--emotional-card-bg)',
           backdropFilter: 'blur(12px)',
           border: '1px solid rgba(13,124,126,0.4)',
           borderRadius: '24px',
@@ -482,9 +482,12 @@ export default function HomePage() {
           textAlign: 'center',
           boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
         }}>
-          <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(13,124,126,0.9)', marginBottom: '1rem' }}>FOR EVERY FIRST-GEN STUDENT</p>
-          <h2 style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, letterSpacing: '-0.03em', color: '#ffffff', marginBottom: '1rem', lineHeight: 1.1 }}>You deserve the same information everyone else got at the dinner table.</h2>
-          <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '1.05rem', marginBottom: '2rem', lineHeight: 1.7 }}>This course exists because the gap between first-gen students and their peers is not about intelligence. It is about access to information. Alum&apos;s Declassified closes that gap.</p>
+          <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#0d7c7e', marginBottom: '1rem' }}>FOR EVERY FIRST-GEN STUDENT</p>
+          <h2
+            className="dark:text-white text-[#1b2537]"
+            style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, letterSpacing: '-0.03em', marginBottom: '1rem', lineHeight: 1.1 }}
+          >You deserve the same information everyone else got at the dinner table.</h2>
+          <p className="dark:text-white/75 text-[#374151]" style={{ fontSize: '1.05rem', marginBottom: '2rem', lineHeight: 1.7 }}>This course exists because the gap between first-gen students and their peers is not about intelligence. It is about access to information. Alum&apos;s Declassified closes that gap.</p>
           <motion.a
             href="/module-1"
             whileHover={{ scale: 1.03, boxShadow: '0 8px 24px rgba(13,124,126,0.4)' }}
