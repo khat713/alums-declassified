@@ -16,7 +16,7 @@ export default function Module5Page() {
   return (
     <main>
       <ReadingProgress />
-      <ModuleToastInit message="Welcome to Module 5 — Academic Success. Re-reading your notes is not studying." />
+      <ModuleToastInit message="Welcome to Module 5: Academic Success. Re-reading your notes is not studying." />
       <Breadcrumb
         items={[
           { label: "Home", href: "/" },
@@ -69,7 +69,7 @@ export default function Module5Page() {
               </h2>
               <ol className="ml-5 space-y-0" style={{ lineHeight: "2.1" }}>
                 <li>Explain the difference between spaced practice and cramming and describe why spaced practice leads to better long-term retention.</li>
-                <li>Apply retrieval practice techniques — including practice testing and flashcards — to study material from at least one of your classes.</li>
+                <li>Apply retrieval practice techniques, including practice testing and flashcards, to study material from at least one of your classes.</li>
                 <li>Use the Cornell note-taking method to take structured notes from a lecture or reading.</li>
                 <li>Build a realistic Week 1 study schedule that incorporates at least two evidence-based study strategies.</li>
               </ol>
@@ -115,19 +115,19 @@ export default function Module5Page() {
               <p className="text-[0.92rem] mb-4">Use the Cornell method to take notes on the passage below. Set up your page with a cue column (left), notes column (right), and summary section (bottom). Then complete all three sections.</p>
 
               <div className="bg-[#f2f4f7] border-l-4 border-l-[#0d7c7e] p-[1rem_1.2rem] rounded-[4px] mt-4 text-[0.92rem]">
-                <p className="text-[0.8rem] text-[#8d9db5] mb-2 font-bold uppercase tracking-[0.06em]">Lecture Excerpt — Read and Take Notes:</p>
-                <p className="mb-3">One of the most important things to understand about memory is that retrieval — the act of pulling information out of your mind — is itself a learning event. Every time you successfully recall something, you strengthen the neural pathway associated with that memory, making it easier to retrieve again in the future. This is why practice testing works better than re-reading.</p>
-                <p className="mb-3">Spaced repetition takes advantage of a related phenomenon called the spacing effect. When you study the same material across multiple sessions separated by time, each subsequent review happens just as you are beginning to forget — which is exactly the moment when retrieval strengthens memory most. The optimal spacing interval grows over time: review once after one day, again after three days, again after a week.</p>
-                <p>Note-taking strategies interact with these principles. Taking notes in your own words — rather than transcribing verbatim — forces you to process information at a deeper level, which improves both comprehension and retention. The cue column in Cornell notes serves as a built-in retrieval cue: a prompt that initiates the recall process without giving you the answer.</p>
+                <p className="text-[0.8rem] text-[#8d9db5] mb-2 font-bold uppercase tracking-[0.06em]">Lecture Excerpt: Read and Take Notes</p>
+                <p className="mb-3">One of the most important things to understand about memory is that retrieval (the act of pulling information out of your mind) is itself a learning event. Every time you successfully recall something, you strengthen the neural pathway associated with that memory, making it easier to retrieve again in the future. This is why practice testing works better than re-reading.</p>
+                <p className="mb-3">Spaced repetition takes advantage of a related phenomenon called the spacing effect. When you study the same material across multiple sessions separated by time, each subsequent review happens just as you are beginning to forget, which is exactly the moment when retrieval strengthens memory most. The optimal spacing interval grows over time: review once after one day, again after three days, again after a week.</p>
+                <p>Note-taking strategies interact with these principles. Taking notes in your own words, rather than transcribing verbatim, forces you to process information at a deeper level, which improves both comprehension and retention. The cue column in Cornell notes serves as a built-in retrieval cue: a prompt that initiates the recall process without giving you the answer.</p>
               </div>
 
               <p className="mt-4 mb-2 text-[0.92rem]">After taking notes:</p>
               <ol className="ml-5 space-y-1 text-[0.92rem]">
                 <li>Cover your notes column and try to answer each cue question from memory.</li>
-                <li>Uncover and check — what did you miss?</li>
+                <li>Uncover and check: what did you miss?</li>
                 <li>Write your 2–3 sentence summary at the bottom of the page.</li>
               </ol>
-              <p className="text-[0.85rem] text-[#8d9db5] dark:text-[#64748b] mt-4">Keep your Cornell notes — you can use them as a model when taking notes in your actual classes this semester.</p>
+              <p className="text-[0.85rem] text-[#8d9db5] dark:text-[#64748b] mt-4">Keep your Cornell notes. You can use them as a model when taking notes in your actual classes this semester.</p>
             </div>
             </FadeIn>
 
@@ -141,10 +141,10 @@ export default function Module5Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Study Plan + Rationale — Assignment 5 (75 pts)
+                Study Plan + Rationale: Assignment 5 (75 pts)
               </h2>
               <p className="text-[0.92rem] mb-4">
-                Build a realistic Week 1 study schedule for your first college semester — class times, study blocks, meals, sleep, and work or family commitments. Then write a 150–250 word rationale explaining which study strategies from this module you built into the schedule and why they work.
+                Build a realistic Week 1 study schedule for your first college semester: class times, study blocks, meals, sleep, and work or family commitments. Then write a 150–250 word rationale explaining which study strategies from this module you built into the schedule and why they work.
               </p>
               <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[0.92rem]">
                 <strong>Two-part submission:</strong>
@@ -174,9 +174,9 @@ export default function Module5Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Example Study Plan — See What Proficient Looks Like
+                Example Study Plan: See What Proficient Looks Like
               </h2>
-              <p className="font-bold text-[0.92rem] mb-3">Example Study Plan — a student named Alex, Week 1:</p>
+              <p className="font-bold text-[0.92rem] mb-3">Example Study Plan: a student named Alex, Week 1</p>
               <div className="overflow-x-auto">
                 <table className="w-full text-[0.875rem] border-collapse">
                   <thead>
@@ -206,7 +206,7 @@ export default function Module5Page() {
                   </tbody>
                 </table>
               </div>
-              <p className="mt-4 text-[0.92rem]"><strong>Rationale (Alex):</strong> I built two study blocks per day instead of one long session based on what this module covered about spaced practice. Studying the same material in shorter sessions across multiple days is more effective than one long cram session because each review happens just as I am starting to forget, which is when memory is strengthened most. I also scheduled my study blocks immediately after each class when the material is freshest, which supports retrieval practice. My Tuesday and Thursday evening blocks are longer because those are my days without back-to-back commitments — I use those for deeper review and practice testing before Wednesday and Friday classes.</p>
+              <p className="mt-4 text-[0.92rem]"><strong>Rationale (Alex):</strong> I built two study blocks per day instead of one long session based on what this module covered about spaced practice. Studying the same material in shorter sessions across multiple days is more effective than one long cram session because each review happens just as I am starting to forget, which is when memory is strengthened most. I also scheduled my study blocks immediately after each class when the material is freshest, which supports retrieval practice. My Tuesday and Thursday evening blocks are longer because those are my days without back-to-back commitments. I use those for deeper review and practice testing before Wednesday and Friday classes.</p>
               <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">Proficient: schedule includes all required elements, rationale names two specific strategies and explains the research behind why they work.</p>
             </div>
             </FadeIn>

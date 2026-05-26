@@ -15,7 +15,7 @@ export default function Module2Page() {
   return (
     <main>
       <ReadingProgress />
-      <ModuleToastInit message="Welcome to Module 2 — Campus Resources. Identify 6 support resources specific to your school." />
+      <ModuleToastInit message="Welcome to Module 2: Campus Resources. Identify 6 support resources specific to your school." />
       <div className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[10px] text-[0.82rem]">
         <div className="container mx-auto px-4">
           <Link href="/" className="text-[#5a6a82] dark:text-[#94a3b8] hover:text-[#0d7c7e] hover:underline">Home</Link>
@@ -34,7 +34,7 @@ export default function Module2Page() {
         <div className="container mx-auto px-4">
           <p className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.09em] uppercase text-[#0d7c7e] mb-2">Week 2 · Module 2</p>
           <h1 className="text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}>Campus Resources</h1>
-          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] max-w-[600px] m-0">The resources exist. Most first-gen students never use them — not because they don&apos;t qualify, but because nobody told them they were there.</p>
+          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] max-w-[600px] m-0">The resources exist. Most first-gen students never use them. Not because they don&apos;t qualify, but because nobody told them they were there.</p>
           <div className="flex flex-wrap gap-4 mt-4 pt-4 border-t border-[#edf0f4] dark:border-[#243044]">
             <span className="flex items-center gap-[5px] text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"><Clock size={14} style={{ color: '#0d7c7e' }} /> <strong className="text-[#1b2537]">~45 minutes</strong></span>
             <span className="flex items-center gap-[5px] text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"><MapPin size={14} style={{ color: '#5a6a82' }} /> <strong className="text-[#1b2537]">Assessment:</strong> Campus Resource Map</span>
@@ -54,7 +54,7 @@ export default function Module2Page() {
                 <li>Identify at least six campus resources across academic, financial, and health/wellbeing categories specific to your school.</li>
                 <li>Explain the purpose of each resource and describe a realistic scenario in which you would use it.</li>
                 <li>Draft a professional email to a campus office requesting help or information.</li>
-                <li>Describe common barriers first-gen students face when accessing campus support — and how to overcome them.</li>
+                <li>Describe common barriers first-gen students face when accessing campus support, and how to overcome them.</li>
               </ol>
             </div>
             </FadeIn>
@@ -63,11 +63,11 @@ export default function Module2Page() {
             <div id="lesson" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">Instructional Content</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Module 2 Lesson</h2>
-              <p>The lesson for this module covers campus resources across academic, financial, and health categories — and how to actually walk into an office for the first time.</p>
+              <p>The lesson for this module covers campus resources across academic, financial, and health categories, and how to actually walk into an office for the first time.</p>
               <Link href="/lesson-2" className="bg-[#0d7c7e] text-white no-underline py-[11px] px-[28px] text-[0.95rem] rounded-[5px] font-bold inline-block hover:bg-[#096163] transition-all mt-2">Read the Lesson →</Link>
 
               <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">Campus Resource Map — Visual Overview</h4>
+                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">Campus Resource Map: Visual Overview</h4>
                 <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[180px] flex flex-col items-center justify-center text-center">
                   <strong>Embed your Canva infographic here</strong><br />
                   <small>3-category campus resource overview (academic / financial / wellbeing)<br />
@@ -97,8 +97,8 @@ export default function Module2Page() {
             <FadeIn delay={0.3}>
             <div id="assessment" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assessment</span>
-              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Campus Resource Map — Assignment 2 (75 pts)</h2>
-              <p>Identify at least six campus resources across three categories — academic support, financial resources, and health/wellbeing — specific to <em>your school</em>. For each: name, location, contact info, and one realistic scenario in which you would use it.</p>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Campus Resource Map: Assignment 2 (75 pts)</h2>
+              <p>Identify at least six campus resources across three categories (academic support, financial resources, and health/wellbeing) specific to <em>your school</em>. For each: name, location, contact info, and one realistic scenario in which you would use it.</p>
               <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-left">
                 <strong>Submission:</strong>
                 <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1rem_1.5rem] text-center mt-2">
@@ -114,15 +114,15 @@ export default function Module2Page() {
             <FadeIn delay={0.4}>
             <div id="model" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">Model Response</span>
-              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Example Resource Map — See What Proficient Looks Like</h2>
-              <p><strong>Example Resource Map — Jordan, First-Year Student at Riverside Community College:</strong></p>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Example Resource Map: See What Proficient Looks Like</h2>
+              <p><strong>Example Resource Map: Jordan, First-Year Student at Riverside Community College</strong></p>
               <div className="overflow-x-auto mt-2">
                 <table className="w-full border-collapse text-[0.875rem]">
                   <thead><tr>{["Resource","Location","Contact","When I Would Use It"].map(h=><th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>)}</tr></thead>
                   <tbody>
                     {[
                       ["Tutoring Center","Student Union, Room 104","tutoring@riverside.edu","If I am struggling with Algebra before a test and office hours aren't until Thursday"],
-                      ["Writing Center","Library, 2nd Floor","(555) 234-5678","Before turning in my first English essay — I want feedback on my thesis"],
+                      ["Writing Center","Library, 2nd Floor","(555) 234-5678","Before turning in my first English essay. I want feedback on my thesis"],
                       ["Financial Aid Office","Admin Building, Room 201","finaid@riverside.edu","If my bill looks wrong or I get a notice about a missing FAFSA document"],
                       ["Emergency Aid Fund","Dean of Students, Room 110","(555) 234-9000","If my car breaks down and I cannot afford the repair and still make rent"],
                       ["Food Pantry","Student Services Building","Open M/W/F 10am–4pm","End of the month when my meal plan runs low before my next paycheck"],

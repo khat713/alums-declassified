@@ -16,7 +16,7 @@ export default function Module3Page() {
   return (
     <main>
       <ReadingProgress />
-      <ModuleToastInit message="Welcome to Module 3 — Financial Literacy. Know the difference between free money and debt before you accept anything." />
+      <ModuleToastInit message="Welcome to Module 3: Financial Literacy. Know the difference between free money and debt before you accept anything." />
       <Breadcrumb
         items={[
           { label: "Home", href: "/" },
@@ -41,7 +41,7 @@ export default function Module3Page() {
             Financial Literacy
           </h1>
           <p className="text-[#b8c5d6] text-[1rem] max-w-[640px] mb-5 leading-[1.6]">
-            Your award letter is not a gift card. Some of that money is free — and some of it you will be paying back for years. Know the difference before you accept anything.
+            Your award letter is not a gift card. Some of that money is free, and some of it you will be paying back for years. Know the difference before you accept anything.
           </p>
           <div className="flex flex-wrap gap-4 text-[0.88rem]">
             <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Clock size={14} style={{ color: '#7ec8ca' }} /> <strong>~50 minutes</strong></span>
@@ -99,7 +99,7 @@ export default function Module3Page() {
               </Link>
 
               <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">How to Read an Award Letter — Visual Guide</h4>
+                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">How to Read an Award Letter: Visual Guide</h4>
                 <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[180px] flex flex-col items-center justify-center text-center">
                   <strong>Embed your Canva infographic here</strong>
                   <br />
@@ -130,7 +130,7 @@ export default function Module3Page() {
               <p className="text-[0.92rem] mb-4">Use the fictional award letter below to practice reading financial aid. Answer the four questions that follow.</p>
 
               <div className="bg-[#f2f4f7] dark:bg-[#162032] border border-[#dde2eb] dark:border-[#334155] rounded-[6px] p-5 my-4 text-[0.92rem]">
-                <p className="font-bold mb-2">Riverside Community College — Financial Aid Award Letter</p>
+                <p className="font-bold mb-2">Riverside Community College: Financial Aid Award Letter</p>
                 <p className="mb-1">Student: Jordan A. | Academic Year: 2025–2026</p>
                 <hr className="border-[#dde2eb] my-3" />
                 <table className="w-full text-[0.88rem] border-collapse">
@@ -149,10 +149,10 @@ export default function Module3Page() {
               <ol className="ml-5 space-y-2 text-[0.92rem]">
                 <li>What is Jordan&apos;s total cost of attendance?</li>
                 <li>How much free money (grants) is Jordan receiving? What is the net cost after grants?</li>
-                <li>If Jordan accepts both loans offered, what will the total borrowed amount be — and which loan is better to accept first, and why?</li>
+                <li>If Jordan accepts both loans offered, what will the total borrowed amount be, and which loan is better to accept first, and why?</li>
                 <li>Jordan&apos;s net cost after all aid (including both loans) is $10,105. What are two ways Jordan could cover that gap without taking on additional loans?</li>
               </ol>
-              <p className="text-[0.85rem] text-[#8d9db5] dark:text-[#64748b] mt-4">Keep your answers — they will help you complete the budget worksheet assessment.</p>
+              <p className="text-[0.85rem] text-[#8d9db5] dark:text-[#64748b] mt-4">Keep your answers, as they will help you complete the budget worksheet assessment.</p>
             </div>
             </FadeIn>
 
@@ -166,7 +166,7 @@ export default function Module3Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Budget Worksheet — Assignment 3 (75 pts)
+                Budget Worksheet: Assignment 3 (75 pts)
               </h2>
               <p className="text-[0.92rem] mb-4">
                 Build a monthly budget for your first semester using your school&apos;s actual cost of attendance and your financial aid information. Categorize each expense as fixed or variable, identify two areas where you could reduce spending, and complete a gap analysis.
@@ -199,9 +199,9 @@ export default function Module3Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Example Budget — See What Proficient Looks Like
+                Example Budget: See What Proficient Looks Like
               </h2>
-              <p className="font-bold text-[0.92rem] mb-3">Example Budget — Jordan, First Semester at Riverside Community College:</p>
+              <p className="font-bold text-[0.92rem] mb-3">Example Budget: Jordan, First Semester at Riverside Community College</p>
               <div className="overflow-x-auto">
                 <table className="w-full text-[0.875rem] border-collapse">
                   <thead>

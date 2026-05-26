@@ -66,7 +66,7 @@ function ModuleCard({ module, i, progress }: { module: typeof modules[0]; i: num
               {module.desc}
             </p>
           </div>
-          {/* Image placeholder — replace src with actual image when ready */}
+          {/* Image placeholder - replace src with actual image when ready */}
           <div style={{
             flexShrink: 0,
             width: 'clamp(140px, 20vw, 220px)',

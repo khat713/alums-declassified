@@ -16,7 +16,7 @@ export default function Module4Page() {
   return (
     <main>
       <ReadingProgress />
-      <ModuleToastInit message="Welcome to Module 4 — Essential Life Skills. Today: groceries, laundry, health insurance, and leases." />
+      <ModuleToastInit message="Welcome to Module 4: Essential Life Skills. Today: groceries, laundry, health insurance, and leases." />
       <Breadcrumb
         items={[
           { label: "Home", href: "/" },
@@ -117,7 +117,7 @@ export default function Module4Page() {
                 <li>Choose 5 dinners you could make with basic ingredients (rice, pasta, eggs, canned beans, frozen vegetables).</li>
                 <li>Write out a grocery list for those 5 meals with estimated prices from a real store (Walmart, Aldi, or Kroger).</li>
                 <li>Check whether your total is under $30. If not, swap one item for a cheaper alternative and note what you swapped.</li>
-                <li>Identify one ingredient that appears in multiple meals — this is the principle of buying ingredients, not single-use items.</li>
+                <li>Identify one ingredient that appears in multiple meals. This is the principle of buying ingredients, not single-use items.</li>
               </ol>
               <p className="text-[0.85rem] text-[#8d9db5] dark:text-[#64748b] mt-4"><strong>Tip:</strong> Rice and eggs are two of the most versatile and affordable grocery items.</p>
             </div>
@@ -133,7 +133,7 @@ export default function Module4Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Life Skills Inventory — 50 Points
+                Life Skills Inventory: 50 Points
               </h2>
               <p className="text-[0.92rem] mb-4">
                 Complete a self-assessment checklist, then write a 300–500 word reflection answering three questions: which skills you feel confident about and why, which skills you are uncertain about, and one specific plan to improve an uncertain skill before your first semester.
@@ -187,12 +187,12 @@ export default function Module4Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Example Reflection — See What Proficient Looks Like
+                Example Reflection: See What Proficient Looks Like
               </h2>
-              <p className="font-bold text-[0.92rem] mb-3">Example Reflection — a student named Alex:</p>
+              <p className="font-bold text-[0.92rem] mb-3">Example Reflection: a student named Alex</p>
               <blockquote className="border-l-[3px] border-l-[#0d7c7e] pl-4 my-4 text-[#2e3f5c] dark:text-[#94a3b8] space-y-3 text-[0.92rem]">
-                <p>I feel confident about grocery shopping and cooking. Growing up, I helped with dinner most nights because both of my parents worked late shifts, so I know how to make a few basic meals and I understand that buying rice and beans in bulk is cheaper than buying pre-made food. I also feel okay about my weekly schedule — I am used to managing my own time because my high school had open campus.</p>
-                <p>Where I am genuinely uncertain is health insurance. I have never had to use it myself before — my mom always handled doctor&apos;s appointments, and I did not know what a copay was until this module. The part that confuses me is how to know if a doctor is &ldquo;in-network&rdquo; before I go. I do not want to show up somewhere and get a bill I did not expect.</p>
+                <p>I feel confident about grocery shopping and cooking. Growing up, I helped with dinner most nights because both of my parents worked late shifts, so I know how to make a few basic meals and I understand that buying rice and beans in bulk is cheaper than buying pre-made food. I also feel okay about my weekly schedule. I am used to managing my own time because my high school had open campus.</p>
+                <p>Where I am genuinely uncertain is health insurance. I have never had to use it myself before. My mom always handled doctor&apos;s appointments, and I did not know what a copay was until this module. The part that confuses me is how to know if a doctor is &ldquo;in-network&rdquo; before I go. I do not want to show up somewhere and get a bill I did not expect.</p>
                 <p>My plan for getting better at this: I am going to look up my school&apos;s student health center this week and confirm it accepts my insurance. I will also call the number on the back of my insurance card and ask them to explain what in-network means and how to find in-network providers near campus. I want to do this before I arrive so I am not figuring it out while I am sick.</p>
               </blockquote>
               <p className="text-[0.82rem] text-[#8d9db5]">Proficient: honest, specific, addresses all three questions, and the plan names real steps the student can actually take.</p>

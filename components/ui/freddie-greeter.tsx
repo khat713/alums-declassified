@@ -9,7 +9,7 @@ const MotionLink = motion(Link);
 const FREDDIE_LINES = [
   "Hey there! I'm First-Gen Freddie 👋",
   "I'm a first-gen grad myself, and I know how overwhelming this all feels.",
-  "That's why I'm here — to walk you through everything they forgot to tell you.",
+  "That's why I'm here to walk you through everything they forgot to tell you.",
   "Seven modules. Real talk. Nothing gatekept.",
   "Ready to get started? 🎓"
 ];

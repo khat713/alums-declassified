@@ -21,7 +21,7 @@ export default function NotFound() {
           This page doesn&apos;t exist.
         </h1>
         <p className="dark:text-white/65 text-[#5a6a82]" style={{ fontSize: '1.05rem', marginBottom: '2.5rem', maxWidth: '420px', lineHeight: 1.7 }}>
-          But your college survival guide does — and it&apos;s free, waiting, and built for you.
+          But your college survival guide does. It is free, waiting, and built for you.
         </p>
         <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
           <Link href="/" style={{ background: 'linear-gradient(135deg, #0d7c7e, #0a6466)', color: '#fff', padding: '14px 32px', borderRadius: '8px', fontWeight: 700, fontSize: '0.97rem', textDecoration: 'none', display: 'inline-block', boxShadow: '0 4px 16px rgba(13,124,126,0.25)' }}>

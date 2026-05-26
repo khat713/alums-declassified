@@ -35,10 +35,10 @@ export function ModuleStepper({ currentStep }: { currentStep: number }) {
               const isActive = s.step === currentStep;
               const isCompleted = s.step < currentStep;
               const ariaLabel = isActive
-                ? `${s.title} — current step`
+                ? `${s.title}, current step`
                 : isCompleted
-                ? `${s.title} — completed`
-                : `${s.title} — not yet started`;
+                ? `${s.title}, completed`
+                : `${s.title}, not yet started`;
 
               return (
                 <React.Fragment key={s.step}>

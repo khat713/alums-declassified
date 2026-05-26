@@ -49,7 +49,7 @@ export default function TechHelpPage() {
             className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
             style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
           >
-            Solve It Yourself — Common Problems
+            Solve It Yourself: Common Problems
           </h2>
 
           <Accordion type="single" collapsible={true}>
@@ -86,7 +86,7 @@ export default function TechHelpPage() {
                   <li>Make sure all required fields are filled in (look for red borders or asterisks).</li>
                   <li>Try refreshing the page and re-entering your response.</li>
                   <li>Try a different browser.</li>
-                  <li>If you&apos;re on a school or work network, try your personal wi-fi — some networks block form submissions.</li>
+                  <li>If you&apos;re on a school or work network, try your personal wi-fi. Some networks block form submissions.</li>
                   <li>As a backup, email your completed response directly to me.</li>
                 </ol>
               </AccordionContent>
@@ -100,7 +100,7 @@ export default function TechHelpPage() {
                   <li>Try rotating your phone to landscape mode for wider tables or content.</li>
                   <li>If text is very small, use your browser&apos;s zoom feature.</li>
                   <li>Clear your browser cache: Settings → Browser → Clear Cache.</li>
-                  <li>Email me and describe exactly what looks wrong — screenshot if possible.</li>
+                  <li>Email me and describe exactly what looks wrong. Screenshot if possible.</li>
                 </ol>
               </AccordionContent>
             </AccordionItem>
@@ -143,9 +143,9 @@ export default function TechHelpPage() {
             <tbody>
               {[
                 ["Chrome (desktop & mobile)", "✅ Fully supported", "Recommended"],
-                ["Firefox (desktop & mobile)", "✅ Fully supported", "—"],
-                ["Safari (Mac & iPhone)", "✅ Fully supported", "—"],
-                ["Edge", "✅ Fully supported", "—"],
+                ["Firefox (desktop & mobile)", "✅ Fully supported", "None"],
+                ["Safari (Mac & iPhone)", "✅ Fully supported", "None"],
+                ["Edge", "✅ Fully supported", "None"],
                 ["Internet Explorer", "❌ Not supported", "Use any modern browser instead"],
                 ["Smartphone", "✅ All modules work on mobile", "No app download required"],
               ].map(([browser, status, notes], i) => (

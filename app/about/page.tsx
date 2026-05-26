@@ -66,7 +66,7 @@ export default function AboutPage() {
                 <ol className="mt-2 ml-4 p-0">
                   <li>Your academic or professional background</li>
                   <li>
-                    Why you built this course — your personal connection to
+                    Why you built this course: your personal connection to
                     first-gen students
                   </li>
                   <li>
@@ -96,7 +96,7 @@ export default function AboutPage() {
             Why This Course Exists
           </h2>
           <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-left min-h-[100px]">
-            Write a paragraph here about the gap this course addresses —
+            Write a paragraph here about the gap this course addresses:
             first-gen students navigating both higher education and independent
             adult life without family guidance. You can draw from your abstract.
           </div>
@@ -113,11 +113,11 @@ export default function AboutPage() {
             className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
             style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
           >
-            Now — Tell Me About You
+            Now: Tell Me About You
           </h2>
           <p>
             Before you start Module 1, I want to hear from you. Introduce
-            yourself below. No pressure on length or format — just tell me
+            yourself below. No pressure on length or format. Just tell me
             something true.
           </p>
           <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-center">

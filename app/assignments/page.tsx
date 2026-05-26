@@ -37,7 +37,7 @@ export default function AssignmentsPage() {
             Nine Assignments.
           </h2>
           <p style={{ fontSize: '1rem', marginBottom: '0.5rem' }} className="text-[#5a6a82] dark:text-white/65">
-            Scroll through each one — 700 points total.
+            Scroll through each one: 700 points total.
           </p>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', fontSize: '0.85rem' }} className="text-[#9ca3af] dark:text-white/40">
             <span>Scroll through all 9 assignments</span>
@@ -88,7 +88,7 @@ export default function AssignmentsPage() {
             <p className="mt-4 text-[0.9rem] text-[#5a6a82] dark:text-[#94a3b8]">
               Assignments scored Emerging or Incomplete may be revised and
               resubmitted once. The revised grade replaces the original. No
-              permission needed — just resubmit with a note explaining what you
+              permission needed. Just resubmit with a note explaining what you
               changed and why.
             </p>
           </div>

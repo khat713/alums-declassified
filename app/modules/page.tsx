@@ -48,7 +48,7 @@ export default function ModulesPage() {
         <div style={{ textAlign: 'center', padding: '4rem 1rem 2rem', position: 'relative', zIndex: 1 }}>
           <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#0d7c7e', marginBottom: '0.75rem' }}>SCROLL THROUGH</p>
           <h2 style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.1 }} className="text-[#1b2537] dark:text-white">Seven Modules.</h2>
-          <p style={{ fontSize: '1.05rem', marginTop: '0.75rem' }} className="text-[#5a6a82] dark:text-white/65">Scroll through each one — click to start whenever you are ready.</p>
+          <p style={{ fontSize: '1.05rem', marginTop: '0.75rem' }} className="text-[#5a6a82] dark:text-white/65">Scroll through each one. Click to start whenever you are ready.</p>
         </div>
 
         {/* Stacked scroll cards */}

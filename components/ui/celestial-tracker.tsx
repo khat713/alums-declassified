@@ -23,11 +23,11 @@ export function CelestialTracker() {
     console.log('CelestialTracker isDark:', isDark);
   }, [isDark]);
 
-  // DARK MODE — moon only. Stays visible the entire scroll.
+  // DARK MODE - moon only. Stays visible the entire scroll.
   const moonTop     = useTransform(scrollYProgress, [0, 1], ['4vh', '85vh']);
   const moonOpacity = useTransform(scrollYProgress, [0, 1], [1, 1]);
 
-  // LIGHT MODE — sun only. Always visible, travels full scroll same as moon.
+  // LIGHT MODE - sun only. Always visible, travels full scroll same as moon.
   const sunTop     = useTransform(scrollYProgress, [0, 1], ['4vh', '85vh']);
   const sunOpacity = useTransform(scrollYProgress, [0, 1], [1, 1]);
 
@@ -35,7 +35,7 @@ export function CelestialTracker() {
 
   return (
     <>
-      {/* MOON — dark mode only — crescent via overlapping circles */}
+      {/* MOON - dark mode only - crescent via overlapping circles */}
       {isDark && (
         <motion.div
           aria-hidden="true"
@@ -96,7 +96,7 @@ export function CelestialTracker() {
         </motion.div>
       )}
 
-      {/* SUN — light mode only — clean yellow circle */}
+      {/* SUN - light mode only - clean yellow circle */}
       {!isDark && (
         <motion.div
           aria-hidden="true"

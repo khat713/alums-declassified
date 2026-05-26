@@ -16,7 +16,7 @@ export default function Module7Page() {
   return (
     <main>
       <ReadingProgress />
-      <ModuleToastInit message="Welcome to Module 7 — Emotional Resilience. You've made it to the final module." />
+      <ModuleToastInit message="Welcome to Module 7: Emotional Resilience. You've made it to the final module." />
       <Breadcrumb
         items={[
           { label: "Home", href: "/" },
@@ -59,7 +59,7 @@ export default function Module7Page() {
             <div className="bg-[#fff8f0] border-l-4 border-l-[#c2680a] rounded-r-[5px] py-[13px] px-[18px] mb-5 flex items-start gap-[10px]">
               <Phone size={15} style={{ color: '#c2680a', marginTop: '2px', flexShrink: 0 }} />
               <p className="m-0 text-[0.9rem]">
-                <strong>If you are in crisis right now:</strong> Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline). Text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line). Your campus counseling center also offers crisis walk-in hours — check their website.
+                <strong>If you are in crisis right now:</strong> Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline). Text <strong>HOME</strong> to <strong>741741</strong> (Crisis Text Line). Your campus counseling center also offers crisis walk-in hours. Check their website.
               </p>
             </div>
 
@@ -139,10 +139,10 @@ export default function Module7Page() {
               <p className="text-[0.92rem] mb-3">Write a letter addressed to yourself at the end of your first college semester. This is not an assignment anyone else will read unless you choose to share it. It is for you.</p>
               <p className="text-[0.92rem] mb-3">In your letter, address all four of the following:</p>
               <ol className="ml-5 space-y-2 text-[0.92rem]">
-                <li><strong>One thing you are scared of going into this semester</strong> — be specific. Not &ldquo;I am scared of failing&rdquo; but what specifically worries you: a particular subject, a social situation, a financial concern, something you have to figure out alone for the first time.</li>
-                <li><strong>One thing you are proud of or excited about</strong> — something real that you are bringing with you. A skill, a value, a person, a reason you are doing this.</li>
-                <li><strong>One piece of advice from this course that you want to remember</strong> — not a summary, but the one thing you do not want to lose track of by October.</li>
-                <li><strong>One question you hope to have answered by the end of the semester</strong> — something you are still genuinely unsure about.</li>
+                <li><strong>One thing you are scared of going into this semester:</strong> be specific. Not &ldquo;I am scared of failing&rdquo; but what specifically worries you: a particular subject, a social situation, a financial concern, something you have to figure out alone for the first time.</li>
+                <li><strong>One thing you are proud of or excited about</strong>: something real that you are bringing with you. A skill, a value, a person, a reason you are doing this.</li>
+                <li><strong>One piece of advice from this course that you want to remember</strong>: not a summary, but the one thing you do not want to lose track of by October.</li>
+                <li><strong>One question you hope to have answered by the end of the semester</strong>: something you are still genuinely unsure about.</li>
               </ol>
               <p className="text-[0.92rem] mt-3">You can write this in a notes app, a document, or by hand. If you want to receive it back at the end of the semester, use the free tool below.</p>
               <div className="mt-4">
@@ -152,7 +152,7 @@ export default function Module7Page() {
                   rel="noopener noreferrer"
                   className="inline-block border border-[#1b2537] text-[#1b2537] hover:bg-[#1b2537] hover:text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
                 >
-                  Send to Future Me (FutureMe.org — free) →
+                  Send to Future Me via FutureMe.org (free) →
                 </a>
               </div>
               <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-3">FutureMe lets you write a letter and schedule it to be delivered to your own email on a future date. No account required. Your letter is private.</p>
@@ -169,22 +169,22 @@ export default function Module7Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Self-Care Plan + Reflection Essay — Assignment 7 (75 pts)
+                Self-Care Plan + Reflection Essay: Assignment 7 (75 pts)
               </h2>
               <p className="text-[0.92rem] mb-4">Complete a two-part submission: a personal self-care plan and a 400–600 word reflection essay.</p>
 
               <div className="bg-[#f2f4f7] rounded-[6px] p-4 mb-4 text-[0.92rem]">
-                <p className="font-bold mb-2">Part 1 — Self-Care Plan:</p>
+                <p className="font-bold mb-2">Part 1: Self-Care Plan</p>
                 <ul className="ml-5 space-y-1">
-                  <li>Three specific coping strategies you will use when things get hard (not vague — describe what you will actually do)</li>
-                  <li>One campus support resource you have looked up — name, location, how to contact</li>
-                  <li>One person in your life you can contact when things get hard — name and relationship only</li>
+                  <li>Three specific coping strategies you will use when things get hard (not vague; describe what you will actually do)</li>
+                  <li>One campus support resource you have looked up: name, location, how to contact</li>
+                  <li>One person in your life you can contact when things get hard: name and relationship only</li>
                 </ul>
               </div>
 
               <div className="bg-[#f2f4f7] rounded-[6px] p-4 mb-4 text-[0.92rem]">
-                <p className="font-bold mb-2">Part 2 — Reflection Essay Prompt (400–600 words):</p>
-                <p>What are you most worried about going into your first college semester — and what do you already have going for you that will help you handle it? Address at least one specific concern from this module and connect it to at least one concrete strategy or resource. The rubric rewards specificity and honest engagement, not a particular emotional tone.</p>
+                <p className="font-bold mb-2">Part 2: Reflection Essay Prompt (400–600 words)</p>
+                <p>What are you most worried about going into your first college semester, and what do you already have going for you that will help you handle it? Address at least one specific concern from this module and connect it to at least one concrete strategy or resource. The rubric rewards specificity and honest engagement, not a particular emotional tone.</p>
               </div>
 
               <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[0.92rem]">
@@ -210,12 +210,12 @@ export default function Module7Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Example Reflection Essay — See What Proficient Looks Like
+                Example Reflection Essay: See What Proficient Looks Like
               </h2>
-              <p className="font-bold text-[0.92rem] mb-3">Example Reflection Essay — a student named Alex:</p>
+              <p className="font-bold text-[0.92rem] mb-3">Example Reflection Essay: a student named Alex</p>
               <blockquote className="border-l-[3px] border-l-[#0d7c7e] pl-4 my-4 text-[#2e3f5c] dark:text-[#94a3b8] space-y-3 text-[0.92rem]">
-                <p>The thing I am most worried about going into my first semester is not the coursework. It is the feeling I already have when I walk into certain rooms: that everyone else knows something I do not. I noticed it at orientation when other students were talking to professors like it was easy, asking questions I would not have known to ask. I felt like there was a whole set of rules for how college works that they already understood and I was still trying to learn. This course named it as imposter syndrome, and that helped — having a word for it made it feel less like a personal deficiency and more like something documented and common. But I am still worried that the feeling will get worse once classes start and the stakes feel higher.</p>
-                <p>What I have going for me is harder to see but I know it is there. I have worked a part-time job since I was sixteen and managed my own schedule without much supervision. I know how to ask for help when I actually need it — I just have to learn who to ask here. I also know why I am doing this, which I think matters more than it sounds: I am the first in my family to go to college, and that feels like both a weight and a reason. On the days when it feels like a weight, I want to remember that it is also a reason.</p>
+                <p>The thing I am most worried about going into my first semester is not the coursework. It is the feeling I already have when I walk into certain rooms: that everyone else knows something I do not. I noticed it at orientation when other students were talking to professors like it was easy, asking questions I would not have known to ask. I felt like there was a whole set of rules for how college works that they already understood and I was still trying to learn. This course named it as imposter syndrome, and that helped. Having a word for it made it feel less like a personal deficiency and more like something documented and common. But I am still worried that the feeling will get worse once classes start and the stakes feel higher.</p>
+                <p>What I have going for me is harder to see but I know it is there. I have worked a part-time job since I was sixteen and managed my own schedule without much supervision. I know how to ask for help when I actually need it. I just have to learn who to ask here. I also know why I am doing this, which I think matters more than it sounds: I am the first in my family to go to college, and that feels like both a weight and a reason. On the days when it feels like a weight, I want to remember that it is also a reason.</p>
                 <p>One strategy I am committing to: I am going to visit my school&apos;s first-gen student office in the first two weeks. I looked it up and my campus has one. I want to know it exists before I need it.</p>
               </blockquote>
               <p className="text-[0.82rem] text-[#8d9db5]">Proficient: addresses both halves of the prompt with specific, honest detail. One concern is directly tied to module content (imposter syndrome). One strength is named specifically and feels genuine. The plan at the end is concrete.</p>
@@ -321,9 +321,9 @@ export default function Module7Page() {
 <div className="bg-white rounded-[10px] p-6 border-l-[3px] border-l-[#c2680a] border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">Crisis Resources</p>
                 <div className="flex flex-col gap-[8px] text-[0.83rem] text-[#1b2537]">
-                  <div className="flex items-center gap-[8px]"><Phone size={13} style={{ color: '#c2680a', flexShrink: 0 }} /><span><strong>988</strong> — Suicide &amp; Crisis Lifeline</span></div>
+                  <div className="flex items-center gap-[8px]"><Phone size={13} style={{ color: '#c2680a', flexShrink: 0 }} /><span><strong>988</strong>: Suicide &amp; Crisis Lifeline</span></div>
                   <div className="flex items-center gap-[8px]"><Smartphone size={13} style={{ color: '#c2680a', flexShrink: 0 }} /><span>Text <strong>HOME</strong> to <strong>741741</strong></span></div>
-                  <div className="flex items-center gap-[8px]"><Heart size={13} style={{ color: '#c2680a', flexShrink: 0 }} /><span>Campus CAPS — check your school&apos;s website</span></div>
+                  <div className="flex items-center gap-[8px]"><Heart size={13} style={{ color: '#c2680a', flexShrink: 0 }} /><span>Campus CAPS: check your school&apos;s website</span></div>
                 </div>
               </div>
             </div>

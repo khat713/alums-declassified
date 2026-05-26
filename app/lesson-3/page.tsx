@@ -30,7 +30,7 @@ export default function Lesson3Page() {
             Lesson: Financial Literacy
           </h1>
           <p className="text-[#b8c5d6] text-[1rem] max-w-[640px] leading-[1.6]">
-            Your award letter is not a gift card. Some of that money is free — and some of it you will be paying back for years. Know the difference before you accept anything.
+            Your award letter is not a gift card. Some of that money is free, and some of it you will be paying back for years. Know the difference before you accept anything.
           </p>
         </div>
       </section>
@@ -53,22 +53,22 @@ export default function Lesson3Page() {
               <h3 className="text-[1.15rem] font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3" style={{ fontFamily: "var(--font-display)" }}>
                 Your Financial Aid Award Letter Is Not a Gift Card
               </h3>
-              <p className="text-[0.92rem] mb-4 leading-[1.7]">When your financial aid award letter arrives, it will list a number that looks like a lot of money. Some of it is. Some of it is a loan you will have to repay — with interest. Knowing the difference before you accept anything is one of the most important financial decisions you will make in college.</p>
+              <p className="text-[0.92rem] mb-4 leading-[1.7]">When your financial aid award letter arrives, it will list a number that looks like a lot of money. Some of it is. Some of it is a loan you will have to repay, with interest. Knowing the difference before you accept anything is one of the most important financial decisions you will make in college.</p>
 
               <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">💵 Grants vs. Loans: The Most Important Distinction</h4>
               <p className="text-[0.92rem] mb-3 leading-[1.7]">Grants are free money. You do not pay them back. The Pell Grant is the most common federal grant for students with financial need. Your school may also offer institutional grants. If your award letter lists a grant, that amount is yours to use for school expenses.</p>
               <p className="text-[0.92rem] mb-2 leading-[1.7]">Loans are borrowed money. You pay them back after graduation, with interest. There are two main types:</p>
               <ul className="ml-5 mb-3 space-y-1 text-[0.92rem]">
                 <li><strong>Subsidized loans:</strong> The government pays the interest while you are in school. These are better. You only qualify if you demonstrate financial need.</li>
-                <li><strong>Unsubsidized loans:</strong> Interest starts accruing immediately, even while you are in school. If you do not pay the interest as it builds, it gets added to your loan balance — meaning you pay interest on your interest.</li>
+                <li><strong>Unsubsidized loans:</strong> Interest starts accruing immediately, even while you are in school. If you do not pay the interest as it builds, it gets added to your loan balance, meaning you pay interest on your interest.</li>
               </ul>
               <p className="text-[0.92rem] mb-4 leading-[1.7]"><strong>Rule of thumb:</strong> Accept grants first. Accept subsidized loans before unsubsidized. Do not accept more in loans than you actually need to cover your costs.</p>
 
               <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">📄 How to Read an Award Letter</h4>
-              <p className="text-[0.92rem] mb-2 leading-[1.7]">Award letters are not standardized — every school formats them differently. Here is what to look for:</p>
+              <p className="text-[0.92rem] mb-2 leading-[1.7]">Award letters are not standardized. Every school formats them differently. Here is what to look for:</p>
               <ol className="ml-5 mb-4 space-y-1 text-[0.92rem]">
                 <li>Find the total cost of attendance (tuition + fees + housing + food + books + personal expenses). This is what school actually costs.</li>
-                <li>Subtract any grants and scholarships (free money). What remains is your &ldquo;net cost&rdquo; — what you or your family need to cover.</li>
+                <li>Subtract any grants and scholarships (free money). What remains is your &ldquo;net cost&rdquo;: what you or your family need to cover.</li>
                 <li>Then look at what loans are being offered to cover that net cost. These are NOT free money. They are options, not requirements.</li>
                 <li>You do not have to accept all the loans offered. Accept only what you need.</li>
               </ol>
@@ -77,7 +77,7 @@ export default function Lesson3Page() {
               <p className="text-[0.92rem] mb-3 leading-[1.7]">A student budget has two sides: money coming in and money going out. Most students underestimate the &ldquo;going out&rdquo; side.</p>
               <p className="text-[0.92rem] mb-3 leading-[1.7]"><strong>Fixed expenses</strong> are the same every month: rent, phone bill, loan payments, subscription services. You know exactly what these cost.</p>
               <p className="text-[0.92rem] mb-3 leading-[1.7]"><strong>Variable expenses</strong> change month to month: groceries, gas, entertainment, clothing, eating out. These are where most students overspend without realizing it.</p>
-              <p className="text-[0.92rem] mb-4 leading-[1.7]">The most important line in your budget is the gap between income and expenses. If that number is negative, you need a plan before the semester starts — not after you are overdrawn.</p>
+              <p className="text-[0.92rem] mb-4 leading-[1.7]">The most important line in your budget is the gap between income and expenses. If that number is negative, you need a plan before the semester starts, not after you are overdrawn.</p>
 
               <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">🚨 Financial Scams Targeting College Students</h4>
               <ul className="ml-5 mb-4 space-y-2 text-[0.92rem]">
@@ -88,7 +88,7 @@ export default function Lesson3Page() {
               </ul>
 
               <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">📊 How to Read an Award Letter — Visual Guide</h4>
+                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">📊 How to Read an Award Letter: Visual Guide</h4>
                 <img src="/images/module3-infographic.png" alt="Annotated financial aid award letter showing grants, loans, and net cost" className="w-full rounded-[8px] mt-2" />
                 <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">A fictional sample award letter with each section labeled and explained.</p>
               </div>

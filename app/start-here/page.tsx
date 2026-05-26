@@ -22,7 +22,7 @@ export default function StartHerePage() {
           <h1
             style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,4rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05, marginBottom: '0.4rem' }}
           >
-            Start Here — Course Syllabus
+            Start Here: Course Syllabus
           </h1>
           <p style={{ fontSize: '0.97rem', margin: 0, maxWidth: '580px' }}>
             Everything you need to know before you begin. Read this page first.
@@ -92,10 +92,10 @@ export default function StartHerePage() {
               <tbody>
                 {[
                   ["Format", "Fully asynchronous, self-paced"],
-                  ["Duration", "7 weeks — summer before your first semester"],
+                  ["Duration", "7 weeks: summer before your first semester"],
                   ["Credit", "Non-credit · Open enrollment · Free"],
-                  ["Platform", "This website — no account required, mobile-friendly"],
-                  ["Prerequisites", "None — built for students starting from scratch"],
+                  ["Platform", "This website: no account required, mobile-friendly"],
+                  ["Prerequisites", "None: built for students starting from scratch"],
                   ["Contact", <a key="contact" href="mailto:your-email@example.com" className="text-[#0d7c7e] hover:underline">your-email@example.com</a>],
                 ].map(([label, value], i) => (
                   <tr key={i}>
@@ -134,7 +134,7 @@ export default function StartHerePage() {
             </h2>
             <ol className="dark:text-white/85 text-[#374151]" style={{ lineHeight: 2.1, marginLeft: '1.25rem' }}>
               <li>
-                Start on the <strong className="dark:text-white text-[#1b2537]">Home page</strong> — it shows all 7 modules
+                Start on the <strong className="dark:text-white text-[#1b2537]">Home page</strong>. It shows all 7 modules
                 in order.
               </li>
               <li>
@@ -179,7 +179,7 @@ export default function StartHerePage() {
             Module Overview &amp; Suggested Pacing
           </h2>
           <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.9rem] mb-4">
-            No hard deadlines — but aim to finish before move-in week.
+            No hard deadlines. Aim to finish before move-in week.
           </p>
           <CurriculumTimeline />
         </div>
@@ -199,13 +199,13 @@ export default function StartHerePage() {
             By the End of This Course, You Will Be Able To:
           </h2>
           <ol className="leading-[2.2] ml-5">
-            <li>Navigate college expectations — identify the unwritten rules rarely stated outright.</li>
-            <li>Access campus resources — locate academic, financial, health, and personal support services.</li>
-            <li>Manage finances as a student — read an aid letter, build a budget, avoid common pitfalls.</li>
-            <li>Handle independent adult responsibilities — laundry, health insurance, leases, grocery budgets.</li>
-            <li>Apply evidence-based academic strategies — study techniques that actually work.</li>
-            <li>Prepare for career development — resume, networking, career center.</li>
-            <li>Build emotional resilience — coping strategies, when to seek support, how to belong.</li>
+            <li>Navigate college expectations: identify the unwritten rules rarely stated outright.</li>
+            <li>Access campus resources: locate academic, financial, health, and personal support services.</li>
+            <li>Manage finances as a student: read an aid letter, build a budget, avoid common pitfalls.</li>
+            <li>Handle independent adult responsibilities: laundry, health insurance, leases, grocery budgets.</li>
+            <li>Apply evidence-based academic strategies: study techniques that actually work.</li>
+            <li>Prepare for career development: resume, networking, career center.</li>
+            <li>Build emotional resilience: coping strategies, when to seek support, how to belong.</li>
           </ol>
         </div>
         </FadeIn>
@@ -224,7 +224,7 @@ export default function StartHerePage() {
             Technology Requirements
           </h2>
           <ul className="leading-[2.2] ml-5">
-            <li>A device with internet access — <strong>a smartphone is sufficient for all modules</strong></li>
+            <li>A device with internet access: <strong>a smartphone is sufficient for all modules</strong></li>
             <li>A browser: Chrome, Firefox, Safari, or Edge</li>
             <li>Ability to type or record audio/video for assessments</li>
             <li>A free Google account if you want to use the provided templates (optional)</li>
@@ -259,7 +259,7 @@ export default function StartHerePage() {
           <p>
             There are no hard deadlines. The only requirement is completing all
             seven modules before the end of your first college semester to
-            receive a certificate of completion. That said — the material is
+            receive a certificate of completion. That said, the material is
             most useful <em>before</em> you need it. Aim to finish by move-in
             week.
           </p>
@@ -288,7 +288,7 @@ export default function StartHerePage() {
           </h5>
           <p>
             No automatic point deductions for late submission. Assignments scored
-            Emerging or Incomplete may be revised and resubmitted once — the
+            Emerging or Incomplete may be revised and resubmitted once. The
             revised grade replaces the original.
           </p>
         </div>
@@ -300,7 +300,7 @@ export default function StartHerePage() {
             href="/module-1"
             className="bg-[#0d7c7e] text-white no-underline py-[11px] px-[28px] text-[0.95rem] rounded-[5px] font-bold inline-block hover:bg-[#096163] transition-all"
           >
-            I&apos;m Ready — Start Module 1 →
+            I&apos;m Ready: Start Module 1 →
           </Link>
         </div>
         </FadeIn>

@@ -16,7 +16,7 @@ export default function Module6Page() {
   return (
     <main>
       <ReadingProgress />
-      <ModuleToastInit message="Welcome to Module 6 — Career Preparation. You already have more to put on a resume than you think." />
+      <ModuleToastInit message="Welcome to Module 6: Career Preparation. You already have more to put on a resume than you think." />
       <Breadcrumb
         items={[
           { label: "Home", href: "/" },
@@ -133,7 +133,7 @@ export default function Module6Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Career Document Draft — Assignment 6 (100 pts)
+                Career Document Draft: Assignment 6 (100 pts)
               </h2>
               <p className="text-[0.92rem] mb-4">
                 Submit either a resume draft or a completed LinkedIn profile. Also submit a 100–150 word note on one thing you are still unsure about and your next step.
@@ -160,12 +160,12 @@ export default function Module6Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Example Resume — See What Proficient Looks Like
+                Example Resume: See What Proficient Looks Like
               </h2>
-              <p className="font-bold text-[0.92rem] mb-3">Example Resume — Alex Rivera (fictional first-year student):</p>
+              <p className="font-bold text-[0.92rem] mb-3">Example Resume: Alex Rivera (fictional first-year student)</p>
               <p className="text-[0.92rem] mb-3">See the annotated resume infographic above. This response scores at <strong>Proficient</strong> because it includes all required sections, uses action-oriented language in every bullet, and is consistently formatted on one page.</p>
-              <p className="text-[0.92rem] mb-3"><strong>Alex&apos;s self-assessment note:</strong> &ldquo;I am not sure how to handle the fact that most of my work experience is at the same place (FoodMart) and I do not have any internships or campus involvement yet. My next step is visiting the career center in week two to ask how to build experience during my first semester — whether that is a work-study position, a club, or something else they recommend.&rdquo;</p>
-              <p className="text-[0.82rem] text-[#8d9db5]">The self-assessment identifies a specific gap with a concrete next step — not a vague plan.</p>
+              <p className="text-[0.92rem] mb-3"><strong>Alex&apos;s self-assessment note:</strong> &ldquo;I am not sure how to handle the fact that most of my work experience is at the same place (FoodMart) and I do not have any internships or campus involvement yet. My next step is visiting the career center in week two to ask how to build experience during my first semester: whether that is a work-study position, a club, or something else they recommend.&rdquo;</p>
+              <p className="text-[0.82rem] text-[#8d9db5]">The self-assessment identifies a specific gap with a concrete next step, not a vague plan.</p>
             </div>
             </FadeIn>
 

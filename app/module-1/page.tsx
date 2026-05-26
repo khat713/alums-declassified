@@ -15,7 +15,7 @@ export default function Module1Page() {
   return (
     <main>
       <ReadingProgress />
-      <ModuleToastInit message="Welcome to Module 1 — College Expectations. This module takes about 45 minutes to complete." />
+      <ModuleToastInit message="Welcome to Module 1: College Expectations. This module takes about 45 minutes to complete." />
       <div className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[10px] text-[0.82rem]">
         <div className="container mx-auto px-4">
           <Link href="/" className="text-[#5a6a82] dark:text-[#94a3b8] hover:text-[#0d7c7e] hover:underline">Home</Link>
@@ -34,7 +34,7 @@ export default function Module1Page() {
         <div className="container mx-auto px-4">
           <p className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.09em] uppercase text-[#0d7c7e] mb-2">Week 1 · Module 1</p>
           <h1 className="text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}>College Expectations</h1>
-          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] max-w-[600px] m-0">The unwritten rules, syllabi, office hours, and how college really works — the things nobody tells you out loud.</p>
+          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] max-w-[600px] m-0">The unwritten rules, syllabi, office hours, and how college really works: the things nobody tells you out loud.</p>
           <div className="flex flex-wrap gap-4 mt-4 pt-4 border-t border-[#edf0f4] dark:border-[#243044]">
             <span className="flex items-center gap-[5px] text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"><Clock size={14} style={{ color: '#0d7c7e' }} /> <strong className="text-[#1b2537]">~45 minutes</strong></span>
             <span className="flex items-center gap-[5px] text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"><PenLine size={14} style={{ color: '#5a6a82' }} /> <strong className="text-[#1b2537]">Assessment:</strong> Reflection prompt</span>
@@ -84,7 +84,7 @@ export default function Module1Page() {
                   <li>What is the attendance policy in a course you&apos;re enrolled in?</li>
                   <li>Where do you go if you need to appeal a grade?</li>
                 </ol>
-                <p className="mt-3 text-[0.85rem] text-[#5a6a82]">Write down where you found each answer. Keep this — it&apos;ll be useful all semester.</p>
+                <p className="mt-3 text-[0.85rem] text-[#5a6a82]">Write down where you found each answer. Keep this. It&apos;ll be useful all semester.</p>
               </div>
             </div>
             </FadeIn>
@@ -95,7 +95,7 @@ export default function Module1Page() {
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Reflection: One Unwritten Rule I Didn&apos;t Know Before</h2>
               <p>After completing the module and activity, write a short reflection (150–300 words).</p>
               <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-left">
-                <strong>Prompt:</strong> Describe one unwritten rule of college you didn&apos;t know before this module. Where did you encounter it? How will knowing it change how you approach your first semester? Be specific — a response that could apply to any student won&apos;t score at Proficient.
+                <strong>Prompt:</strong> Describe one unwritten rule of college you didn&apos;t know before this module. Where did you encounter it? How will knowing it change how you approach your first semester? Be specific. A response that could apply to any student won&apos;t score at Proficient.
                 <br /><br />
                 <strong>Submission:</strong>
                 <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1rem_1.5rem] text-center mt-2">
@@ -110,11 +110,11 @@ export default function Module1Page() {
             <FadeIn delay={0.4}>
             <div id="model" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">Model Response</span>
-              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Example Response — See What Proficient Looks Like</h2>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Example Response: See What Proficient Looks Like</h2>
               <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-left">
                 <strong>Write your own completed example here.</strong>
                 <br /><br />
-                Complete the reflection yourself as if you were a student — use a fictional name like &ldquo;Alex&rdquo; if you prefer. This should be immediately visible on this page (not hidden behind a link). Label it clearly: <em>&ldquo;Example Response from a student named Alex:&rdquo;</em>
+                Complete the reflection yourself as if you were a student. Use a fictional name like &ldquo;Alex&rdquo; if you prefer. This should be immediately visible on this page (not hidden behind a link). Label it clearly: <em>&ldquo;Example Response from a student named Alex:&rdquo;</em>
               </div>
             </div>
             </FadeIn>
@@ -138,7 +138,7 @@ export default function Module1Page() {
             <div className="content-block py-5 px-7 flex justify-between items-center flex-wrap gap-4 mt-2">
               <div>
                 <p className="text-[0.72rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-bold mb-[0.2rem]">← Previous</p>
-                <p className="text-[0.93rem] font-semibold text-[#1b2537] dark:text-[#e2e8f0] m-0"><Link href="/start-here" className="text-[#1b2537] dark:text-[#e2e8f0] hover:text-[#0d7c7e] hover:underline">Start Here — Syllabus</Link></p>
+                <p className="text-[0.93rem] font-semibold text-[#1b2537] dark:text-[#e2e8f0] m-0"><Link href="/start-here" className="text-[#1b2537] dark:text-[#e2e8f0] hover:text-[#0d7c7e] hover:underline">Start Here: Syllabus</Link></p>
               </div>
               <div className="text-right">
                 <p className="text-[0.72rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-bold mb-[0.2rem]">Next →</p>

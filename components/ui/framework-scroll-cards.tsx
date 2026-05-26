@@ -6,14 +6,14 @@ import { Search, Lightbulb, Hammer, FlaskConical, BarChart3 } from 'lucide-react
 const frameworkPhases = [
   {
     id: 1, phase: 'Phase 1', model: 'ADDIE', title: 'Analysis', subtitle: 'Understanding the learner and the gap',
-    description: 'Before building anything, I identified the target audience — first-generation college students entering their first semester — and the core knowledge gap. Research showed first-gen students lack access to the informal institutional knowledge that continuing-generation students receive through family networks. This phase defined the need, the audience, and the learning problem.',
+    description: 'Before building anything, I identified the target audience (first-generation college students entering their first semester) and the core knowledge gap. Research showed first-gen students lack access to the informal institutional knowledge that continuing-generation students receive through family networks. This phase defined the need, the audience, and the learning problem.',
     bullets: ['Target audience: first-generation college students, pre-semester', 'Gap identified: informal institutional knowledge not transmitted through family', 'Needs assessment: interviews, literature review, WWC evidence guidelines', 'Constraints: zero cost, no account required, mobile-first, asynchronous'],
     icon: Search, bg: 'linear-gradient(135deg, #0f766e 0%, #134e4a 100%)', number: '01',
   },
   {
     id: 2, phase: 'Phase 2', model: 'ADDIE', title: 'Design', subtitle: 'Structuring the learning experience',
     description: 'Using backward design (UbD), I started with the desired outcomes and worked backward to the learning activities. Each module was structured around a single transferable skill with a clear learning objective, lesson, activity, and assessment. The design prioritized low cognitive load, mobile readability, and immediate applicability.',
-    bullets: ['Backward design framework — outcomes first, activities second', 'Seven modules aligned to seven domains of first-gen experience', 'Each module: objective → lesson → activity → assessment', 'Accessibility-first: WCAG 2.2 AA compliance built into design'],
+    bullets: ['Backward design framework: outcomes first, activities second', 'Seven modules aligned to seven domains of first-gen experience', 'Each module: objective → lesson → activity → assessment', 'Accessibility-first: WCAG 2.2 AA compliance built into design'],
     icon: Lightbulb, bg: 'linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%)', number: '02',
   },
   {
@@ -24,14 +24,14 @@ const frameworkPhases = [
   },
   {
     id: 4, phase: 'Phase 4', model: 'ADDIE', title: 'Implementation', subtitle: 'Deploying and delivering the course',
-    description: 'The course is deployed as a free public website requiring no account, no login, and no download. Students access it on any device at any time. Implementation decisions were made to remove every possible barrier to entry — a direct response to the equity-centered design principle that access should be universal and frictionless for first-generation students.',
-    bullets: ['Zero-barrier access: no account, no cost, no deadline', 'Mobile-first responsive design for students without laptops', 'Self-paced and asynchronous — works around work schedules', 'Freddie AI greeter provides personalized onboarding support'],
+    description: 'The course is deployed as a free public website requiring no account, no login, and no download. Students access it on any device at any time. Implementation decisions were made to remove every possible barrier to entry, a direct response to the equity-centered design principle that access should be universal and frictionless for first-generation students.',
+    bullets: ['Zero-barrier access: no account, no cost, no deadline', 'Mobile-first responsive design for students without laptops', 'Self-paced and asynchronous: works around work schedules', 'Freddie AI greeter provides personalized onboarding support'],
     icon: FlaskConical, bg: 'linear-gradient(135deg, #059669 0%, #064e3b 100%)', number: '04',
   },
   {
     id: 5, phase: 'Phase 5', model: 'ADDIE', title: 'Evaluation', subtitle: 'Measuring impact and iterating',
     description: 'Evaluation is built into the course structure through formative assessments at the end of each module and a summative College Readiness Portfolio as the final deliverable. The course design itself serves as a Key Assessment artifact demonstrating mastery of the MEITE program learning outcomes in instructional design, technology integration, and educational equity.',
-    bullets: ['Formative: 8 module assessments with model responses provided', 'Summative: College Readiness Portfolio — all modules synthesized', 'Program alignment: MEITE Key Assessment 3c — capstone artifact', 'Iteration: WCAG audit, usability testing, peer feedback incorporated'],
+    bullets: ['Formative: 8 module assessments with model responses provided', 'Summative: College Readiness Portfolio, all modules synthesized', 'Program alignment: MEITE Key Assessment 3c, capstone artifact', 'Iteration: WCAG audit, usability testing, peer feedback incorporated'],
     icon: BarChart3, bg: 'linear-gradient(135deg, #be123c 0%, #881337 100%)', number: '05',
   },
 ];

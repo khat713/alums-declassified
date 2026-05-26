@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 const lessons = [
   { emoji: "🎓", week: "Week 1", title: "College Expectations", desc: "The unwritten rules, how to read a syllabus, office hours, professor communication, and academic integrity.", lessonHref: "/lesson-1", moduleHref: "/module-1" },
-  { emoji: "🏛", week: "Week 2", title: "Campus Resources", desc: "Tutoring, writing center, financial aid, food pantry, counseling — and how to actually walk into an office for the first time.", lessonHref: "/lesson-2", moduleHref: "/module-2" },
+  { emoji: "🏛", week: "Week 2", title: "Campus Resources", desc: "Tutoring, writing center, financial aid, food pantry, counseling, and how to actually walk into an office for the first time.", lessonHref: "/lesson-2", moduleHref: "/module-2" },
   { emoji: "💵", week: "Week 3", title: "Financial Literacy", desc: "How to read an award letter, grants vs. loans, budgeting on a student income, and financial scams to avoid.", lessonHref: "/lesson-3", moduleHref: "/module-3" },
   { emoji: "🛒", week: "Week 4", title: "Essential Life Skills", desc: "Grocery shopping on a budget, laundry basics, reading a health insurance card, and what to check before signing a lease.", lessonHref: "/lesson-4", moduleHref: "/module-4" },
   { emoji: "📚", week: "Week 5", title: "Academic Success", desc: "Spaced practice, retrieval practice, Cornell note-taking, the Pomodoro technique, and managing imposter syndrome.", lessonHref: "/lesson-5", moduleHref: "/module-5" },
@@ -38,7 +38,7 @@ export default function LessonsPage() {
             Lessons
           </h1>
           <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] m-0 max-w-[600px]">
-            The instructional content for each module — read the lesson first,
+            The instructional content for each module: read the lesson first,
             then head back to the module to complete the activity and assessment.
           </p>
         </div>
