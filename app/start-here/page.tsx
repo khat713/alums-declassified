@@ -114,6 +114,87 @@ export default function StartHerePage() {
         </FadeIn>
 
 
+        {/* Syllabus Embed */}
+        <FadeIn delay={0.15}>
+        <section style={{ position: 'relative', zIndex: 1, padding: '2rem 0' }}>
+          <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 1.5rem' }}>
+
+            {/* Section label */}
+            <p style={{
+              fontSize: '0.78rem',
+              fontWeight: 700,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: '#0d7c7e',
+              marginBottom: '0.75rem',
+            }}>COURSE SYLLABUS</p>
+
+            <h2 style={{
+              fontFamily: 'Fraunces, serif',
+              fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+              fontWeight: 800,
+              letterSpacing: '-0.025em',
+              marginBottom: '1.5rem',
+              lineHeight: 1.1,
+            }}
+            className="dark:text-white text-[#1b2537]"
+            >Full Course Syllabus</h2>
+
+            {/* Syllabus placeholder box */}
+            <div style={{
+              width: '100%',
+              minHeight: '500px',
+              borderRadius: '16px',
+              background: 'var(--card-bg)',
+              border: '2px dashed rgba(13,124,126,0.3)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.75rem',
+              padding: '3rem 2rem',
+              boxShadow: 'var(--card-shadow)',
+            }}>
+              <div style={{ fontSize: '2.5rem' }}>📄</div>
+              <p style={{
+                fontFamily: 'Fraunces, serif',
+                fontSize: '1.15rem',
+                fontWeight: 700,
+                color: '#0d7c7e',
+                margin: 0,
+                textAlign: 'center',
+              }}>Insert Syllabus Here</p>
+              <p style={{
+                fontSize: '0.875rem',
+                margin: 0,
+                textAlign: 'center',
+                maxWidth: '400px',
+                lineHeight: 1.6,
+              }}
+              className="dark:text-white/55 text-[#6b7280]"
+              >
+                Embed a Google Doc, PDF, or paste your syllabus content directly.
+                Recommended: embed using a Google Docs iframe or link to a PDF in your public folder.
+              </p>
+              <div style={{
+                marginTop: '0.5rem',
+                padding: '8px 20px',
+                borderRadius: '100px',
+                border: '1px solid rgba(13,124,126,0.3)',
+                color: '#0d7c7e',
+                fontSize: '0.8rem',
+                fontWeight: 600,
+                letterSpacing: '0.05em',
+              }}>
+                To embed a Google Doc: File → Share → Publish to web → Embed
+              </div>
+            </div>
+
+          </div>
+        </section>
+        </FadeIn>
+
+
         {/* Navigation Guide */}
         <FadeIn delay={0.2}>
         <div className="mb-10">
