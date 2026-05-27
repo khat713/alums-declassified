@@ -67,12 +67,19 @@ export default function Module3Page() {
               >
                 By the End of This Module, You Will Be Able To:
               </h2>
-              <ol className="ml-5 space-y-0" style={{ lineHeight: "2.1" }}>
-                <li>Distinguish between grants, scholarships, and loans in a financial aid award letter and explain the repayment implications of each.</li>
-                <li>Calculate a monthly student budget by categorizing income sources and expenses as fixed or variable.</li>
-                <li>Identify at least two strategies for addressing a negative budget gap before the semester begins.</li>
-                <li>Recognize at least three financial scams commonly targeting college students and describe how to avoid them.</li>
-              </ol>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                {[
+                  "Distinguish between grants, scholarships, and loans in a financial aid award letter and explain the repayment implications of each.",
+                  "Calculate a monthly student budget by categorizing income sources and expenses as fixed or variable.",
+                  "Identify at least two strategies for addressing a negative budget gap before the semester begins.",
+                  "Recognize at least three financial scams commonly targeting college students and describe how to avoid them.",
+                ].map((obj, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             </FadeIn>
 
@@ -233,6 +240,38 @@ export default function Module3Page() {
               </div>
               <p className="mt-4 text-[0.92rem]"><strong>If my gap were negative:</strong> I would reduce entertainment first, then look into whether I qualify for the campus food pantry to cut grocery costs. I would also visit the financial aid office to ask about work-study options.</p>
               <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">Proficient: all categories completed, fixed vs. variable correctly labeled, and the gap analysis includes a specific and realistic plan.</p>
+            </div>
+            </FadeIn>
+
+            {/* Downloads */}
+            <FadeIn delay={0.45}>
+            <div id="downloads" className="content-block p-7 mb-5">
+              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
+                Lesson Materials
+              </span>
+              <h2
+                className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
+                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
+              >
+                Downloadable Resources
+              </h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <div style={{ border: '1.5px solid #0d7c7e', borderRadius: '8px', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+                  <div>
+                    <p style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Module 3 Lesson: Financial Literacy</p>
+                    <p style={{ fontSize: '0.82rem', color: '#8d9db5', margin: 0 }}>PDF · Lesson reading for offline use</p>
+                  </div>
+                  <a href="/documents/module-3-lesson.pdf" download aria-disabled="true" style={{ opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none', background: '#0d7c7e', color: '#fff', fontWeight: 600, fontSize: '0.88rem', padding: '8px 18px', borderRadius: '6px', textDecoration: 'none', display: 'inline-block' }}>Download PDF</a>
+                </div>
+                <div style={{ border: '1.5px solid #c2680a', borderRadius: '8px', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+                  <div>
+                    <p style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Module 3 Assignment: Budget Worksheet</p>
+                    <p style={{ fontSize: '0.82rem', color: '#8d9db5', margin: 0 }}>PDF · Assignment instructions and rubric</p>
+                  </div>
+                  <a href="/documents/module-3-assignment.pdf" download aria-disabled="true" style={{ opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none', background: '#c2680a', color: '#fff', fontWeight: 600, fontSize: '0.88rem', padding: '8px 18px', borderRadius: '6px', textDecoration: 'none', display: 'inline-block' }}>Download PDF</a>
+                </div>
+              </div>
+              <p style={{ fontSize: '0.78rem', color: '#8d9db5', marginTop: '0.75rem' }}>To activate: add your PDF to <code>/public/documents/</code> and update the href.</p>
             </div>
             </FadeIn>
 

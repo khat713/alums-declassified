@@ -45,8 +45,6 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-8 items-start">
             <div className="text-center">
               <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[180px] flex flex-col items-center justify-center">
-                📷
-                <br />
                 <small>
                   Add a photo here
                   <br />
@@ -75,7 +73,7 @@ export default function AboutPage() {
                   </li>
                 </ol>
                 <p className="mt-3 text-[0.88rem] text-[#999] mb-0">
-                  ⚠️ Required by rubric Standard 1.
+                  Required by rubric Standard 1.
                 </p>
               </div>
             </div>
@@ -121,7 +119,7 @@ export default function AboutPage() {
             something true.
           </p>
           <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-center">
-            📝 <strong>Discussion / Intro Form Placeholder</strong>
+            <strong>Discussion / Intro Form Placeholder</strong>
             <br />
             <small>
               Embed a Google Form, Padlet, or discussion thread here.

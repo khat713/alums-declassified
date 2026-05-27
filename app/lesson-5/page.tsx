@@ -55,17 +55,17 @@ export default function Lesson5Page() {
               </h3>
               <p className="text-[0.92rem] mb-4 leading-[1.7]">Most students study the way they were taught in high school: re-reading notes, highlighting textbooks, reviewing material the night before an exam. Research on learning and memory is clear that these methods feel productive but are among the least effective ways to retain information. This module covers what actually works, and why.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">🧠 Spaced Practice vs. Cramming</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Spaced Practice vs. Cramming</h4>
               <p className="text-[0.92rem] mb-3 leading-[1.7]">Cramming (studying a large amount of material in one session right before a test) leads to short-term retention and rapid forgetting. You might do okay on the test, but you will not remember the material two weeks later.</p>
               <p className="text-[0.92rem] mb-3 leading-[1.7]">Spaced practice means distributing your studying across multiple shorter sessions over days or weeks. Research on the forgetting curve shows that we forget information rapidly after one exposure, but each subsequent review resets the curve. Three 30-minute sessions over three days is more effective than one 90-minute session the night before.</p>
               <p className="text-[0.92rem] mb-4 leading-[1.7]"><strong>How to implement it:</strong> As soon as you get a syllabus, put all major exams in your calendar. Work backward from each exam and schedule review sessions in the weeks before.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">🔁 Retrieval Practice</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Retrieval Practice</h4>
               <p className="text-[0.92rem] mb-3 leading-[1.7]">Re-reading your notes feels productive. When you re-read, you are recognizing information, not recalling it. Recognition is easy. Recall is what tests actually measure.</p>
               <p className="text-[0.92rem] mb-3 leading-[1.7]">Retrieval practice means actively trying to recall information without looking at it. Research by Roediger and Karpicke (2006) found that students who used retrieval practice outperformed students who re-read material by a significant margin, even one week later.</p>
               <p className="text-[0.92rem] mb-4 leading-[1.7]"><strong>How to implement it:</strong> Close your notes. Write down everything you remember about a topic from memory. Then open your notes and check what you got right and what you missed. The things you missed are exactly what you need to study more. Flashcards (physical or via Quizlet) are also retrieval practice.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">📝 Cornell Note-Taking Method</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Cornell Note-Taking Method</h4>
               <p className="text-[0.92rem] mb-2 leading-[1.7]">The Cornell method is a structured note-taking system that builds review directly into the process of taking notes. Divide your page into three sections:</p>
               <ul className="ml-5 mb-3 space-y-2 text-[0.92rem]">
                 <li><strong>Notes column (right, ~70% of page):</strong> Main ideas from the lecture, in your own words. Do not transcribe. Summarize and paraphrase as you listen.</li>
@@ -74,10 +74,10 @@ export default function Lesson5Page() {
               </ul>
               <p className="text-[0.92rem] mb-4 leading-[1.7]">To review: cover the notes column with a piece of paper. Read each cue question and try to answer it from memory. Then uncover to check. This converts your notes into a built-in study tool.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">⏱ The Pomodoro Technique</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">The Pomodoro Technique</h4>
               <p className="text-[0.92rem] mb-4 leading-[1.7]">Long, unbroken study sessions are less effective than shorter, focused ones with deliberate breaks. Study with full focus for 25 minutes, then take a 5-minute break. After four cycles, take a longer break (15–30 minutes). You do not need any app. A phone timer works.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">🎭 Imposter Syndrome in the Classroom</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Imposter Syndrome in the Classroom</h4>
               <p className="text-[0.92rem] mb-2 leading-[1.7]">Imposter syndrome is the experience of feeling like you do not belong, and the persistent fear of being &ldquo;found out.&rdquo; It is extremely common among first-generation college students entering spaces where the cultural norms are unfamiliar.</p>
               <ul className="ml-5 mb-4 space-y-2 text-[0.92rem]">
                 <li><strong>Name it.</strong> Recognizing imposter syndrome as a named, documented experience, not a personal deficiency, is the first step to managing it.</li>
@@ -86,7 +86,7 @@ export default function Lesson5Page() {
               </ul>
 
               <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">📝 Cornell Note-Taking Method: Visual Guide</h4>
+                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">Cornell Note-Taking Method: Visual Guide</h4>
                 <img src="/images/module5-infographic.png" alt="Cornell note-taking template with labeled sections and sample content" className="w-full rounded-[8px] mt-2" />
                 <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">A blank Cornell template with each section labeled and described.</p>
               </div>

@@ -50,12 +50,19 @@ export default function Module2Page() {
             <div id="objectives" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">Learning Objectives</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>By the End of This Module, You Will Be Able To:</h2>
-              <ol className="ml-5 leading-[2.1] mb-0">
-                <li>Identify at least six campus resources across academic, financial, and health/wellbeing categories specific to your school.</li>
-                <li>Explain the purpose of each resource and describe a realistic scenario in which you would use it.</li>
-                <li>Draft a professional email to a campus office requesting help or information.</li>
-                <li>Describe common barriers first-gen students face when accessing campus support, and how to overcome them.</li>
-              </ol>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                {[
+                  "Identify at least six campus resources across academic, financial, and health/wellbeing categories specific to your school.",
+                  "Explain the purpose of each resource and describe a realistic scenario in which you would use it.",
+                  "Draft a professional email to a campus office requesting help or information.",
+                  "Describe common barriers first-gen students face when accessing campus support, and how to overcome them.",
+                ].map((obj, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             </FadeIn>
 
@@ -136,6 +143,27 @@ export default function Module2Page() {
                 </table>
               </div>
               <p className="text-[0.82rem] text-[#5a6a82] mt-3">This response scores at <strong>Proficient</strong>: all six resources identified with specific contact info, and each scenario is realistic and personal rather than generic.</p>
+            </div>
+            </FadeIn>
+
+            <FadeIn delay={0.45}>
+            <div id="downloads" className="content-block p-7 mb-5">
+              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">Lesson Materials</span>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.1rem,2vw,1.4rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Downloadable Resources</h2>
+              <div style={{ border: '2px dashed rgba(13,124,126,0.3)', borderRadius: '12px', padding: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', background: 'var(--card-bg)', marginBottom: '1rem' }}>
+                <div>
+                  <p className="dark:text-white text-[#1b2537]" style={{ fontWeight: 700, marginBottom: '0.25rem' }}>Module 2 Lesson: Campus Resources</p>
+                  <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem' }}>To activate: add your PDF to <code>/public/documents/</code> and update the href to <code>/documents/module-2-lesson.pdf</code></p>
+                </div>
+                <a href="/documents/module-2-lesson.pdf" download aria-disabled="true" aria-label="Download Module 2 Lesson PDF" style={{ background: '#0d7c7e', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', flexShrink: 0, opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none' }}>Download PDF</a>
+              </div>
+              <div style={{ border: '2px dashed rgba(217,119,6,0.3)', borderRadius: '12px', padding: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', background: 'var(--card-bg)' }}>
+                <div>
+                  <p className="dark:text-white text-[#1b2537]" style={{ fontWeight: 700, marginBottom: '0.25rem' }}>Module 2 Assignment: Campus Resource Map</p>
+                  <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem' }}>To activate: add your PDF to <code>/public/documents/</code> and update the href to <code>/documents/module-2-assignment.pdf</code></p>
+                </div>
+                <a href="/documents/module-2-assignment.pdf" download aria-disabled="true" aria-label="Download Module 2 Assignment PDF" style={{ background: '#d97706', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', flexShrink: 0, opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none' }}>Download PDF</a>
+              </div>
             </div>
             </FadeIn>
 

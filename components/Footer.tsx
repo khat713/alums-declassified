@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <p style={{ fontFamily: 'Fraunces, serif', fontWeight: 800, fontSize: '1.4rem', color: '#ffffff', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>
-              <span aria-hidden="true">🎓</span> Alum&apos;s Declassified
+              Alum&apos;s Declassified
             </p>
             <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem', lineHeight: 1.7, maxWidth: '260px' }}>A free seven-week college survival guide built specifically for first-generation students. No tuition. No gatekeeping.</p>
           </div>

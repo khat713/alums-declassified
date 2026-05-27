@@ -38,7 +38,9 @@
       "Bash(where chromium-browser *)",
       "Bash(where google-chrome *)",
       "Bash(pkill -f \"next dev\")",
-      "Bash(python *)"
+      "Bash(python *)",
+      "Bash(Write-Output \"Deleted all 3 scroll card files\")",
+      "PowerShell(Remove-Item *)"
     ]
   }
 }

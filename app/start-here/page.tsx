@@ -155,7 +155,7 @@ export default function StartHerePage() {
               padding: '3rem 2rem',
               boxShadow: 'var(--card-shadow)',
             }}>
-              <div style={{ fontSize: '2.5rem' }}>📄</div>
+
               <p style={{
                 fontFamily: 'Fraunces, serif',
                 fontSize: '1.15rem',

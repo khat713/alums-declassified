@@ -55,7 +55,7 @@ export default function Lesson2Page() {
               </h3>
               <p className="text-[0.92rem] mb-4 leading-[1.7]">Every campus resource described in this module exists specifically because students struggle with the things it covers. The tutoring center is not for students who are failing. It is for students who want to do better. The food pantry is not for emergencies. It is for any student who needs it. The counseling center is not for crises. It is for anyone who wants to talk to someone. You do not have to earn access to any of these things. You just have to know they exist and walk in.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">🏛 Academic Support</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Academic Support</h4>
               <p className="text-[0.92rem] mb-2 leading-[1.7]"><strong>Tutoring Center</strong><br />
               Most schools offer free peer or professional tutoring across a wide range of subjects: math, writing, science, foreign language. You do not need to be failing to go. Many students who earn A&apos;s use tutoring regularly. Find yours before midterms, not during them. Most tutoring centers require you to make an appointment in advance. Walk-ins are often full.</p>
               <p className="text-[0.92rem] mb-2 leading-[1.7]"><strong>Writing Center</strong><br />
@@ -63,7 +63,7 @@ export default function Lesson2Page() {
               <p className="text-[0.92rem] mb-4 leading-[1.7]"><strong>Academic Advising</strong><br />
               Your academic advisor helps you choose courses, plan your degree, and navigate requirements. They are not your professor and not your counselor. They are the person who makes sure you are on track to graduate. Meeting with them once a semester is normal. Do not wait until you are in trouble to introduce yourself.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">💰 Financial Resources</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Financial Resources</h4>
               <p className="text-[0.92rem] mb-2 leading-[1.7]"><strong>Financial Aid Office</strong><br />
               This is your first stop for any question about your award letter, your loans, your scholarship, or your bill. The staff deal with these questions every day. Nothing you ask will be surprising or embarrassing to them. If you get a bill you do not understand, call or visit before the due date, not after.</p>
               <p className="text-[0.92rem] mb-2 leading-[1.7]"><strong>Emergency Aid</strong><br />
@@ -71,19 +71,19 @@ export default function Lesson2Page() {
               <p className="text-[0.92rem] mb-4 leading-[1.7]"><strong>Food Pantry</strong><br />
               A significant number of colleges have an on-campus food pantry available to any enrolled student, free of charge, with no proof of need required. If you are ever short on food (or just running low at the end of the month), look yours up. The location is usually listed on the Dean of Students or student services page.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">🧠 Health and Wellbeing</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Health and Wellbeing</h4>
               <p className="text-[0.92rem] mb-2 leading-[1.7]"><strong>Counseling and Psychological Services (CAPS)</strong><br />
               Free or low-cost mental health support for enrolled students. Going to counseling does not mean something is seriously wrong. Adjusting to college is hard. Feeling anxious, homesick, or overwhelmed in your first semester is common. Talking to someone is a reasonable response. Most CAPS offices require an initial intake appointment. Schedule it early in the semester, because wait times grow after midterms.</p>
               <p className="text-[0.92rem] mb-4 leading-[1.7]"><strong>Campus Health / Student Health Center</strong><br />
               Medical care for students, usually at low or no cost. Know where it is located, what your student health insurance covers, and how to make an appointment before you are sick. The first time you get a bad cold at college and do not know where to go is not the right time to figure this out.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">🚪 How to Actually Walk Into an Office for the First Time</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">How to Actually Walk Into an Office for the First Time</h4>
               <p className="text-[0.92rem] mb-3 leading-[1.7]">A lot of first-gen students avoid campus offices because they do not know what to say, are not sure they qualify for help, or feel like they will be judged. Here is the script:</p>
               <p className="text-[0.92rem] mb-3 leading-[1.7] italic">&ldquo;Hi, I&apos;m [your name], I&apos;m a first-year student, and I had a question about [specific thing]. Is this the right place to ask, or can you point me in the right direction?&rdquo;</p>
               <p className="text-[0.92rem] mb-4 leading-[1.7]">That is it. You do not need to explain your whole situation upfront. Office staff expect new students to not know where to start. That is most of who they see.</p>
 
               <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">🗺 Campus Resource Categories: Visual Overview</h4>
+                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">Campus Resource Categories: Visual Overview</h4>
                 <img src="/images/module2-infographic.png" alt="Campus resource categories: academic, financial, health and wellbeing" className="w-full rounded-[8px] mt-2" />
                 <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">The three resource categories every first-gen student should know before day one.</p>
               </div>

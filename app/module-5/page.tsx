@@ -67,12 +67,19 @@ export default function Module5Page() {
               >
                 By the End of This Module, You Will Be Able To:
               </h2>
-              <ol className="ml-5 space-y-0" style={{ lineHeight: "2.1" }}>
-                <li>Explain the difference between spaced practice and cramming and describe why spaced practice leads to better long-term retention.</li>
-                <li>Apply retrieval practice techniques, including practice testing and flashcards, to study material from at least one of your classes.</li>
-                <li>Use the Cornell note-taking method to take structured notes from a lecture or reading.</li>
-                <li>Build a realistic Week 1 study schedule that incorporates at least two evidence-based study strategies.</li>
-              </ol>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                {[
+                  "Explain the difference between spaced practice and cramming and describe why spaced practice leads to better long-term retention.",
+                  "Apply retrieval practice techniques, including practice testing and flashcards, to study material from at least one of your classes.",
+                  "Use the Cornell note-taking method to take structured notes from a lecture or reading.",
+                  "Build a realistic Week 1 study schedule that incorporates at least two evidence-based study strategies.",
+                ].map((obj, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             </FadeIn>
 
@@ -208,6 +215,38 @@ export default function Module5Page() {
               </div>
               <p className="mt-4 text-[0.92rem]"><strong>Rationale (Alex):</strong> I built two study blocks per day instead of one long session based on what this module covered about spaced practice. Studying the same material in shorter sessions across multiple days is more effective than one long cram session because each review happens just as I am starting to forget, which is when memory is strengthened most. I also scheduled my study blocks immediately after each class when the material is freshest, which supports retrieval practice. My Tuesday and Thursday evening blocks are longer because those are my days without back-to-back commitments. I use those for deeper review and practice testing before Wednesday and Friday classes.</p>
               <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">Proficient: schedule includes all required elements, rationale names two specific strategies and explains the research behind why they work.</p>
+            </div>
+            </FadeIn>
+
+            {/* Downloads */}
+            <FadeIn delay={0.45}>
+            <div id="downloads" className="content-block p-7 mb-5">
+              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
+                Lesson Materials
+              </span>
+              <h2
+                className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
+                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
+              >
+                Downloadable Resources
+              </h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <div style={{ border: '1.5px solid #0d7c7e', borderRadius: '8px', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+                  <div>
+                    <p style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Module 5 Lesson: Academic Success</p>
+                    <p style={{ fontSize: '0.82rem', color: '#8d9db5', margin: 0 }}>PDF · Lesson reading for offline use</p>
+                  </div>
+                  <a href="/documents/module-5-lesson.pdf" download aria-disabled="true" style={{ opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none', background: '#0d7c7e', color: '#fff', fontWeight: 600, fontSize: '0.88rem', padding: '8px 18px', borderRadius: '6px', textDecoration: 'none', display: 'inline-block' }}>Download PDF</a>
+                </div>
+                <div style={{ border: '1.5px solid #c2680a', borderRadius: '8px', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+                  <div>
+                    <p style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Module 5 Assignment: Study Plan</p>
+                    <p style={{ fontSize: '0.82rem', color: '#8d9db5', margin: 0 }}>PDF · Assignment instructions and rubric</p>
+                  </div>
+                  <a href="/documents/module-5-assignment.pdf" download aria-disabled="true" style={{ opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none', background: '#c2680a', color: '#fff', fontWeight: 600, fontSize: '0.88rem', padding: '8px 18px', borderRadius: '6px', textDecoration: 'none', display: 'inline-block' }}>Download PDF</a>
+                </div>
+              </div>
+              <p style={{ fontSize: '0.78rem', color: '#8d9db5', marginTop: '0.75rem' }}>To activate: add your PDF to <code>/public/documents/</code> and update the href.</p>
             </div>
             </FadeIn>
 

@@ -55,14 +55,14 @@ export default function Lesson6Page() {
               </h3>
               <p className="text-[0.92rem] mb-4 leading-[1.7]">A lot of first-year students avoid building a resume because they feel like they do not have anything to put on it. Babysitting, fast food, volunteering, caregiving, a sport, a club: all of these count. The goal is to show that you show up, work hard, and can communicate that in writing.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">📄 Resume Basics: What to Include</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Resume Basics: What to Include</h4>
               <p className="text-[0.92rem] mb-2 leading-[1.7]"><strong>Header:</strong> Your name, phone number, email, and optionally your LinkedIn URL. Use a professional email address.</p>
               <p className="text-[0.92rem] mb-2 leading-[1.7]"><strong>Education:</strong> Your college, expected degree, and graduation year. Include GPA if above 3.0. List this first as a first-year student.</p>
               <p className="text-[0.92rem] mb-2 leading-[1.7]"><strong>Experience:</strong> Paid or unpaid work, internships, volunteering, caregiving. For each: organization, role, dates, and 2–3 bullets starting with action verbs. Quantify when possible: not &ldquo;served customers&rdquo; but &ldquo;served 80+ customers per shift.&rdquo;</p>
               <p className="text-[0.92rem] mb-2 leading-[1.7]"><strong>Skills:</strong> Technical skills and languages only. No soft skills like &ldquo;teamwork.&rdquo; Those belong in your bullets as evidence.</p>
               <p className="text-[0.92rem] mb-4 leading-[1.7]"><strong>One additional section:</strong> Extracurriculars, volunteer work, coursework, honors, or certifications.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">💼 Formatting Rules</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Formatting Rules</h4>
               <ul className="ml-5 mb-4 space-y-2 text-[0.92rem]">
                 <li>One page. Always, for a first-year student.</li>
                 <li>Clean font: Arial, Calibri, or Georgia in 10–12pt.</li>
@@ -71,7 +71,7 @@ export default function Lesson6Page() {
                 <li>No photos or graphics unless applying for a design role.</li>
               </ul>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">🔗 LinkedIn Basics</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">LinkedIn Basics</h4>
               <ul className="ml-5 mb-4 space-y-2 text-[0.92rem]">
                 <li><strong>Headline:</strong> Who you are and what you are working toward. Example: &ldquo;First-year student at Riverside CC | Aspiring Registered Nurse | Healthcare Volunteer&rdquo;</li>
                 <li><strong>About:</strong> 3–5 sentences in first person. Who you are, what you are studying, what you are looking for.</li>
@@ -79,11 +79,11 @@ export default function Lesson6Page() {
                 <li><strong>Photo:</strong> Clear, front-facing, plain background. Normal day, not a party.</li>
               </ul>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">🤝 Networking Without Feeling Awkward</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Networking Without Feeling Awkward</h4>
               <p className="text-[0.92rem] mb-4 leading-[1.7]">Networking is just talking to people who work in areas you are interested in. Three concrete ways to start: visit your career center, ask professors for introductions, and attend one career event even if it feels uncomfortable.</p>
 
               <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">📋 Sample First-Year Resume: Annotated</h4>
+                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">Sample First-Year Resume: Annotated</h4>
                 <img src="/images/module6-infographic.png" alt="Annotated sample resume for a first-year college student" className="w-full rounded-[8px] mt-2" />
                 <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">A fictional student resume showing how to present part-time work, volunteering, and school activities professionally.</p>
               </div>

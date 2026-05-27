@@ -75,12 +75,19 @@ export default function Module7Page() {
               >
                 By the End of This Module, You Will Be Able To:
               </h2>
-              <ol className="ml-5 space-y-0" style={{ lineHeight: "2.1" }}>
-                <li>Define imposter syndrome and describe at least two strategies for managing it during your first semester.</li>
-                <li>Explain what code-switching is and articulate its emotional weight without framing it as a problem to be solved.</li>
-                <li>Identify at least three concrete strategies for coping with homesickness and building belonging over time.</li>
-                <li>Distinguish between normal college stress and signs that it is time to reach out for professional support.</li>
-              </ol>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                {[
+                  "Define imposter syndrome and describe at least two strategies for managing it during your first semester.",
+                  "Explain what code-switching is and articulate its emotional weight without framing it as a problem to be solved.",
+                  "Identify at least three concrete strategies for coping with homesickness and building belonging over time.",
+                  "Distinguish between normal college stress and signs that it is time to reach out for professional support.",
+                ].map((obj, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             </FadeIn>
 
@@ -219,6 +226,38 @@ export default function Module7Page() {
                 <p>One strategy I am committing to: I am going to visit my school&apos;s first-gen student office in the first two weeks. I looked it up and my campus has one. I want to know it exists before I need it.</p>
               </blockquote>
               <p className="text-[0.82rem] text-[#8d9db5]">Proficient: addresses both halves of the prompt with specific, honest detail. One concern is directly tied to module content (imposter syndrome). One strength is named specifically and feels genuine. The plan at the end is concrete.</p>
+            </div>
+            </FadeIn>
+
+            {/* Downloads */}
+            <FadeIn delay={0.45}>
+            <div id="downloads" className="content-block p-7 mb-5">
+              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
+                Lesson Materials
+              </span>
+              <h2
+                className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
+                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
+              >
+                Downloadable Resources
+              </h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <div style={{ border: '1.5px solid #0d7c7e', borderRadius: '8px', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+                  <div>
+                    <p style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Module 7 Lesson: Emotional Resilience</p>
+                    <p style={{ fontSize: '0.82rem', color: '#8d9db5', margin: 0 }}>PDF · Lesson reading for offline use</p>
+                  </div>
+                  <a href="/documents/module-7-lesson.pdf" download aria-disabled="true" style={{ opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none', background: '#0d7c7e', color: '#fff', fontWeight: 600, fontSize: '0.88rem', padding: '8px 18px', borderRadius: '6px', textDecoration: 'none', display: 'inline-block' }}>Download PDF</a>
+                </div>
+                <div style={{ border: '1.5px solid #c2680a', borderRadius: '8px', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+                  <div>
+                    <p style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Module 7 Assignment: Reflection Essay</p>
+                    <p style={{ fontSize: '0.82rem', color: '#8d9db5', margin: 0 }}>PDF · Assignment instructions and rubric</p>
+                  </div>
+                  <a href="/documents/module-7-assignment.pdf" download aria-disabled="true" style={{ opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none', background: '#c2680a', color: '#fff', fontWeight: 600, fontSize: '0.88rem', padding: '8px 18px', borderRadius: '6px', textDecoration: 'none', display: 'inline-block' }}>Download PDF</a>
+                </div>
+              </div>
+              <p style={{ fontSize: '0.78rem', color: '#8d9db5', marginTop: '0.75rem' }}>To activate: add your PDF to <code>/public/documents/</code> and update the href.</p>
             </div>
             </FadeIn>
 

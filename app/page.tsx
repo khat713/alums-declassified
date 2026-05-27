@@ -94,7 +94,7 @@ export default function HomePage() {
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
                 <h1
                   className="font-bold leading-[1.05] mb-5 dark:text-white text-[#1b2537] min-h-[3.5em]"
-                  style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", letterSpacing: "-0.04em", textShadow: '0 2px 8px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.7)' }}
+                  style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", letterSpacing: "-0.04em" }}
                 >
                   <Typewriter
                     words={[
@@ -309,7 +309,7 @@ export default function HomePage() {
             justifyContent: 'center',
             gap: '0.75rem'
           }}>
-            <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.1rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>📸 Insert Screenshot Here</p>
+            <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.1rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>Insert Screenshot Here</p>
             <p className="dark:text-white/50 text-[#6b7280]" style={{ fontSize: '0.85rem', margin: 0 }}>Replace with a screenshot of your course</p>
           </div>
         </div>

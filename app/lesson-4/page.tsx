@@ -55,7 +55,7 @@ export default function Lesson4Page() {
               </h3>
               <p className="text-[0.92rem] mb-4 leading-[1.7]">College is often the first time you are fully responsible for your own daily life: your food, your laundry, your health, your finances, your schedule. Some of this you already know. Some of it you have never had to do before. This module covers the practical skills that do not show up in any course catalog but matter every single week.</p>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">🛒 Grocery Shopping on a Budget</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Grocery Shopping on a Budget</h4>
               <ul className="ml-5 mb-4 space-y-2 text-[0.92rem]">
                 <li><strong>Make a list before you go.</strong> Grocery stores are designed to make you buy things you did not plan to buy.</li>
                 <li><strong>Buy ingredients, not meals.</strong> A bag of rice, a dozen eggs, canned beans, and frozen vegetables will make six meals for the same cost as one pre-made dinner.</li>
@@ -64,7 +64,7 @@ export default function Lesson4Page() {
                 <li><strong>Know your campus food pantry.</strong> If you are short on food at the end of the month, use it.</li>
               </ul>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">👕 Laundry Basics</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Laundry Basics</h4>
               <ol className="ml-5 mb-4 space-y-2 text-[0.92rem]">
                 <li><strong>Sort your clothes.</strong> Darks with darks, lights with lights. New dark clothes can bleed dye onto lighter items.</li>
                 <li><strong>Check the care label.</strong> &ldquo;Cold wash&rdquo; is safe for almost everything. &ldquo;Lay flat to dry&rdquo; means no dryer.</li>
@@ -73,7 +73,7 @@ export default function Lesson4Page() {
                 <li><strong>Empty your pockets.</strong> Tissues, gum, and earbuds have destroyed many loads of laundry.</li>
               </ol>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">🏥 Understanding Your Health Insurance Card</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">Understanding Your Health Insurance Card</h4>
               <ul className="ml-5 mb-4 space-y-2 text-[0.92rem]">
                 <li><strong>Member ID / Policy Number:</strong> Your unique identifier. Give this at every visit.</li>
                 <li><strong>Group Number:</strong> Identifies your plan. Required at the pharmacy and doctor&apos;s office.</li>
@@ -82,7 +82,7 @@ export default function Lesson4Page() {
                 <li><strong>In-network vs. out-of-network:</strong> In-network is cheaper. When in doubt, use your campus health center.</li>
               </ul>
 
-              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">📋 What to Check Before Signing a Lease</h4>
+              <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mt-6 mb-2">What to Check Before Signing a Lease</h4>
               <ul className="ml-5 mb-3 space-y-2 text-[0.92rem]">
                 <li><strong>Lease length and end date.</strong> What happens if you need to leave early?</li>
                 <li><strong>What utilities are included.</strong> Know what you pay separately before calculating your costs.</li>
@@ -93,7 +93,7 @@ export default function Lesson4Page() {
               <p className="text-[0.92rem] mb-4 leading-[1.7]">If something in the lease is unclear, ask before you sign. Once you sign, you are legally bound to the terms.</p>
 
               <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">🏥 How to Read Your Health Insurance Card</h4>
+                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">How to Read Your Health Insurance Card</h4>
                 <img src="/images/module4-infographic.png" alt="Annotated health insurance card showing Member ID, copay, and deductible" className="w-full rounded-[8px] mt-2" />
                 <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">A sample insurance card with each field labeled in plain language.</p>
               </div>

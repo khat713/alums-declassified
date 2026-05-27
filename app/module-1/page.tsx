@@ -51,12 +51,19 @@ export default function Module1Page() {
             <div id="objectives" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#deeafb] text-[#1a56a4]">Learning Objectives</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>By the End of This Module, You Will Be Able To:</h2>
-              <ol className="ml-5 leading-[2.1] mb-0">
-                <li>Identify at least three unwritten rules of college that are rarely explained in official orientation materials.</li>
-                <li>Describe the purpose of a syllabus and explain how to use it as a reference tool throughout the semester.</li>
-                <li>Explain what office hours are, why professors hold them, and draft a plan for attending them at least once.</li>
-                <li>Apply your school&apos;s academic integrity policy to realistic scenarios you might encounter as a first-semester student.</li>
-              </ol>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                {[
+                  "Identify at least three unwritten rules of college that are rarely explained in official orientation materials.",
+                  "Describe the purpose of a syllabus and explain how to use it as a reference tool throughout the semester.",
+                  "Explain what office hours are, why professors hold them, and draft a plan for attending them at least once.",
+                  "Apply your school's academic integrity policy to realistic scenarios you might encounter as a first-semester student.",
+                ].map((obj, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             </FadeIn>
 
@@ -115,6 +122,27 @@ export default function Module1Page() {
                 <strong>Write your own completed example here.</strong>
                 <br /><br />
                 Complete the reflection yourself as if you were a student. Use a fictional name like &ldquo;Alex&rdquo; if you prefer. This should be immediately visible on this page (not hidden behind a link). Label it clearly: <em>&ldquo;Example Response from a student named Alex:&rdquo;</em>
+              </div>
+            </div>
+            </FadeIn>
+
+            <FadeIn delay={0.45}>
+            <div id="downloads" className="content-block p-7 mb-5">
+              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">Lesson Materials</span>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.1rem,2vw,1.4rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Downloadable Resources</h2>
+              <div style={{ border: '2px dashed rgba(13,124,126,0.3)', borderRadius: '12px', padding: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', background: 'var(--card-bg)', marginBottom: '1rem' }}>
+                <div>
+                  <p className="dark:text-white text-[#1b2537]" style={{ fontWeight: 700, marginBottom: '0.25rem' }}>Module 1 Lesson: College Expectations</p>
+                  <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem' }}>To activate: add your PDF to <code>/public/documents/</code> and update the href to <code>/documents/module-1-lesson.pdf</code></p>
+                </div>
+                <a href="/documents/module-1-lesson.pdf" download aria-disabled="true" aria-label="Download Module 1 Lesson PDF" style={{ background: '#0d7c7e', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', flexShrink: 0, opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none' }}>Download PDF</a>
+              </div>
+              <div style={{ border: '2px dashed rgba(217,119,6,0.3)', borderRadius: '12px', padding: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', background: 'var(--card-bg)' }}>
+                <div>
+                  <p className="dark:text-white text-[#1b2537]" style={{ fontWeight: 700, marginBottom: '0.25rem' }}>Module 1 Assignment: College Expectations Quiz</p>
+                  <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem' }}>To activate: add your PDF to <code>/public/documents/</code> and update the href to <code>/documents/module-1-assignment.pdf</code></p>
+                </div>
+                <a href="/documents/module-1-assignment.pdf" download aria-disabled="true" aria-label="Download Module 1 Assignment PDF" style={{ background: '#d97706', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', flexShrink: 0, opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none' }}>Download PDF</a>
               </div>
             </div>
             </FadeIn>
