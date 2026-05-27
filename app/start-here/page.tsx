@@ -53,22 +53,12 @@ export default function StartHerePage() {
                 </small>
               </div>
             </div>
-            <div>
-              <p>
-                Nobody hands you a manual when you get to college. If you grew
-                up in a family where someone already went, you probably got
-                pieces of it over dinner or during move-in. First-generation
-                students don&apos;t get that.
+            <div style={{ border: '2px dashed rgba(13,124,126,0.3)', borderRadius: '12px', padding: '1.75rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>Welcome Message Goes Here</p>
+              <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.88rem', lineHeight: 1.7, margin: 0 }}>
+                Replace this placeholder with your welcome message to students. 2–3 short paragraphs recommended. Cover: who this course is for, what students will walk away with, and your tone/approach as an instructor.
               </p>
-              <p>
-                This course is an attempt to fix that. Seven modules. Everything
-                documented. Nothing gatekept.
-              </p>
-              <p>
-                <strong>Each module takes roughly 40–50 minutes.</strong> Work
-                at your own pace. Complete one per week over the summer before
-                your first semester.
-              </p>
+              <p className="dark:text-white/40 text-[#9ca3af]" style={{ fontSize: '0.8rem', fontStyle: 'italic', margin: 0 }}>Tip: write this last, after you have built all 7 modules — it will be easier to summarize what you made.</p>
             </div>
           </div>
         </div>
@@ -279,15 +269,14 @@ export default function StartHerePage() {
           >
             By the End of This Course, You Will Be Able To:
           </h2>
-          <ol className="leading-[2.2] ml-5">
-            <li>Navigate college expectations: identify the unwritten rules rarely stated outright.</li>
-            <li>Access campus resources: locate academic, financial, health, and personal support services.</li>
-            <li>Manage finances as a student: read an aid letter, build a budget, avoid common pitfalls.</li>
-            <li>Handle independent adult responsibilities: laundry, health insurance, leases, grocery budgets.</li>
-            <li>Apply evidence-based academic strategies: study techniques that actually work.</li>
-            <li>Prepare for career development: resume, networking, career center.</li>
-            <li>Build emotional resilience: coping strategies, when to seek support, how to belong.</li>
-          </ol>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+            {[1,2,3,4,5,6,7].map(n => (
+              <li key={n} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
+                <span style={{ fontSize: '0.95rem', lineHeight: 1.7, fontStyle: 'italic', color: '#9ca3af' }}>Add course-level learning outcome {n} here</span>
+              </li>
+            ))}
+          </ul>
         </div>
         </FadeIn>
 

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
@@ -77,14 +77,14 @@ export default function Module7Page() {
               </h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  "Define imposter syndrome and describe at least two strategies for managing it during your first semester.",
-                  "Explain what code-switching is and articulate its emotional weight without framing it as a problem to be solved.",
-                  "Identify at least three concrete strategies for coping with homesickness and building belonging over time.",
-                  "Distinguish between normal college stress and signs that it is time to reach out for professional support.",
+                  'Add learning objective 1 here',
+                  'Add learning objective 2 here',
+                  'Add learning objective 3 here',
+                  'Add learning objective 4 here',
                 ].map((obj, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
-                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7, fontStyle: 'italic', color: '#9ca3af' }}>{obj}</span>
                   </li>
                 ))}
               </ul>
@@ -103,30 +103,20 @@ export default function Module7Page() {
               >
                 Module 7 Lesson
               </h2>
-              <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] mb-4">
-                The lesson for this module covers imposter syndrome, code-switching, homesickness, the difference between stress and crisis, and when and how to use campus counseling.
-              </p>
-              <Link
-                href="/lesson-7"
-                className="inline-block bg-[#0d7c7e] hover:bg-[#096163] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
-              >
-                Read the Lesson →
-              </Link>
-
-              <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">Normal Stress vs. When to Reach Out</h4>
-                <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[180px] flex flex-col items-center justify-center text-center">
-                  <strong>Embed your Canva infographic here</strong>
-                  <br />
-                  <small>
-                    Two-column: &ldquo;Normal College Stress&rdquo; vs. &ldquo;Time to Reach Out&rdquo;
-                    <br />
-                    Save as <code>images/module7-infographic.png</code>, then replace with:
-                    <br />
-                    <code>{`<img src="images/module7-infographic.png" alt="Normal stress vs. when to seek support" style="width:100%; border-radius:8px;" />`}</code>
-                  </small>
+              <div style={{ border: '2px dashed rgba(13,124,126,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '300px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>Lesson Content Goes Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  This is where your Module 7 lesson content lives. Replace this placeholder with your instructional material about emotional resilience.
+                </p>
+                <div style={{ border: '1px solid rgba(13,124,126,0.25)', borderRadius: '10px', padding: '1rem 1.5rem', background: 'rgba(13,124,126,0.05)', maxWidth: '480px', textAlign: 'left' }}>
+                  <p style={{ fontSize: '0.8rem', fontWeight: 700, color: '#0d7c7e', marginBottom: '0.5rem' }}>TO ADD YOUR LESSON:</p>
+                  <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem', lineHeight: 1.6, margin: 0 }}>
+                    <strong>Option A:</strong> Paste written content directly into this section.<br />
+                    <strong>Option B:</strong> Embed a video (YouTube, Loom, Kaltura) using an iframe.<br />
+                    <strong>Option C:</strong> Link to a PDF or external resource and keep this card as the entry point.
+                  </p>
                 </div>
-                <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-2">Normal college stress vs. signs it&apos;s time to reach out for support.</p>
+                <a href="/documents/module-7-lesson.pdf" download aria-disabled="true" aria-label="Download Module 7 Lesson PDF (inactive until file added)" style={{ background: '#0d7c7e', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Lesson PDF (inactive until file added)</a>
               </div>
             </div>
             </FadeIn>
@@ -143,26 +133,13 @@ export default function Module7Page() {
               >
                 Activity: Write a Letter to Future You
               </h2>
-              <p className="text-[0.92rem] mb-3">Write a letter addressed to yourself at the end of your first college semester. This is not an assignment anyone else will read unless you choose to share it. It is for you.</p>
-              <p className="text-[0.92rem] mb-3">In your letter, address all four of the following:</p>
-              <ol className="ml-5 space-y-2 text-[0.92rem]">
-                <li><strong>One thing you are scared of going into this semester:</strong> be specific. Not &ldquo;I am scared of failing&rdquo; but what specifically worries you: a particular subject, a social situation, a financial concern, something you have to figure out alone for the first time.</li>
-                <li><strong>One thing you are proud of or excited about</strong>: something real that you are bringing with you. A skill, a value, a person, a reason you are doing this.</li>
-                <li><strong>One piece of advice from this course that you want to remember</strong>: not a summary, but the one thing you do not want to lose track of by October.</li>
-                <li><strong>One question you hope to have answered by the end of the semester</strong>: something you are still genuinely unsure about.</li>
-              </ol>
-              <p className="text-[0.92rem] mt-3">You can write this in a notes app, a document, or by hand. If you want to receive it back at the end of the semester, use the free tool below.</p>
-              <div className="mt-4">
-                <a
-                  href="https://www.futureme.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block border border-[#1b2537] text-[#1b2537] hover:bg-[#1b2537] hover:text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
-                >
-                  Send to Future Me via FutureMe.org (free) →
-                </a>
+              <div style={{ border: '2px dashed rgba(217,119,6,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#d97706', margin: 0 }}>Activity Instructions Go Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  Replace this placeholder with the activity prompt and instructions for Module 7.
+                </p>
+                <a href="/documents/module-7-activity.pdf" download aria-disabled="true" aria-label="Download Module 7 Activity PDF (inactive until file added)" style={{ background: '#d97706', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Activity PDF (inactive until file added)</a>
               </div>
-              <p className="text-[0.82rem] text-[#8d9db5] dark:text-[#64748b] mt-3">FutureMe lets you write a letter and schedule it to be delivered to your own email on a future date. No account required. Your letter is private.</p>
             </div>
             </FadeIn>
 
@@ -178,31 +155,16 @@ export default function Module7Page() {
               >
                 Self-Care Plan + Reflection Essay: Assignment 7 (75 pts)
               </h2>
-              <p className="text-[0.92rem] mb-4">Complete a two-part submission: a personal self-care plan and a 400–600 word reflection essay.</p>
-
-              <div className="bg-[#f2f4f7] rounded-[6px] p-4 mb-4 text-[0.92rem]">
-                <p className="font-bold mb-2">Part 1: Self-Care Plan</p>
-                <ul className="ml-5 space-y-1">
-                  <li>Three specific coping strategies you will use when things get hard (not vague; describe what you will actually do)</li>
-                  <li>One campus support resource you have looked up: name, location, how to contact</li>
-                  <li>One person in your life you can contact when things get hard: name and relationship only</li>
-                </ul>
-              </div>
-
-              <div className="bg-[#f2f4f7] rounded-[6px] p-4 mb-4 text-[0.92rem]">
-                <p className="font-bold mb-2">Part 2: Reflection Essay Prompt (400–600 words)</p>
-                <p>What are you most worried about going into your first college semester, and what do you already have going for you that will help you handle it? Address at least one specific concern from this module and connect it to at least one concrete strategy or resource. The rubric rewards specificity and honest engagement, not a particular emotional tone.</p>
-              </div>
-
-              <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[0.92rem]">
-                <strong>Submission:</strong>
-                <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-4 text-center mt-3">
-                  Create a Google Form with both parts, then replace with:
-                  <br />
-                  <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_FORM_LINK" target="_blank">Submit Self-Care Plan + Reflection Essay →</a>`}</code>
+              <div style={{ border: '2px dashed rgba(99,102,241,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#6366f1', margin: 0 }}>Assessment Goes Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  Replace this placeholder with your Google Form embed or assessment instructions for Module 7.
+                </p>
+                <div style={{ border: '1px solid rgba(99,102,241,0.25)', borderRadius: '10px', padding: '1.5rem', background: 'rgba(99,102,241,0.04)', width: '100%', maxWidth: '480px', minHeight: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <p className="dark:text-white/40 text-[#9ca3af]" style={{ fontSize: '0.85rem', margin: 0, fontStyle: 'italic' }}>Google Form embed goes here — replace with your &lt;iframe&gt; or form link</p>
                 </div>
+                <a href="/documents/module-7-assignment.pdf" download aria-disabled="true" aria-label="Download Module 7 Assignment PDF (inactive until file added)" style={{ background: '#6366f1', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Assignment PDF (inactive until file added)</a>
                 <AssessmentSubmitButton />
-                <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = specific coping strategies, real resource with contact info, essay addresses both halves with honest detail and ties to module content. Proficient = all parts complete with relevant specifics. Emerging = vague or missing parts. Incomplete = missing.</p>
               </div>
             </div>
             </FadeIn>
@@ -219,45 +181,13 @@ export default function Module7Page() {
               >
                 Example Reflection Essay: See What Proficient Looks Like
               </h2>
-              <p className="font-bold text-[0.92rem] mb-3">Example Reflection Essay: a student named Alex</p>
-              <blockquote className="border-l-[3px] border-l-[#0d7c7e] pl-4 my-4 text-[#2e3f5c] dark:text-[#94a3b8] space-y-3 text-[0.92rem]">
-                <p>The thing I am most worried about going into my first semester is not the coursework. It is the feeling I already have when I walk into certain rooms: that everyone else knows something I do not. I noticed it at orientation when other students were talking to professors like it was easy, asking questions I would not have known to ask. I felt like there was a whole set of rules for how college works that they already understood and I was still trying to learn. This course named it as imposter syndrome, and that helped. Having a word for it made it feel less like a personal deficiency and more like something documented and common. But I am still worried that the feeling will get worse once classes start and the stakes feel higher.</p>
-                <p>What I have going for me is harder to see but I know it is there. I have worked a part-time job since I was sixteen and managed my own schedule without much supervision. I know how to ask for help when I actually need it. I just have to learn who to ask here. I also know why I am doing this, which I think matters more than it sounds: I am the first in my family to go to college, and that feels like both a weight and a reason. On the days when it feels like a weight, I want to remember that it is also a reason.</p>
-                <p>One strategy I am committing to: I am going to visit my school&apos;s first-gen student office in the first two weeks. I looked it up and my campus has one. I want to know it exists before I need it.</p>
-              </blockquote>
-              <p className="text-[0.82rem] text-[#8d9db5]">Proficient: addresses both halves of the prompt with specific, honest detail. One concern is directly tied to module content (imposter syndrome). One strength is named specifically and feels genuine. The plan at the end is concrete.</p>
-            </div>
-            </FadeIn>
-
-            {/* Downloads */}
-            <FadeIn delay={0.45}>
-            <div id="downloads" className="content-block p-7 mb-5">
-              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
-                Lesson Materials
-              </span>
-              <h2
-                className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
-                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
-              >
-                Downloadable Resources
-              </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <div style={{ border: '1.5px solid #0d7c7e', borderRadius: '8px', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
-                  <div>
-                    <p style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Module 7 Lesson: Emotional Resilience</p>
-                    <p style={{ fontSize: '0.82rem', color: '#8d9db5', margin: 0 }}>PDF · Lesson reading for offline use</p>
-                  </div>
-                  <a href="/documents/module-7-lesson.pdf" download aria-disabled="true" style={{ opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none', background: '#0d7c7e', color: '#fff', fontWeight: 600, fontSize: '0.88rem', padding: '8px 18px', borderRadius: '6px', textDecoration: 'none', display: 'inline-block' }}>Download PDF</a>
-                </div>
-                <div style={{ border: '1.5px solid #c2680a', borderRadius: '8px', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
-                  <div>
-                    <p style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Module 7 Assignment: Reflection Essay</p>
-                    <p style={{ fontSize: '0.82rem', color: '#8d9db5', margin: 0 }}>PDF · Assignment instructions and rubric</p>
-                  </div>
-                  <a href="/documents/module-7-assignment.pdf" download aria-disabled="true" style={{ opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none', background: '#c2680a', color: '#fff', fontWeight: 600, fontSize: '0.88rem', padding: '8px 18px', borderRadius: '6px', textDecoration: 'none', display: 'inline-block' }}>Download PDF</a>
-                </div>
+              <div style={{ border: '2px dashed rgba(220,38,38,0.2)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#dc2626', margin: 0 }}>Model Response Goes Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  Replace this placeholder with a model or exemplar response showing students what proficient work looks like for Module 7.
+                </p>
+                <a href="/documents/module-7-model-response.pdf" download aria-disabled="true" aria-label="Download Module 7 Model Response PDF (inactive until file added)" style={{ background: '#dc2626', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Model Response PDF (inactive until file added)</a>
               </div>
-              <p style={{ fontSize: '0.78rem', color: '#8d9db5', marginTop: '0.75rem' }}>To activate: add your PDF to <code>/public/documents/</code> and update the href.</p>
             </div>
             </FadeIn>
 
@@ -273,29 +203,28 @@ export default function Module7Page() {
               >
                 Technological Tools
               </h2>
-              <table className="w-full text-[0.875rem] border-collapse">
-                <thead>
-                  <tr>
-                    {["Tool", "Purpose", "Privacy Policy", "Cost"].map((h) => (
-                      <th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ["Google Forms", "Self-care plan and reflection submission", "https://policies.google.com/privacy", "Free"],
-                    ["FutureMe.org", "Optional: send letter to future self via email", "https://www.futureme.org/privacy", "Free"],
-                    ["Canva", "Normal stress vs. seek help comparison infographic", "https://www.canva.com/policies/privacy-policy/", "Free"],
-                  ].map(([tool, purpose, privacy, cost]) => (
-                    <tr key={tool} className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{tool}</td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{purpose}</td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]"><a href={privacy} target="_blank" rel="noopener noreferrer" className="text-[#0d7c7e] hover:underline">View</a></td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{cost}</td>
+              <div style={{ border: '2px dashed rgba(13,124,126,0.2)', borderRadius: '16px', padding: '2rem', background: 'var(--card-bg)' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1rem', fontWeight: 700, color: '#0d7c7e', marginBottom: '0.75rem' }}>Tools and Resources for This Module</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>Replace this placeholder with the actual tools used in Module 7. Add rows for each tool, link to its privacy policy, and note the cost.</p>
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
+                  <thead>
+                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                      {['Tool / Resource', 'What It Is', 'Cost'].map(h => (
+                        <th key={h} style={{ textAlign: 'left', padding: '8px 12px', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: '#9ca3af' }}>{h}</th>
+                      ))}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {['Tool 1', 'Tool 2', 'Tool 3'].map((tool, i) => (
+                      <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>{tool} placeholder</td>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>Add description</td>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>Free / Paid</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
             </FadeIn>
 
@@ -357,7 +286,7 @@ export default function Module7Page() {
                 <Link href="/assignments#a7" className="text-[0.875rem] font-semibold text-[#0d7c7e] hover:underline">View full rubric →</Link>
               </div>
 
-<div className="bg-white rounded-[10px] p-6 border-l-[3px] border-l-[#c2680a] border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
+              <div className="bg-white rounded-[10px] p-6 border-l-[3px] border-l-[#c2680a] border border-[#dde2eb] shadow-[0_1px_2px_rgba(27,37,55,0.06)]">
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#8d9db5] dark:text-[#64748b] mb-3">Crisis Resources</p>
                 <div className="flex flex-col gap-[8px] text-[0.83rem] text-[#1b2537]">
                   <div className="flex items-center gap-[8px]"><Phone size={13} style={{ color: '#c2680a', flexShrink: 0 }} /><span><strong>988</strong>: Suicide &amp; Crisis Lifeline</span></div>

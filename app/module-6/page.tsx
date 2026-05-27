@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
@@ -69,14 +69,14 @@ export default function Module6Page() {
               </h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  "Build a one-page resume with all required sections using action verbs and quantified bullet points.",
-                  "Set up a complete LinkedIn profile with a headline, about section, experience, education, and photo.",
-                  "Describe at least two concrete strategies for networking during your first semester.",
-                  "Identify one specific next step for your career development and explain why you chose it.",
+                  'Add learning objective 1 here',
+                  'Add learning objective 2 here',
+                  'Add learning objective 3 here',
+                  'Add learning objective 4 here',
                 ].map((obj, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
-                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7, fontStyle: 'italic', color: '#9ca3af' }}>{obj}</span>
                   </li>
                 ))}
               </ul>
@@ -95,15 +95,21 @@ export default function Module6Page() {
               >
                 Module 6 Lesson
               </h2>
-              <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] mb-4">
-                The lesson for this module covers resume basics, LinkedIn setup, elevator pitches, networking strategies, and how to use your campus career center.
-              </p>
-              <Link
-                href="/lesson-6"
-                className="inline-block bg-[#0d7c7e] hover:bg-[#096163] text-white font-semibold text-[0.88rem] px-5 py-[9px] rounded-[6px] transition-colors"
-              >
-                Read the Lesson →
-              </Link>
+              <div style={{ border: '2px dashed rgba(13,124,126,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '300px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>Lesson Content Goes Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  This is where your Module 6 lesson content lives. Replace this placeholder with your instructional material about career preparation.
+                </p>
+                <div style={{ border: '1px solid rgba(13,124,126,0.25)', borderRadius: '10px', padding: '1rem 1.5rem', background: 'rgba(13,124,126,0.05)', maxWidth: '480px', textAlign: 'left' }}>
+                  <p style={{ fontSize: '0.8rem', fontWeight: 700, color: '#0d7c7e', marginBottom: '0.5rem' }}>TO ADD YOUR LESSON:</p>
+                  <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem', lineHeight: 1.6, margin: 0 }}>
+                    <strong>Option A:</strong> Paste written content directly into this section.<br />
+                    <strong>Option B:</strong> Embed a video (YouTube, Loom, Kaltura) using an iframe.<br />
+                    <strong>Option C:</strong> Link to a PDF or external resource and keep this card as the entry point.
+                  </p>
+                </div>
+                <a href="/documents/module-6-lesson.pdf" download aria-disabled="true" aria-label="Download Module 6 Lesson PDF (inactive until file added)" style={{ background: '#0d7c7e', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Lesson PDF (inactive until file added)</a>
+              </div>
             </div>
             </FadeIn>
 
@@ -119,14 +125,13 @@ export default function Module6Page() {
               >
                 Activity: Write Three Elevator Pitches
               </h2>
-              <p className="text-[0.92rem] mb-3">Write three 30–60 second verbal pitches for these contexts:</p>
-              <ol className="ml-5 space-y-2 text-[0.92rem]">
-                <li><strong>Career fair:</strong> A recruiter says &ldquo;tell me about yourself.&rdquo; 45 seconds.</li>
-                <li><strong>Professor&apos;s office hours:</strong> They ask what brought you to their class and what you hope to do after college. 60 seconds.</li>
-                <li><strong>Networking event:</strong> You introduce yourself to a group. 30 seconds.</li>
-              </ol>
-              <p className="text-[0.92rem] mt-3">Each pitch must include: your name, year and major, one relevant experience or interest, and one specific goal or question.</p>
-              <p className="text-[0.85rem] text-[#8d9db5] mt-3">Read each pitch out loud. If it sounds like a cover letter, rewrite it to sound like you talking.</p>
+              <div style={{ border: '2px dashed rgba(217,119,6,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#d97706', margin: 0 }}>Activity Instructions Go Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  Replace this placeholder with the activity prompt and instructions for Module 6.
+                </p>
+                <a href="/documents/module-6-activity.pdf" download aria-disabled="true" aria-label="Download Module 6 Activity PDF (inactive until file added)" style={{ background: '#d97706', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Activity PDF (inactive until file added)</a>
+              </div>
             </div>
             </FadeIn>
 
@@ -142,17 +147,16 @@ export default function Module6Page() {
               >
                 Career Document Draft: Assignment 6 (100 pts)
               </h2>
-              <p className="text-[0.92rem] mb-4">
-                Submit either a resume draft or a completed LinkedIn profile. Also submit a 100–150 word note on one thing you are still unsure about and your next step.
-              </p>
-              <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1.4rem_1.5rem] text-[0.92rem]">
-                <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-4 text-center">
-                  Create a Google Form, then replace with:
-                  <br />
-                  <code className="text-[0.82rem]">{`<a href="YOUR_GOOGLE_FORM_LINK" target="_blank">Submit Resume or LinkedIn Profile →</a>`}</code>
+              <div style={{ border: '2px dashed rgba(99,102,241,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#6366f1', margin: 0 }}>Assessment Goes Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  Replace this placeholder with your Google Form embed or assessment instructions for Module 6.
+                </p>
+                <div style={{ border: '1px solid rgba(99,102,241,0.25)', borderRadius: '10px', padding: '1.5rem', background: 'rgba(99,102,241,0.04)', width: '100%', maxWidth: '480px', minHeight: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <p className="dark:text-white/40 text-[#9ca3af]" style={{ fontSize: '0.85rem', margin: 0, fontStyle: 'italic' }}>Google Form embed goes here — replace with your &lt;iframe&gt; or form link</p>
                 </div>
+                <a href="/documents/module-6-assignment.pdf" download aria-disabled="true" aria-label="Download Module 6 Assignment PDF (inactive until file added)" style={{ background: '#6366f1', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Assignment PDF (inactive until file added)</a>
                 <AssessmentSubmitButton />
-                <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = all sections, quantified bullets, honest specific self-assessment. Proficient = all sections, adequate bullets, concrete next step. Emerging = missing sections or vague note. Incomplete = missing.</p>
               </div>
             </div>
             </FadeIn>
@@ -169,42 +173,13 @@ export default function Module6Page() {
               >
                 Example Resume: See What Proficient Looks Like
               </h2>
-              <p className="font-bold text-[0.92rem] mb-3">Example Resume: Alex Rivera (fictional first-year student)</p>
-              <p className="text-[0.92rem] mb-3">See the annotated resume infographic above. This response scores at <strong>Proficient</strong> because it includes all required sections, uses action-oriented language in every bullet, and is consistently formatted on one page.</p>
-              <p className="text-[0.92rem] mb-3"><strong>Alex&apos;s self-assessment note:</strong> &ldquo;I am not sure how to handle the fact that most of my work experience is at the same place (FoodMart) and I do not have any internships or campus involvement yet. My next step is visiting the career center in week two to ask how to build experience during my first semester: whether that is a work-study position, a club, or something else they recommend.&rdquo;</p>
-              <p className="text-[0.82rem] text-[#8d9db5]">The self-assessment identifies a specific gap with a concrete next step, not a vague plan.</p>
-            </div>
-            </FadeIn>
-
-            {/* Downloads */}
-            <FadeIn delay={0.45}>
-            <div id="downloads" className="content-block p-7 mb-5">
-              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
-                Lesson Materials
-              </span>
-              <h2
-                className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
-                style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
-              >
-                Downloadable Resources
-              </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <div style={{ border: '1.5px solid #0d7c7e', borderRadius: '8px', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
-                  <div>
-                    <p style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Module 6 Lesson: Career Preparation</p>
-                    <p style={{ fontSize: '0.82rem', color: '#8d9db5', margin: 0 }}>PDF · Lesson reading for offline use</p>
-                  </div>
-                  <a href="/documents/module-6-lesson.pdf" download aria-disabled="true" style={{ opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none', background: '#0d7c7e', color: '#fff', fontWeight: 600, fontSize: '0.88rem', padding: '8px 18px', borderRadius: '6px', textDecoration: 'none', display: 'inline-block' }}>Download PDF</a>
-                </div>
-                <div style={{ border: '1.5px solid #c2680a', borderRadius: '8px', padding: '1.25rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
-                  <div>
-                    <p style={{ fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.2rem' }}>Module 6 Assignment: Career Document Draft</p>
-                    <p style={{ fontSize: '0.82rem', color: '#8d9db5', margin: 0 }}>PDF · Assignment instructions and rubric</p>
-                  </div>
-                  <a href="/documents/module-6-assignment.pdf" download aria-disabled="true" style={{ opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none', background: '#c2680a', color: '#fff', fontWeight: 600, fontSize: '0.88rem', padding: '8px 18px', borderRadius: '6px', textDecoration: 'none', display: 'inline-block' }}>Download PDF</a>
-                </div>
+              <div style={{ border: '2px dashed rgba(220,38,38,0.2)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#dc2626', margin: 0 }}>Model Response Goes Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  Replace this placeholder with a model or exemplar response showing students what proficient work looks like for Module 6.
+                </p>
+                <a href="/documents/module-6-model-response.pdf" download aria-disabled="true" aria-label="Download Module 6 Model Response PDF (inactive until file added)" style={{ background: '#dc2626', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Model Response PDF (inactive until file added)</a>
               </div>
-              <p style={{ fontSize: '0.78rem', color: '#8d9db5', marginTop: '0.75rem' }}>To activate: add your PDF to <code>/public/documents/</code> and update the href.</p>
             </div>
             </FadeIn>
 
@@ -220,29 +195,28 @@ export default function Module6Page() {
               >
                 Technological Tools
               </h2>
-              <table className="w-full text-[0.875rem] border-collapse">
-                <thead>
-                  <tr>
-                    {["Tool", "Purpose", "Privacy Policy", "Cost"].map((h) => (
-                      <th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ["LinkedIn", "Professional profile and networking", "https://www.linkedin.com/legal/privacy-policy", "Free (basic)"],
-                    ["Google Forms", "Assignment submission", "https://policies.google.com/privacy", "Free"],
-                    ["Canva", "Annotated resume infographic", "https://www.canva.com/policies/privacy-policy/", "Free"],
-                  ].map(([tool, purpose, privacy, cost]) => (
-                    <tr key={tool} className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{tool}</td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{purpose}</td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]"><a href={privacy} target="_blank" rel="noopener noreferrer" className="text-[#0d7c7e] hover:underline">View</a></td>
-                      <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">{cost}</td>
+              <div style={{ border: '2px dashed rgba(13,124,126,0.2)', borderRadius: '16px', padding: '2rem', background: 'var(--card-bg)' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1rem', fontWeight: 700, color: '#0d7c7e', marginBottom: '0.75rem' }}>Tools and Resources for This Module</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>Replace this placeholder with the actual tools used in Module 6. Add rows for each tool, link to its privacy policy, and note the cost.</p>
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
+                  <thead>
+                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                      {['Tool / Resource', 'What It Is', 'Cost'].map(h => (
+                        <th key={h} style={{ textAlign: 'left', padding: '8px 12px', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: '#9ca3af' }}>{h}</th>
+                      ))}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {['Tool 1', 'Tool 2', 'Tool 3'].map((tool, i) => (
+                      <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>{tool} placeholder</td>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>Add description</td>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>Free / Paid</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
             </FadeIn>
 
@@ -286,7 +260,6 @@ export default function Module6Page() {
                 <p className="text-[0.82rem] text-[#8d9db5] mb-3">Resume or LinkedIn profile + 100–150 word self-assessment.</p>
                 <Link href="/assignments#a6" className="text-[0.875rem] font-semibold text-[#0d7c7e] hover:underline">View full rubric →</Link>
               </div>
-
             </div>
           </div>
         </div>

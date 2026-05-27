@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ModuleStepper } from "@/components/ModuleStepper";
 import { FadeIn } from "@/components/ui/fade-in";
@@ -52,14 +52,14 @@ export default function Module2Page() {
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>By the End of This Module, You Will Be Able To:</h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  "Identify at least six campus resources across academic, financial, and health/wellbeing categories specific to your school.",
-                  "Explain the purpose of each resource and describe a realistic scenario in which you would use it.",
-                  "Draft a professional email to a campus office requesting help or information.",
-                  "Describe common barriers first-gen students face when accessing campus support, and how to overcome them.",
+                  'Add learning objective 1 here',
+                  'Add learning objective 2 here',
+                  'Add learning objective 3 here',
+                  'Add learning objective 4 here',
                 ].map((obj, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
-                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7, fontStyle: 'italic', color: '#9ca3af' }}>{obj}</span>
                   </li>
                 ))}
               </ul>
@@ -70,17 +70,20 @@ export default function Module2Page() {
             <div id="lesson" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">Instructional Content</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Module 2 Lesson</h2>
-              <p>The lesson for this module covers campus resources across academic, financial, and health categories, and how to actually walk into an office for the first time.</p>
-              <Link href="/lesson-2" className="bg-[#0d7c7e] text-white no-underline py-[11px] px-[28px] text-[0.95rem] rounded-[5px] font-bold inline-block hover:bg-[#096163] transition-all mt-2">Read the Lesson →</Link>
-
-              <div className="mt-6">
-                <h4 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3">Campus Resource Map: Visual Overview</h4>
-                <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[180px] flex flex-col items-center justify-center text-center">
-                  <strong>Embed your Canva infographic here</strong><br />
-                  <small>3-category campus resource overview (academic / financial / wellbeing)<br />
-                  Save as <code>images/module2-infographic.png</code> then replace this with:<br />
-                  <code>&lt;img src=&quot;images/module2-infographic.png&quot; alt=&quot;Campus resource categories&quot; /&gt;</code></small>
+              <div style={{ border: '2px dashed rgba(13,124,126,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '300px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>Lesson Content Goes Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  This is where your Module 2 lesson content lives. Replace this placeholder with your instructional material about campus resources.
+                </p>
+                <div style={{ border: '1px solid rgba(13,124,126,0.25)', borderRadius: '10px', padding: '1rem 1.5rem', background: 'rgba(13,124,126,0.05)', maxWidth: '480px', textAlign: 'left' }}>
+                  <p style={{ fontSize: '0.8rem', fontWeight: 700, color: '#0d7c7e', marginBottom: '0.5rem' }}>TO ADD YOUR LESSON:</p>
+                  <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem', lineHeight: 1.6, margin: 0 }}>
+                    <strong>Option A:</strong> Paste written content directly into this section.<br />
+                    <strong>Option B:</strong> Embed a video (YouTube, Loom, Kaltura) using an iframe.<br />
+                    <strong>Option C:</strong> Link to a PDF or external resource and keep this card as the entry point.
+                  </p>
                 </div>
+                <a href="/documents/module-2-lesson.pdf" download aria-disabled="true" aria-label="Download Module 2 Lesson PDF (inactive until file added)" style={{ background: '#0d7c7e', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Lesson PDF (inactive until file added)</a>
               </div>
             </div>
             </FadeIn>
@@ -89,15 +92,13 @@ export default function Module2Page() {
             <div id="activity" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 label-activity">Learning Activity</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Activity: Write Your First Professional Email</h2>
-              <p>Before writing your resource map, practice the skill you will use most: reaching out to an office for the first time.</p>
-              <p><strong>Instructions:</strong> Write a short professional email (3–5 sentences) to a campus office you have never contacted. Choose one of the following scenarios:</p>
-              <ol className="ml-5 mb-4">
-                <li>Email the tutoring center asking how to schedule an appointment for math help.</li>
-                <li>Email the financial aid office asking when your award letter will arrive and who to contact with questions.</li>
-                <li>Email the Dean of Students office asking whether your school has an emergency aid fund and how to apply.</li>
-              </ol>
-              <p>Your email must include: a clear subject line, a greeting with the office name, your name and year, one specific question, and a polite close.</p>
-              <p className="text-[0.85rem] text-[#5a6a82]"><strong>Tip:</strong> You can actually send this email. Offices respond faster than most students expect.</p>
+              <div style={{ border: '2px dashed rgba(217,119,6,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#d97706', margin: 0 }}>Activity Instructions Go Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  Replace this placeholder with the activity prompt and instructions for Module 2.
+                </p>
+                <a href="/documents/module-2-activity.pdf" download aria-disabled="true" aria-label="Download Module 2 Activity PDF (inactive until file added)" style={{ background: '#d97706', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Activity PDF (inactive until file added)</a>
+              </div>
             </div>
             </FadeIn>
 
@@ -105,15 +106,16 @@ export default function Module2Page() {
             <div id="assessment" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assessment</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Campus Resource Map: Assignment 2 (75 pts)</h2>
-              <p>Identify at least six campus resources across three categories (academic support, financial resources, and health/wellbeing) specific to <em>your school</em>. For each: name, location, contact info, and one realistic scenario in which you would use it.</p>
-              <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-left">
-                <strong>Submission:</strong>
-                <div className="bg-[#f2f4f7] border-[1.5px] border-dashed border-[#dde2eb] rounded-[5px] p-[1rem_1.5rem] text-center mt-2">
-                  Create a Google Form with 6 resource sections, then replace this with:<br />
-                  <code className="text-[0.8rem]">&lt;a href=&quot;YOUR_GOOGLE_FORM_LINK&quot; target=&quot;_blank&quot;&gt;Submit Your Resource Map →&lt;/a&gt;</code>
+              <div style={{ border: '2px dashed rgba(99,102,241,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#6366f1', margin: 0 }}>Assessment Goes Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  Replace this placeholder with your Google Form embed or assessment instructions for Module 2.
+                </p>
+                <div style={{ border: '1px solid rgba(99,102,241,0.25)', borderRadius: '10px', padding: '1.5rem', background: 'rgba(99,102,241,0.04)', width: '100%', maxWidth: '480px', minHeight: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <p className="dark:text-white/40 text-[#9ca3af]" style={{ fontSize: '0.85rem', margin: 0, fontStyle: 'italic' }}>Google Form embed goes here — replace with your &lt;iframe&gt; or form link</p>
                 </div>
+                <a href="/documents/module-2-assignment.pdf" download aria-disabled="true" aria-label="Download Module 2 Assignment PDF (inactive until file added)" style={{ background: '#6366f1', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Assignment PDF (inactive until file added)</a>
                 <AssessmentSubmitButton />
-                <p className="mt-3 text-[0.85rem] text-[#8d9db5]">Rubric: Exemplary = all 6 resources with specific contact info and realistic personal scenarios. Proficient = all 6 fields complete. Emerging = fewer than 6 or missing fields. Incomplete = missing.</p>
               </div>
             </div>
             </FadeIn>
@@ -122,47 +124,12 @@ export default function Module2Page() {
             <div id="model" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">Model Response</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Example Resource Map: See What Proficient Looks Like</h2>
-              <p><strong>Example Resource Map: Jordan, First-Year Student at Riverside Community College</strong></p>
-              <div className="overflow-x-auto mt-2">
-                <table className="w-full border-collapse text-[0.875rem]">
-                  <thead><tr>{["Resource","Location","Contact","When I Would Use It"].map(h=><th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>)}</tr></thead>
-                  <tbody>
-                    {[
-                      ["Tutoring Center","Student Union, Room 104","tutoring@riverside.edu","If I am struggling with Algebra before a test and office hours aren't until Thursday"],
-                      ["Writing Center","Library, 2nd Floor","(555) 234-5678","Before turning in my first English essay. I want feedback on my thesis"],
-                      ["Financial Aid Office","Admin Building, Room 201","finaid@riverside.edu","If my bill looks wrong or I get a notice about a missing FAFSA document"],
-                      ["Emergency Aid Fund","Dean of Students, Room 110","(555) 234-9000","If my car breaks down and I cannot afford the repair and still make rent"],
-                      ["Food Pantry","Student Services Building","Open M/W/F 10am–4pm","End of the month when my meal plan runs low before my next paycheck"],
-                      ["Counseling (CAPS)","Health Center, Room 205","caps@riverside.edu","If I am overwhelmed during midterms and need to talk to someone"],
-                    ].map((row,i)=>(
-                      <tr key={i} className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
-                        {row.map((cell,j)=><td key={j} className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">{cell}</td>)}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="text-[0.82rem] text-[#5a6a82] mt-3">This response scores at <strong>Proficient</strong>: all six resources identified with specific contact info, and each scenario is realistic and personal rather than generic.</p>
-            </div>
-            </FadeIn>
-
-            <FadeIn delay={0.45}>
-            <div id="downloads" className="content-block p-7 mb-5">
-              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">Lesson Materials</span>
-              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.1rem,2vw,1.4rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Downloadable Resources</h2>
-              <div style={{ border: '2px dashed rgba(13,124,126,0.3)', borderRadius: '12px', padding: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', background: 'var(--card-bg)', marginBottom: '1rem' }}>
-                <div>
-                  <p className="dark:text-white text-[#1b2537]" style={{ fontWeight: 700, marginBottom: '0.25rem' }}>Module 2 Lesson: Campus Resources</p>
-                  <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem' }}>To activate: add your PDF to <code>/public/documents/</code> and update the href to <code>/documents/module-2-lesson.pdf</code></p>
-                </div>
-                <a href="/documents/module-2-lesson.pdf" download aria-disabled="true" aria-label="Download Module 2 Lesson PDF" style={{ background: '#0d7c7e', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', flexShrink: 0, opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none' }}>Download PDF</a>
-              </div>
-              <div style={{ border: '2px dashed rgba(217,119,6,0.3)', borderRadius: '12px', padding: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', background: 'var(--card-bg)' }}>
-                <div>
-                  <p className="dark:text-white text-[#1b2537]" style={{ fontWeight: 700, marginBottom: '0.25rem' }}>Module 2 Assignment: Campus Resource Map</p>
-                  <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem' }}>To activate: add your PDF to <code>/public/documents/</code> and update the href to <code>/documents/module-2-assignment.pdf</code></p>
-                </div>
-                <a href="/documents/module-2-assignment.pdf" download aria-disabled="true" aria-label="Download Module 2 Assignment PDF" style={{ background: '#d97706', color: '#ffffff', padding: '10px 20px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', flexShrink: 0, opacity: 0.5, cursor: 'not-allowed', pointerEvents: 'none' }}>Download PDF</a>
+              <div style={{ border: '2px dashed rgba(220,38,38,0.2)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#dc2626', margin: 0 }}>Model Response Goes Here</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
+                  Replace this placeholder with a model or exemplar response showing students what proficient work looks like for Module 2.
+                </p>
+                <a href="/documents/module-2-model-response.pdf" download aria-disabled="true" aria-label="Download Module 2 Model Response PDF (inactive until file added)" style={{ background: '#dc2626', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Model Response PDF (inactive until file added)</a>
               </div>
             </div>
             </FadeIn>
@@ -171,12 +138,25 @@ export default function Module2Page() {
             <div id="tools" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">Tools Used in This Module</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Technological Tools</h2>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse text-[0.875rem]">
-                  <thead><tr>{["Tool","Purpose","Privacy Policy","Cost"].map(h=><th key={h} className="bg-[#f2f4f7] dark:bg-[#162032] text-[#5a6a82] dark:text-[#94a3b8] px-[14px] py-[10px] text-left font-semibold text-[0.75rem] uppercase tracking-[0.07em] border-b-2 border-[#dde2eb] dark:border-[#334155]">{h}</th>)}</tr></thead>
+              <div style={{ border: '2px dashed rgba(13,124,126,0.2)', borderRadius: '16px', padding: '2rem', background: 'var(--card-bg)' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1rem', fontWeight: 700, color: '#0d7c7e', marginBottom: '0.75rem' }}>Tools and Resources for This Module</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>Replace this placeholder with the actual tools used in Module 2. Add rows for each tool, link to its privacy policy, and note the cost.</p>
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
+                  <thead>
+                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                      {['Tool / Resource', 'What It Is', 'Cost'].map(h => (
+                        <th key={h} style={{ textAlign: 'left', padding: '8px 12px', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: '#9ca3af' }}>{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
                   <tbody>
-                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">Google Forms</td><td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">Submit the Campus Resource Map</td><td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener" className="text-[#0d7c7e] hover:underline">View</a></td><td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">Free</td></tr>
-                    <tr className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]"><td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">Canva</td><td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">Module infographic (campus resource categories)</td><td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]"><a href="https://www.canva.com/policies/privacy-policy/" target="_blank" rel="noopener" className="text-[#0d7c7e] hover:underline">View</a></td><td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044]">Free</td></tr>
+                    {['Tool 1', 'Tool 2', 'Tool 3'].map((tool, i) => (
+                      <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>{tool} placeholder</td>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>Add description</td>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>Free / Paid</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
