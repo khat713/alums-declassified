@@ -8,43 +8,64 @@ import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedThemeToggler from "@/components/ui/animated-theme-toggler";
 
-const topLinks = [
+// ── data ──────────────────────────────────────────────────────────────────────
+
+const leadingLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/start-here", label: "Start Here" },
 ];
 
-const dropdowns = [
+const trailingLinks = [
+  { href: "/tech-help", label: "Tech Help" },
+  { href: "/framework", label: "Framework" },
+];
+
+type DropdownKey = "lessons";
+
+const DROPDOWNS: {
+  key: DropdownKey;
+  label: string;
+  isGroupActive: (p: string) => boolean;
+  items: { href: string; label: string }[];
+  viewAll: { href: string; label: string };
+  minWidth: string;
+}[] = [
   {
-    label: "Course",
-    key: "course",
+    key: "lessons",
+    label: "Lessons",
+    isGroupActive: (p) => p === "/lessons" || /^\/module-\d/.test(p),
     items: [
-      { href: "/start-here", label: "Start Here" },
-      { href: "/lessons", label: "Lessons" },
-      { href: "/framework", label: "Framework" },
+      { href: "/module-1", label: "Module 1: College Expectations" },
+      { href: "/module-2", label: "Module 2: Campus Resources" },
+      { href: "/module-3", label: "Module 3: Financial Literacy" },
+      { href: "/module-4", label: "Module 4: Essential Life Skills" },
+      { href: "/module-5", label: "Module 5: Academic Success" },
+      { href: "/module-6", label: "Module 6: Career Preparation" },
+      { href: "/module-7", label: "Module 7: Emotional Resilience" },
     ],
-  },
-  {
-    label: "Support",
-    key: "support",
-    items: [
-      { href: "/tech-help", label: "Tech Help" },
-      { href: "/assignments", label: "Assignments" },
-    ],
+    viewAll: { href: "/lessons", label: "View All Lessons" },
+    minWidth: "260px",
   },
 ];
+
+// ── helpers ───────────────────────────────────────────────────────────────────
 
 function isActive(href: string, pathname: string): boolean {
   if (href === "/") return pathname === "/";
-  if (href === "/lessons") return pathname === "/lessons" || /^\/lesson-\d/.test(pathname);
-  return pathname === href || pathname.startsWith(href + "/");
+  const path = href.split("#")[0];
+  return pathname === path || pathname.startsWith(path + "/");
 }
+
+// ── component ─────────────────────────────────────────────────────────────────
 
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [openDropdown, setOpenDropdown] = useState<DropdownKey | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<DropdownKey | null>(null);
   const navRef = useRef<HTMLElement>(null);
+  const triggerRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   useEffect(() => {
     function onClickOutside(e: MouseEvent) {
@@ -73,12 +94,66 @@ export default function Navbar() {
     setMobileExpanded(null);
   }, [pathname]);
 
+  function handleDropdownKeyDown(
+    e: React.KeyboardEvent<HTMLDivElement>,
+    key: string
+  ) {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      setOpenDropdown(null);
+      triggerRefs.current[key]?.focus();
+      return;
+    }
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      const items = Array.from(
+        e.currentTarget.querySelectorAll<HTMLElement>('[role="menuitem"]')
+      );
+      const idx = items.indexOf(document.activeElement as HTMLElement);
+      if (e.key === "ArrowDown") {
+        items[(idx + 1) % items.length]?.focus();
+      } else {
+        items[(idx - 1 + items.length) % items.length]?.focus();
+      }
+    }
+    if (e.key === "Home") {
+      e.preventDefault();
+      const items = Array.from(
+        e.currentTarget.querySelectorAll<HTMLElement>('[role="menuitem"]')
+      );
+      items[0]?.focus();
+    }
+    if (e.key === "End") {
+      e.preventDefault();
+      const items = Array.from(
+        e.currentTarget.querySelectorAll<HTMLElement>('[role="menuitem"]')
+      );
+      items[items.length - 1]?.focus();
+    }
+  }
+
   const linkCls = (active: boolean) =>
     cn(
-      "nav-link block px-[0.8rem] rounded-[5px] text-[0.865rem] font-medium transition-colors no-underline hover:no-underline",
+      "nav-link flex items-center min-h-[44px] px-[0.8rem] rounded-[5px] text-[0.865rem] font-medium transition-colors no-underline hover:no-underline",
       active
         ? "text-[#0d7c7e] font-semibold bg-[#e0f4f4] dark:bg-[#0d3538]"
         : "text-[#1b2537] dark:text-[#94a3b8] hover:text-[#0d7c7e] dark:hover:text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032]"
+    );
+
+  const triggerCls = (active: boolean, open: boolean) =>
+    cn(
+      "nav-link flex items-center gap-[4px] min-h-[44px] px-[0.8rem] rounded-[5px] text-[0.865rem] font-medium transition-colors border-0 bg-transparent cursor-pointer",
+      active || open
+        ? "text-[#0d7c7e] font-semibold bg-[#e0f4f4] dark:bg-[#0d3538]"
+        : "text-[#1b2537] dark:text-[#94a3b8] hover:text-[#0d7c7e] dark:hover:text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032]"
+    );
+
+  const dropdownItemCls = (active: boolean) =>
+    cn(
+      "flex items-center min-h-[44px] px-4 text-[0.875rem] font-medium transition-colors no-underline hover:no-underline whitespace-nowrap",
+      active
+        ? "text-[#0d7c7e] font-semibold bg-[#e0f4f4] dark:bg-[#0d3538]"
+        : "text-[#1b2537] dark:text-[#e2e8f0] hover:text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032]"
     );
 
   return (
@@ -90,6 +165,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 min-h-[60px] flex flex-wrap items-center justify-between">
 
+        {/* Logo */}
         <Link
           href="/"
           className="nav-link font-bold text-base text-[#1b2537] dark:text-[#e2e8f0] tracking-[-0.01em] no-underline hover:no-underline"
@@ -97,11 +173,12 @@ export default function Navbar() {
           Alum&apos;s Declassified
         </Link>
 
-        <div className="flex items-center gap-1 lg:hidden">
+        {/* Mobile: theme toggle + hamburger */}
+        <div className="flex items-center gap-1 md:hidden">
           <AnimatedThemeToggler />
           <button
             type="button"
-            className="border border-[#dde2eb] dark:border-[#334155] rounded-[5px] px-[10px] py-[6px] text-[#5a6a82] dark:text-[#94a3b8]"
+            className="border border-[#dde2eb] dark:border-[#334155] rounded-[5px] px-[10px] py-[6px] text-[#5a6a82] dark:text-[#94a3b8] min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation"
             aria-expanded={mobileOpen}
@@ -114,22 +191,25 @@ export default function Navbar() {
               stroke="currentColor"
               strokeLinecap="round"
               strokeWidth="2"
+              aria-hidden="true"
             >
               <path d="M4 7h22M4 15h22M4 23h22" />
             </svg>
           </button>
         </div>
 
+        {/* Nav links */}
         <ul
           className={cn(
             "list-none m-0 p-0 gap-1",
-            "lg:flex lg:items-center",
+            "md:flex md:items-center",
             mobileOpen
               ? "flex flex-col w-full pt-3 border-t border-[#dde2eb] dark:border-[#334155] mt-2 pb-2"
               : "hidden"
           )}
         >
-          {topLinks.map((link) => (
+          {/* Leading simple links */}
+          {leadingLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
@@ -141,31 +221,34 @@ export default function Navbar() {
             </li>
           ))}
 
-          {dropdowns.map((group) => {
-            const groupActive = group.items.some((i) => isActive(i.href, pathname));
-            const isOpen = openDropdown === group.key;
-            const btnCls = cn(
-              "nav-link px-[0.8rem] rounded-[5px] text-[0.865rem] font-medium transition-colors border-0 bg-transparent cursor-pointer",
-              groupActive || isOpen
-                ? "text-[#0d7c7e] font-semibold bg-[#e0f4f4] dark:bg-[#0d3538]"
-                : "text-[#1b2537] dark:text-[#94a3b8] hover:text-[#0d7c7e] dark:hover:text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032]"
-            );
+          {/* Dropdowns: Lessons + Assignments */}
+          {DROPDOWNS.map((dd) => {
+            const groupActive = dd.isGroupActive(pathname);
+            const isOpen = openDropdown === dd.key;
+            const isMobileExpanded = mobileExpanded === dd.key;
 
             return (
               <li
-                key={group.key}
+                key={dd.key}
                 className="relative"
-                onMouseEnter={() => setOpenDropdown(group.key)}
+                onMouseEnter={() => setOpenDropdown(dd.key)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 {/* Desktop trigger */}
                 <button
-                  className={cn(btnCls, "hidden lg:flex items-center gap-[4px]")}
+                  ref={(el) => { triggerRefs.current[dd.key] = el; }}
+                  className={cn(triggerCls(groupActive, isOpen), "hidden md:flex")}
                   aria-haspopup="true"
                   aria-expanded={isOpen}
-                  onClick={() => setOpenDropdown(isOpen ? null : group.key)}
+                  onClick={() => setOpenDropdown(isOpen ? null : dd.key)}
+                  onKeyDown={(e) => {
+                    if (e.key === "ArrowDown" && !isOpen) {
+                      e.preventDefault();
+                      setOpenDropdown(dd.key);
+                    }
+                  }}
                 >
-                  {group.label}
+                  {dd.label}
                   <motion.span
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.18 }}
@@ -181,91 +264,126 @@ export default function Navbar() {
                   {isOpen && (
                     <motion.div
                       role="menu"
-                      aria-label={`${group.label} submenu`}
+                      aria-label={`${dd.label} menu`}
                       initial={{ opacity: 0, y: -6 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -6 }}
                       transition={{ duration: 0.15, ease: "easeOut" }}
-                      className="hidden lg:block absolute top-[calc(100%+2px)] left-0 min-w-[160px] bg-white dark:bg-[#1e293b] border border-[#dde2eb] dark:border-[#334155] rounded-[8px] shadow-[0_8px_24px_rgba(27,37,55,0.12)] dark:shadow-[0_8px_24px_rgba(0,0,0,0.3)] py-1 z-50"
+                      style={{ minWidth: dd.minWidth }}
+                      className="hidden md:block absolute top-[calc(100%+4px)] left-0 bg-white dark:bg-[#1e293b] border border-[#dde2eb] dark:border-[#334155] rounded-[12px] shadow-[0_8px_24px_rgba(27,37,55,0.12)] dark:shadow-[0_8px_24px_rgba(0,0,0,0.3)] py-1 z-50"
+                      onKeyDown={(e) => handleDropdownKeyDown(e, dd.key)}
                     >
-                      {group.items.map((item) => {
+                      {dd.items.map((item) => {
                         const active = isActive(item.href, pathname);
                         return (
                           <Link
                             key={item.href}
                             href={item.href}
                             role="menuitem"
-                            className={cn(
-                              "block px-4 py-[9px] text-[0.865rem] font-medium transition-colors no-underline hover:no-underline",
-                              active
-                                ? "text-[#0d7c7e] font-semibold bg-[#e0f4f4] dark:bg-[#0d3538]"
-                                : "text-[#1b2537] dark:text-[#e2e8f0] hover:text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032]"
-                            )}
+                            className={dropdownItemCls(active)}
                             aria-current={active ? "page" : undefined}
                           >
                             {item.label}
                           </Link>
                         );
                       })}
+                      <div
+                        role="separator"
+                        className="my-1 border-t border-[#edf0f4] dark:border-[#243044]"
+                      />
+                      <Link
+                        href={dd.viewAll.href}
+                        role="menuitem"
+                        className="flex items-center min-h-[44px] px-4 text-[0.875rem] font-semibold text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032] no-underline hover:no-underline transition-colors"
+                      >
+                        {dd.viewAll.label} →
+                      </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>
 
-                {/* Mobile expandable */}
-                <div className="lg:hidden">
-                  <button
-                    className={cn(btnCls, "flex items-center justify-between w-full")}
-                    aria-haspopup="true"
-                    aria-expanded={mobileExpanded === group.key}
-                    onClick={() =>
-                      setMobileExpanded(mobileExpanded === group.key ? null : group.key)
-                    }
+                {/* Mobile trigger */}
+                <button
+                  className={cn(
+                    triggerCls(groupActive, isMobileExpanded),
+                    "md:hidden flex items-center justify-between w-full"
+                  )}
+                  aria-haspopup="true"
+                  aria-expanded={isMobileExpanded}
+                  onClick={() =>
+                    setMobileExpanded(isMobileExpanded ? null : dd.key)
+                  }
+                >
+                  {dd.label}
+                  <motion.span
+                    animate={{ rotate: isMobileExpanded ? 180 : 0 }}
+                    transition={{ duration: 0.18 }}
+                    style={{ display: "flex", alignItems: "center" }}
+                    aria-hidden="true"
                   >
-                    {group.label}
-                    <motion.span
-                      animate={{ rotate: mobileExpanded === group.key ? 180 : 0 }}
-                      transition={{ duration: 0.18 }}
-                      style={{ display: "flex", alignItems: "center" }}
-                      aria-hidden="true"
-                    >
-                      <ChevronDown size={13} />
-                    </motion.span>
-                  </button>
+                    <ChevronDown size={13} />
+                  </motion.span>
+                </button>
 
-                  <AnimatePresence>
-                    {mobileExpanded === group.key && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.18, ease: "easeOut" }}
-                        style={{ overflow: "hidden" }}
-                      >
-                        <ul className="list-none p-0 m-0 pl-3 border-l-2 border-[#e0f4f4] dark:border-[#0d3538] ml-3 mt-1 mb-1">
-                          {group.items.map((item) => {
-                            const active = isActive(item.href, pathname);
-                            return (
-                              <li key={item.href}>
-                                <Link
-                                  href={item.href}
-                                  className={linkCls(active)}
-                                  aria-current={active ? "page" : undefined}
-                                >
-                                  {item.label}
-                                </Link>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                {/* Mobile sub-menu */}
+                <AnimatePresence>
+                  {isMobileExpanded && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.18, ease: "easeOut" }}
+                      style={{ overflow: "hidden" }}
+                    >
+                      <ul className="list-none p-0 m-0 pl-3 border-l-2 border-[#e0f4f4] dark:border-[#0d3538] ml-3 mt-1 mb-1">
+                        {dd.items.map((item) => {
+                          const active = isActive(item.href, pathname);
+                          return (
+                            <li key={item.href}>
+                              <Link
+                                href={item.href}
+                                className={linkCls(active)}
+                                aria-current={active ? "page" : undefined}
+                              >
+                                {item.label}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                        <li role="separator">
+                          <hr className="border-t border-[#edf0f4] dark:border-[#243044] my-1 mx-2" />
+                        </li>
+                        <li>
+                          <Link
+                            href={dd.viewAll.href}
+                            className="flex items-center min-h-[44px] px-[0.8rem] rounded-[5px] text-[0.865rem] font-semibold text-[#0d7c7e] hover:bg-[#f2f4f7] dark:hover:bg-[#162032] no-underline hover:no-underline transition-colors"
+                          >
+                            {dd.viewAll.label} →
+                          </Link>
+                        </li>
+                      </ul>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </li>
             );
           })}
 
-          <li className="hidden lg:flex items-center ml-1">
+          {/* Trailing simple links */}
+          {trailingLinks.map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                className={linkCls(isActive(link.href, pathname))}
+                aria-current={isActive(link.href, pathname) ? "page" : undefined}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+
+          {/* Desktop theme toggle */}
+          <li className="hidden md:flex items-center ml-1">
             <AnimatedThemeToggler />
           </li>
         </ul>

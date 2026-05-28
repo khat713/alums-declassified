@@ -158,6 +158,12 @@ export default function Module4Page() {
                 <a href="/documents/module-4-assignment.pdf" download aria-disabled="true" aria-label="Download Module 4 Assignment PDF (inactive until file added)" style={{ background: '#6366f1', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Assignment PDF (inactive until file added)</a>
                 <AssessmentSubmitButton />
               </div>
+              <div style={{ borderTop: '1px solid var(--border)', paddingTop: '1.5rem', marginTop: '1.5rem' }}>
+                <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#0d7c7e', marginBottom: '0.5rem' }}>MIDPOINT CHECK-IN</p>
+                <h3 style={{ fontFamily: 'Fraunces, serif', fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.5rem' }} className="dark:text-white text-[#1b2537]">Assignment 8: Midpoint Discussion</h3>
+                <p className="dark:text-white/70 text-[#4a5568]" style={{ fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '0.75rem' }}>After completing Module 3 or 4, post a midpoint reflection on your progress and respond to at least one other student. 50 pts</p>
+                <a href="/assignments#assignment-8" style={{ color: '#0d7c7e', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', borderBottom: '1px solid rgba(13,124,126,0.3)' }}>View assignment details</a>
+              </div>
             </div>
             </FadeIn>
 

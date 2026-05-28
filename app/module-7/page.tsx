@@ -166,6 +166,12 @@ export default function Module7Page() {
                 <a href="/documents/module-7-assignment.pdf" download aria-disabled="true" aria-label="Download Module 7 Assignment PDF (inactive until file added)" style={{ background: '#6366f1', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Assignment PDF (inactive until file added)</a>
                 <AssessmentSubmitButton />
               </div>
+              <div style={{ borderTop: '1px solid var(--border)', paddingTop: '1.5rem', marginTop: '1.5rem' }}>
+                <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#d97706', marginBottom: '0.5rem' }}>FINAL ASSIGNMENT</p>
+                <h3 style={{ fontFamily: 'Fraunces, serif', fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.5rem' }} className="dark:text-white text-[#1b2537]">Assignment 9: College Readiness Portfolio</h3>
+                <p className="dark:text-white/70 text-[#4a5568]" style={{ fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '0.75rem' }}>Compile your best work from all seven modules into a cohesive portfolio that demonstrates your growth and readiness for college. Include a short recorded introduction. 150 pts</p>
+                <a href="/assignments#assignment-9" style={{ color: '#0d7c7e', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', borderBottom: '1px solid rgba(13,124,126,0.3)' }}>View assignment details</a>
+              </div>
             </div>
             </FadeIn>
 
