@@ -162,15 +162,8 @@ export default function FrameworkPage() {
                   {/* Phase number + badges */}
                   <div style={{ flexShrink: 0, width: "120px" }}>
                     <p
-                      style={{
-                        fontFamily: "Fraunces, serif",
-                        fontSize: "3.5rem",
-                        fontWeight: 900,
-                        color: "#0d7c7e",
-                        opacity: 0.15,
-                        lineHeight: 1,
-                        marginBottom: "0.5rem",
-                      }}
+                      style={{ fontFamily: "Fraunces, serif", fontSize: "3.5rem", fontWeight: 900, lineHeight: 1, marginBottom: "0.5rem" }}
+                      className="dark:text-white text-[#1b2537]"
                     >
                       {String(i + 1).padStart(2, "0")}
                     </p>

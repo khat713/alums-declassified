@@ -27,23 +27,23 @@ const DARK_SCENES = [
 
 const LIGHT_SCENES = [
   {
-    sky: 'linear-gradient(180deg, #1e40af 0%, #3b82f6 25%, #60a5fa 55%, #bae6fd 80%, #fed7aa 100%)',
-    glow: 'rgba(251,146,60,0.2)',
+    sky: 'linear-gradient(180deg, #60a5fa 0%, #93c5fd 40%, #bae6fd 70%, #e0f2fe 100%)',
+    glow: 'rgba(147,197,253,0.2)',
     starOpacity: 0,
   },
   {
-    sky: 'linear-gradient(180deg, #1d4ed8 0%, #2563eb 30%, #3b82f6 60%, #60a5fa 100%)',
+    sky: 'linear-gradient(180deg, #2563eb 0%, #3b82f6 35%, #60a5fa 65%, #93c5fd 100%)',
     glow: 'rgba(96,165,250,0.2)',
     starOpacity: 0,
   },
   {
-    sky: 'linear-gradient(180deg, #1e3a8a 0%, #1d4ed8 40%, #2563eb 70%, #3b82f6 100%)',
-    glow: 'rgba(37,99,235,0.2)',
+    sky: 'linear-gradient(180deg, #1d4ed8 0%, #2563eb 30%, #f97316 70%, #fb923c 100%)',
+    glow: 'rgba(249,115,22,0.3)',
     starOpacity: 0,
   },
   {
-    sky: 'linear-gradient(180deg, #1d4ed8 0%, #7c3aed 20%, #dc2626 50%, #ea580c 75%, #f97316 100%)',
-    glow: 'rgba(234,88,12,0.4)',
+    sky: 'linear-gradient(180deg, #ea580c 0%, #f97316 30%, #fb923c 60%, #fdba74 100%)',
+    glow: 'rgba(251,146,60,0.45)',
     starOpacity: 0,
   },
 ];

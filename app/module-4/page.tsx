@@ -260,11 +260,12 @@ export default function Module4Page() {
                 </ul>
               </div>
 
-              <div className="bg-[#fef3e2] rounded-[10px] p-6 mb-4 border border-[#fcd69a]">
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.09em] text-[#c2680a] mb-2">Assignment Due</p>
-                <p className="font-bold text-[#1b2537] dark:text-[#e2e8f0] text-[0.95rem] mb-1">Life Skills Inventory · 50 pts</p>
-                <p className="text-[0.82rem] text-[#8d9db5] mb-3">Checklist + 300–500 word reflection on your real skill gaps.</p>
-                <Link href="/assignments#a4" className="text-[0.875rem] font-semibold text-[#0d7c7e] hover:underline">View full assignment →</Link>
+              <div style={{ background: 'rgba(251,191,36,0.08)', border: '1.5px solid rgba(217,119,6,0.35)', borderRadius: '12px', padding: '1.25rem', marginBottom: '1rem' }}>
+                <p style={{ color: '#d97706', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>Assignment Due</p>
+                <p className="dark:text-white text-[#1b2537]" style={{ fontWeight: 700, fontSize: '0.9rem', marginBottom: '0.15rem' }}>Life Skills Inventory</p>
+                <p style={{ color: '#d97706', fontWeight: 600, fontSize: '0.875rem', marginBottom: '0.5rem' }}>50 pts</p>
+                <p className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '0.6rem' }}>Checklist + 300–500 word reflection on your real skill gaps.</p>
+                <Link href="/assignments#a4" className="hover:underline" style={{ color: '#0d7c7e', fontWeight: 600, fontSize: '0.875rem' }}>View full assignment →</Link>
               </div>
             </div>
           </div>

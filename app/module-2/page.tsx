@@ -189,11 +189,12 @@ export default function Module2Page() {
                   ))}
                 </ul>
               </div>
-              <div className="bg-[#fef3e2] border border-[#fcd69a] border-l-[3px] border-l-[#c2680a] rounded-[10px] p-[1.1rem_1.2rem] mb-4">
-                <p className="text-[0.7rem] font-bold uppercase tracking-[0.09em] text-[#c2680a] mb-[0.4rem]">Assignment Due</p>
-                <p className="text-[0.875rem] text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem]"><strong>Campus Resource Map</strong> · 75 pts</p>
-                <p className="text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8] mb-2">Identify 6 resources across 3 categories specific to your school.</p>
-                <Link href="/assignments#a2" className="text-[0.82rem] text-[#0d7c7e] hover:underline">View full rubric →</Link>
+              <div style={{ background: 'rgba(251,191,36,0.08)', border: '1.5px solid rgba(217,119,6,0.35)', borderRadius: '12px', padding: '1.25rem', marginBottom: '1rem' }}>
+                <p style={{ color: '#d97706', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>Assignment Due</p>
+                <p className="dark:text-white text-[#1b2537]" style={{ fontWeight: 700, fontSize: '0.9rem', marginBottom: '0.15rem' }}>Campus Resource Map</p>
+                <p style={{ color: '#d97706', fontWeight: 600, fontSize: '0.875rem', marginBottom: '0.5rem' }}>75 pts</p>
+                <p className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '0.6rem' }}>Identify 6 resources across 3 categories specific to your school.</p>
+                <Link href="/assignments#a2" className="hover:underline" style={{ color: '#0d7c7e', fontWeight: 600, fontSize: '0.875rem' }}>View full rubric →</Link>
               </div>
             </div>
           </div>
