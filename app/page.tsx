@@ -7,6 +7,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 import { Typewriter } from "@/components/ui/typewriter";
 import { Counter } from "@/components/ui/animated-counter";
 import { motion, useScroll, useTransform } from "motion/react";
+const MotionLink = motion(Link);
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Clock, CheckCircle, Smartphone, Award } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { ScrollAtmosphere } from '@/components/ui/scroll-atmosphere';
@@ -119,7 +120,7 @@ export default function HomePage() {
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.7 }}>
                 <div className="flex gap-4 flex-wrap">
-                  <motion.a
+                  <MotionLink
                     href="/module-1"
                     whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(13,124,126,0.4)' }}
                     whileTap={{ scale: 0.97 }}
@@ -137,8 +138,8 @@ export default function HomePage() {
                     }}
                   >
                     Start Module 1 →
-                  </motion.a>
-                  <motion.a
+                  </MotionLink>
+                  <MotionLink
                     href="/start-here"
                     whileHover={{ scale: 1.03, background: 'rgba(255,255,255,0.08)' }}
                     whileTap={{ scale: 0.97 }}
@@ -156,7 +157,7 @@ export default function HomePage() {
                     }}
                   >
                     Read the Syllabus →
-                  </motion.a>
+                  </MotionLink>
                 </div>
               </motion.div>
               </div>{/* end hero-backdrop */}
@@ -488,14 +489,14 @@ export default function HomePage() {
             style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, letterSpacing: '-0.03em', marginBottom: '1rem', lineHeight: 1.1 }}
           >You deserve the same information everyone else got at the dinner table.</h2>
           <p className="dark:text-white/75 text-[#374151]" style={{ fontSize: '1.05rem', marginBottom: '2rem', lineHeight: 1.7 }}>This course exists because the gap between first-gen students and their peers is not about intelligence. It is about access to information. Alum&apos;s Declassified closes that gap.</p>
-          <motion.a
+          <MotionLink
             href="/module-1"
             whileHover={{ scale: 1.03, boxShadow: '0 8px 24px rgba(13,124,126,0.4)' }}
             whileTap={{ scale: 0.97 }}
             style={{ background: 'linear-gradient(135deg, #0d7c7e, #096163)', color: '#fff', padding: '14px 32px', borderRadius: '8px', fontWeight: 700, display: 'inline-block', textDecoration: 'none' }}
           >
             Start for Free →
-          </motion.a>
+          </MotionLink>
         </div>
       </section>
 

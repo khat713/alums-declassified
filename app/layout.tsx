@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { ToastContainer } from "@/components/ui/toast-notification";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { PageTransition } from "@/components/ui/page-transition";
-import { FreddieGreeter } from "@/components/ui/freddie-greeter";
+import { FreddiePortal } from "@/components/ui/freddie-portal";
 import { CelestialTracker } from "@/components/ui/celestial-tracker";
 import ReactLenis from 'lenis/react';
 
@@ -59,9 +59,7 @@ export default function RootLayout({
         </ReactLenis>
         <ToastContainer />
         <ScrollToTop />
-        <div style={{ position: 'fixed', bottom: '24px', left: '24px', zIndex: 9999 }}>
-          <FreddieGreeter />
-        </div>
+        <FreddiePortal />
       </body>
     </html>
   );
