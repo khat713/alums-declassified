@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 import { ReadingProgress } from "@/components/ui/reading-progress";
+import { DocumentDownload } from '@/components/ui/document-download';
 import { Target, BookOpen, FileText, DollarSign, Lightbulb, Wrench, Clock, Award } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -95,21 +96,7 @@ export default function Module3Page() {
               >
                 Module 3 Lesson
               </h2>
-              <div style={{ border: '2px dashed rgba(13,124,126,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '300px' }}>
-                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>Lesson Content Goes Here</p>
-                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
-                  This is where your Module 3 lesson content lives. Replace this placeholder with your instructional material about financial literacy.
-                </p>
-                <div style={{ border: '1px solid rgba(13,124,126,0.25)', borderRadius: '10px', padding: '1rem 1.5rem', background: 'rgba(13,124,126,0.05)', maxWidth: '480px', textAlign: 'left' }}>
-                  <p style={{ fontSize: '0.8rem', fontWeight: 700, color: '#0d7c7e', marginBottom: '0.5rem' }}>TO ADD YOUR LESSON:</p>
-                  <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem', lineHeight: 1.6, margin: 0 }}>
-                    <strong>Option A:</strong> Paste written content directly into this section.<br />
-                    <strong>Option B:</strong> Embed a video (YouTube, Loom, Kaltura) using an iframe.<br />
-                    <strong>Option C:</strong> Link to a PDF or external resource and keep this card as the entry point.
-                  </p>
-                </div>
-                <a href="/documents/module-3-lesson.pdf" download aria-disabled="true" aria-label="Download Module 3 Lesson PDF (inactive until file added)" style={{ background: '#0d7c7e', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Lesson PDF (inactive until file added)</a>
-              </div>
+              <DocumentDownload title="Module 3 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-3-lesson.pdf" type="lesson" active={false} />
             </div>
             </FadeIn>
 
@@ -125,13 +112,7 @@ export default function Module3Page() {
               >
                 Activity: Read a Sample Award Letter
               </h2>
-              <div style={{ border: '2px dashed rgba(217,119,6,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
-                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#d97706', margin: 0 }}>Activity Instructions Go Here</p>
-                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
-                  Replace this placeholder with the activity prompt and instructions for Module 3.
-                </p>
-                <a href="/documents/module-3-activity.pdf" download aria-disabled="true" aria-label="Download Module 3 Activity PDF (inactive until file added)" style={{ background: '#d97706', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Activity PDF (inactive until file added)</a>
-              </div>
+              <DocumentDownload title="Module 3 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-3-activity.pdf" type="activity" active={false} />
             </div>
             </FadeIn>
 
@@ -147,17 +128,8 @@ export default function Module3Page() {
               >
                 Budget Worksheet: Assignment 3 (75 pts)
               </h2>
-              <div style={{ border: '2px dashed rgba(99,102,241,0.3)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
-                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#6366f1', margin: 0 }}>Assessment Goes Here</p>
-                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
-                  Replace this placeholder with your Google Form embed or assessment instructions for Module 3.
-                </p>
-                <div style={{ border: '1px solid rgba(99,102,241,0.25)', borderRadius: '10px', padding: '1.5rem', background: 'rgba(99,102,241,0.04)', width: '100%', maxWidth: '480px', minHeight: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <p className="dark:text-white/40 text-[#9ca3af]" style={{ fontSize: '0.85rem', margin: 0, fontStyle: 'italic' }}>Google Form embed goes here — replace with your &lt;iframe&gt; or form link</p>
-                </div>
-                <a href="/documents/module-3-assignment.pdf" download aria-disabled="true" aria-label="Download Module 3 Assignment PDF (inactive until file added)" style={{ background: '#6366f1', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Assignment PDF (inactive until file added)</a>
-                <AssessmentSubmitButton />
-              </div>
+              <DocumentDownload title="Module 3 Assignment" description="Download the assignment instructions and rubric." filename="module-3-assignment.pdf" type="assessment" active={false} />
+              <AssessmentSubmitButton />
             </div>
             </FadeIn>
 
@@ -173,13 +145,7 @@ export default function Module3Page() {
               >
                 Example Budget: See What Proficient Looks Like
               </h2>
-              <div style={{ border: '2px dashed rgba(220,38,38,0.2)', borderRadius: '16px', padding: '2.5rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', textAlign: 'center', minHeight: '260px' }}>
-                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.15rem', fontWeight: 700, color: '#dc2626', margin: 0 }}>Model Response Goes Here</p>
-                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.9rem', lineHeight: 1.7, maxWidth: '480px', margin: 0 }}>
-                  Replace this placeholder with a model or exemplar response showing students what proficient work looks like for Module 3.
-                </p>
-                <a href="/documents/module-3-model-response.pdf" download aria-disabled="true" aria-label="Download Module 3 Model Response PDF (inactive until file added)" style={{ background: '#dc2626', color: '#ffffff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', opacity: 0.45, pointerEvents: 'none', cursor: 'not-allowed' }}>Download Model Response PDF (inactive until file added)</a>
-              </div>
+              <DocumentDownload title="Module 3 Model Response" description="See an example of a Proficient response to guide your own submission." filename="module-3-model-response.pdf" type="model" active={false} />
             </div>
             </FadeIn>
 
