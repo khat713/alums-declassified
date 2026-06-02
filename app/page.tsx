@@ -167,7 +167,7 @@ export default function HomePage() {
           {/* Right: Spline Scene - no parallax */}
           <div
             className="flex-1 h-[300px] md:h-[420px] w-full relative"
-            style={{ mixBlendMode: 'screen' }}
+            style={{ mixBlendMode: 'screen', overflow: 'hidden', borderRadius: '8px' }}
           >
             <SplineScene
               scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
