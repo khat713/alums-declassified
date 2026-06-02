@@ -21,20 +21,23 @@ const trailingLinks = [
   { href: "/framework", label: "Framework" },
 ];
 
-type DropdownKey = "lessons";
+type DropdownKey = "modules";
 
 const DROPDOWNS: {
   key: DropdownKey;
   label: string;
   isGroupActive: (p: string) => boolean;
   items: { href: string; label: string }[];
+  extras: { href: string; label: string }[];
   viewAll: { href: string; label: string };
   minWidth: string;
 }[] = [
   {
-    key: "lessons",
-    label: "Lessons",
-    isGroupActive: (p) => p === "/lessons" || /^\/module-\d/.test(p),
+    key: "modules",
+    label: "Modules",
+    isGroupActive: (p) =>
+      p === "/modules" || p === "/lessons" || /^\/module-\d/.test(p) ||
+      p === "/final-project" || p === "/assignments",
     items: [
       { href: "/module-1", label: "Module 1: College Expectations" },
       { href: "/module-2", label: "Module 2: Campus Resources" },
@@ -43,9 +46,13 @@ const DROPDOWNS: {
       { href: "/module-5", label: "Module 5: Academic Success" },
       { href: "/module-6", label: "Module 6: Career Preparation" },
       { href: "/module-7", label: "Module 7: Emotional Resilience" },
+      { href: "/final-project", label: "Final Project: College Readiness Portfolio" },
     ],
-    viewAll: { href: "/lessons", label: "View All Lessons" },
-    minWidth: "260px",
+    extras: [
+      { href: "/assignments", label: "Assignments" },
+    ],
+    viewAll: { href: "/modules", label: "View All Modules" },
+    minWidth: "290px",
   },
 ];
 
@@ -287,6 +294,25 @@ export default function Navbar() {
                           </Link>
                         );
                       })}
+                      {dd.extras.length > 0 && (
+                        <>
+                          <div role="separator" className="my-1 border-t border-[#edf0f4] dark:border-[#243044]" />
+                          {dd.extras.map((item) => {
+                            const active = isActive(item.href, pathname);
+                            return (
+                              <Link
+                                key={item.href}
+                                href={item.href}
+                                role="menuitem"
+                                className={dropdownItemCls(active)}
+                                aria-current={active ? "page" : undefined}
+                              >
+                                {item.label}
+                              </Link>
+                            );
+                          })}
+                        </>
+                      )}
                       <div
                         role="separator"
                         className="my-1 border-t border-[#edf0f4] dark:border-[#243044]"
@@ -350,6 +376,21 @@ export default function Navbar() {
                             </li>
                           );
                         })}
+                        {dd.extras.length > 0 && (
+                          <>
+                            <li role="separator"><hr className="border-t border-[#edf0f4] dark:border-[#243044] my-1 mx-2" /></li>
+                            {dd.extras.map((item) => {
+                              const active = isActive(item.href, pathname);
+                              return (
+                                <li key={item.href}>
+                                  <Link href={item.href} className={linkCls(active)} aria-current={active ? "page" : undefined}>
+                                    {item.label}
+                                  </Link>
+                                </li>
+                              );
+                            })}
+                          </>
+                        )}
                         <li role="separator">
                           <hr className="border-t border-[#edf0f4] dark:border-[#243044] my-1 mx-2" />
                         </li>
