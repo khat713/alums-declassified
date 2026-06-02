@@ -8,8 +8,10 @@ export const metadata: Metadata = {
 
 const assignments = [
   {
+    id: "a1",
     number: "Assignment 1",
     module: "Module 1",
+    moduleHref: "/module-1#assessment",
     title: "College Expectations Quiz",
     points: 50,
     format: "Multiple-choice and short-answer quiz (20–25 questions)",
@@ -17,8 +19,10 @@ const assignments = [
       "Tests whether you can identify the unwritten rules and institutional norms covered in Module 1. Questions are scenario-based: not definitions, but situations you are likely to actually encounter. You can retake once if your first attempt is below Proficient.",
   },
   {
+    id: "a2",
     number: "Assignment 2",
     module: "Module 2",
+    moduleHref: "/module-2#assessment",
     title: "Campus Resource Map",
     points: 75,
     format: "Completed template (Google Doc or Word) · 1–2 pages",
@@ -26,8 +30,10 @@ const assignments = [
       "Identify at least six campus resources across three categories (academic support, financial resources, and health/wellbeing) specific to your school. For each resource: name, location, contact info, and one realistic scenario in which you would actually use it.",
   },
   {
+    id: "a3",
     number: "Assignment 3",
     module: "Module 3",
+    moduleHref: "/module-3#assessment",
     title: "Budget Worksheet",
     points: 75,
     format: "Completed spreadsheet or template · PDF, Google Sheet, or Word",
@@ -35,8 +41,10 @@ const assignments = [
       "Build a monthly budget for your first semester using your school's actual cost of attendance and your financial aid information. Categorize each expense as fixed or variable, identify two areas where you could reduce spending, and complete a gap analysis.",
   },
   {
+    id: "a4",
     number: "Assignment 4",
     module: "Module 4",
+    moduleHref: "/module-4#assessment",
     title: "Life Skills Inventory",
     points: 50,
     format: "Written reflection · 300–500 words",
@@ -44,8 +52,10 @@ const assignments = [
       "After completing Module 4, write a reflection answering three questions: Which skills do you feel confident about and why? Which are you uncertain about? Pick one uncertain skill and describe the specific steps you would take to get better at it before your first semester.",
   },
   {
+    id: "a5",
     number: "Assignment 5",
     module: "Module 5",
+    moduleHref: "/module-5#assessment",
     title: "Study Plan",
     points: 75,
     format: "Schedule template + written rationale · 1 schedule page + 150–250 words",
@@ -53,8 +63,10 @@ const assignments = [
       "Build a realistic Week 1 study schedule for your first college semester: class times, study blocks, meals, sleep, and any work or family commitments. Then write a rationale explaining which study strategies from Module 5 you built into the schedule and why they work.",
   },
   {
+    id: "a6",
     number: "Assignment 6",
     module: "Module 6",
+    moduleHref: "/module-6#assessment",
     title: "Career Document Draft",
     points: 100,
     format: "Resume OR LinkedIn profile (4 sections minimum) · PDF or link",
@@ -62,8 +74,10 @@ const assignments = [
       "Submit either a resume draft or a completed LinkedIn profile, whichever is more relevant to your goals right now. Also submit a 100–150 word note on one thing you are still unsure about and what your next step is.",
   },
   {
+    id: "a7",
     number: "Assignment 7",
     module: "Module 7",
+    moduleHref: "/module-7#assessment",
     title: "Reflection Essay",
     points: 75,
     format: "Written essay · 400–600 words",
@@ -71,8 +85,10 @@ const assignments = [
       "Prompt: What are you most worried about going into your first college semester, and what do you already have going for you that will help you handle it? Address at least one specific concern from Module 7 and connect it to at least one concrete strategy or resource.",
   },
   {
+    id: "a8",
     number: "Assignment 8",
     module: "After Module 3 or 4",
+    moduleHref: "/module-4#assessment",
     title: "Midpoint Check-In Discussion Post",
     points: 50,
     format: "Discussion post + one reply to a peer · about 200 words per post",
@@ -80,8 +96,10 @@ const assignments = [
       "Complete this after Module 3 or 4. Prompt: What is one thing you have learned so far that surprised you, changed how you think about something, or that you wish you had known earlier? After posting, reply meaningfully to at least one peer's post.",
   },
   {
+    id: "a9",
     number: "Assignment 9",
     module: "Final: all modules",
+    moduleHref: "/final-project",
     title: "College Readiness Portfolio",
     points: 150,
     format: "Portfolio document + 3–5 minute recorded introduction",
@@ -161,6 +179,7 @@ export default function AssignmentsPage() {
               {assignments.map((a) => (
                 <div
                   key={a.number}
+                  id={a.id}
                   style={{ borderBottom: "1px solid var(--border)", padding: "1.5rem 0" }}
                 >
                   <div
@@ -231,7 +250,7 @@ export default function AssignmentsPage() {
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "flex-end",
-                        gap: "0.35rem",
+                        gap: "0.5rem",
                         flexShrink: 0,
                       }}
                     >
@@ -248,6 +267,23 @@ export default function AssignmentsPage() {
                       >
                         {a.points} pts
                       </span>
+                      {a.moduleHref && (
+                        <Link
+                          href={a.moduleHref}
+                          style={{
+                            background: "#0d7c7e",
+                            color: "#ffffff",
+                            padding: "6px 14px",
+                            borderRadius: "6px",
+                            fontSize: "0.8rem",
+                            fontWeight: 600,
+                            textDecoration: "none",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          Go to Module →
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
