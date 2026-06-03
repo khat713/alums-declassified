@@ -378,7 +378,7 @@ input[type="radio"] {
 }
 .hero-backdrop-inner {
   position: relative;
-  width: min(30vw, 380px);
+  width: min(38vw, 480px);
   aspect-ratio: 1408 / 768;
   /* Transparent-background PNG: no mask or blend needed. */
 }

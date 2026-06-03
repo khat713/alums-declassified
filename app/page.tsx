@@ -65,7 +65,7 @@ export default function HomePage() {
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         <div className="flex-1 flex flex-col md:flex-row items-center container mx-auto px-4 py-16 relative z-10">
           {/* Left: Text + CTAs */}
-          <div className="flex-1 flex flex-col justify-center py-8 md:py-0 md:pr-12">
+          <div className="flex-1 flex flex-col justify-center py-8 md:py-0 md:pr-12" style={{ maxWidth: '42%' }}>
             <motion.div style={{ y: heroY, opacity: heroOpacity }}>
               <div style={{
                 background: 'var(--hero-backdrop)',
