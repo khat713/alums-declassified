@@ -20,7 +20,7 @@ export function HeroBackdrop() {
   // as the hero scrolls away.
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 800], [0, -160]);
-  const opacity = useTransform(scrollY, [0, 500], [0.5, 0.1]);
+  const opacity = useTransform(scrollY, [0, 500], [0.92, 0.25]);
 
   return (
     <div className="hero-backdrop" aria-hidden="true">
