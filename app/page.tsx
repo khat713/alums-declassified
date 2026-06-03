@@ -13,6 +13,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { ScrollAtmosphere } from '@/components/ui/scroll-atmosphere';
 import { LottieSceneLayer } from '@/components/ui/lottie-scenes';
 import { ScrollPath } from '@/components/ui/scroll-path';
+import { HeroBackdrop } from '@/components/ui/hero-backdrop';
 
 
 export default function HomePage() {
@@ -51,6 +52,11 @@ export default function HomePage() {
           zIndex: 1
         }}
       >
+        {/* Theme-bound Old Well backdrop (light = spring, dark = night) */}
+        <HeroBackdrop />
+        {/* Scrim for text contrast over the photo */}
+        <div className="hero-scrim" />
+
         {/* Film grain overlay */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" style={{ opacity: 0.04 }} xmlns="http://www.w3.org/2000/svg">
           <filter id="grain">

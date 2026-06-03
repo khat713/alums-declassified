@@ -44,6 +44,14 @@ export default function RootLayout({
             __html: `try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(_){}`,
           }}
         />
+        {/* Preload only the default-theme (light) hero image. The night image
+            loads on demand when the user switches to dark mode. */}
+        <link
+          rel="preload"
+          as="image"
+          href={`${process.env.NODE_ENV === "production" ? "/alums-declassified" : ""}/old-well-spring.avif`}
+          type="image/avif"
+        />
       </head>
       <body className="text-[#1b2537] dark:text-[#e2e8f0] font-body transition-colors duration-200">
         <a href="#main-content" className="skip-link">Skip to main content</a>

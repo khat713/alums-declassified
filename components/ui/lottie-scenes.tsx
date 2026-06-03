@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -61,14 +61,15 @@ function LottieScene({ src, opacity, position = 'right', size = 400, bottom = 0,
 
 export function LottieSceneLayer() {
   const { scrollYProgress } = useScroll();
-  const cityLottieRef = useRef<any>(null);
   const [prefersReducedMotion] = useState(() =>
     typeof window !== 'undefined'
       ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
       : false
   );
 
-  const cityOpacity = useTransform(scrollYProgress, [0, 0.7, 0.9], [0.8, 0.4, 0.15]);
+  // The full-screen City_Building Lottie was removed: it looped continuously and
+  // was the main hero lag source. The Old Well hero backdrop replaces it. The two
+  // scroll-gated scenes below stay.
   const studyOpacity = useTransform(scrollYProgress, [0.25, 0.35, 0.65, 0.75], [0, 1, 1, 0]);
   const gradOpacity  = useTransform(scrollYProgress, [0.60, 0.70, 0.95, 1],    [0, 1, 1, 0]);
 
@@ -79,14 +80,6 @@ export function LottieSceneLayer() {
       aria-hidden="true"
       style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}
     >
-      <LottieScene
-        src={`${BASE}/animations/City_Building.json`}
-        opacity={cityOpacity}
-        position="full"
-        bottom={0}
-        lottieRef={cityLottieRef}
-        onDOMLoaded={() => { if (cityLottieRef.current) cityLottieRef.current.setSpeed(0.25); }}
-      />
       <LottieScene
         src={`${BASE}/animations/Exams_Preparation_.json`}
         opacity={studyOpacity}
