@@ -65,7 +65,7 @@ export default function HomePage() {
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         <div className="flex-1 flex flex-col md:flex-row items-center justify-between container mx-auto px-4 py-16 relative z-10">
           {/* Left: Text + CTAs */}
-          <div className="flex flex-col justify-center py-8 md:py-0" style={{ width: '35%' }}>
+          <div className="flex flex-col justify-center py-8 md:py-0" style={{ width: '32%' }}>
             <motion.div style={{ y: heroY, opacity: heroOpacity }}>
               <div style={{
                 background: 'var(--hero-backdrop)',
@@ -97,7 +97,7 @@ export default function HomePage() {
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
                 <h1
                   className="font-bold leading-[1.05] mb-5 dark:text-white text-[#1b2537] min-h-[3.5em]"
-                  style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", letterSpacing: "-0.04em" }}
+                  style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.6rem,2.8vw,2.4rem)", letterSpacing: "-0.04em" }}
                 >
                   <Typewriter
                     words={[
@@ -169,7 +169,7 @@ export default function HomePage() {
           {/* Right: Spline Scene */}
           <div
             className="h-[300px] md:h-[420px] relative"
-            style={{ width: '35%', mixBlendMode: 'screen', overflow: 'hidden', borderRadius: '8px' }}
+            style={{ width: '32%', mixBlendMode: 'screen', overflow: 'hidden', borderRadius: '8px' }}
           >
             <SplineScene
               scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
