@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { speakText, stopSpeaking, setMuted } from '@/lib/elevenlabs';
+import { speakText, stopSpeaking, setMuted, preloadLines, clearPreloadCache } from '@/lib/elevenlabs';
 
 const MotionLink = motion(Link);
 
@@ -127,6 +127,7 @@ export function FreddieDialog() {
   // Reset and start typing when opened; stop audio when closed.
   useEffect(() => {
     if (isOpen) {
+      preloadLines(FREDDIE_LINES); // fetch all audio in background before they're needed
       spokenLineRef.current = -1;
       setCurrentLine(0);
       setDisplayText('');
@@ -136,6 +137,7 @@ export function FreddieDialog() {
     } else {
       setIsTyping(false);
       stopSpeaking();
+      clearPreloadCache();
     }
   }, [isOpen]);
 
@@ -216,7 +218,8 @@ export function FreddieDialog() {
     if (currentLine >= FREDDIE_LINES.length - 1) return;
     stopSpeaking();
     const next = currentLine + 1;
-    spokenLineRef.current = next;
+    // Do NOT pre-set spokenLineRef here — the voice effect will fire when
+    // charIndex resets to 0 for the new line and handle it there.
     setCurrentLine(next);
     setDisplayText('');
     setCharIndex(0);
@@ -229,17 +232,10 @@ export function FreddieDialog() {
     setMuted(nowMuting);
     setIsMuted(nowMuting);
     if (nowMuting) {
-      // Abrupt cut-off.
       stopSpeaking();
-    } else {
-      // Unmuting — speak wherever we currently are without resetting anything.
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (!prefersReducedMotion) {
-        // Speak from the current display text so far (partial line is fine).
-        const textSoFar = displayText || FREDDIE_LINES[currentLine];
-        speakText(textSoFar);
-      }
     }
+    // On unmute: do nothing. The typewriter is still running; when it advances
+    // to the next line the voice effect will fire naturally. No restart.
   };
 
   return (
