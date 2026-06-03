@@ -38,7 +38,7 @@ export default function Module4Page() {
             Week 4 · Module 4
           </p>
           <h1
-            className="mb-3"
+            className="text-[#1b2537] dark:text-[#e2e8f0] mb-3"
             style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}
           >
             Essential Life Skills
