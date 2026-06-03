@@ -7,10 +7,8 @@ const BASE = process.env.NODE_ENV === 'production' ? '/alums-declassified' : '';
 
 // Swap these filenames to change the emblem; just drop a new image into
 // public/images and point these paths at it.
-// NOTE: the uploaded files were labelled backwards — the "dark" file is the
-// white-background emblem (used in light mode) and vice-versa.
-const LIGHT = `${BASE}/images/old-well-dark.avif`;   // white-background emblem
-const DARK = `${BASE}/images/old-well-light.avif`;   // navy-background emblem
+const LIGHT = `${BASE}/images/old-well-light.avif`;   // white-background emblem → light mode
+const DARK  = `${BASE}/images/old-well-dark.avif`;    // navy-background emblem  → dark mode
 
 const ALT = 'The UNC Old Well emblem';
 
