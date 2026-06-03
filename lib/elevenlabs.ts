@@ -1,5 +1,36 @@
 const VOICE_ID = 'CwhRBWXzGAHq8TQ4Fs17'; // Roger
 
+// Module-level reference so stopSpeaking() can reach it from anywhere.
+let activeAudio: HTMLAudioElement | null = null;
+
+/** Immediately cut off whatever is currently playing. */
+export function stopSpeaking(): void {
+  if (activeAudio) {
+    activeAudio.pause();
+    activeAudio.src = '';
+    activeAudio = null;
+  }
+  if (typeof window !== 'undefined') {
+    window.speechSynthesis?.cancel();
+  }
+}
+
+function cleanEmoji(text: string): string {
+  return text
+    .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
+    .replace(/[\u{2600}-\u{26FF}]/gu, '')
+    .replace(/[\u{2700}-\u{27BF}]/gu, '')
+    .replace(/[\u{1F000}-\u{1F02F}]/gu, '')
+    .replace(/[\u{1F0A0}-\u{1F0FF}]/gu, '')
+    .replace(/[\u{1F100}-\u{1F1FF}]/gu, '')
+    .replace(/[\u{1F200}-\u{1F2FF}]/gu, '')
+    .replace(/[\u{1FA00}-\u{1FA6F}]/gu, '')
+    .replace(/[\u{1FA70}-\u{1FAFF}]/gu, '')
+    .replace(/[\u{FE00}-\u{FE0F}]/gu, '')
+    .replace(/[\u{20D0}-\u{20FF}]/gu, '')
+    .trim();
+}
+
 function fallbackSpeak(text: string): void {
   if (typeof window === 'undefined') return;
   window.speechSynthesis.cancel();
@@ -13,20 +44,10 @@ function fallbackSpeak(text: string): void {
 export async function speakText(text: string): Promise<void> {
   if (typeof window === 'undefined') return;
 
-  const cleanText = text
-    .replace(/[\u{1F300}-\u{1F9FF}]/gu, '')
-    .replace(/[\u{2600}-\u{26FF}]/gu, '')
-    .replace(/[\u{2700}-\u{27BF}]/gu, '')
-    .replace(/[\u{1F000}-\u{1F02F}]/gu, '')
-    .replace(/[\u{1F0A0}-\u{1F0FF}]/gu, '')
-    .replace(/[\u{1F100}-\u{1F1FF}]/gu, '')
-    .replace(/[\u{1F200}-\u{1F2FF}]/gu, '')
-    .replace(/[\u{1FA00}-\u{1FA6F}]/gu, '')
-    .replace(/[\u{1FA70}-\u{1FAFF}]/gu, '')
-    .replace(/[\u{FE00}-\u{FE0F}]/gu, '')
-    .replace(/[\u{20D0}-\u{20FF}]/gu, '')
-    .trim();
+  // Stop anything already playing before starting a new line.
+  stopSpeaking();
 
+  const cleanText = cleanEmoji(text);
   const apiKey = process.env.NEXT_PUBLIC_ELEVENLABS_API_KEY;
 
   if (!apiKey) {
@@ -65,25 +86,30 @@ export async function speakText(text: string): Promise<void> {
     const audioBlob = await response.blob();
     const audioUrl = URL.createObjectURL(audioBlob);
     const audio = new Audio(audioUrl);
+    activeAudio = audio;
 
     audio.onerror = () => {
       URL.revokeObjectURL(audioUrl);
+      activeAudio = null;
       fallbackSpeak(cleanText);
     };
 
     return new Promise((resolve) => {
       audio.onended = () => {
         URL.revokeObjectURL(audioUrl);
+        activeAudio = null;
         resolve();
       };
       audio.play().catch(() => {
         URL.revokeObjectURL(audioUrl);
+        activeAudio = null;
         fallbackSpeak(cleanText);
         resolve();
       });
     });
   } catch (error) {
     console.error('ElevenLabs error, falling back to Web Speech API:', error);
+    activeAudio = null;
     fallbackSpeak(cleanText);
   }
 }

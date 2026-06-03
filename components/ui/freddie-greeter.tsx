@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { speakText } from '@/lib/elevenlabs';
+import { speakText, stopSpeaking } from '@/lib/elevenlabs';
 
 const MotionLink = motion(Link);
 
@@ -119,12 +119,16 @@ export function FreddieDialog() {
   const [isTyping, setIsTyping] = useState(false);
   const [isDone, setIsDone] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  // Tracks which line index has already been sent to speakText so we never
+  // fire it twice for the same line (e.g. mute → unmute mid-line).
+  const spokenLineRef = useRef<number>(-1);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
 
-  // Reset and start typing when opened
+  // Reset and start typing when opened; stop audio when closed.
   useEffect(() => {
     if (isOpen) {
+      spokenLineRef.current = -1;
       setCurrentLine(0);
       setDisplayText('');
       setCharIndex(0);
@@ -132,6 +136,7 @@ export function FreddieDialog() {
       setIsDone(false);
     } else {
       setIsTyping(false);
+      stopSpeaking();
     }
   }, [isOpen]);
 
@@ -145,9 +150,11 @@ export function FreddieDialog() {
       }, 55);
       return () => clearTimeout(timer);
     }
+    // Line finished typing — speak it once (guard with spokenLineRef).
     if (charIndex === FREDDIE_LINES[currentLine].length) {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (!isMuted && !prefersReducedMotion) {
+      if (!isMuted && !prefersReducedMotion && spokenLineRef.current !== currentLine) {
+        spokenLineRef.current = currentLine;
         speakText(FREDDIE_LINES[currentLine]);
       }
       if (currentLine < FREDDIE_LINES.length - 1) {
@@ -190,18 +197,44 @@ export function FreddieDialog() {
   }, [isOpen, close]);
 
   const handleSkip = () => {
+    stopSpeaking();
     const last = FREDDIE_LINES.length - 1;
+    spokenLineRef.current = last;
     setDisplayText(FREDDIE_LINES[last]);
     setCurrentLine(last);
     setCharIndex(FREDDIE_LINES[last].length);
     setIsTyping(false);
     setIsDone(true);
+    if (!isMuted) speakText(FREDDIE_LINES[last]);
+  };
+
+  const handleNext = () => {
+    if (currentLine >= FREDDIE_LINES.length - 1) return;
+    stopSpeaking();
+    const next = currentLine + 1;
+    spokenLineRef.current = next;
+    setCurrentLine(next);
+    setDisplayText('');
+    setCharIndex(0);
+    setIsTyping(true);
   };
 
   const handleMuteToggle = () => {
     setIsMuted(prev => {
-      if (!prev) window.speechSynthesis?.cancel();
-      return !prev;
+      const nowMuting = !prev;
+      if (nowMuting) {
+        // Cut off audio immediately — abrupt stop as requested.
+        stopSpeaking();
+      } else {
+        // Unmuting: speak the line that's currently displayed, but only if
+        // the line has already finished typing (charIndex at end).
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReducedMotion && spokenLineRef.current !== currentLine) {
+          spokenLineRef.current = currentLine;
+          speakText(FREDDIE_LINES[currentLine]);
+        }
+      }
+      return nowMuting;
     });
   };
 
@@ -303,11 +336,23 @@ export function FreddieDialog() {
             </div>
 
             {/* Actions */}
-            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
               {!isDone && (
-                <button onClick={handleSkip} style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.80)', padding: '10px 20px', borderRadius: '8px', cursor: 'pointer', fontSize: '0.875rem', fontWeight: 500 }}>
-                  Skip →
-                </button>
+                <>
+                  {/* Next line */}
+                  <motion.button
+                    onClick={handleNext}
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.93 }}
+                    aria-label="Next line"
+                    style={{ background: 'linear-gradient(135deg, #0d7c7e, #096163)', border: 'none', color: '#ffffff', width: '38px', height: '38px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.1rem', flexShrink: 0 }}
+                  >
+                    ›
+                  </motion.button>
+                  <button onClick={handleSkip} style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.80)', padding: '10px 20px', borderRadius: '8px', cursor: 'pointer', fontSize: '0.875rem', fontWeight: 500 }}>
+                    Skip to end
+                  </button>
+                </>
               )}
               {isDone && (
                 <MotionLink href="/module-1" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} style={{ background: 'linear-gradient(135deg, #0d7c7e, #0a6466)', color: '#ffffff', padding: '12px 28px', borderRadius: '8px', fontWeight: 700, fontSize: '0.95rem', textDecoration: 'none', display: 'inline-block', border: '1px solid rgba(255,255,255,0.1)' }}>
