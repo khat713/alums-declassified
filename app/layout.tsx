@@ -29,7 +29,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Alum's Declassified: College Survival Guide",
   description:
-    "A free seven-week course for first-generation college students covering everything from syllabi and office hours to budgeting, mental health, and building a career.",
+    "A comprehensive seven-week course for first-generation college students covering everything from syllabi and office hours to budgeting, mental health, and building a career.",
 };
 
 export default function RootLayout({

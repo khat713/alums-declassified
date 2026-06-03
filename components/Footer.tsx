@@ -11,7 +11,7 @@ export default function Footer() {
             <p style={{ fontFamily: 'Fraunces, serif', fontWeight: 800, fontSize: '1.4rem', color: '#ffffff', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>
               Alum&apos;s Declassified
             </p>
-            <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem', lineHeight: 1.7, maxWidth: '260px' }}>A free seven-week college survival guide built specifically for first-generation students. No tuition. No gatekeeping.</p>
+            <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem', lineHeight: 1.7, maxWidth: '260px' }}>A comprehensive seven-week college survival guide built specifically for first-generation students. No gatekeeping.</p>
           </div>
           <nav aria-label="Course navigation">
             <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>Course</p>
@@ -37,7 +37,7 @@ export default function Footer() {
           </nav>
         </div>
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', marginTop: '3rem', paddingTop: '2rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.82rem' }}>© 2025 Alum&apos;s Declassified · Free for all first-generation students</p>
+          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.82rem' }}>© 2025 Alum&apos;s Declassified · Built for first-generation students</p>
           <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.78rem' }}>Built with care for every first-gen student who deserved better information sooner.</p>
         </div>
       </div>

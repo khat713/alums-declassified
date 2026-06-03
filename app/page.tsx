@@ -73,7 +73,7 @@ export default function HomePage() {
                 backdropFilter: 'blur(4px)',
                 WebkitBackdropFilter: 'blur(4px)',
                 borderRadius: '16px',
-                padding: '2rem',
+                padding: '2rem 2rem 2.5rem',
               }}>
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
@@ -93,7 +93,7 @@ export default function HomePage() {
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
                   color: '#5eead4',
-                }}>FREE · ASYNCHRONOUS · BUILT FOR YOU</span>
+                }}>COMPREHENSIVE · ASYNCHRONOUS · BUILT FOR YOU</span>
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}>
                 <h1
@@ -103,7 +103,7 @@ export default function HomePage() {
                   <Typewriter
                     words={[
                       "Everything they forgot to tell you about college. Documented.",
-                      "Free. Self-paced. Built for first-gen students.",
+                      "Thorough. Self-paced. Built for first-gen students.",
                       "7 modules. Nothing gatekept.",
                     ]}
                     speed={80}
@@ -114,8 +114,8 @@ export default function HomePage() {
                 </h1>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}>
-                <p className="dark:text-white/80 text-[#374151] text-[1.05rem] leading-[1.7] mb-14 max-w-[520px]">
-                  Alum&apos;s Declassified is a free seven-week course for
+                <p className="dark:text-white/80 text-[#374151] text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]" style={{ marginTop: '1rem' }}>
+                  Alum&apos;s Declassified is a comprehensive seven-week course for
                   first-generation college students, covering everything from syllabi
                   and office hours to budgeting, mental health, and building a career.
                   The stuff nobody tells you out loud.
@@ -249,7 +249,7 @@ export default function HomePage() {
             style={{ fontSize: '0.82rem' }}
           >
             <CheckCircle size={15} style={{ color: '#4ade80' }} />
-            <span className="font-medium">Completely free</span>
+            <span className="font-medium">Self-paced</span>
           </motion.div>
 
           <motion.div
@@ -378,7 +378,7 @@ export default function HomePage() {
             className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-4 pb-[0.65rem] border-b dark:border-white/10 border-black/10 tracking-[-0.03em] leading-[1.2] dark:text-white text-[#1b2537]"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Built for First-Generation Students. Free for Everyone.
+            Built for First-Generation Students. Built to Last.
           </h2>
           <p className="dark:text-white/75 text-[#2e3f5c]">
             If you&apos;re the first in your family to go to college, you
@@ -388,9 +388,8 @@ export default function HomePage() {
             conversation.
           </p>
           <p className="dark:text-white/75 text-[#2e3f5c]">
-            It&apos;s completely free, fully asynchronous, and designed to work
-            on your phone. No account required. No deadlines. Start whenever
-            you&apos;re ready.
+            It&apos;s fully asynchronous and designed to work on your phone.
+            No account required. No deadlines. Start whenever you&apos;re ready.
           </p>
           <div className="flex gap-8 flex-wrap mt-5">
             {[
@@ -503,7 +502,7 @@ export default function HomePage() {
             whileTap={{ scale: 0.97 }}
             style={{ background: 'linear-gradient(135deg, #0d7c7e, #096163)', color: '#fff', padding: '14px 32px', borderRadius: '8px', fontWeight: 700, display: 'inline-block', textDecoration: 'none' }}
           >
-            Start for Free →
+            Start Learning →
           </MotionLink>
         </div>
       </section>

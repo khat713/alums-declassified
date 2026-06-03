@@ -83,7 +83,7 @@ export default function StartHerePage() {
                 {[
                   ["Format", "Fully asynchronous, self-paced"],
                   ["Duration", "7 weeks: summer before your first semester"],
-                  ["Credit", "Non-credit · Open enrollment · Free"],
+                  ["Credit", "Non-credit · Open enrollment · Open access"],
                   ["Platform", "This website: no account required, mobile-friendly"],
                   ["Prerequisites", "None: built for students starting from scratch"],
                   ["Contact", <a key="contact" href="mailto:your-email@example.com" className="text-[#0d7c7e] hover:underline">your-email@example.com</a>],

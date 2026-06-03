@@ -53,7 +53,7 @@ const phases = [
     title: "Implementation",
     subtitle: "Deploying and delivering the course",
     description:
-      "The course is a free public website. No account, no login, nothing to download. A student can open it on any device whenever they have a minute. Almost every decision here came down to one question: does this add a barrier? If it did, I cut it. The students this course is for already have enough standing in their way.",
+      "The course is a public website. No account, no login, nothing to download. A student can open it on any device whenever they have a minute. Almost every decision here came down to one question: does this add a barrier? If it did, I cut it. The students this course is for already have enough standing in their way.",
     bullets: [
       "Zero-barrier access: no account, no cost, no deadline",
       "Mobile-first responsive design for students without laptops",
