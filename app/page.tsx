@@ -14,6 +14,7 @@ import { ScrollAtmosphere } from '@/components/ui/scroll-atmosphere';
 import { LottieSceneLayer } from '@/components/ui/lottie-scenes';
 import { ScrollPath } from '@/components/ui/scroll-path';
 import { HeroBackdrop } from '@/components/ui/hero-backdrop';
+import { FreddieButton } from '@/components/ui/freddie-greeter';
 
 
 export default function HomePage() {
@@ -166,15 +167,20 @@ export default function HomePage() {
             </motion.div>
           </div>
 
-          {/* Right: Spline Scene */}
-          <div
-            className="h-[300px] md:h-[420px] relative"
-            style={{ width: '30%', mixBlendMode: 'screen', overflow: 'hidden', borderRadius: '8px' }}
-          >
-            <SplineScene
-              scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
-              className="w-full h-full"
-            />
+          {/* Right: Spline Scene + Freddie button */}
+          <div className="flex flex-col items-center" style={{ width: '30%' }}>
+            <div
+              className="h-[300px] md:h-[420px] relative w-full"
+              style={{ mixBlendMode: 'screen', overflow: 'hidden', borderRadius: '8px' }}
+            >
+              <SplineScene
+                scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
+                className="w-full h-full"
+              />
+            </div>
+            <div style={{ marginTop: '1rem' }}>
+              <FreddieButton />
+            </div>
           </div>
         </div>
 

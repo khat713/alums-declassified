@@ -7,6 +7,7 @@ import { ToastContainer } from "@/components/ui/toast-notification";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { PageTransition } from "@/components/ui/page-transition";
 import { FreddiePortal } from "@/components/ui/freddie-portal";
+import { FreddieProvider } from "@/components/ui/freddie-greeter";
 import { CelestialTracker } from "@/components/ui/celestial-tracker";
 import ReactLenis from 'lenis/react';
 
@@ -54,19 +55,21 @@ export default function RootLayout({
       </head>
       <body className="text-[#1b2537] dark:text-[#e2e8f0] font-body transition-colors duration-200">
         <a href="#main-content" className="skip-link">Skip to main content</a>
-        <ReactLenis root options={{ lerp: 0.08, duration: 1.2, smoothWheel: true }}>
-          <div
-            style={{ position: 'relative', zIndex: 0, minHeight: '100vh', background: 'var(--page-bg)' }}
-          >
-            <Navbar />
-            <CelestialTracker />
-            <PageTransition>{children}</PageTransition>
-            <Footer />
-          </div>
-        </ReactLenis>
-        <ToastContainer />
-        <ScrollToTop />
-        <FreddiePortal />
+        <FreddieProvider>
+          <ReactLenis root options={{ lerp: 0.08, duration: 1.2, smoothWheel: true }}>
+            <div
+              style={{ position: 'relative', zIndex: 0, minHeight: '100vh', background: 'var(--page-bg)' }}
+            >
+              <Navbar />
+              <CelestialTracker />
+              <PageTransition>{children}</PageTransition>
+              <Footer />
+            </div>
+          </ReactLenis>
+          <ToastContainer />
+          <ScrollToTop />
+          <FreddiePortal />
+        </FreddieProvider>
       </body>
     </html>
   );
