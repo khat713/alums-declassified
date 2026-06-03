@@ -30,21 +30,25 @@ const LIGHT_SCENES = [
     sky: 'linear-gradient(180deg, #60a5fa 0%, #93c5fd 40%, #bae6fd 70%, #e0f2fe 100%)',
     glow: 'rgba(147,197,253,0.2)',
     starOpacity: 0,
+    cloudOpacity: 1,
   },
   {
     sky: 'linear-gradient(180deg, #2563eb 0%, #3b82f6 35%, #60a5fa 65%, #93c5fd 100%)',
     glow: 'rgba(96,165,250,0.2)',
     starOpacity: 0,
+    cloudOpacity: 0.7,
   },
   {
     sky: 'linear-gradient(180deg, #1d4ed8 0%, #2563eb 30%, #f97316 70%, #fb923c 100%)',
     glow: 'rgba(249,115,22,0.3)',
     starOpacity: 0,
+    cloudOpacity: 0.35,
   },
   {
     sky: 'linear-gradient(180deg, #ea580c 0%, #f97316 30%, #fb923c 60%, #fdba74 100%)',
     glow: 'rgba(251,146,60,0.45)',
     starOpacity: 0,
+    cloudOpacity: 0.15,
   },
 ];
 
@@ -86,6 +90,59 @@ function Stars({ opacity }: { opacity: number }) {
             repeat: Infinity,
             ease: 'easeInOut',
             delay: star.delay,
+          }}
+        />
+      ))}
+    </motion.div>
+  );
+}
+
+
+function Clouds({ opacity }: { opacity: number }) {
+  // Soft, blurred puffs that drift slowly across the daytime sky. Positions and
+  // speeds are fixed per mount so they don't reshuffle on every scene change.
+  const cloudsRef = useRef(
+    Array.from({ length: 6 }, (_, i) => ({
+      id: i,
+      top: Math.random() * 45 + 3,
+      width: Math.random() * 220 + 180,
+      height: Math.random() * 50 + 45,
+      baseOpacity: Math.random() * 0.3 + 0.55,
+      duration: Math.random() * 40 + 60,
+      delay: Math.random() * -60,
+      startX: Math.random() * 100,
+    }))
+  );
+
+  return (
+    <motion.div
+      animate={{ opacity }}
+      transition={{ duration: 2, ease: 'easeInOut' }}
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+      aria-hidden="true"
+    >
+      {cloudsRef.current.map((cloud) => (
+        <motion.div
+          key={cloud.id}
+          style={{
+            position: 'absolute',
+            top: `${cloud.top}%`,
+            left: 0,
+            width: `${cloud.width}px`,
+            height: `${cloud.height}px`,
+            borderRadius: '50%',
+            background:
+              'radial-gradient(ellipse at center, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 45%, rgba(255,255,255,0) 70%)',
+            filter: 'blur(6px)',
+            opacity: cloud.baseOpacity,
+          }}
+          initial={{ x: `${cloud.startX}vw` }}
+          animate={{ x: ['-25vw', '110vw'] }}
+          transition={{
+            duration: cloud.duration,
+            repeat: Infinity,
+            ease: 'linear',
+            delay: cloud.delay,
           }}
         />
       ))}
@@ -143,6 +200,7 @@ export function ScrollAtmosphere() {
       style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none' }}
     >
       {isDark && <Stars opacity={scene.starOpacity} />}
+      {!isDark && <Clouds opacity={(scene as any).cloudOpacity ?? 0} />}
 
       <motion.div
         animate={{
