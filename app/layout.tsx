@@ -44,13 +44,12 @@ export default function RootLayout({
             __html: `try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(_){}`,
           }}
         />
-        {/* Preload only the default-theme (light) Old Well emblem. The dark
-            variant loads when the user switches to dark mode. */}
+        {/* Preload the hero logo so it paints with the first view. */}
         <link
           rel="preload"
           as="image"
-          href={`${process.env.NODE_ENV === "production" ? "/alums-declassified" : ""}/images/old-well-light.avif`}
-          type="image/avif"
+          href={`${process.env.NODE_ENV === "production" ? "/alums-declassified" : ""}/images/logo.png`}
+          type="image/png"
         />
       </head>
       <body className="text-[#1b2537] dark:text-[#e2e8f0] font-body transition-colors duration-200">

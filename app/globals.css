@@ -378,10 +378,9 @@ input[type="radio"] {
 }
 .hero-backdrop-inner {
   position: relative;
-  width: min(82vw, 620px);
-  aspect-ratio: 1 / 1;
-  /* No mask: the per-image blend modes drop each emblem's solid background out
-     against the page, so there is no box to feather. */
+  width: min(88vw, 760px);
+  aspect-ratio: 1408 / 768;
+  /* Transparent-background PNG: no mask or blend needed. */
 }
 .hero-backdrop-img {
   position: absolute;
