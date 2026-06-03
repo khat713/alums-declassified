@@ -1,18 +1,20 @@
 const VOICE_ID = 'CwhRBWXzGAHq8TQ4Fs17'; // Roger
 
-// Module-level reference so stopSpeaking() can reach it from anywhere.
 let activeAudio: HTMLAudioElement | null = null;
+let activeAbort: AbortController | null = null;
+// Module-level mute flag so async callbacks respect it after the fact.
+let muted = false;
 
-/** Immediately cut off whatever is currently playing. */
+export function setMuted(val: boolean): void {
+  muted = val;
+  if (val) stopSpeaking();
+}
+
+/** Immediately cut off whatever is currently playing (audio + any in-flight fetch). */
 export function stopSpeaking(): void {
-  if (activeAudio) {
-    activeAudio.pause();
-    activeAudio.src = '';
-    activeAudio = null;
-  }
-  if (typeof window !== 'undefined') {
-    window.speechSynthesis?.cancel();
-  }
+  if (activeAbort) { activeAbort.abort(); activeAbort = null; }
+  if (activeAudio) { activeAudio.pause(); activeAudio.src = ''; activeAudio = null; }
+  if (typeof window !== 'undefined') window.speechSynthesis?.cancel();
 }
 
 function cleanEmoji(text: string): string {
@@ -32,7 +34,7 @@ function cleanEmoji(text: string): string {
 }
 
 function fallbackSpeak(text: string): void {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || muted) return;
   window.speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.rate = 0.92;
@@ -42,10 +44,11 @@ function fallbackSpeak(text: string): void {
 }
 
 export async function speakText(text: string): Promise<void> {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined' || muted) return;
 
-  // Stop anything already playing before starting a new line.
+  // Cancel anything already playing.
   stopSpeaking();
+  if (muted) return;
 
   const cleanText = cleanEmoji(text);
   const apiKey = process.env.NEXT_PUBLIC_ELEVENLABS_API_KEY;
@@ -55,6 +58,9 @@ export async function speakText(text: string): Promise<void> {
     fallbackSpeak(cleanText);
     return;
   }
+
+  const abort = new AbortController();
+  activeAbort = abort;
 
   try {
     const response = await fetch(
@@ -76,40 +82,38 @@ export async function speakText(text: string): Promise<void> {
             use_speaker_boost: true,
           },
         }),
+        signal: abort.signal,
       }
     );
 
-    if (!response.ok) {
-      throw new Error(`ElevenLabs API error: ${response.status} ${response.statusText}`);
-    }
+    // If muted while fetch was in flight, discard the result.
+    if (muted || abort.signal.aborted) return;
+
+    if (!response.ok) throw new Error(`ElevenLabs API error: ${response.status}`);
 
     const audioBlob = await response.blob();
+    if (muted || abort.signal.aborted) return;
+
     const audioUrl = URL.createObjectURL(audioBlob);
     const audio = new Audio(audioUrl);
     activeAudio = audio;
+    activeAbort = null;
 
-    audio.onerror = () => {
-      URL.revokeObjectURL(audioUrl);
-      activeAudio = null;
-      fallbackSpeak(cleanText);
-    };
+    audio.onerror = () => { URL.revokeObjectURL(audioUrl); activeAudio = null; };
 
     return new Promise((resolve) => {
-      audio.onended = () => {
-        URL.revokeObjectURL(audioUrl);
-        activeAudio = null;
-        resolve();
-      };
+      audio.onended = () => { URL.revokeObjectURL(audioUrl); activeAudio = null; resolve(); };
       audio.play().catch(() => {
         URL.revokeObjectURL(audioUrl);
         activeAudio = null;
-        fallbackSpeak(cleanText);
+        if (!muted) fallbackSpeak(cleanText);
         resolve();
       });
     });
-  } catch (error) {
+  } catch (error: any) {
+    activeAbort = null;
+    if (error?.name === 'AbortError') return; // intentional stop — no fallback
     console.error('ElevenLabs error, falling back to Web Speech API:', error);
-    activeAudio = null;
-    fallbackSpeak(cleanText);
+    if (!muted) fallbackSpeak(cleanText);
   }
 }
