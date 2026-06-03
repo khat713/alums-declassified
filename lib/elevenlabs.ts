@@ -10,13 +10,29 @@ const pendingFetches = new Map<string, Promise<string | null>>();
 
 export function setMuted(val: boolean): void {
   muted = val;
-  if (val) stopSpeaking();
+  if (val) pauseSpeaking();
 }
 
 export function stopSpeaking(): void {
   if (activeAbort) { activeAbort.abort(); activeAbort = null; }
   if (activeAudio) { activeAudio.pause(); activeAudio.src = ''; activeAudio = null; }
   if (typeof window !== 'undefined') window.speechSynthesis?.cancel();
+}
+
+/** Pause without discarding the audio element — use for mute. */
+export function pauseSpeaking(): void {
+  if (activeAudio) activeAudio.pause();
+  if (typeof window !== 'undefined') window.speechSynthesis?.pause();
+}
+
+/** Resume from where it was paused — use for unmute. */
+export function resumeSpeaking(): void {
+  if (muted) return;
+  if (activeAudio) {
+    activeAudio.play().catch(() => {});
+  } else if (typeof window !== 'undefined') {
+    window.speechSynthesis?.resume();
+  }
 }
 
 export function clearPreloadCache(): void {

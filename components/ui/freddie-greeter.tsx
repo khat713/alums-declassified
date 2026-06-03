@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { speakText, stopSpeaking, setMuted, preloadLines, clearPreloadCache } from '@/lib/elevenlabs';
+import { speakText, stopSpeaking, pauseSpeaking, resumeSpeaking, setMuted, preloadLines, clearPreloadCache } from '@/lib/elevenlabs';
 
 const MotionLink = motion(Link);
 
@@ -214,6 +214,17 @@ export function FreddieDialog() {
     if (!isMuted) speakText(FREDDIE_LINES[last]);
   };
 
+  const handlePrev = () => {
+    if (currentLine <= 0) return;
+    stopSpeaking();
+    const prev = currentLine - 1;
+    setCurrentLine(prev);
+    setDisplayText('');
+    setCharIndex(0);
+    setIsTyping(true);
+    setIsDone(false);
+  };
+
   const handleNext = () => {
     if (currentLine >= FREDDIE_LINES.length - 1) return;
     stopSpeaking();
@@ -232,10 +243,10 @@ export function FreddieDialog() {
     setMuted(nowMuting);
     setIsMuted(nowMuting);
     if (nowMuting) {
-      stopSpeaking();
+      pauseSpeaking(); // pause, keep position
+    } else {
+      resumeSpeaking(); // resume from exact position — no restart
     }
-    // On unmute: do nothing. The typewriter is still running; when it advances
-    // to the next line the voice effect will fire naturally. No restart.
   };
 
   return (
@@ -310,9 +321,9 @@ export function FreddieDialog() {
               </AnimatePresence>
             </div>
 
-            {/* Message box with next arrow pinned to right edge */}
+            {/* Message box with prev/next arrows on either side */}
             <div style={{ position: 'relative', marginBottom: '1.5rem', minHeight: '80px' }}>
-            <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '1.25rem 3.5rem 1.25rem 1.5rem', minHeight: '80px', display: 'flex', alignItems: 'center' }} aria-live="polite" aria-atomic="true">
+            <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '1.25rem 3.5rem', minHeight: '80px', display: 'flex', alignItems: 'center' }} aria-live="polite" aria-atomic="true">
               <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', lineHeight: 1.7, margin: 0 }}>
                 {displayText}
                 {isTyping && (
@@ -320,7 +331,21 @@ export function FreddieDialog() {
                 )}
               </p>
             </div>
-            {/* Next arrow — always reserves space so layout never shifts */}
+            {/* Prev arrow */}
+            <div style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', width: '34px', height: '34px' }}>
+              {currentLine > 0 && (
+                <motion.button
+                  onClick={handlePrev}
+                  whileHover={{ scale: 1.12, background: 'linear-gradient(135deg, #0f9a9c, #0d7c7e)' }}
+                  whileTap={{ scale: 0.9 }}
+                  aria-label="Previous line"
+                  style={{ width: '34px', height: '34px', background: 'linear-gradient(135deg, #0d7c7e, #096163)', border: 'none', color: '#ffffff', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', lineHeight: 1 }}
+                >
+                  ‹
+                </motion.button>
+              )}
+            </div>
+            {/* Next arrow */}
             <div style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', width: '34px', height: '34px' }}>
               {!isDone && (
                 <motion.button
