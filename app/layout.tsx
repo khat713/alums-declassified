@@ -48,7 +48,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href={`${process.env.NODE_ENV === "production" ? "/alums-declassified" : ""}/images/logo.png`}
+          href={`${process.env.NODE_ENV === "production" ? "/alums-declassified" : ""}/images/logo-clip.png`}
           type="image/png"
         />
       </head>

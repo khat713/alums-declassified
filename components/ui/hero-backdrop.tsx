@@ -6,9 +6,9 @@ const BASE = process.env.NODE_ENV === 'production' ? '/alums-declassified' : '';
 
 // Transparent-background logo; works in both light and dark mode with no box.
 // Swap this filename to change it; just drop a new image into public/images.
-const LOGO = `${BASE}/images/logo.png`;
+const LOGO = `${BASE}/images/logo-clip.png`;
 
-const ALT = "Alum's Declassified: College Survival Guide";
+const ALT = "Alum's Declassified graduation cap and key emblem";
 
 /**
  * Logo emblem that sits centered behind the page content and drifts on scroll
