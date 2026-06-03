@@ -63,9 +63,9 @@ export default function HomePage() {
         </svg>
 
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
-        <div className="flex-1 flex flex-col md:flex-row items-center mx-auto px-4 py-16 relative z-10 w-full">
-          {/* Left: Text + CTAs — pinned to the left edge */}
-          <div className="flex flex-col justify-center py-8 md:py-0 md:pr-6" style={{ width: 'min(30vw, 420px)', flexShrink: 0 }}>
+        <div className="flex-1 flex flex-col md:flex-row items-center container mx-auto px-4 py-16 relative z-10">
+          {/* Left: Text + CTAs */}
+          <div className="flex-1 flex flex-col justify-center py-8 md:py-0 md:pr-12">
             <motion.div style={{ y: heroY, opacity: heroOpacity }}>
               <div style={{
                 background: 'var(--hero-backdrop)',
@@ -166,10 +166,10 @@ export default function HomePage() {
             </motion.div>
           </div>
 
-          {/* Right: Spline Scene — pinned to the right edge */}
+          {/* Right: Spline Scene */}
           <div
-            className="h-[300px] md:h-[420px] relative ml-auto"
-            style={{ width: 'min(30vw, 420px)', flexShrink: 0, mixBlendMode: 'screen', overflow: 'hidden', borderRadius: '8px' }}
+            className="flex-1 h-[300px] md:h-[420px] w-full relative"
+            style={{ mixBlendMode: 'screen', overflow: 'hidden', borderRadius: '8px' }}
           >
             <SplineScene
               scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
