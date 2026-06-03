@@ -158,7 +158,7 @@ export function FreddieDialog() {
       const timer = setTimeout(() => {
         setDisplayText(prev => prev + FREDDIE_LINES[currentLine][charIndex]);
         setCharIndex(prev => prev + 1);
-      }, 85);
+      }, 55);
       return () => clearTimeout(timer);
     }
     // Line finished typing — wait then advance.
