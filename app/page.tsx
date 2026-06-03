@@ -114,7 +114,7 @@ export default function HomePage() {
                 </h1>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}>
-                <p className="dark:text-white/80 text-[#374151] text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
+                <p className="dark:text-white/80 text-[#374151] text-[1.05rem] leading-[1.7] mb-14 max-w-[520px]">
                   Alum&apos;s Declassified is a free seven-week course for
                   first-generation college students, covering everything from syllabi
                   and office hours to budgeting, mental health, and building a career.
@@ -167,21 +167,21 @@ export default function HomePage() {
             </motion.div>
           </div>
 
-          {/* Right: Spline Scene + Freddie button */}
-          <div className="flex flex-col items-center" style={{ width: '30%' }}>
-            <div
-              className="h-[300px] md:h-[420px] relative w-full"
-              style={{ mixBlendMode: 'screen', overflow: 'hidden', borderRadius: '8px' }}
-            >
-              <SplineScene
-                scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
-                className="w-full h-full"
-              />
-            </div>
-            <div style={{ marginTop: '1rem' }}>
-              <FreddieButton />
-            </div>
+          {/* Right: Spline Scene — shifted left via margin */}
+          <div
+            className="h-[300px] md:h-[420px] relative"
+            style={{ width: '30%', marginRight: '6%', mixBlendMode: 'screen', overflow: 'hidden', borderRadius: '8px' }}
+          >
+            <SplineScene
+              scene="https://prod.spline.design/0uWX7lcprzhw2YAn/scene.splinecode"
+              className="w-full h-full"
+            />
           </div>
+        </div>
+
+        {/* Freddie button — bottom-right of hero */}
+        <div className="absolute bottom-6 right-8 z-20">
+          <FreddieButton />
         </div>
 
         {/* Scroll indicator */}
