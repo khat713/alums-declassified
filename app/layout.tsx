@@ -44,12 +44,12 @@ export default function RootLayout({
             __html: `try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(_){}`,
           }}
         />
-        {/* Preload only the default-theme (light) hero image. The night image
-            loads on demand when the user switches to dark mode. */}
+        {/* Preload only the default-theme (light) Old Well emblem. The dark
+            variant loads when the user switches to dark mode. */}
         <link
           rel="preload"
           as="image"
-          href={`${process.env.NODE_ENV === "production" ? "/alums-declassified" : ""}/old-well-spring.avif`}
+          href={`${process.env.NODE_ENV === "production" ? "/alums-declassified" : ""}/images/old-well-light.avif`}
           type="image/avif"
         />
       </head>

@@ -37,6 +37,7 @@ export default function HomePage() {
   return (
     <main>
       <ScrollAtmosphere />
+      <HeroBackdrop />
       <LottieSceneLayer />
       <ScrollPath />
       <div style={{ position: 'relative', zIndex: 1 }}>
@@ -52,11 +53,6 @@ export default function HomePage() {
           zIndex: 1
         }}
       >
-        {/* Theme-bound Old Well backdrop (light = spring, dark = night) */}
-        <HeroBackdrop />
-        {/* Scrim for text contrast over the photo */}
-        <div className="hero-scrim" />
-
         {/* Film grain overlay */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" style={{ opacity: 0.04 }} xmlns="http://www.w3.org/2000/svg">
           <filter id="grain">
@@ -119,10 +115,9 @@ export default function HomePage() {
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}>
                 <p className="dark:text-white/80 text-[#374151] text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]">
                   Alum&apos;s Declassified is a free seven-week course for
-                  first-generation college students. It covers what nobody says
-                  out loud: how syllabi and office hours really work, how to handle
-                  money on a student budget, how to look after your mental health,
-                  and how to start building a career before you feel ready.
+                  first-generation college students, covering everything from syllabi
+                  and office hours to budgeting, mental health, and building a career.
+                  The stuff nobody tells you out loud.
                 </p>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.7 }}>
@@ -339,9 +334,9 @@ export default function HomePage() {
           </h2>
           <p className="dark:text-white/75 text-[#2e3f5c]">
             This course runs the summer before your first college semester. Each
-            module takes about 45 minutes and covers one piece of starting out.
-            There is no theory and no pep talk here, just the practical stuff you
-            can use the week you move in.
+            module takes about 45 minutes and covers one domain of the first-gen
+            experience: not theory, not inspiration, but practical information
+            you can use immediately.
           </p>
           </FadeIn>
 
@@ -387,8 +382,9 @@ export default function HomePage() {
             conversation.
           </p>
           <p className="dark:text-white/75 text-[#2e3f5c]">
-            It&apos;s free, it runs on your phone, and you go at your own pace.
-            No account, no deadlines. Start whenever you want.
+            It&apos;s completely free, fully asynchronous, and designed to work
+            on your phone. No account required. No deadlines. Start whenever
+            you&apos;re ready.
           </p>
           <div className="flex gap-8 flex-wrap mt-5">
             {[
@@ -494,7 +490,7 @@ export default function HomePage() {
             className="dark:text-white text-[#1b2537]"
             style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, letterSpacing: '-0.03em', marginBottom: '1rem', lineHeight: 1.1 }}
           >You deserve the same information everyone else got at the dinner table.</h2>
-          <p className="dark:text-white/75 text-[#374151]" style={{ fontSize: '1.05rem', marginBottom: '2rem', lineHeight: 1.7 }}>This course exists because the gap between first-gen students and everyone else was never about how smart you are. It is about who got told how things work and who had to figure it out alone. That is the gap this course is trying to close.</p>
+          <p className="dark:text-white/75 text-[#374151]" style={{ fontSize: '1.05rem', marginBottom: '2rem', lineHeight: 1.7 }}>This course exists because the gap between first-gen students and their peers is not about intelligence. It is about access to information. Alum&apos;s Declassified closes that gap.</p>
           <MotionLink
             href="/module-1"
             whileHover={{ scale: 1.03, boxShadow: '0 8px 24px rgba(13,124,126,0.4)' }}
