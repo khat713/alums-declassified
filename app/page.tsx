@@ -114,7 +114,7 @@ export default function HomePage() {
                 </h1>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}>
-                <p className="dark:text-white/80 text-[#374151] text-[1.05rem] leading-[1.7] mb-8 max-w-[520px]" style={{ marginTop: '1rem' }}>
+                <p className="dark:text-white/80 text-[#374151] text-[1.05rem] leading-[1.7] max-w-[520px]" style={{ marginTop: '1rem', marginBottom: '2.5rem' }}>
                   Alum&apos;s Declassified is a comprehensive seven-week course for
                   first-generation college students, covering everything from syllabi
                   and office hours to budgeting, mental health, and building a career.

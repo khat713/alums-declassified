@@ -119,8 +119,7 @@ export function FreddieDialog() {
   const [isTyping, setIsTyping] = useState(false);
   const [isDone, setIsDone] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
-  // Tracks which line index has already been sent to speakText so we never
-  // fire it twice for the same line (e.g. mute → unmute mid-line).
+  const isMutedRef = useRef(false); // ref so voice effect reads it without depending on it
   const spokenLineRef = useRef<number>(-1);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -140,14 +139,15 @@ export function FreddieDialog() {
     }
   }, [isOpen]);
 
-  // Fire voice at the START of each new line so audio and text run in parallel.
+  // Fire voice at the START of each new line. Uses isMutedRef (not state) so
+  // toggling mute never re-triggers this effect.
   useEffect(() => {
     if (!isOpen || !isTyping || charIndex !== 0) return;
     if (spokenLineRef.current === currentLine) return;
     spokenLineRef.current = currentLine;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!isMuted && !prefersReducedMotion) speakText(FREDDIE_LINES[currentLine]);
-  }, [isOpen, isTyping, currentLine, charIndex, isMuted]);
+    if (!isMutedRef.current && !prefersReducedMotion) speakText(FREDDIE_LINES[currentLine]);
+  }, [isOpen, isTyping, currentLine, charIndex]); // isMuted intentionally excluded
 
   // Typewriter effect — 85ms/char so text roughly tracks the voice.
   useEffect(() => {
@@ -224,21 +224,22 @@ export function FreddieDialog() {
   };
 
   const handleMuteToggle = () => {
-    setIsMuted(prev => {
-      const nowMuting = !prev;
-      setMuted(nowMuting); // sync module-level flag so async fetches respect it
-      if (!nowMuting) {
-        // Unmuting — replay the current line from the top if still typing,
-        // or speak it if already done.
-        spokenLineRef.current = -1; // allow re-speak
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (!prefersReducedMotion) {
-          spokenLineRef.current = currentLine;
-          speakText(FREDDIE_LINES[currentLine]);
-        }
+    const nowMuting = !isMutedRef.current;
+    isMutedRef.current = nowMuting;
+    setMuted(nowMuting);
+    setIsMuted(nowMuting);
+    if (nowMuting) {
+      // Abrupt cut-off.
+      stopSpeaking();
+    } else {
+      // Unmuting — speak wherever we currently are without resetting anything.
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReducedMotion) {
+        // Speak from the current display text so far (partial line is fine).
+        const textSoFar = displayText || FREDDIE_LINES[currentLine];
+        speakText(textSoFar);
       }
-      return nowMuting;
-    });
+    }
   };
 
   return (
@@ -313,8 +314,8 @@ export function FreddieDialog() {
               </AnimatePresence>
             </div>
 
-            {/* Message box with next arrow on the right */}
-            <div style={{ position: 'relative', marginBottom: '1.5rem' }}>
+            {/* Message box with next arrow pinned to right edge */}
+            <div style={{ position: 'relative', marginBottom: '1.5rem', minHeight: '80px' }}>
             <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '1.25rem 3.5rem 1.25rem 1.5rem', minHeight: '80px', display: 'flex', alignItems: 'center' }} aria-live="polite" aria-atomic="true">
               <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', lineHeight: 1.7, margin: 0 }}>
                 {displayText}
@@ -323,18 +324,20 @@ export function FreddieDialog() {
                 )}
               </p>
             </div>
-            {/* Next arrow — right edge of message box */}
-            {!isDone && (
-              <motion.button
-                onClick={handleNext}
-                whileHover={{ scale: 1.12, background: 'linear-gradient(135deg, #0f9a9c, #0d7c7e)' }}
-                whileTap={{ scale: 0.9 }}
-                aria-label="Next line"
-                style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', background: 'linear-gradient(135deg, #0d7c7e, #096163)', border: 'none', color: '#ffffff', width: '34px', height: '34px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', lineHeight: 1 }}
-              >
-                ›
-              </motion.button>
-            )}
+            {/* Next arrow — always reserves space so layout never shifts */}
+            <div style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', width: '34px', height: '34px' }}>
+              {!isDone && (
+                <motion.button
+                  onClick={handleNext}
+                  whileHover={{ scale: 1.12, background: 'linear-gradient(135deg, #0f9a9c, #0d7c7e)' }}
+                  whileTap={{ scale: 0.9 }}
+                  aria-label="Next line"
+                  style={{ width: '34px', height: '34px', background: 'linear-gradient(135deg, #0d7c7e, #096163)', border: 'none', color: '#ffffff', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', lineHeight: 1 }}
+                >
+                  ›
+                </motion.button>
+              )}
+            </div>
             </div>
 
             {/* Transcript */}
