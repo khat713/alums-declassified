@@ -7,17 +7,22 @@ const BASE = process.env.NODE_ENV === 'production' ? '/alums-declassified' : '';
 
 // Swap these filenames to change the emblem; just drop a new image into
 // public/images and point these paths at it.
-const LIGHT = `${BASE}/images/old-well-light.avif`;
-const DARK = `${BASE}/images/old-well-dark.avif`;
+// NOTE: the uploaded files were labelled backwards — the "dark" file is the
+// white-background emblem (used in light mode) and vice-versa.
+const LIGHT = `${BASE}/images/old-well-dark.avif`;   // white-background emblem
+const DARK = `${BASE}/images/old-well-light.avif`;   // navy-background emblem
 
 const ALT = 'The UNC Old Well emblem';
 
 /**
  * Theme-bound Old Well emblem that sits centered behind the page content and
- * drifts on scroll (parallax). Replaces the looping building Lottie. Light mode
- * shows the white-background emblem; dark mode shows the navy one. The solid
- * background baked into each image blends into the matching page background, and
- * a radial mask feathers the edges so there is no hard square.
+ * drifts on scroll (parallax). Replaces the looping building Lottie.
+ *
+ * Each source image has a solid background baked in (white for the light-mode
+ * emblem, navy for the dark-mode one). Rather than mask a circle, we drop the
+ * background out with blend modes: the white emblem uses `multiply` (white goes
+ * transparent over the page) and the navy emblem uses `screen` (navy goes
+ * transparent). That leaves just the columns with no visible box or border.
  */
 export function HeroBackdrop() {
   // Read the live theme synchronously on the client so the correct image paints
@@ -49,7 +54,7 @@ export function HeroBackdrop() {
           src={LIGHT}
           alt={ALT}
           className="hero-backdrop-img"
-          style={{ opacity: isDark ? 0 : 1 }}
+          style={{ opacity: isDark ? 0 : 1, mixBlendMode: 'multiply' }}
           draggable={false}
           suppressHydrationWarning
         />
@@ -57,7 +62,7 @@ export function HeroBackdrop() {
           src={DARK}
           alt=""
           className="hero-backdrop-img"
-          style={{ opacity: isDark ? 1 : 0 }}
+          style={{ opacity: isDark ? 1 : 0, mixBlendMode: 'screen' }}
           draggable={false}
           suppressHydrationWarning
         />
