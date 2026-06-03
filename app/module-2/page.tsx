@@ -6,6 +6,8 @@ import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from '@/components/ui/document-download';
+import { LessonVideo } from '@/components/ui/lesson-video';
+import { Infographic } from '@/components/ui/infographic';
 import { Target, BookOpen, Mail, MapPin, Lightbulb, Wrench, Clock, Award, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -53,14 +55,14 @@ export default function Module2Page() {
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>By the End of This Module, You Will Be Able To:</h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  'Add learning objective 1 here',
-                  'Add learning objective 2 here',
-                  'Add learning objective 3 here',
-                  'Add learning objective 4 here',
+                  'Locate and describe the function of at least five major campus support services.',
+                  'Explain how to access each service: where it is, how to make contact, and whether it costs anything.',
+                  'Identify which resources address which problems, ideally before those problems happen.',
+                  'Build a personal resource map for your specific school that you can use during your first semester.',
                 ].map((obj, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
-                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7, fontStyle: 'italic', color: '#9ca3af' }}>{obj}</span>
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
                   </li>
                 ))}
               </ul>
@@ -71,6 +73,8 @@ export default function Module2Page() {
             <div id="lesson" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">Instructional Content</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Module 2 Lesson</h2>
+              <LessonVideo title="The Resources Nobody Pointed You To" length="~3 min" />
+              <Infographic title="The Campus Resource Map" filename="module-2-infographic.png" />
               <DocumentDownload title="Module 2 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-2-lesson.pdf" type="lesson" active={false} />
             </div>
             </FadeIn>
@@ -78,7 +82,7 @@ export default function Module2Page() {
             <FadeIn delay={0.2}>
             <div id="activity" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 label-activity">Learning Activity</span>
-              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Activity: Write Your First Professional Email</h2>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Activity: Find Three</h2>
               <DocumentDownload title="Module 2 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-2-activity.pdf" type="activity" active={false} />
             </div>
             </FadeIn>

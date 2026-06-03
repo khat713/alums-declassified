@@ -7,6 +7,8 @@ import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from '@/components/ui/document-download';
+import { LessonVideo } from '@/components/ui/lesson-video';
+import { Infographic } from '@/components/ui/infographic';
 import { Target, BookOpen, ShoppingCart, PenLine, Lightbulb, Wrench, Clock, CheckCircle, Award } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -70,14 +72,14 @@ export default function Module4Page() {
               </h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  'Add learning objective 1 here',
-                  'Add learning objective 2 here',
-                  'Add learning objective 3 here',
-                  'Add learning objective 4 here',
+                  'Complete basic independent-living tasks: grocery shopping on a budget, laundry, and simple cooking.',
+                  'Explain the basics of health insurance as it applies to a college student.',
+                  'Identify the key things to understand before signing a lease.',
+                  'Assess your own readiness across these life skills and make a plan for the gaps.',
                 ].map((obj, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
-                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7, fontStyle: 'italic', color: '#9ca3af' }}>{obj}</span>
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
                   </li>
                 ))}
               </ul>
@@ -96,6 +98,8 @@ export default function Module4Page() {
               >
                 Module 4 Lesson
               </h2>
+              <LessonVideo title="Running Your Own Life" length="~3 min" />
+              <Infographic title="The Adult Skills Checklist" filename="module-4-infographic.png" />
               <DocumentDownload title="Module 4 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-4-lesson.pdf" type="lesson" active={false} />
             </div>
             </FadeIn>

@@ -7,6 +7,8 @@ import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from '@/components/ui/document-download';
+import { LessonVideo } from '@/components/ui/lesson-video';
+import { Infographic } from '@/components/ui/infographic';
 import { Target, BookOpen, Mail, Heart, Lightbulb, Wrench, Clock, Award, Phone, Smartphone } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -78,14 +80,14 @@ export default function Module7Page() {
               </h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  'Add learning objective 1 here',
-                  'Add learning objective 2 here',
-                  'Add learning objective 3 here',
-                  'Add learning objective 4 here',
+                  'Define imposter syndrome and code-switching in the context of first-gen college students, and identify at least one personal example of each.',
+                  'Identify at least two campus mental health resources and describe how to access them at your institution.',
+                  'Apply at least one concrete coping strategy from the module to a specific emotional challenge you anticipate in your first semester.',
+                  'Write honestly about both a fear and a strength you are bringing into your first college semester.',
                 ].map((obj, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
-                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7, fontStyle: 'italic', color: '#9ca3af' }}>{obj}</span>
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
                   </li>
                 ))}
               </ul>
@@ -104,6 +106,8 @@ export default function Module7Page() {
               >
                 Module 7 Lesson
               </h2>
+              <LessonVideo title="What Nobody Puts in the Brochure" length="~3 min" />
+              <Infographic title="Imposter Syndrome + Belonging Uncertainty" filename="module-7-infographic.png" />
               <DocumentDownload title="Module 7 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-7-lesson.pdf" type="lesson" active={false} />
             </div>
             </FadeIn>
@@ -118,7 +122,7 @@ export default function Module7Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Activity: Write a Letter to Future You
+                Activity: Emotional Landscape Mapping
               </h2>
               <DocumentDownload title="Module 7 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-7-activity.pdf" type="activity" active={false} />
             </div>
