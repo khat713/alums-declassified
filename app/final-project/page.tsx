@@ -119,7 +119,7 @@ export default function FinalProjectPage() {
               </h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  "Seven sections — one per module, with takeaway, assignment, and action",
+                  "Seven sections, one per module, each with a takeaway, an assignment, and an action",
                   "Selected your strongest section and written 2–3 sentences on why it is strong",
                   "Written a before-and-after comparison: how you thought about something at the start vs. now",
                   "Recorded a 3–5 minute video introduction addressed to a future first-gen student",

@@ -58,7 +58,7 @@ export default function StartHerePage() {
               <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.88rem', lineHeight: 1.7, margin: 0 }}>
                 Replace this placeholder with your welcome message to students. 2–3 short paragraphs recommended. Cover: who this course is for, what students will walk away with, and your tone/approach as an instructor.
               </p>
-              <p className="dark:text-white/40 text-[#9ca3af]" style={{ fontSize: '0.8rem', fontStyle: 'italic', margin: 0 }}>Tip: write this last, after you have built all 7 modules — it will be easier to summarize what you made.</p>
+              <p className="dark:text-white/40 text-[#9ca3af]" style={{ fontSize: '0.8rem', fontStyle: 'italic', margin: 0 }}>Tip: write this last, after you have built all 7 modules. It will be easier to summarize what you made.</p>
             </div>
           </div>
         </div>

@@ -66,7 +66,7 @@ export function Infographic({ title, filename, alt, description, active = false 
             <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem', lineHeight: 1.5, maxWidth: '460px', margin: 0 }}>{description}</p>
           )}
           <p style={{ fontSize: '0.75rem', margin: 0, color: '#9ca3af', fontStyle: 'italic' }}>
-            Canva infographic coming soon — export as PNG to /public/infographics/{filename}, add alt text, then set active. WCAG: no meaning by color alone.
+            Canva infographic coming soon. Export as PNG to /public/infographics/{filename}, add alt text, then set active. WCAG: no meaning by color alone.
           </p>
         </div>
       )}

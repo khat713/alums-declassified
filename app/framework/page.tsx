@@ -11,7 +11,7 @@ const phases = [
     title: "Analysis",
     subtitle: "Understanding the learner and the gap",
     description:
-      "Before building anything, I identified the target audience (first-generation college students entering their first semester) and the core knowledge gap. Research showed first-gen students lack access to the informal institutional knowledge that continuing-generation students receive through family networks. This phase defined the need, the audience, and the learning problem.",
+      "I started by figuring out who the course was for and what they were missing. The audience is first-generation students in the summer before their first semester. The gap is the informal knowledge about how college works that other students pick up from family who already went. Most of this phase was reading the research, talking to students, and writing down the actual problem before I designed anything to solve it.",
     bullets: [
       "Target audience: first-generation college students, pre-semester",
       "Gap identified: informal institutional knowledge not transmitted through family",
@@ -25,7 +25,7 @@ const phases = [
     title: "Design",
     subtitle: "Structuring the learning experience",
     description:
-      "Using backward design (UbD), I started with the desired outcomes and worked backward to the learning activities. Each module was structured around a single transferable skill with a clear learning objective, lesson, activity, and assessment. The design prioritized low cognitive load, mobile readability, and immediate applicability.",
+      "I used backward design here, which means I wrote the outcomes first and then built the activities that would get students to them. Each module covers one skill a student can carry into any class, and each one follows the same shape: an objective, a lesson, an activity, and an assessment. I kept the cognitive load low, made sure everything reads on a phone, and aimed for material a student could use the same week they learned it.",
     bullets: [
       "Backward design: outcomes first, activities second",
       "Seven modules aligned to seven domains of first-gen experience",
@@ -39,7 +39,7 @@ const phases = [
     title: "Development",
     subtitle: "Building the course and its tools",
     description:
-      "Development took place across two platforms: the course content was authored in this Next.js web application with custom components, and assessments were built in Google Forms. Technical skills applied include HTML, TypeScript, React, Tailwind CSS, Framer Motion, and accessibility auditing. The site was designed to function as both a learning environment and a portfolio artifact.",
+      "I built the course on two platforms. The content lives in this Next.js site with custom components I wrote, and the assessments run on Google Forms. The technical work pulled in HTML, TypeScript, React, Tailwind CSS, Framer Motion, and a fair amount of accessibility auditing. I wanted the site to do two jobs at once: teach the course and stand on its own as a portfolio piece.",
     bullets: [
       "Built with Next.js 15, TypeScript, Tailwind CSS, Framer Motion",
       "Lottie animations for atmospheric scroll-driven storytelling",
@@ -53,7 +53,7 @@ const phases = [
     title: "Implementation",
     subtitle: "Deploying and delivering the course",
     description:
-      "The course is deployed as a free public website requiring no account, no login, and no download. Students access it on any device at any time. Implementation decisions were made to remove every possible barrier to entry. Access should be universal and frictionless for first-generation students.",
+      "The course is a free public website. No account, no login, nothing to download. A student can open it on any device whenever they have a minute. Almost every decision here came down to one question: does this add a barrier? If it did, I cut it. The students this course is for already have enough standing in their way.",
     bullets: [
       "Zero-barrier access: no account, no cost, no deadline",
       "Mobile-first responsive design for students without laptops",
@@ -67,7 +67,7 @@ const phases = [
     title: "Evaluation",
     subtitle: "Measuring impact and iterating",
     description:
-      "Evaluation is built into the course structure through formative assessments at the end of each module and a summative College Readiness Portfolio as the final deliverable. The course design itself serves as a Key Assessment artifact demonstrating mastery of the MEITE program learning outcomes in instructional design, technology integration, and educational equity.",
+      "Evaluation is built into how the course is structured. Every module ends with a formative assessment, and the whole course ends with the College Readiness Portfolio, which pulls the earlier work together. The site itself doubles as a Key Assessment artifact for the MEITE program, showing what I can do with instructional design, technology, and educational equity.",
     bullets: [
       "Formative: 8 module assessments with model responses provided",
       "Summative: College Readiness Portfolio, all modules synthesized",

@@ -50,7 +50,7 @@ export function LessonVideo({ title, length, embedUrl, description }: LessonVide
               <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem', lineHeight: 1.5, maxWidth: '460px', margin: 0 }}>{description}</p>
             )}
             <p style={{ fontSize: '0.75rem', margin: 0, color: '#9ca3af', fontStyle: 'italic' }}>
-              Lesson video coming soon — paste the Loom embed URL into <code>embedUrl</code> to activate. Captions &amp; transcript required.
+              Lesson video coming soon. Paste the Loom embed URL into <code>embedUrl</code> to activate. Captions and transcript required.
             </p>
           </div>
         </div>
