@@ -7,6 +7,8 @@ import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from '@/components/ui/document-download';
+import { LessonVideo } from '@/components/ui/lesson-video';
+import { Infographic } from '@/components/ui/infographic';
 import { Target, BookOpen, FileText, DollarSign, Lightbulb, Wrench, Clock, Award } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -70,14 +72,14 @@ export default function Module3Page() {
               </h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  'Add learning objective 1 here',
-                  'Add learning objective 2 here',
-                  'Add learning objective 3 here',
-                  'Add learning objective 4 here',
+                  'Read a financial aid award letter and identify what is a grant, what is a loan, and what must be earned.',
+                  'Explain the difference between subsidized and unsubsidized loans, and between grants and loans.',
+                  'Build a monthly budget using real numbers from your own situation.',
+                  'Identify common financial scams that target students and know how to respond to them.',
                 ].map((obj, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
-                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7, fontStyle: 'italic', color: '#9ca3af' }}>{obj}</span>
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
                   </li>
                 ))}
               </ul>
@@ -96,6 +98,8 @@ export default function Module3Page() {
               >
                 Module 3 Lesson
               </h2>
+              <LessonVideo title="Your Award Letter Is Not a Gift Card" length="~3 min" />
+              <Infographic title="Free Money vs. Borrowed Money" filename="module-3-infographic.png" />
               <DocumentDownload title="Module 3 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-3-lesson.pdf" type="lesson" active={false} />
             </div>
             </FadeIn>

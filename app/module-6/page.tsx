@@ -7,6 +7,8 @@ import { ModuleToastInit } from "@/components/ui/module-toast-init";
 import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button";
 import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from '@/components/ui/document-download';
+import { LessonVideo } from '@/components/ui/lesson-video';
+import { Infographic } from '@/components/ui/infographic';
 import { Target, BookOpen, Mic, Briefcase, Lightbulb, Wrench, Clock, Award } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -46,7 +48,7 @@ export default function Module6Page() {
           </p>
           <div className="flex flex-wrap gap-4 text-[0.88rem]">
             <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Clock size={14} style={{ color: '#7ec8ca' }} /> <strong>~50 minutes</strong></span>
-            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Briefcase size={14} style={{ color: '#7ec8ca' }} /> <strong>Assessment:</strong> Resume or LinkedIn Draft</span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Briefcase size={14} style={{ color: '#7ec8ca' }} /> <strong>Assessment:</strong> LinkedIn Profile and Career Self-Assessment</span>
             <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Award size={14} style={{ color: '#7ec8ca' }} /> <strong>100 points</strong></span>
           </div>
         </div>
@@ -70,14 +72,14 @@ export default function Module6Page() {
               </h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {[
-                  'Add learning objective 1 here',
-                  'Add learning objective 2 here',
-                  'Add learning objective 3 here',
-                  'Add learning objective 4 here',
+                  'Identify the core components of a resume appropriate for a first-year student with limited work experience, and write experience bullets using action verbs.',
+                  'Build a LinkedIn profile with at least four complete sections and a photo, using language that accurately represents your background.',
+                  'Describe at least two concrete networking strategies for a first-gen student who does not have prior professional connections.',
+                  'Locate your institution\'s career center and explain how to schedule an appointment.',
                 ].map((obj, i) => (
                   <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0d7c7e', marginTop: '7px', flexShrink: 0 }} />
-                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7, fontStyle: 'italic', color: '#9ca3af' }}>{obj}</span>
+                    <span className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.975rem', lineHeight: 1.7 }}>{obj}</span>
                   </li>
                 ))}
               </ul>
@@ -96,6 +98,8 @@ export default function Module6Page() {
               >
                 Module 6 Lesson
               </h2>
+              <LessonVideo title="You Already Have More Than You Think" length="~3 min" />
+              <Infographic title="Resume vs. LinkedIn: What Goes Where" filename="module-6-infographic.png" />
               <DocumentDownload title="Module 6 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-6-lesson.pdf" type="lesson" active={false} />
             </div>
             </FadeIn>
@@ -110,7 +114,7 @@ export default function Module6Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Activity: Write Three Elevator Pitches
+                Activity: Experience Inventory
               </h2>
               <DocumentDownload title="Module 6 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-6-activity.pdf" type="activity" active={false} />
             </div>
@@ -126,7 +130,7 @@ export default function Module6Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Career Document Draft: Assignment 6 (100 pts)
+                LinkedIn Profile and Career Self-Assessment (100 pts)
               </h2>
               <DocumentDownload title="Module 6 Assignment" description="Download the assignment instructions and rubric." filename="module-6-assignment.pdf" type="assessment" active={false} />
                 <AssessmentSubmitButton />
@@ -222,9 +226,9 @@ export default function Module6Page() {
 
               <div style={{ background: 'rgba(251,191,36,0.08)', border: '1.5px solid rgba(217,119,6,0.35)', borderRadius: '12px', padding: '1.25rem', marginBottom: '1rem' }}>
                 <p style={{ color: '#d97706', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.4rem' }}>Assignment Due</p>
-                <p className="dark:text-white text-[#1b2537]" style={{ fontWeight: 700, fontSize: '0.9rem', marginBottom: '0.15rem' }}>Career Document Draft</p>
+                <p className="dark:text-white text-[#1b2537]" style={{ fontWeight: 700, fontSize: '0.9rem', marginBottom: '0.15rem' }}>LinkedIn Profile and Career Self-Assessment</p>
                 <p style={{ color: '#d97706', fontWeight: 600, fontSize: '0.875rem', marginBottom: '0.5rem' }}>100 pts</p>
-                <p className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '0.6rem' }}>Resume or LinkedIn profile + 100–150 word self-assessment.</p>
+                <p className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '0.6rem' }}>LinkedIn profile (public URL) + encouraged resume + 100–150 word self-assessment.</p>
                 <Link href="/assignments#a6" className="hover:underline" style={{ color: '#0d7c7e', fontWeight: 600, fontSize: '0.875rem' }}>View full rubric →</Link>
               </div>
             </div>
