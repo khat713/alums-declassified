@@ -99,7 +99,7 @@ export default function Module7Page() {
               </h2>
               <LessonVideo title="What Nobody Puts in the Brochure" length="~3 min" />
               <Infographic title="Imposter Syndrome + Belonging Uncertainty" filename="module-7-infographic.png" />
-              <DocumentDownload title="Module 7 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-7-lesson.pdf" type="lesson" active={false} />
+              <DocumentDownload title="Module 7 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_7_Lesson.pdf" type="lesson" active={true} />
             </div>
             </FadeIn>
 
