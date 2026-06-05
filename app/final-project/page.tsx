@@ -137,7 +137,7 @@ export default function FinalProjectPage() {
               >
                 Assignment 9: College Readiness Portfolio (150 pts)
               </h2>
-              <DocumentDownload title="College Readiness Portfolio Instructions" description="Download the full assignment instructions, rubric, and portfolio template." filename="Final_Portfolio_Assignment.docx" type="assessment" active={true} />
+              <DocumentDownload title="College Readiness Portfolio Instructions" description="Download the full assignment instructions, rubric, and portfolio template." filename="Final_Portfolio_Assignment.pdf" type="assessment" active={true} />
               <AssessmentSubmitButton />
             </div>
             </FadeIn>
@@ -154,7 +154,7 @@ export default function FinalProjectPage() {
               >
                 Example Portfolio: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Final Project Model Response" description="See an example of a Proficient portfolio to guide your own submission." filename="Final_Portfolio_Model_Response.docx" type="model" active={true} />
+              <DocumentDownload title="Final Project Model Response" description="See an example of a Proficient portfolio to guide your own submission." filename="Final_Portfolio_Model_Response.pdf" type="model" active={true} />
             </div>
             </FadeIn>
 
