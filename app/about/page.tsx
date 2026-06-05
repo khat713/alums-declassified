@@ -77,7 +77,6 @@ export default function AboutPage() {
                   "M.A. Educational Innovation, Technology & Entrepreneurship",
                   "Minor: History",
                   "Dean's List Fall 2023 & Fall 2024",
-                  "Fluent: Burmese · English · Japanese",
                 ].map(tag => (
                   <span key={tag} style={{ fontSize: '0.72rem', fontWeight: 600, padding: '4px 10px', borderRadius: '100px', background: 'rgba(13,124,126,0.08)', border: '1px solid rgba(13,124,126,0.2)', color: '#0d7c7e' }}>
                     {tag}
