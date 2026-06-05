@@ -66,13 +66,7 @@ export default function AboutPage() {
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
                 <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.97rem', lineHeight: 1.75, margin: 0 }}>
-                  I grew up in Chapel Hill, North Carolina, and attended the University of North Carolina at Chapel Hill, where I earned a B.A. in Human Development and Family Sciences with a concentration in Family Life Education, and am completing a Master&apos;s in Educational Innovation, Technology, and Entrepreneurship. I am a two-time Dean&apos;s List honoree and have spent my academic career focused on how education systems serve, and sometimes fail, students who arrive without a roadmap.
-                </p>
-                <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.97rem', lineHeight: 1.75, margin: 0 }}>
-                  My work in the classroom has been hands-on. I completed a 335-hour student teaching internship in a third-grade classroom at Carrboro Elementary School, served as a youth counselor in an after-school program for low-income families, and worked as a Makery Fellow at Kidzu Children&apos;s Museum helping children explore creativity on their own terms. I am fluent in Burmese and English, with conversational Japanese.
-                </p>
-                <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.97rem', lineHeight: 1.75, margin: 0 }}>
-                  I built this course because I was a first-generation student who had to figure out most of this alone. The information exists. It just never got handed to the students who needed it most. This is my attempt to fix that.
+                  I attend the University of North Carolina at Chapel Hill in the MEITE program. Before, I completed my undergraduate degree in Human Development and Family Sciences, with a concentration in Family Life Education. As you can tell, I am extremely passionate about education. Through completing student teaching, internships, research, and more, I became increasingly aware of my interests. Thus, leading me to pursue Instructional Design.
                 </p>
               </div>
 
@@ -109,10 +103,7 @@ export default function AboutPage() {
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
             <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.97rem', lineHeight: 1.75, margin: 0 }}>
-              First-generation college students are handed the same syllabus as everyone else and expected to figure out the rest on their own. Nobody tells you what office hours actually are, how to read a financial aid award letter, what to do when your mental health takes a hit, or how to start building a resume when you have never had a job that felt relevant. That gap is not a failure of the students. It is a failure of the system.
-            </p>
-            <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.97rem', lineHeight: 1.75, margin: 0 }}>
-              This course was designed to close that gap. Seven modules, no gatekeeping. Everything from navigating college expectations and campus resources to managing money, building academic habits, preparing for a career, and taking care of yourself along the way. The information here is not new. It is just rarely handed directly to the people who need it most.
+              I built this course because as a fellow first-generation college student, I felt lost a lot of times during my first year. I had no idea what I was supposed to do to reach my goals. Heck, I even enrolled in 12 credit hours for both semesters, not realizing to stay on track I needed 15 on average, causing me to be behind at the start. I don&apos;t want that for other first-generation students. I know just how difficult it is to navigate through this without the proper resources, without parents telling you how to do this, relying on the internet for any help you can get. I hope you can come to me for guidance, or that this course I have created can help you in any way possible!
             </p>
           </div>
         </div>
