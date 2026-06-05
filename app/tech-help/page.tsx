@@ -142,12 +142,12 @@ export default function TechHelpPage() {
             </thead>
             <tbody>
               {[
-                ["Chrome (desktop & mobile)", "Fully supported", "Recommended"],
-                ["Firefox (desktop & mobile)", "Fully supported", "None"],
-                ["Safari (Mac & iPhone)", "Fully supported", "None"],
-                ["Edge", "Fully supported", "None"],
-                ["Internet Explorer", "Not supported", "Use any modern browser instead"],
-                ["Smartphone", "All modules work on mobile", "No app download required"],
+                ["Chrome (desktop & mobile)", "✅ Fully supported", "Recommended"],
+                ["Firefox (desktop & mobile)", "✅ Fully supported", "None"],
+                ["Safari (Mac & iPhone)", "✅ Fully supported", "None"],
+                ["Edge", "✅ Fully supported", "None"],
+                ["Internet Explorer", "❌ Not supported", "Use any modern browser instead"],
+                ["Smartphone", "✅ All modules work on mobile", "No app download required"],
               ].map(([browser, status, notes], i) => (
                 <tr key={i} className="hover:bg-[#fafbfd] dark:hover:bg-[#1a2638]">
                   <td className="px-[14px] py-[11px] border-b border-[#edf0f4] dark:border-[#243044] align-top">{browser}</td>

@@ -78,9 +78,9 @@ export function FreddieButton() {
         <motion.span
           animate={{ rotate: [0, 15, -10, 15, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 3 }}
-          style={{ fontSize: '1rem', fontWeight: 800, color: '#ffffff', lineHeight: 1, letterSpacing: '-0.02em' }}
+          style={{ fontSize: '1.4rem', lineHeight: 1 }}
         >
-          FG
+          🎓
         </motion.span>
       </motion.button>
 
@@ -292,8 +292,8 @@ export function FreddieDialog() {
             }}
           >
             {/* Mute */}
-            <button onClick={handleMuteToggle} aria-label={isMuted ? 'Unmute Freddie' : 'Mute Freddie'} aria-pressed={isMuted} style={{ position: 'absolute', top: '1rem', right: '3.5rem', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', color: isMuted ? 'rgba(255,255,255,0.55)' : '#0d7c7e', width: '32px', height: '32px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.04em', textTransform: 'uppercase' as const }}>
-              {isMuted ? 'off' : 'on'}
+            <button onClick={handleMuteToggle} aria-label={isMuted ? 'Unmute Freddie' : 'Mute Freddie'} aria-pressed={isMuted} style={{ position: 'absolute', top: '1rem', right: '3.5rem', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)', color: isMuted ? 'rgba(255,255,255,0.55)' : '#0d7c7e', width: '32px', height: '32px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.85rem' }}>
+              {isMuted ? '🔇' : '🔊'}
             </button>
 
             {/* Close */}
@@ -303,8 +303,8 @@ export function FreddieDialog() {
 
             {/* Header */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-              <motion.div animate={{ y: [0, -4, 0] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'linear-gradient(135deg, #0d7c7e, #096163)', border: '2px solid rgba(13,124,126,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }} aria-hidden="true">
-                <span style={{ color: '#ffffff', fontWeight: 800, fontSize: '1rem', letterSpacing: '-0.02em' }}>FG</span>
+              <motion.div animate={{ y: [0, -4, 0] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }} style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(13,124,126,0.3), rgba(13,124,126,0.1))', border: '2px solid rgba(13,124,126,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.75rem', flexShrink: 0 }} aria-hidden="true">
+                🎓
               </motion.div>
               <div>
                 <p style={{ color: '#ffffff', fontWeight: 700, fontSize: '1.05rem', fontFamily: 'Fraunces, serif', marginBottom: '2px' }}>First-Gen Freddie</p>
