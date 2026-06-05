@@ -91,7 +91,7 @@ export default function Module4Page() {
               </h2>
               <LessonVideo title="Running Your Own Life" length="~3 min" />
               <Infographic title="The Adult Skills Checklist" filename="module-4-infographic.png" />
-              <DocumentDownload title="Module 4 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-4-lesson.pdf" type="lesson" active={false} />
+              <DocumentDownload title="Module 4 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_4_Lesson.docx" type="lesson" active={false} />
             </div>
             </FadeIn>
 
@@ -107,7 +107,7 @@ export default function Module4Page() {
               >
                 Activity: Plan a $30 Grocery Run
               </h2>
-              <DocumentDownload title="Module 4 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-4-activity.pdf" type="activity" active={false} />
+              <DocumentDownload title="Module 4 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_4_Activity.docx" type="activity" active={false} />
             </div>
             </FadeIn>
 
@@ -123,7 +123,7 @@ export default function Module4Page() {
               >
                 Life Skills Inventory: 50 Points
               </h2>
-              <DocumentDownload title="Module 4 Assignment" description="Download the assignment instructions and rubric." filename="module-4-assignment.pdf" type="assessment" active={false} />
+              <DocumentDownload title="Module 4 Assignment" description="Download the assignment instructions and rubric." filename="Module_4_Assignment.docx" type="assessment" active={false} />
               <AssessmentSubmitButton />
               <div style={{ borderTop: '1px solid var(--border)', paddingTop: '1.5rem', marginTop: '1.5rem' }}>
                 <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#0d7c7e', marginBottom: '0.5rem' }}>MIDPOINT CHECK-IN</p>
@@ -146,7 +146,7 @@ export default function Module4Page() {
               >
                 Example Reflection: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 4 Model Response" description="See an example of a Proficient response to guide your own submission." filename="module-4-model-response.pdf" type="model" active={false} />
+              <DocumentDownload title="Module 4 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_4_Model_Responses.docx" type="model" active={false} />
             </div>
             </FadeIn>
 

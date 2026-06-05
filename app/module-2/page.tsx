@@ -75,7 +75,7 @@ export default function Module2Page() {
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Module 2 Lesson</h2>
               <LessonVideo title="The Resources Nobody Pointed You To" length="~3 min" />
               <Infographic title="The Campus Resource Map" filename="module-2-infographic.png" />
-              <DocumentDownload title="Module 2 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-2-lesson.pdf" type="lesson" active={false} />
+              <DocumentDownload title="Module 2 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_2_Lesson.docx" type="lesson" active={true} />
             </div>
             </FadeIn>
 
@@ -83,7 +83,7 @@ export default function Module2Page() {
             <div id="activity" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 label-activity">Learning Activity</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Activity: Find Three</h2>
-              <DocumentDownload title="Module 2 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-2-activity.pdf" type="activity" active={false} />
+              <DocumentDownload title="Module 2 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_2_Activity.docx" type="activity" active={true} />
             </div>
             </FadeIn>
 
@@ -91,7 +91,7 @@ export default function Module2Page() {
             <div id="assessment" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assessment</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Campus Resource Map: Assignment 2 (75 pts)</h2>
-              <DocumentDownload title="Module 2 Assignment" description="Download the assignment instructions and rubric." filename="module-2-assignment.pdf" type="assessment" active={false} />
+              <DocumentDownload title="Module 2 Assignment" description="Download the assignment instructions and rubric." filename="Module_2_Assignment.docx" type="assessment" active={true} />
               <AssessmentSubmitButton />
             </div>
             </FadeIn>
@@ -100,7 +100,7 @@ export default function Module2Page() {
             <div id="model" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">Model Response</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Example Resource Map: See What Proficient Looks Like</h2>
-              <DocumentDownload title="Module 2 Model Response" description="See an example of a Proficient response to guide your own submission." filename="module-2-model-response.pdf" type="model" active={false} />
+              <DocumentDownload title="Module 2 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_2_Model_Responses.docx" type="model" active={true} />
             </div>
             </FadeIn>
 

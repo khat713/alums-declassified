@@ -91,7 +91,7 @@ export default function Module3Page() {
               </h2>
               <LessonVideo title="Your Award Letter Is Not a Gift Card" length="~3 min" />
               <Infographic title="Free Money vs. Borrowed Money" filename="module-3-infographic.png" />
-              <DocumentDownload title="Module 3 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-3-lesson.pdf" type="lesson" active={false} />
+              <DocumentDownload title="Module 3 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_3_Lesson.docx" type="lesson" active={true} />
             </div>
             </FadeIn>
 
@@ -107,7 +107,7 @@ export default function Module3Page() {
               >
                 Activity: Read a Sample Award Letter
               </h2>
-              <DocumentDownload title="Module 3 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-3-activity.pdf" type="activity" active={false} />
+              <DocumentDownload title="Module 3 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_3_Activity.docx" type="activity" active={true} />
             </div>
             </FadeIn>
 
@@ -123,7 +123,7 @@ export default function Module3Page() {
               >
                 Budget Worksheet: Assignment 3 (75 pts)
               </h2>
-              <DocumentDownload title="Module 3 Assignment" description="Download the assignment instructions and rubric." filename="module-3-assignment.pdf" type="assessment" active={false} />
+              <DocumentDownload title="Module 3 Assignment" description="Download the assignment instructions and rubric." filename="Module_3_Assignment.docx" type="assessment" active={true} />
               <AssessmentSubmitButton />
             </div>
             </FadeIn>
@@ -140,7 +140,7 @@ export default function Module3Page() {
               >
                 Example Budget: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 3 Model Response" description="See an example of a Proficient response to guide your own submission." filename="module-3-model-response.pdf" type="model" active={false} />
+              <DocumentDownload title="Module 3 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_3_Model_Responses.docx" type="model" active={true} />
             </div>
             </FadeIn>
 

@@ -137,7 +137,7 @@ export default function FinalProjectPage() {
               >
                 Assignment 9: College Readiness Portfolio (150 pts)
               </h2>
-              <DocumentDownload title="College Readiness Portfolio Instructions" description="Download the full assignment instructions, rubric, and portfolio template." filename="final-project-instructions.pdf" type="assessment" active={false} />
+              <DocumentDownload title="College Readiness Portfolio Instructions" description="Download the full assignment instructions, rubric, and portfolio template." filename="Final_Portfolio_Assignment.docx" type="assessment" active={true} />
               <AssessmentSubmitButton />
             </div>
             </FadeIn>
@@ -154,7 +154,7 @@ export default function FinalProjectPage() {
               >
                 Example Portfolio: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Final Project Model Response" description="See an example of a Proficient portfolio to guide your own submission." filename="final-project-model-response.pdf" type="model" active={false} />
+              <DocumentDownload title="Final Project Model Response" description="See an example of a Proficient portfolio to guide your own submission." filename="Final_Portfolio_Model_Response.docx" type="model" active={true} />
             </div>
             </FadeIn>
 
@@ -165,7 +165,7 @@ export default function FinalProjectPage() {
                 <Link href="/module-7" className="text-[0.95rem] font-semibold text-[#0d7c7e] hover:underline">Module 7: Emotional Resilience</Link>
               </div>
               <div className="text-right">
-                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-semibold mb-1">Course Complete 🎓</p>
+                <p className="text-[0.75rem] uppercase tracking-[0.08em] text-[#8d9db5] dark:text-[#64748b] font-semibold mb-1">Course Complete</p>
               </div>
             </div>
           </div>

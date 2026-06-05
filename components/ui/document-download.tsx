@@ -10,14 +10,28 @@ interface DocumentDownloadProps {
 }
 
 const typeConfig = {
-  lesson:     { bg: 'rgba(13,124,126,0.08)',  border: 'rgba(13,124,126,0.3)',  badge: 'rgba(13,124,126,0.15)',  label: 'Lesson',         icon: '📄' },
-  activity:   { bg: 'rgba(217,119,6,0.08)',   border: 'rgba(217,119,6,0.3)',   badge: 'rgba(217,119,6,0.15)',   label: 'Activity',       icon: '✏️' },
-  assessment: { bg: 'rgba(99,102,241,0.08)',  border: 'rgba(99,102,241,0.3)',  badge: 'rgba(99,102,241,0.15)', label: 'Assessment',     icon: '📝' },
-  model:      { bg: 'rgba(239,68,68,0.08)',   border: 'rgba(239,68,68,0.3)',   badge: 'rgba(239,68,68,0.15)',  label: 'Model Response', icon: '⭐' },
-  template:   { bg: 'rgba(34,197,94,0.08)',   border: 'rgba(34,197,94,0.3)',   badge: 'rgba(34,197,94,0.15)',  label: 'Template',       icon: '📋' },
+  lesson:     { bg: 'rgba(13,124,126,0.08)',  border: 'rgba(13,124,126,0.3)',  badge: 'rgba(13,124,126,0.15)',  label: 'Lesson' },
+  activity:   { bg: 'rgba(217,119,6,0.08)',   border: 'rgba(217,119,6,0.3)',   badge: 'rgba(217,119,6,0.15)',   label: 'Activity' },
+  assessment: { bg: 'rgba(99,102,241,0.08)',  border: 'rgba(99,102,241,0.3)',  badge: 'rgba(99,102,241,0.15)',  label: 'Assessment' },
+  model:      { bg: 'rgba(239,68,68,0.08)',   border: 'rgba(239,68,68,0.3)',   badge: 'rgba(239,68,68,0.15)',   label: 'Model Response' },
+  template:   { bg: 'rgba(34,197,94,0.08)',   border: 'rgba(34,197,94,0.3)',   badge: 'rgba(34,197,94,0.15)',   label: 'Template' },
 };
 
+const isPdf = (filename: string) => filename.toLowerCase().endsWith('.pdf');
+
+// On GitHub Pages the site is at khat713.github.io/alums-declassified
+const PRODUCTION_ORIGIN = 'https://khat713.github.io';
 const basePath = process.env.NODE_ENV === 'production' ? '/alums-declassified' : '';
+
+function getPreviewSrc(filename: string): string {
+  const filePath = `${basePath}/documents/${filename}`;
+  if (isPdf(filename)) {
+    return `${filePath}#toolbar=1&navpanes=0`;
+  }
+  // .docx — use Google Docs viewer with the full public URL
+  const fullUrl = `${PRODUCTION_ORIGIN}${basePath}/documents/${encodeURIComponent(filename)}`;
+  return `https://docs.google.com/viewer?url=${fullUrl}&embedded=true`;
+}
 
 export function DocumentDownload({
   title,
@@ -30,6 +44,7 @@ export function DocumentDownload({
   const [previewOpen, setPreviewOpen] = useState(false);
   const cfg = typeConfig[type];
   const href = `${basePath}/documents/${filename}`;
+  const ext = filename.split('.').pop()?.toUpperCase() ?? 'DOC';
 
   return (
     <div style={{ marginBottom: '0.75rem' }}>
@@ -46,7 +61,6 @@ export function DocumentDownload({
         flexWrap: 'wrap',
       }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', flex: 1 }}>
-          <span style={{ fontSize: '1.6rem', lineHeight: 1, flexShrink: 0 }}>{cfg.icon}</span>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.25rem', flexWrap: 'wrap' }}>
               <span style={{ fontWeight: 700, fontSize: '0.95rem' }} className="dark:text-white text-[#1b2537]">
@@ -63,7 +77,7 @@ export function DocumentDownload({
               <span style={{
                 fontSize: '0.68rem', fontWeight: 600, padding: '2px 8px', borderRadius: '100px',
                 background: 'rgba(0,0,0,0.06)', color: '#9ca3af',
-              }}>PDF</span>
+              }}>{ext}</span>
             </div>
             {description && (
               <p style={{ fontSize: '0.825rem', lineHeight: 1.5, margin: 0 }} className="dark:text-white/55 text-[#6b7280]">
@@ -72,7 +86,7 @@ export function DocumentDownload({
             )}
             {!active && (
               <p style={{ fontSize: '0.75rem', margin: '4px 0 0', color: '#9ca3af', fontStyle: 'italic' }}>
-                Add {filename} to /public/documents/ to activate this download.
+                Upload {filename} to /public/documents/ to activate.
               </p>
             )}
           </div>
@@ -147,7 +161,7 @@ export function DocumentDownload({
         </div>
       </div>
 
-      {/* Inline PDF preview — only shown when active and toggled open */}
+      {/* Inline preview panel */}
       {active && previewOpen && (
         <div style={{
           border: `1.5px solid ${cfg.border}`,
@@ -157,10 +171,10 @@ export function DocumentDownload({
           background: '#f5f5f5',
         }}>
           <iframe
-            src={`${href}#toolbar=1&navpanes=0`}
+            src={getPreviewSrc(filename)}
             title={`Preview: ${title}`}
-            style={{ width: '100%', height: '600px', border: 'none', display: 'block' }}
-            aria-label={`PDF preview of ${title}`}
+            style={{ width: '100%', height: '620px', border: 'none', display: 'block' }}
+            aria-label={`Document preview of ${title}`}
           />
         </div>
       )}

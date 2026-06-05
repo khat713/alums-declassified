@@ -91,7 +91,7 @@ export default function Module5Page() {
               </h2>
               <LessonVideo title="What Actually Works (And What Doesn't)" length="~3 min" />
               <Infographic title="Study Techniques Ranked by Evidence" filename="module-5-infographic.png" />
-              <DocumentDownload title="Module 5 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-5-lesson.pdf" type="lesson" active={false} />
+              <DocumentDownload title="Module 5 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_5_Lesson.docx" type="lesson" active={false} />
             </div>
             </FadeIn>
 
@@ -107,7 +107,7 @@ export default function Module5Page() {
               >
                 Activity: Take Cornell Notes on This Lecture Excerpt
               </h2>
-              <DocumentDownload title="Module 5 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-5-activity.pdf" type="activity" active={false} />
+              <DocumentDownload title="Module 5 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_5_Activity.docx" type="activity" active={false} />
             </div>
             </FadeIn>
 
@@ -123,7 +123,7 @@ export default function Module5Page() {
               >
                 Study Plan + Rationale: Assignment 5 (75 pts)
               </h2>
-              <DocumentDownload title="Module 5 Assignment" description="Download the assignment instructions and rubric." filename="module-5-assignment.pdf" type="assessment" active={false} />
+              <DocumentDownload title="Module 5 Assignment" description="Download the assignment instructions and rubric." filename="Module_5_Assignment.docx" type="assessment" active={false} />
                 <AssessmentSubmitButton />
             </div>
             </FadeIn>
@@ -140,7 +140,7 @@ export default function Module5Page() {
               >
                 Example Study Plan: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 5 Model Response" description="See an example of a Proficient response to guide your own submission." filename="module-5-model-response.pdf" type="model" active={false} />
+              <DocumentDownload title="Module 5 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_5_Model_Responses.docx" type="model" active={false} />
             </div>
             </FadeIn>
 
