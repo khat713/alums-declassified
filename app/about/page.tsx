@@ -66,7 +66,7 @@ export default function AboutPage() {
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
                 <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.97rem', lineHeight: 1.75, margin: 0 }}>
-                  I attend the University of North Carolina at Chapel Hill in the MEITE program. Before, I completed my undergraduate degree in Human Development and Family Sciences, with a concentration in Family Life Education. As you can tell, I am extremely passionate about education. Through completing student teaching, internships, research, and more, I became increasingly aware of my interests. Thus, leading me to pursue Instructional Design.
+                  I grew up in Chapel Hill, North Carolina. I attend the University of North Carolina at Chapel Hill in the MEITE program. Before, I completed my undergraduate degree in Human Development and Family Sciences, with a concentration in Family Life Education. As you can tell, I am extremely passionate about education. Through completing student teaching, internships, research, and more, I became increasingly aware of my interests. Thus, leading me to pursue Instructional Design.
                 </p>
               </div>
 
