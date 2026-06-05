@@ -40,7 +40,9 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(python *)",
       "Bash(Write-Output \"Deleted all 3 scroll card files\")",
-      "PowerShell(Remove-Item *)"
+      "PowerShell(Remove-Item *)",
+      "mcp__cac79f86-afd8-47aa-bf79-173ef56622ac__search_files",
+      "mcp__cac79f86-afd8-47aa-bf79-173ef56622ac__read_file_content"
     ]
   }
 }
