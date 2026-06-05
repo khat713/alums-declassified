@@ -91,7 +91,7 @@ export default function Module6Page() {
               </h2>
               <LessonVideo title="You Already Have More Than You Think" length="~3 min" />
               <Infographic title="Resume vs. LinkedIn: What Goes Where" filename="module-6-infographic.png" />
-              <DocumentDownload title="Module 6 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_6_Lesson.docx" type="lesson" active={false} />
+              <DocumentDownload title="Module 6 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_6_Lesson.pdf" type="lesson" active={true} />
             </div>
             </FadeIn>
 
@@ -107,7 +107,7 @@ export default function Module6Page() {
               >
                 Activity: Experience Inventory
               </h2>
-              <DocumentDownload title="Module 6 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_6_Activity.docx" type="activity" active={false} />
+              <DocumentDownload title="Module 6 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_6_Activity.pdf" type="activity" active={true} />
             </div>
             </FadeIn>
 
@@ -123,7 +123,7 @@ export default function Module6Page() {
               >
                 LinkedIn Profile and Career Self-Assessment (100 pts)
               </h2>
-              <DocumentDownload title="Module 6 Assignment" description="Download the assignment instructions and rubric." filename="Module_6_Assignment.docx" type="assessment" active={false} />
+              <DocumentDownload title="Module 6 Assignment" description="Download the assignment instructions and rubric." filename="Module_6_Assignment.pdf" type="assessment" active={true} />
                 <AssessmentSubmitButton />
             </div>
             </FadeIn>
@@ -140,7 +140,7 @@ export default function Module6Page() {
               >
                 Example Resume: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 6 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_6_Model_Responses.docx" type="model" active={false} />
+              <DocumentDownload title="Module 6 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_6_Model_Responses.pdf" type="model" active={true} />
             </div>
             </FadeIn>
 
