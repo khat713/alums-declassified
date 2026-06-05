@@ -115,7 +115,7 @@ export default function Module7Page() {
               >
                 Activity: Emotional Landscape Mapping
               </h2>
-              <DocumentDownload title="Module 7 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_7_Activity.docx" type="activity" active={false} />
+              <DocumentDownload title="Module 7 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_7_Activity.pdf" type="activity" active={true} />
             </div>
             </FadeIn>
 
@@ -131,7 +131,7 @@ export default function Module7Page() {
               >
                 Self-Care Plan + Reflection Essay: Assignment 7 (75 pts)
               </h2>
-              <DocumentDownload title="Module 7 Assignment" description="Download the assignment instructions and rubric." filename="Module_7_Assignment.docx" type="assessment" active={false} />
+              <DocumentDownload title="Module 7 Assignment" description="Download the assignment instructions and rubric." filename="Module_7_Assignment.pdf" type="assessment" active={true} />
                 <AssessmentSubmitButton />
               <div style={{ borderTop: '1px solid var(--border)', paddingTop: '1.5rem', marginTop: '1.5rem' }}>
                 <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#d97706', marginBottom: '0.5rem' }}>FINAL ASSIGNMENT</p>
@@ -154,7 +154,7 @@ export default function Module7Page() {
               >
                 Example Reflection Essay: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 7 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_7_Model_Responses.docx" type="model" active={false} />
+              <DocumentDownload title="Module 7 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_7_Model_Responses.pdf" type="model" active={true} />
             </div>
             </FadeIn>
 
