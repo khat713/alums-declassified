@@ -282,48 +282,6 @@ export default function HomePage() {
       </div>
 
 
-      {/* SEE WHAT'S INSIDE */}
-      <section
-        style={{
-          background: 'var(--card-bg)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
-          padding: '5rem 0',
-          position: 'relative',
-          zIndex: 1,
-          overflow: 'hidden',
-        }}
-      >
-        <div className="container mx-auto px-4 text-center mb-10">
-          <h2
-            className="text-[clamp(2.2rem,5vw,4rem)] font-bold mb-4 tracking-[-0.04em] leading-[1.1] dark:text-white text-[#1b2537]"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            See what&apos;s inside
-          </h2>
-          <p className="dark:text-white/65 text-[#4a5568]" style={{ fontSize: '1.125rem' }}>
-            Seven modules. Everything documented. Nothing gatekept.
-          </p>
-        </div>
-        <div className="container mx-auto px-4">
-          <div style={{
-            width: '100%',
-            height: '300px',
-            borderRadius: '16px',
-            background: 'rgba(128,128,128,0.07)',
-            border: '2px dashed rgba(128,128,128,0.25)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '0.75rem'
-          }}>
-            <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1.1rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>Insert Screenshot Here</p>
-            <p className="dark:text-white/50 text-[#6b7280]" style={{ fontSize: '0.85rem', margin: 0 }}>Replace with a screenshot of your course</p>
-          </div>
-        </div>
-      </section>
-
       <div className="container mx-auto px-4 my-12" style={{ position: 'relative', zIndex: 1 }}>
         {/* WHAT THIS COURSE IS */}
         <FadeIn delay={0}>
