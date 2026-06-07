@@ -124,7 +124,7 @@ export default function Module5Page() {
                 Study Plan + Rationale: Assignment 5 (75 pts)
               </h2>
               <DocumentDownload title="Module 5 Assignment" description="Download the assignment instructions and rubric." filename="Module_5_Assignment.docx" type="assessment" active={true} />
-                <AssessmentSubmitButton />
+                <AssessmentSubmitButton label="Submit Your Study Plan →" />
             </div>
             </FadeIn>
 

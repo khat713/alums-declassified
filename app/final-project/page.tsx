@@ -138,7 +138,7 @@ export default function FinalProjectPage() {
                 Assignment 9: College Readiness Portfolio (150 pts)
               </h2>
               <DocumentDownload title="College Readiness Portfolio Instructions" description="Download the full assignment instructions, rubric, and portfolio template." filename="Final_Portfolio_Assignment.docx" type="assessment" active={true} />
-              <AssessmentSubmitButton />
+              <AssessmentSubmitButton label="Submit Your Portfolio →" />
             </div>
             </FadeIn>
 

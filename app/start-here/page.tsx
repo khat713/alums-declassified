@@ -294,6 +294,36 @@ export default function StartHerePage() {
         </FadeIn>
 
 
+        {/* Submitting Work */}
+        <FadeIn delay={0.55}>
+        <div className="content-block p-7 mb-10">
+          <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fef3e2] text-[#c2680a]">
+            Submissions
+          </span>
+          <h2
+            className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
+          >
+            How to Submit Your Work
+          </h2>
+          <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.97rem', lineHeight: 1.75 }}>
+            Every assignment is submitted through a short form linked at the bottom of its module page. You do not need an account to submit anything in this course.
+          </p>
+          <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.97rem', lineHeight: 1.75 }}>
+            For written assignments, like the reflections and the life skills inventory, you type your response directly into the form. For assignments that produce a document or a link, like your budget, your study plan, your LinkedIn profile, and your final portfolio, you paste a shareable link into the form. If you use a Google Doc, set it to &ldquo;anyone with the link can view&rdquo; before you paste it, so I can open it.
+          </p>
+          <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.97rem', lineHeight: 1.75 }}>
+            The Midpoint Check-In is the one exception, because it is a discussion. You post it on the{' '}
+            <Link href="/midpoint" className="text-[#0d7c7e] hover:underline font-semibold">class discussion board</Link>,
+            where you can also read and reply to other students. No account is needed to post there either.
+          </p>
+          <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.97rem', lineHeight: 1.75 }}>
+            After you submit, I review your work and reply within 48 hours on weekdays, using the email address you provide on the form. Once you have completed all seven module assessments at a Proficient level or above, I send your certificate of completion.
+          </p>
+        </div>
+        </FadeIn>
+
+
         {/* Policies */}
         <FadeIn delay={0.6}>
         <div className="content-block p-7 mb-10">

@@ -132,7 +132,7 @@ export default function Module7Page() {
                 Self-Care Plan + Reflection Essay: Assignment 7 (75 pts)
               </h2>
               <DocumentDownload title="Module 7 Assignment" description="Download the assignment instructions and rubric." filename="Module_7_Assignment.docx" type="assessment" active={true} />
-                <AssessmentSubmitButton />
+                <AssessmentSubmitButton label="Submit Your Reflection →" />
               <div style={{ borderTop: '1px solid var(--border)', paddingTop: '1.5rem', marginTop: '1.5rem' }}>
                 <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#d97706', marginBottom: '0.5rem' }}>FINAL ASSIGNMENT</p>
                 <h3 style={{ fontFamily: 'Fraunces, serif', fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.5rem' }} className="dark:text-white text-[#1b2537]">Assignment 9: College Readiness Portfolio</h3>

@@ -124,7 +124,7 @@ export default function Module3Page() {
                 Budget Worksheet: Assignment 3 (75 pts)
               </h2>
               <DocumentDownload title="Module 3 Assignment" description="Download the assignment instructions and rubric." filename="Module_3_Assignment.docx" type="assessment" active={true} />
-              <AssessmentSubmitButton />
+              <AssessmentSubmitButton label="Submit Your Budget →" />
             </div>
             </FadeIn>
 
