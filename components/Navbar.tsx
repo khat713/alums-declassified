@@ -14,10 +14,10 @@ const leadingLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/start-here", label: "Start Here" },
-  { href: "/midpoint", label: "Discussions" },
 ];
 
 const trailingLinks = [
+  { href: "/midpoint", label: "Discussions" },
   { href: "/tech-help", label: "Tech Help" },
   { href: "/framework", label: "Framework" },
 ];

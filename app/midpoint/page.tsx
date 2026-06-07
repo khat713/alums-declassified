@@ -25,7 +25,7 @@ const EXAMPLE_POSTS = [
     name: "Jordan M.",
     color: "#1d4ed8",
     date: "Example student post",
-    body: "Coming into this course, I honestly didn't know what FAFSA even stood for. Module 3 was the one that hit hardest for me — I realized my family had been leaving money on the table because we didn't know about certain grants. The financial literacy section made me feel like I finally had a map instead of just wandering. I also appreciated Module 1's breakdown of office hours because that was something I was genuinely scared of doing.",
+    body: "Coming into this course, I honestly didn't know what FAFSA even stood for. Module 3 was the one that hit hardest for me. I realized my family had been leaving money on the table because we didn't know about certain grants. The financial literacy section made me feel like I finally had a map instead of just wandering. I also appreciated Module 1's breakdown of office hours because that was something I was genuinely scared of doing.",
     reply: {
       name: "Aaliyah R.",
       color: "#7e22ce",
@@ -37,7 +37,7 @@ const EXAMPLE_POSTS = [
     name: "Marcus T.",
     color: "#15803d",
     date: "Example student post",
-    body: "Module 4 was the one that surprised me most. I thought I knew how to handle adult responsibilities but the health insurance section alone was something I had never thought about. My parents always handled all of that. Now I actually know what a copay is and why I need to stay in-network. The grocery budgeting activity was also really practical — I did the $30 challenge and realized how much I had been overestimating costs.",
+    body: "Module 4 was the one that surprised me most. I thought I knew how to handle adult responsibilities but the health insurance section alone was something I had never thought about. My parents always handled all of that. Now I actually know what a copay is and why I need to stay in-network. The grocery budgeting activity was also really practical. I did the $30 challenge and realized how much I had been overestimating costs.",
     reply: null,
   },
 ];
@@ -101,7 +101,7 @@ export default function MidpointPage() {
                   You have made it halfway through the course. Take a moment to step back and reflect on what you have learned so far and how it connects to your own situation as an incoming first-generation college student.
                 </p>
                 <p className="text-[#374151] dark:text-white/80" style={{ fontSize: "0.97rem", lineHeight: 1.75, margin: 0 }}>
-                  In your post, reflect on at least two things: something from Modules 1–4 that surprised you or changed how you think, and one thing you are going to do differently as a result. Then read at least one classmate's post and reply with a genuine response — something more than just agreement.
+                  In your post, reflect on at least two things: something from Modules 1–4 that surprised you or changed how you think, and one thing you are going to do differently as a result. Then read at least one classmate's post and reply with a genuine response, something more than just agreement.
                 </p>
                 <p className="text-[#374151] dark:text-white/80" style={{ fontSize: "0.97rem", lineHeight: 1.75, margin: 0 }}>
                   No account is needed to post. When you are ready, use the button below to submit both your post and your reply in the same form.
