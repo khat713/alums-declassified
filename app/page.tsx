@@ -385,14 +385,22 @@ export default function HomePage() {
             Before you start Module 1, take a second to say hello. No pressure
             on length or format. Just tell me something true.
           </p>
-          <div className="dark:text-white/50 text-[#6b7280]" style={{ background: 'rgba(128,128,128,0.06)', border: '1.5px dashed rgba(128,128,128,0.2)', borderRadius: '5px', padding: '1.4rem 1.5rem', fontSize: '0.92rem', lineHeight: 1.6, textAlign: 'center' }}>
-            <strong className="dark:text-white/70 text-[#374151]">Embed your Google Form or Padlet here</strong>
-            <br />
-            <small>
-              Suggested prompt: &ldquo;What&apos;s one thing you&apos;re hoping
-              to figure out before your first semester?&rdquo;
-            </small>
-          </div>
+          <iframe
+            src="https://docs.google.com/forms/d/1i30akapaJRpAbG95ub6yf1gNBSwhCcfaBeOiRKknsgo/viewform?embedded=true"
+            width="100%"
+            height="600"
+            style={{ border: 'none', borderRadius: '10px', display: 'block', marginTop: '0.75rem' }}
+            title="Student Introduction Form"
+            aria-label="Student introduction Google Form"
+          >
+            Loading form…
+          </iframe>
+          <p style={{ fontSize: '0.8rem', marginTop: '0.5rem' }} className="text-[#5a6a82] dark:text-[#94a3b8]">
+            Having trouble with the form?{' '}
+            <a href="https://forms.gle/HC8URZb5FuucWWX89" target="_blank" rel="noopener noreferrer" style={{ color: '#0d7c7e', fontWeight: 600 }}>
+              Open it directly →
+            </a>
+          </p>
         </div>
         </FadeIn>
 
@@ -418,14 +426,13 @@ export default function HomePage() {
           <Link
             href="/modules"
             style={{
-              background: 'transparent',
-              color: '#0d7c7e',
-              border: '1.5px solid rgba(13,124,126,0.5)',
+              background: 'linear-gradient(135deg, #0d7c7e, #096163)',
+              color: '#ffffff',
               textDecoration: 'none',
               padding: '11px 28px',
               fontSize: '0.95rem',
               borderRadius: '5px',
-              fontWeight: 600,
+              fontWeight: 700,
               display: 'inline-block',
             }}
           >
