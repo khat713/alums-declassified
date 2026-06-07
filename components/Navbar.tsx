@@ -14,6 +14,7 @@ const leadingLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/start-here", label: "Start Here" },
+  { href: "/midpoint", label: "Discussions" },
 ];
 
 const trailingLinks = [
