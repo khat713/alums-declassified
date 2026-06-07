@@ -203,34 +203,20 @@ export default function StartHerePage() {
             >
               How to Navigate This Course
             </h2>
-            <ol className="dark:text-white/85 text-[#374151]" style={{ lineHeight: 2.1, marginLeft: '1.25rem' }}>
-              <li>
-                Start on the <strong className="dark:text-white text-[#1b2537]">Home page</strong>. It shows all 7 modules
-                in order.
-              </li>
-              <li>
-                Click <strong className="dark:text-white text-[#1b2537]">Start →</strong> on any module card to open that
-                module.
-              </li>
-              <li>
-                Each module has: learning objectives, instructional content, a
-                learning activity, and an assessment.
-              </li>
-              <li>
-                Complete the assessment at the end of each module before moving to
-                the next.
-              </li>
-              <li>
-                Use the <strong className="dark:text-white text-[#1b2537]">← Prev / Next →</strong> buttons at the bottom of
-                each module to navigate.
-              </li>
-              <li>
-                Need help? Visit the{" "}
-                <Link href="/tech-help" className="dark:text-[#5eead4] text-[#0d7c7e] underline">
-                  Tech Help
-                </Link>{" "}
-                page at any time.
-              </li>
+            <ol style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+              {[
+                { n: 1, text: <>Start on the <strong className="dark:text-white text-[#1b2537]">Home page</strong>. It shows all 7 modules in order.</> },
+                { n: 2, text: <>Click <strong className="dark:text-white text-[#1b2537]">Start →</strong> on any module card to open that module.</> },
+                { n: 3, text: <>Each module has: learning objectives, instructional content, a learning activity, and an assessment.</> },
+                { n: 4, text: <>Complete the assessment at the end of each module before moving to the next.</> },
+                { n: 5, text: <>Use the <strong className="dark:text-white text-[#1b2537]">← Prev / Next →</strong> buttons at the bottom of each module to navigate.</> },
+                { n: 6, text: <>Need help? Visit the <Link href="/tech-help" className="dark:text-[#5eead4] text-[#0d7c7e] underline">Tech Help</Link> page at any time.</> },
+              ].map(({ n, text }) => (
+                <li key={n} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                  <span style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#0d7c7e', color: 'white', fontWeight: 700, fontSize: '0.8rem', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '1px' }}>{n}</span>
+                  <span className="dark:text-white/85 text-[#374151]" style={{ fontSize: '0.95rem', lineHeight: 1.7, paddingTop: '2px' }}>{text}</span>
+                </li>
+              ))}
             </ol>
           </div>
         </div>
@@ -294,12 +280,10 @@ export default function StartHerePage() {
             Technology Requirements
           </h2>
           <ul className="leading-[2.2] ml-5">
-            <li>A device with internet access: <strong>a smartphone is sufficient for all modules</strong></li>
-            <li>A browser: Chrome, Firefox, Safari, or Edge</li>
-            <li>Ability to type or record audio/video for assessments</li>
-            <li>A free Google account if you want to use the provided templates (optional)</li>
+            <li>Internet access</li>
+            <li>A device: laptop, desktop, or tablet <span className="text-[#5a6a82] dark:text-[#94a3b8]" style={{ fontSize: '0.88rem' }}>(phone also works, though it may be difficult for some activities)</span></li>
           </ul>
-          <p>You do not need to purchase any software. All tools used in this course are free.</p>
+          <p>No software downloads or accounts required. All tools used in this course are free.</p>
           <p>
             <Link href="/tech-help" className="text-[#0d7c7e] hover:underline">
               → Visit the Tech Help page
