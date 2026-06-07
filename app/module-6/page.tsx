@@ -124,7 +124,7 @@ export default function Module6Page() {
                 LinkedIn Profile and Career Self-Assessment (100 pts)
               </h2>
               <DocumentDownload title="Module 6 Assignment" description="Download the assignment instructions and rubric." filename="Module_6_Assignment.docx" type="assessment" active={true} />
-                <AssessmentSubmitButton label="Submit Your LinkedIn Profile →" />
+                <AssessmentSubmitButton formUrl="https://docs.google.com/forms/d/e/1FAIpQLSeCdDR-tqseG4ALsLadEzDg0IZcufrqgJYBJFK6pZ4sDWYXvw/viewform?usp=dialog" label="Submit Your LinkedIn Profile →" />
             </div>
             </FadeIn>
 

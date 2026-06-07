@@ -85,7 +85,7 @@ export default function MidpointPage() {
               ))}
             </ol>
             <div style={{ marginTop: '1.5rem' }}>
-              <AssessmentSubmitButton label="Submit Your Discussion Post →" />
+              <AssessmentSubmitButton formUrl="https://docs.google.com/forms/d/e/1FAIpQLSeCdDR-tqseG4ALsLadEzDg0IZcufrqgJYBJFK6pZ4sDWYXvw/viewform?usp=dialog" label="Submit Your Discussion Post →" />
             </div>
           </div>
           </FadeIn>

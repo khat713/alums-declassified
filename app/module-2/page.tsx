@@ -92,7 +92,7 @@ export default function Module2Page() {
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">Assessment</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Campus Resource Map: Assignment 2 (75 pts)</h2>
               <DocumentDownload title="Module 2 Assignment" description="Download the assignment instructions and rubric." filename="Module_2_Assignment.docx" type="assessment" active={true} />
-              <AssessmentSubmitButton label="Submit Your Reflection →" />
+              <AssessmentSubmitButton formUrl="https://docs.google.com/forms/d/e/1FAIpQLSeCdDR-tqseG4ALsLadEzDg0IZcufrqgJYBJFK6pZ4sDWYXvw/viewform?usp=dialog" label="Submit Your Reflection →" />
             </div>
             </FadeIn>
 

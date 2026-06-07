@@ -124,7 +124,7 @@ export default function Module4Page() {
                 Life Skills Inventory: 50 Points
               </h2>
               <DocumentDownload title="Module 4 Assignment" description="Download the assignment instructions and rubric." filename="Module_4_Assignment.docx" type="assessment" active={true} />
-              <AssessmentSubmitButton label="Submit Your Inventory →" />
+              <AssessmentSubmitButton formUrl="https://docs.google.com/forms/d/e/1FAIpQLSeCdDR-tqseG4ALsLadEzDg0IZcufrqgJYBJFK6pZ4sDWYXvw/viewform?usp=dialog" label="Submit Your Inventory →" />
               <div style={{ borderTop: '1px solid var(--border)', paddingTop: '1.5rem', marginTop: '1.5rem' }}>
                 <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#0d7c7e', marginBottom: '0.5rem' }}>MIDPOINT CHECK-IN</p>
                 <h3 style={{ fontFamily: 'Fraunces, serif', fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.5rem' }} className="dark:text-white text-[#1b2537]">Assignment 8: Midpoint Discussion</h3>
