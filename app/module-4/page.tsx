@@ -30,26 +30,26 @@ export default function Module4Page() {
 
       <ModuleStepper currentStep={4} />
 
-      <section className="bg-[#1b2537] text-white py-[38px] pb-8 relative overflow-hidden">
+      <section className="module-header border-b py-[38px] pb-8 relative overflow-hidden">
         <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '200px', height: '200px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.25)', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '140px', height: '140px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.15)', pointerEvents: 'none' }} />
         <div className="container mx-auto px-4">
-          <p className="text-[0.78rem] font-semibold uppercase tracking-[0.1em] text-[#7ec8ca] mb-2">
+          <p className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.09em] uppercase text-[#0d7c7e] mb-2">
             Week 4 · Module 4
           </p>
           <h1
-            className="mb-3"
+            className="text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem]"
             style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}
           >
             Essential Life Skills
           </h1>
-          <p className="text-[#b8c5d6] text-[1rem] max-w-[640px] mb-5 leading-[1.6]">
+          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] max-w-[600px] mb-5 leading-[1.6]">
             Grocery shopping, laundry, health insurance, leases, and managing adult life without a parent doing it for you.
           </p>
           <div className="flex flex-wrap gap-4 text-[0.88rem]">
-            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Clock size={14} style={{ color: '#7ec8ca' }} /> <strong>~45 minutes</strong></span>
-            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><CheckCircle size={14} style={{ color: '#7ec8ca' }} /> <strong>Assessment:</strong> Life Skills Inventory</span>
-            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Award size={14} style={{ color: '#7ec8ca' }} /> <strong>50 points</strong></span>
+            <span className="flex items-center gap-[5px] text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"><Clock size={14} style={{ color: '#0d7c7e' }} /> <strong className="text-[#1b2537] dark:text-white">~45 minutes</strong></span>
+            <span className="flex items-center gap-[5px] text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"><CheckCircle size={14} style={{ color: '#0d7c7e' }} /> <strong>Assessment:</strong> Life Skills Inventory</span>
+            <span className="flex items-center gap-[5px] text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"><Award size={14} style={{ color: '#0d7c7e' }} /> <strong>50 points</strong></span>
           </div>
         </div>
       </section>
