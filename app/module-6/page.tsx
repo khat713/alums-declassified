@@ -30,17 +30,26 @@ export default function Module6Page() {
 
       <ModuleStepper currentStep={6} />
 
-      <section className="module-header border-b py-9 pb-7 relative overflow-hidden">
-        <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '200px', height: '200px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.12)', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '140px', height: '140px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.08)', pointerEvents: 'none' }} />
+      <section className="bg-[#1b2537] text-white py-[38px] pb-8 relative overflow-hidden">
+        <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '200px', height: '200px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.25)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '-10px', right: '-10px', width: '140px', height: '140px', borderRadius: '50%', border: '1px solid rgba(13,124,126,0.15)', pointerEvents: 'none' }} />
         <div className="container mx-auto px-4">
-          <p className="inline-flex items-center gap-2 text-[0.75rem] font-bold tracking-[0.09em] uppercase text-[#0d7c7e] mb-2">Week 6 · Module 6</p>
-          <h1 className="text-[#1b2537] dark:text-[#e2e8f0] mb-[0.4rem]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}>Career Preparation</h1>
-          <p className="text-[#5a6a82] dark:text-[#94a3b8] text-[0.97rem] max-w-[600px] m-0">You already have more to put on a resume than you think. The goal is not to look like you have ten years of experience. It is to show you show up and can communicate that in writing.</p>
-          <div className="flex flex-wrap gap-4 mt-4 pt-4 border-t border-[#edf0f4] dark:border-[#243044]">
-            <span className="flex items-center gap-[5px] text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"><Clock size={14} style={{ color: '#0d7c7e' }} /> <strong className="text-[#1b2537]">~50 minutes</strong></span>
-            <span className="flex items-center gap-[5px] text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"><Briefcase size={14} style={{ color: '#5a6a82' }} /> <strong className="text-[#1b2537]">Assessment:</strong> LinkedIn Profile and Career Self-Assessment</span>
-            <span className="flex items-center gap-[5px] text-[0.82rem] text-[#5a6a82] dark:text-[#94a3b8]"><Award size={14} style={{ color: '#5a6a82' }} /> <strong className="text-[#1b2537]">100 points</strong></span>
+          <p className="text-[0.78rem] font-semibold uppercase tracking-[0.1em] text-[#7ec8ca] mb-2">
+            Week 6 · Module 6
+          </p>
+          <h1
+            className="mb-3"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem,5vw,3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1.05 }}
+          >
+            Career Preparation
+          </h1>
+          <p className="text-[#b8c5d6] text-[1rem] max-w-[640px] mb-5 leading-[1.6]">
+            You already have more to put on a resume than you think. The goal is not to look like you have ten years of experience. It is to show you show up and can communicate that in writing.
+          </p>
+          <div className="flex flex-wrap gap-4 text-[0.88rem]">
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Clock size={14} style={{ color: '#7ec8ca' }} /> <strong>~50 minutes</strong></span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Briefcase size={14} style={{ color: '#7ec8ca' }} /> <strong>Assessment:</strong> LinkedIn Profile and Career Self-Assessment</span>
+            <span className="bg-white/10 rounded-full px-4 py-[6px] flex items-center gap-2"><Award size={14} style={{ color: '#7ec8ca' }} /> <strong>100 points</strong></span>
           </div>
         </div>
       </section>
@@ -90,7 +99,8 @@ export default function Module6Page() {
                 Module 6 Lesson
               </h2>
               <LessonVideo title="You Already Have More Than You Think" length="~3 min" />
-              <Infographic title="Resume vs. LinkedIn: What Goes Where" filename="module-6-infographic.png" />
+              <DocumentDownload title="Module 6 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-6-lesson.pdf" type="lesson" active={false} />
+              <Infographic title="Resume vs. LinkedIn: What Goes Where" filename="Infographic - Career Preparation Program.png" active={true} />
               <DocumentDownload title="Module 6 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_6_Lesson.docx" type="lesson" active={true} />
             </div>
             </FadeIn>
@@ -107,7 +117,7 @@ export default function Module6Page() {
               >
                 Activity: Experience Inventory
               </h2>
-              <DocumentDownload title="Module 6 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_6_Activity.docx" type="activity" active={true} />
+              <DocumentDownload title="Module 6 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-6-activity.pdf" type="activity" active={false} />
             </div>
             </FadeIn>
 
@@ -123,8 +133,8 @@ export default function Module6Page() {
               >
                 LinkedIn Profile and Career Self-Assessment (100 pts)
               </h2>
-              <DocumentDownload title="Module 6 Assignment" description="Download the assignment instructions and rubric." filename="Module_6_Assignment.docx" type="assessment" active={true} />
-                <AssessmentSubmitButton formUrl="https://docs.google.com/forms/d/e/1FAIpQLSeCdDR-tqseG4ALsLadEzDg0IZcufrqgJYBJFK6pZ4sDWYXvw/viewform?usp=dialog" label="Submit Your LinkedIn Profile →" />
+              <DocumentDownload title="Module 6 Assignment" description="Download the assignment instructions and rubric." filename="module-6-assignment.pdf" type="assessment" active={false} />
+                <AssessmentSubmitButton />
             </div>
             </FadeIn>
 
@@ -140,7 +150,7 @@ export default function Module6Page() {
               >
                 Example Resume: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 6 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_6_Model_Responses.docx" type="model" active={true} />
+              <DocumentDownload title="Module 6 Model Response" description="See an example of a Proficient response to guide your own submission." filename="module-6-model-response.pdf" type="model" active={false} />
             </div>
             </FadeIn>
 
@@ -156,11 +166,28 @@ export default function Module6Page() {
               >
                 Technological Tools
               </h2>
-              <ul className="leading-[2.2] ml-5">
-                <li>Internet access</li>
-                <li>A device: laptop, desktop, tablet, or phone <span className="text-[#5a6a82] dark:text-[#94a3b8]" style={{ fontSize: '0.88rem' }}>(phone works but may be difficult for some activities)</span></li>
-              </ul>
-              <p className="text-[#374151] dark:text-white/70" style={{ fontSize: '0.9rem' }}>No software downloads or accounts required.</p>
+              <div style={{ border: '2px dashed rgba(13,124,126,0.2)', borderRadius: '16px', padding: '2rem', background: 'var(--card-bg)' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1rem', fontWeight: 700, color: '#0d7c7e', marginBottom: '0.75rem' }}>Tools and Resources for This Module</p>
+                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>Replace this placeholder with the actual tools used in Module 6. Add rows for each tool, link to its privacy policy, and note the cost.</p>
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
+                  <thead>
+                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                      {['Tool / Resource', 'What It Is', 'Cost'].map(h => (
+                        <th key={h} style={{ textAlign: 'left', padding: '8px 12px', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: '#9ca3af' }}>{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {['Tool 1', 'Tool 2', 'Tool 3'].map((tool, i) => (
+                      <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>{tool} placeholder</td>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>Add description</td>
+                        <td style={{ padding: '10px 12px', fontStyle: 'italic', color: '#9ca3af' }}>Free / Paid</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
             </FadeIn>
 
