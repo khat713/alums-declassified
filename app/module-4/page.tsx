@@ -99,8 +99,9 @@ export default function Module4Page() {
                 Module 4 Lesson
               </h2>
               <LessonVideo title="Running Your Own Life" length="~3 min" />
-              <Infographic title="The Adult Skills Checklist" filename="module-4-infographic.png" />
               <DocumentDownload title="Module 4 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-4-lesson.pdf" type="lesson" active={false} />
+              <Infographic title="The Adult Skills Checklist" filename="module-4-infographic.pdf" active={true} />
+              <DocumentDownload title="Module 4 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_4_Lesson.docx" type="lesson" active={true} />
             </div>
             </FadeIn>
 

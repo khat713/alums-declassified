@@ -7,6 +7,7 @@ import { AssessmentSubmitButton } from "@/components/ui/assessment-submit-button
 import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from "@/components/ui/document-download";
 import { GraduationCap, FileText, Video, BookOpen, Clock, Award, Star, CheckCircle } from "lucide-react";
+import { Infographic } from '@/components/ui/infographic';
 
 export const metadata: Metadata = {
   title: "Final Project: College Readiness Portfolio | Alum's Declassified",
@@ -131,6 +132,13 @@ export default function FinalProjectPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+            </FadeIn>
+
+            {/* Infographic */}
+            <FadeIn delay={0.25}>
+            <div className="content-block p-7 mb-5">
+              <Infographic title="Your Portfolio at a Glance" filename="final-project-infographic.pdf" active={true} />
             </div>
             </FadeIn>
 

@@ -99,8 +99,9 @@ export default function Module6Page() {
                 Module 6 Lesson
               </h2>
               <LessonVideo title="You Already Have More Than You Think" length="~3 min" />
-              <Infographic title="Resume vs. LinkedIn: What Goes Where" filename="module-6-infographic.png" />
               <DocumentDownload title="Module 6 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-6-lesson.pdf" type="lesson" active={false} />
+              <Infographic title="Resume vs. LinkedIn: What Goes Where" filename="module-6-infographic.pdf" active={true} />
+              <DocumentDownload title="Module 6 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_6_Lesson.docx" type="lesson" active={true} />
             </div>
             </FadeIn>
 
