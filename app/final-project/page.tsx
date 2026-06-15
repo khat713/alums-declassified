@@ -138,7 +138,7 @@ export default function FinalProjectPage() {
             {/* Infographic */}
             <FadeIn delay={0.25}>
             <div className="content-block p-7 mb-5">
-              <Infographic title="Your Portfolio at a Glance" filename="final-project-infographic.pdf" active={true} />
+              <Infographic title="Your Portfolio at a Glance" filename="Infographic - Your Portfolio.png" active={true} />
             </div>
             </FadeIn>
 

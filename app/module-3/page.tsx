@@ -100,7 +100,7 @@ export default function Module3Page() {
               </h2>
               <LessonVideo title="Your Award Letter Is Not a Gift Card" length="~3 min" />
               <DocumentDownload title="Module 3 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-3-lesson.pdf" type="lesson" active={false} />
-              <Infographic title="Free Money vs. Borrowed Money" filename="module-3-infographic.pdf" active={true} />
+              <Infographic title="Free Money vs. Borrowed Money" filename="Infographic - How to Read Your Award Letter.png" active={true} />
               <DocumentDownload title="Module 3 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_3_Lesson.docx" type="lesson" active={true} />
             </div>
             </FadeIn>

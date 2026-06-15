@@ -10,7 +10,7 @@ interface InfographicProps {
 const basePath = process.env.NODE_ENV === 'production' ? '/alums-declassified' : '';
 
 export function Infographic({ title, filename, alt, active = false }: InfographicProps) {
-  const src = `${basePath}/infographics/${filename}`;
+  const src = `${basePath}/images/${filename}`;
   const isPDF = filename.endsWith('.pdf');
 
   if (!active) {

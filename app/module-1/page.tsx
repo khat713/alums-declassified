@@ -76,7 +76,7 @@ export default function Module1Page() {
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Module 1 Lesson</h2>
               <LessonVideo title="The Manual Nobody Gave You" length="~3 min" />
               <DocumentDownload title="Module 1 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-1-lesson.pdf" type="lesson" active={false} />
-              <Infographic title="The 4 Unwritten Rules of College" filename="module-1-infographic.pdf" active={true} />
+              <Infographic title="The 4 Unwritten Rules of College" filename="Infographic - Essential rules for academic success.png" active={true} />
               <DocumentDownload title="Module 1 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_1_Lesson.docx" type="lesson" active={true} />
             </div>
             </FadeIn>
