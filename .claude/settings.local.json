@@ -42,7 +42,15 @@
       "Bash(Write-Output \"Deleted all 3 scroll card files\")",
       "PowerShell(Remove-Item *)",
       "mcp__cac79f86-afd8-47aa-bf79-173ef56622ac__search_files",
-      "mcp__cac79f86-afd8-47aa-bf79-173ef56622ac__read_file_content"
+      "mcp__cac79f86-afd8-47aa-bf79-173ef56622ac__read_file_content",
+      "Bash(cp \"/root/.claude/uploads/1c8accd7-a82d-5036-9f40-5407032510a9/111c847e-module_1.mp4\" public/videos/module-1-lesson.mp4)",
+      "Bash(cp \"/root/.claude/uploads/1c8accd7-a82d-5036-9f40-5407032510a9/f1e034ab-module_2.mp4\" public/videos/module-2-lesson.mp4)",
+      "Bash(cp \"/root/.claude/uploads/1c8accd7-a82d-5036-9f40-5407032510a9/d1af13d3-module_3.mp4\" public/videos/module-3-lesson.mp4)",
+      "Bash(cp \"/root/.claude/uploads/1c8accd7-a82d-5036-9f40-5407032510a9/d5b40c76-module_4.mp4\" public/videos/module-4-lesson.mp4)",
+      "Bash(cp \"/root/.claude/uploads/1c8accd7-a82d-5036-9f40-5407032510a9/f70182a9-module_5.mp4\" public/videos/module-5-lesson.mp4)",
+      "Bash(cp \"/root/.claude/uploads/1c8accd7-a82d-5036-9f40-5407032510a9/0ad7fc1a-start_here_video.mp4\" public/videos/start-here-welcome.mp4)",
+      "Bash(cp \"/root/.claude/uploads/1c8accd7-a82d-5036-9f40-5407032510a9/48b908c6-module_6.mp4\" public/videos/module-6-lesson.mp4)",
+      "Bash(cp \"/root/.claude/uploads/1c8accd7-a82d-5036-9f40-5407032510a9/010bd05e-module_7.mp4\" public/videos/module-7-lesson.mp4)"
     ]
   }
 }
