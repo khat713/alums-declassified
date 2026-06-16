@@ -99,7 +99,6 @@ export default function Module4Page() {
                 Module 4 Lesson
               </h2>
               <LessonVideo title="Running Your Own Life" length="~3 min" videoFile="module-4-lesson.mp4" />
-              <DocumentDownload title="Module 4 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-4-lesson.pdf" type="lesson" active={false} />
               <Infographic title="The Adult Skills Checklist" filename="Infographic - The Adulting Cheat Sheet.png" active={true} />
               <DocumentDownload title="Module 4 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_4_Lesson.docx" type="lesson" active={true} />
             </div>
@@ -117,7 +116,7 @@ export default function Module4Page() {
               >
                 Activity: Plan a $30 Grocery Run
               </h2>
-              <DocumentDownload title="Module 4 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-4-activity.pdf" type="activity" active={false} />
+              <DocumentDownload title="Module 4 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_4_Activity.docx" type="activity" active={true} />
             </div>
             </FadeIn>
 
@@ -133,8 +132,8 @@ export default function Module4Page() {
               >
                 Life Skills Inventory: 50 Points
               </h2>
-              <DocumentDownload title="Module 4 Assignment" description="Download the assignment instructions and rubric." filename="module-4-assignment.pdf" type="assessment" active={false} />
-              <AssessmentSubmitButton />
+              <DocumentDownload title="Module 4 Assignment" description="Download the assignment instructions and rubric." filename="Module_4_Assignment.docx" type="assessment" active={true} />
+              <AssessmentSubmitButton formUrl="https://docs.google.com/forms/d/e/1FAIpQLSeCdDR-tqseG4ALsLadEzDg0IZcufrqgJYBJFK6pZ4sDWYXvw/viewform?usp=dialog" />
               <div style={{ borderTop: '1px solid var(--border)', paddingTop: '1.5rem', marginTop: '1.5rem' }}>
                 <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#0d7c7e', marginBottom: '0.5rem' }}>MIDPOINT CHECK-IN</p>
                 <h3 style={{ fontFamily: 'Fraunces, serif', fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.5rem' }} className="dark:text-white text-[#1b2537]">Assignment 8: Midpoint Discussion</h3>
@@ -156,7 +155,7 @@ export default function Module4Page() {
               >
                 Example Reflection: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 4 Model Response" description="See an example of a Proficient response to guide your own submission." filename="module-4-model-response.pdf" type="model" active={false} />
+              <DocumentDownload title="Module 4 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_4_Model_Responses.docx" type="model" active={true} />
             </div>
             </FadeIn>
 

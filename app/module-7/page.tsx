@@ -107,7 +107,6 @@ export default function Module7Page() {
                 Module 7 Lesson
               </h2>
               <LessonVideo title="What Nobody Puts in the Brochure" length="~3 min" videoFile="module-7-lesson.mp4" />
-              <DocumentDownload title="Module 7 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-7-lesson.pdf" type="lesson" active={false} />
               <Infographic title="Imposter Syndrome + Belonging Uncertainty" filename="Infographic - When It Gets Hard A Reminder and a Plan.png" active={true} />
               <DocumentDownload title="Module 7 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_7_Lesson.docx" type="lesson" active={true} />
             </div>
@@ -125,7 +124,7 @@ export default function Module7Page() {
               >
                 Activity: Emotional Landscape Mapping
               </h2>
-              <DocumentDownload title="Module 7 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-7-activity.pdf" type="activity" active={false} />
+              <DocumentDownload title="Module 7 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_7_Activity.docx" type="activity" active={true} />
             </div>
             </FadeIn>
 
@@ -141,8 +140,8 @@ export default function Module7Page() {
               >
                 Self-Care Plan + Reflection Essay: Assignment 7 (75 pts)
               </h2>
-              <DocumentDownload title="Module 7 Assignment" description="Download the assignment instructions and rubric." filename="module-7-assignment.pdf" type="assessment" active={false} />
-                <AssessmentSubmitButton />
+              <DocumentDownload title="Module 7 Assignment" description="Download the assignment instructions and rubric." filename="Module_7_Assignment.docx" type="assessment" active={true} />
+                <AssessmentSubmitButton formUrl="https://docs.google.com/forms/d/e/1FAIpQLSeCdDR-tqseG4ALsLadEzDg0IZcufrqgJYBJFK6pZ4sDWYXvw/viewform?usp=dialog" />
               <div style={{ borderTop: '1px solid var(--border)', paddingTop: '1.5rem', marginTop: '1.5rem' }}>
                 <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#d97706', marginBottom: '0.5rem' }}>FINAL ASSIGNMENT</p>
                 <h3 style={{ fontFamily: 'Fraunces, serif', fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.5rem' }} className="dark:text-white text-[#1b2537]">Assignment 9: College Readiness Portfolio</h3>
@@ -164,7 +163,7 @@ export default function Module7Page() {
               >
                 Example Reflection Essay: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 7 Model Response" description="See an example of a Proficient response to guide your own submission." filename="module-7-model-response.pdf" type="model" active={false} />
+              <DocumentDownload title="Module 7 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_7_Model_Responses.docx" type="model" active={true} />
             </div>
             </FadeIn>
 

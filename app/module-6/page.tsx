@@ -99,7 +99,6 @@ export default function Module6Page() {
                 Module 6 Lesson
               </h2>
               <LessonVideo title="You Already Have More Than You Think" length="~3 min" videoFile="module-6-lesson.mp4" />
-              <DocumentDownload title="Module 6 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-6-lesson.pdf" type="lesson" active={false} />
               <Infographic title="Resume vs. LinkedIn: What Goes Where" filename="Infographic - Career Preparation Program.png" active={true} />
               <DocumentDownload title="Module 6 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_6_Lesson.docx" type="lesson" active={true} />
             </div>
@@ -117,7 +116,7 @@ export default function Module6Page() {
               >
                 Activity: Experience Inventory
               </h2>
-              <DocumentDownload title="Module 6 Activity" description="Download and complete this worksheet as part of the module activity." filename="module-6-activity.pdf" type="activity" active={false} />
+              <DocumentDownload title="Module 6 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_6_Activity.docx" type="activity" active={true} />
             </div>
             </FadeIn>
 
@@ -133,8 +132,8 @@ export default function Module6Page() {
               >
                 LinkedIn Profile and Career Self-Assessment (100 pts)
               </h2>
-              <DocumentDownload title="Module 6 Assignment" description="Download the assignment instructions and rubric." filename="module-6-assignment.pdf" type="assessment" active={false} />
-                <AssessmentSubmitButton />
+              <DocumentDownload title="Module 6 Assignment" description="Download the assignment instructions and rubric." filename="Module_6_Assignment.docx" type="assessment" active={true} />
+                <AssessmentSubmitButton formUrl="https://docs.google.com/forms/d/e/1FAIpQLSeCdDR-tqseG4ALsLadEzDg0IZcufrqgJYBJFK6pZ4sDWYXvw/viewform?usp=dialog" />
             </div>
             </FadeIn>
 
@@ -150,7 +149,7 @@ export default function Module6Page() {
               >
                 Example Resume: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 6 Model Response" description="See an example of a Proficient response to guide your own submission." filename="module-6-model-response.pdf" type="model" active={false} />
+              <DocumentDownload title="Module 6 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_6_Model_Responses.docx" type="model" active={true} />
             </div>
             </FadeIn>
 
