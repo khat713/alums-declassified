@@ -13,7 +13,7 @@ const modules = [
     title: "College Expectations",
     desc: "The unwritten rules, how to read a syllabus, office hours, professor communication, and academic integrity.",
     moduleHref: "/module-1",
-    assessment: "College Expectations Quiz",
+    assessment: "College Expectations Reflection",
     points: 50,
   },
   {
@@ -58,7 +58,7 @@ const modules = [
     title: "Career Preparation",
     desc: "Resume basics, LinkedIn setup, elevator pitches, networking without the awkwardness, and using your campus career center.",
     moduleHref: "/module-6",
-    assessment: "Career Document Draft",
+    assessment: "LinkedIn Profile & Career Self-Assessment",
     points: 100,
   },
   {

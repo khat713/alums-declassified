@@ -12,11 +12,11 @@ const assignments = [
     number: "Assignment 1",
     module: "Module 1",
     moduleHref: "/module-1#assessment",
-    title: "College Expectations Quiz",
+    title: "College Expectations Reflection",
     points: 50,
-    format: "Multiple-choice and short-answer quiz (20–25 questions)",
+    format: "Written reflection · 250–400 words",
     description:
-      "Tests whether you can identify the unwritten rules and institutional norms covered in Module 1. Questions are scenario-based: not definitions, but situations you are likely to actually encounter. You can retake once if your first attempt is below Proficient.",
+      "Identify one unwritten rule or expectation from Module 1 that you did not know before. Explain why it matters for your specific situation, then describe one concrete thing you will do in your first three weeks to act on it. Be specific to your own situation, not generic.",
   },
   {
     id: "a2",
@@ -27,7 +27,7 @@ const assignments = [
     points: 75,
     format: "Completed template (Google Doc or Word) · 1–2 pages",
     description:
-      "Identify at least six campus resources across three categories (academic support, financial resources, and health/wellbeing) specific to your school. For each resource: name, location, contact info, and one realistic scenario in which you would actually use it.",
+      "Build a resource map for your specific school. Identify at least five campus resources. For each one, list its name at your school, its location, how to contact it, and a realistic scenario in which you would personally use it. End by naming the one resource you are most likely to use first and when.",
   },
   {
     id: "a3",
@@ -38,7 +38,7 @@ const assignments = [
     points: 75,
     format: "Completed spreadsheet or template · PDF, Google Sheet, or Word",
     description:
-      "Build a monthly budget for your first semester using your school's actual cost of attendance and your financial aid information. Categorize each expense as fixed or variable, identify two areas where you could reduce spending, and complete a gap analysis.",
+      "Build a one-month budget using real numbers from your own situation. List your monthly income and your expenses, separated into fixed and variable, then calculate the gap (income minus expenses). Write a short honest note: is your gap positive or negative, which line are you least certain about, and what is one thing you will do based on what you see?",
   },
   {
     id: "a4",
@@ -47,9 +47,9 @@ const assignments = [
     moduleHref: "/module-4#assessment",
     title: "Life Skills Inventory",
     points: 50,
-    format: "Written reflection · 300–500 words",
+    format: "Self-rating inventory + written plan",
     description:
-      "After completing Module 4, write a reflection answering three questions: Which skills do you feel confident about and why? Which are you uncertain about? Pick one uncertain skill and describe the specific steps you would take to get better at it before your first semester.",
+      "Rate your readiness across the five life skill areas from Module 4: food and cooking, laundry, health insurance, housing and leases, and managing your own schedule. Rate yourself as confident, shaky, or no idea for each. Then pick the two areas you are least ready for and write a specific plan to build each skill before your first semester.",
   },
   {
     id: "a5",
@@ -58,20 +58,20 @@ const assignments = [
     moduleHref: "/module-5#assessment",
     title: "Study Plan",
     points: 75,
-    format: "Schedule template + written rationale · 1 schedule page + 150–250 words",
+    format: "Weekly study schedule + written rationale",
     description:
-      "Build a realistic Week 1 study schedule for your first college semester: class times, study blocks, meals, sleep, and any work or family commitments. Then write a rationale explaining which study strategies from Module 5 you built into the schedule and why they work.",
+      "Build a weekly study schedule for a realistic college course load, using your actual fall schedule if you have it. Your plan must include specific study blocks for each subject (not just class times) and use spaced practice, with sessions spread across the week rather than all at once. Then explain how your plan uses retrieval practice and spaced practice, and which subject you expect to be hardest and how your plan accounts for it.",
   },
   {
     id: "a6",
     number: "Assignment 6",
     module: "Module 6",
     moduleHref: "/module-6#assessment",
-    title: "Career Document Draft",
+    title: "LinkedIn Profile & Career Self-Assessment",
     points: 100,
-    format: "Resume OR LinkedIn profile (4 sections minimum) · PDF or link",
+    format: "LinkedIn profile (4 sections minimum) + resume draft strongly encouraged · link or PDF",
     description:
-      "Submit either a resume draft or a completed LinkedIn profile, whichever is more relevant to your goals right now. Also submit a 100–150 word note on one thing you are still unsure about and what your next step is.",
+      "Create a LinkedIn profile with at least four complete sections (headline, About, Education, and at least one Experience entry) and a profile photo, then paste its public URL into your College Readiness Portfolio. A one-page resume draft is strongly encouraged and required for an Exemplary score. Also submit a 100–150 word self-assessment on one thing you are still unsure about and what your next step is.",
   },
   {
     id: "a7",

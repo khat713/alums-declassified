@@ -114,7 +114,7 @@ export default function Module4Page() {
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
-                Activity: Plan a $30 Grocery Run
+                Activity: Plan One Week of Food
               </h2>
               <DocumentDownload title="Module 4 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_4_Activity.docx" type="activity" active={true} />
             </div>
