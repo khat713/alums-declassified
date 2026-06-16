@@ -6,6 +6,7 @@ import { ScrollAtmosphere } from "@/components/ui/scroll-atmosphere";
 import { LottieSceneLayer } from "@/components/ui/lottie-scenes";
 import { ScrollPath } from "@/components/ui/scroll-path";
 import { DocumentDownload } from "@/components/ui/document-download";
+import { LessonVideo } from "@/components/ui/lesson-video";
 
 export const metadata: Metadata = {
   title: "Start Here | Alum's Declassified",
@@ -47,13 +48,7 @@ export default function StartHerePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-[5fr_7fr] gap-8 items-center">
             <div>
-              <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] min-h-[200px] flex flex-col items-center justify-center text-center">
-                <strong>Welcome Video</strong>
-                <br />
-                <small>
-                  Embed a Loom or YouTube video here using an &lt;iframe&gt;.
-                </small>
-              </div>
+              <LessonVideo title="Welcome Video" description="A short welcome from your instructor." />
             </div>
             <div style={{ border: '2px dashed rgba(13,124,126,0.3)', borderRadius: '12px', padding: '1.75rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>Welcome Message Goes Here</p>

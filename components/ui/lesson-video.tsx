@@ -1,16 +1,21 @@
 'use client';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/alums-declassified' : '';
+
 interface LessonVideoProps {
   title: string;
   /** Length hint shown on the placeholder, e.g. "~3 min". */
   length?: string;
   /** Loom/YouTube embed URL. When provided, the video renders instead of the placeholder. */
   embedUrl?: string;
+  /** Filename of a self-hosted MP4 in public/videos/, e.g. "module-1-lesson.mp4". Takes priority over embedUrl. */
+  videoFile?: string;
   /** Optional one-line description of what the video covers. */
   description?: string;
 }
 
-export function LessonVideo({ title, length, embedUrl, description }: LessonVideoProps) {
+export function LessonVideo({ title, length, embedUrl, videoFile, description }: LessonVideoProps) {
+  const videoSrc = videoFile ? `${basePath}/videos/${videoFile}` : undefined;
   return (
     <div style={{ marginBottom: '1rem' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.6rem', flexWrap: 'wrap' }}>
@@ -26,7 +31,15 @@ export function LessonVideo({ title, length, embedUrl, description }: LessonVide
         )}
       </div>
 
-      {embedUrl ? (
+      {videoSrc ? (
+        <video
+          controls
+          preload="metadata"
+          style={{ width: '100%', borderRadius: '12px', display: 'block', background: '#000' }}
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+      ) : embedUrl ? (
         <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, borderRadius: '12px', overflow: 'hidden', background: '#000' }}>
           <iframe
             src={embedUrl}
@@ -50,7 +63,7 @@ export function LessonVideo({ title, length, embedUrl, description }: LessonVide
               <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.85rem', lineHeight: 1.5, maxWidth: '460px', margin: 0 }}>{description}</p>
             )}
             <p style={{ fontSize: '0.75rem', margin: 0, color: '#9ca3af', fontStyle: 'italic' }}>
-              Lesson video coming soon. Paste the Loom embed URL into <code>embedUrl</code> to activate. Captions and transcript required.
+              Lesson video coming soon. Drop an MP4 into <code>public/videos/</code> and pass the filename as <code>videoFile</code>, or paste an embed URL into <code>embedUrl</code>. Captions and transcript required.
             </p>
           </div>
         </div>
