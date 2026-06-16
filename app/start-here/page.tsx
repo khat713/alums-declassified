@@ -48,7 +48,7 @@ export default function StartHerePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-[5fr_7fr] gap-8 items-center">
             <div>
-              <LessonVideo title="Welcome Video" description="A short welcome from your instructor." />
+              <LessonVideo title="Welcome Video" description="A short welcome from your instructor." videoFile="start-here-welcome.mp4" />
             </div>
             <div style={{ border: '2px dashed rgba(13,124,126,0.3)', borderRadius: '12px', padding: '1.75rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>Welcome Message Goes Here</p>

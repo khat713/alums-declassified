@@ -106,7 +106,7 @@ export default function Module7Page() {
               >
                 Module 7 Lesson
               </h2>
-              <LessonVideo title="What Nobody Puts in the Brochure" length="~3 min" />
+              <LessonVideo title="What Nobody Puts in the Brochure" length="~3 min" videoFile="module-7-lesson.mp4" />
               <DocumentDownload title="Module 7 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-7-lesson.pdf" type="lesson" active={false} />
               <Infographic title="Imposter Syndrome + Belonging Uncertainty" filename="Infographic - When It Gets Hard A Reminder and a Plan.png" active={true} />
               <DocumentDownload title="Module 7 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_7_Lesson.docx" type="lesson" active={true} />
