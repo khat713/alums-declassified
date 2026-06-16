@@ -19,7 +19,6 @@ const leadingLinks = [
 const trailingLinks = [
   { href: "/midpoint", label: "Discussions" },
   { href: "/tech-help", label: "Tech Help" },
-  { href: "/framework", label: "Framework" },
 ];
 
 type DropdownKey = "modules";
