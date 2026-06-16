@@ -109,27 +109,11 @@ export default function Module1Page() {
             <div id="tools" className="mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">Tools Used in This Module</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Technological Tools</h2>
-              <div style={{ border: '2px dashed rgba(13,124,126,0.2)', borderRadius: '16px', padding: '2rem', background: 'var(--card-bg)' }}>
-                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1rem', fontWeight: 700, color: '#0d7c7e', marginBottom: '0.75rem' }}>Tools and Resources for This Module</p>
-                <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '1rem' }}>Replace this placeholder with a list of tools, websites, templates, or resources relevant to this module topic.</p>
-                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
-                  <thead>
-                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
-                      <th style={{ textAlign: 'left', padding: '0.5rem 0', fontWeight: 700 }} className="dark:text-white/70 text-[#374151]">Tool / Resource</th>
-                      <th style={{ textAlign: 'left', padding: '0.5rem 0', fontWeight: 700 }} className="dark:text-white/70 text-[#374151]">What It Is</th>
-                      <th style={{ textAlign: 'left', padding: '0.5rem 0', fontWeight: 700 }} className="dark:text-white/70 text-[#374151]">Cost</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {['Tool 1', 'Tool 2', 'Tool 3'].map((tool, i) => (
-                      <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
-                        <td style={{ padding: '0.75rem 0' }} className="dark:text-white/45 text-[#9ca3af]">{tool} placeholder</td>
-                        <td style={{ padding: '0.75rem 0' }} className="dark:text-white/45 text-[#9ca3af]">Add description</td>
-                        <td style={{ padding: '0.75rem 0' }} className="dark:text-white/45 text-[#9ca3af]">Free / Paid</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div style={{ border: '1px solid var(--card-border)', borderRadius: '16px', padding: '1.75rem', background: 'var(--card-bg)' }}>
+                <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1rem', fontWeight: 700, color: '#0d7c7e', marginBottom: '0.5rem' }}>What You'll Need</p>
+                <p className="dark:text-white/70 text-[#374151]" style={{ fontSize: '0.9rem', lineHeight: 1.7, margin: 0 }}>
+                  This module does not require any special software or accounts. As long as you have a working internet connection and a device, a laptop, desktop, or tablet works best, you can access everything you need.
+                </p>
               </div>
             </div>
             </FadeIn>
