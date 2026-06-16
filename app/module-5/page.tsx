@@ -98,7 +98,7 @@ export default function Module5Page() {
               >
                 Module 5 Lesson
               </h2>
-              <LessonVideo title="What Actually Works (And What Doesn't)" length="~3 min" />
+              <LessonVideo title="What Actually Works (And What Doesn't)" length="~3 min" videoFile="module-5-lesson.mp4" />
               <DocumentDownload title="Module 5 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-5-lesson.pdf" type="lesson" active={false} />
               <Infographic title="Study Techniques Ranked by Evidence" filename="Infographic - Study Smarter.png" active={true} />
               <DocumentDownload title="Module 5 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_5_Lesson.docx" type="lesson" active={true} />

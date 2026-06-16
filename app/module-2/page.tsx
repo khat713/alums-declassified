@@ -73,7 +73,7 @@ export default function Module2Page() {
             <div id="lesson" className="content-block p-7 mb-5" style={{ borderLeft: '3px solid #0d7c7e' }}>
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#d4f1e3] text-[#16723d]">Instructional Content</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Module 2 Lesson</h2>
-              <LessonVideo title="The Resources Nobody Pointed You To" length="~3 min" />
+              <LessonVideo title="The Resources Nobody Pointed You To" length="~3 min" videoFile="module-2-lesson.mp4" />
               <DocumentDownload title="Module 2 Lesson" description="Read the full lesson before completing the activity and assessment." filename="module-2-lesson.pdf" type="lesson" active={false} />
               <Infographic title="The Campus Resource Map" filename="Infographic - Your Campus Resource Map.png" active={true} />
               <DocumentDownload title="Module 2 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_2_Lesson.docx" type="lesson" active={true} />
