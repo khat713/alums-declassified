@@ -50,12 +50,16 @@ export default function StartHerePage() {
             <div>
               <LessonVideo title="Welcome Video" description="A short welcome from your instructor." videoFile="start-here-welcome.mp4" />
             </div>
-            <div style={{ border: '2px dashed rgba(13,124,126,0.3)', borderRadius: '12px', padding: '1.75rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <p style={{ fontFamily: 'Fraunces, serif', fontSize: '1rem', fontWeight: 700, color: '#0d7c7e', margin: 0 }}>Welcome Message Goes Here</p>
-              <p className="dark:text-white/55 text-[#6b7280]" style={{ fontSize: '0.88rem', lineHeight: 1.7, margin: 0 }}>
-                Replace this placeholder with your welcome message to students. 2-3 short paragraphs recommended. Cover: who this course is for, what students will walk away with, and your tone/approach as an instructor.
+            <div style={{ border: '1px solid var(--card-border)', borderRadius: '12px', padding: '1.75rem', background: 'var(--card-bg)', display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+              <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.95rem', lineHeight: 1.75, margin: 0 }}>
+                Hi, I&apos;m so glad you&apos;re here. If you&apos;re a first-generation college student, this course was built for you, by someone who has been exactly where you are. I remember feeling completely lost during my first year, not knowing what questions to even ask, let alone who to ask them to.
               </p>
-              <p className="dark:text-white/40 text-[#9ca3af]" style={{ fontSize: '0.8rem', fontStyle: 'italic', margin: 0 }}>Tip: write this last, after you have built all 7 modules. It will be easier to summarize what you made.</p>
+              <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.95rem', lineHeight: 1.75, margin: 0 }}>
+                This course walks you through seven modules covering the things that nobody hands you a manual for: how college actually works, where to find help on campus, how to read your financial aid award letter, how to take care of yourself outside the classroom, how to study in a way that actually works, how to start thinking about life after graduation, and how to take care of your mental health along the way.
+              </p>
+              <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.95rem', lineHeight: 1.75, margin: 0 }}>
+                You don&apos;t need to rush through this. Work at your own pace, take what&apos;s useful to you, and come back to anything that didn&apos;t click the first time. I built this so you would have what I wish I had: someone walking you through it step by step. Welcome to the course, and welcome to college. You belong here.
+              </p>
             </div>
           </div>
         </div>
