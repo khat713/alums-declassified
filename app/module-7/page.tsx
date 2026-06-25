@@ -121,7 +121,9 @@ export default function Module7Page() {
                   "Clance, P. R., & Imes, S. A. (1978). The imposter phenomenon in high achieving women: Dynamics and therapeutic intervention. Psychotherapy: Theory, Research and Practice, 15(3), 241–247.",
                   "Walton, G. M., & Cohen, G. L. (2007). A question of belonging: Race, social fit, and achievement. Journal of Personality and Social Psychology, 92(1), 82–96.",
                   "Walton, G. M., & Cohen, G. L. (2011). A brief social-belonging intervention improves academic and health outcomes of minority students. Science, 331(6023), 1447–1451.",
-                ]} />
+                ]}
+              headings={[{ beforeIndex: 1, text: "Imposter Syndrome" }, { beforeIndex: 2, text: "Code-Switching" }, { beforeIndex: 3, text: "Homesickness" }, { beforeIndex: 4, text: "Belonging Uncertainty" }, { beforeIndex: 5, text: "Getting Support" }]}
+            />
             </div>
             </FadeIn>
 

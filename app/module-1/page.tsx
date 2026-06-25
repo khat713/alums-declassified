@@ -85,7 +85,9 @@ export default function Module1Page() {
                 "Academic integrity is where good students get into trouble by accident. Everyone knows copying a test is cheating, but fewer students know that turning in the same paper for two different classes can be a violation, that working with a classmate on an assignment meant to be done alone is a violation, or that pasting a few sentences from a website without a citation is plagiarism even if you did not mean to steal anything. The rules vary by professor and school and are usually on the syllabus, so when you are not sure if something is allowed, ask first. “I did not know” does not protect you after the fact, but “I asked first” almost always does.",
                 "There are smaller unwritten rules too. Professors expect you to check your school email because that is where official information goes, not your personal account. Deadlines are usually firm, but many professors will work with you if you reach out before the deadline rather than after. Showing up matters even in classes that do not take attendance, because professors remember who was there, and none of this is difficult once someone tells you. The problem was never that first-gen students could not follow the rules but that nobody handed them the list.",
                 "The goal of this module is not to make college feel like a minefield but the opposite: once you can see these hidden rules, they stop feeling hidden, and most of them turn out to be straightforward. Read the syllabus. Go to office hours early. Email like a professional. Ask before you collaborate. Do those four things and you are already ahead of most of the room, first-gen or not.",
-              ]} />
+              ]}
+              headings={[{ beforeIndex: 0, text: "The Hidden Curriculum" }, { beforeIndex: 1, text: "The Syllabus and Office Hours" }, { beforeIndex: 3, text: "How to Email a Professor" }, { beforeIndex: 4, text: "Academic Integrity" }, { beforeIndex: 5, text: "The Smaller Rules That Add Up" }]}
+            />
             </div>
             </FadeIn>
 

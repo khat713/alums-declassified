@@ -113,7 +113,9 @@ export default function Module5Page() {
                   "References",
                   "Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2013). Improving students’ learning with effective learning techniques: Promising directions from cognitive and educational psychology. Psychological Science in the Public Interest, 14(1), 4–58.",
                   "Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249–255.",
-                ]} />
+                ]}
+              headings={[{ beforeIndex: 1, text: "What Does Not Work" }, { beforeIndex: 2, text: "What Actually Works" }, { beforeIndex: 5, text: "Building Your Schedule" }, { beforeIndex: 6, text: "Talking to Your Professors" }]}
+            />
             </div>
             </FadeIn>
 

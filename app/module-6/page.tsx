@@ -111,7 +111,9 @@ export default function Module6Page() {
                   "A career center appointment is not an interview, and you do not need to dress up or have everything figured out, because you bring your draft or even just your confusion and someone whose entire job is helping students works through it with you. Find your career center this week, write down the building, the hours, and how to book, and remember that the students who use it early are not the ones who needed the least help but the ones who stopped treating help as a last resort.",
                   "References",
                   "Granovetter, M. S. (1973). The strength of weak ties. American Journal of Sociology, 78(6), 1360–1380.",
-                ]} />
+                ]}
+              headings={[{ beforeIndex: 1, text: "Building Your Resume" }, { beforeIndex: 3, text: "LinkedIn: Being Findable" }, { beforeIndex: 5, text: "Networking" }, { beforeIndex: 6, text: "The Career Center" }]}
+            />
             </div>
             </FadeIn>
 

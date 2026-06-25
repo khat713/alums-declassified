@@ -85,7 +85,9 @@ export default function Module2Page() {
                   "Disability services covers more than most students expect, including diagnosed conditions like ADHD, anxiety, learning disabilities, and chronic illness, and it can arrange accommodations like extended test time or a quieter testing room. If you ever struggled with timed tests or had accommodations in high school, this is the office that continues that support in college, but the process requires documentation, so it is worth asking early what they need.",
                   "Beyond these core resources, there are others worth knowing about: the career center (which you will use in Module 6), the writing center where someone reads your paper with you before you turn it in, the health center for physical care, the registrar for anything involving your official academic record, and academic advising for choosing classes and staying on track to graduate. Each one solves a specific problem, and the pattern is always the same: the resource is most useful before the problem becomes an emergency.",
                   "Here is the habit that separates students who use resources from those who do not. Do not wait until you need a resource to find out where it is, because when something goes wrong you do not want to be figuring out logistics while panicking. Find them now, while nothing is wrong, so the map is ready when you need it, and that is the entire point of this module's assignment: you are going to build a map of your school's resources before your first day.",
-                ]} />
+                ]}
+              headings={[{ beforeIndex: 0, text: "Why First-Gen Students Miss Out" }, { beforeIndex: 1, text: "Six Resources Worth Knowing" }, { beforeIndex: 7, text: "Find Them Before You Need Them" }]}
+            />
             </div>
             </FadeIn>
 

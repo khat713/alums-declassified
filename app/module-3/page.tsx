@@ -111,7 +111,9 @@ export default function Module3Page() {
                   "The budget is just a plan for money you already have. List your monthly income: any aid that comes back to you directly, money from a job, money from family. Then list your expenses, split into fixed and variable, where fixed expenses stay the same every month like rent or a phone bill, and variable expenses change like food, gas, and going out. Subtract expenses from income, and if the number is positive you have a cushion; if it is negative you have a gap to close before it becomes debt, which is much easier to fix on paper in the summer than during a semester.",
                   "Last, the scams, because students are a common target. If a company charges a fee to apply for a scholarship, it is a scam because real scholarships do not charge to apply. If someone offers to file your FAFSA for a fee, do not pay them because the FAFSA is free, which is literally what the first F stands for. If you get a call saying your financial aid will be canceled unless you pay right now or give out your Social Security number, hang up because that is not how aid offices work. Any message that creates urgency and asks for money or personal information is worth being suspicious of.",
                   "None of this requires being naturally good with money, only reading one document carefully, knowing which money is free and which is borrowed, and writing down a plan before school starts. Do that, and money becomes something you manage instead of something that happens to you.",
-                ]} />
+                ]}
+              headings={[{ beforeIndex: 0, text: "Why Money Ends More College Careers Than Grades" }, { beforeIndex: 1, text: "Reading Your Award Letter" }, { beforeIndex: 6, text: "Building Your Budget" }, { beforeIndex: 7, text: "Scams to Watch For" }]}
+            />
             </div>
             </FadeIn>
 
