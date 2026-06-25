@@ -124,6 +124,25 @@ export default function HomePage() {
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.7 }}>
                 <div className="flex gap-4 flex-wrap">
                   <MotionLink
+                    href="/start-here"
+                    whileHover={{ scale: 1.03, background: 'rgba(255,255,255,0.08)' }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                    style={{
+                      background: 'transparent',
+                      color: 'rgba(255,255,255,0.85)',
+                      padding: '14px 32px',
+                      borderRadius: '8px',
+                      fontWeight: 600,
+                      fontSize: '0.97rem',
+                      display: 'inline-block',
+                      textDecoration: 'none',
+                      border: '1.5px solid rgba(255,255,255,0.25)'
+                    }}
+                  >
+                    Start Here →
+                  </MotionLink>
+                  <MotionLink
                     href="/module-1"
                     whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(13,124,126,0.4)' }}
                     whileTap={{ scale: 0.97 }}
@@ -141,25 +160,6 @@ export default function HomePage() {
                     }}
                   >
                     Start Module 1 →
-                  </MotionLink>
-                  <MotionLink
-                    href="/start-here"
-                    whileHover={{ scale: 1.03, background: 'rgba(255,255,255,0.08)' }}
-                    whileTap={{ scale: 0.97 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-                    style={{
-                      background: 'transparent',
-                      color: 'rgba(255,255,255,0.85)',
-                      padding: '14px 32px',
-                      borderRadius: '8px',
-                      fontWeight: 600,
-                      fontSize: '0.97rem',
-                      display: 'inline-block',
-                      textDecoration: 'none',
-                      border: '1.5px solid rgba(255,255,255,0.25)'
-                    }}
-                  >
-                    Read the Syllabus →
                   </MotionLink>
                 </div>
               </motion.div>
@@ -421,7 +421,7 @@ export default function HomePage() {
               marginRight: '0.5rem',
             }}
           >
-            Read the Syllabus →
+            Start Here →
           </Link>
           <Link
             href="/modules"
