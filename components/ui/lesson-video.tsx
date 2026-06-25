@@ -38,6 +38,15 @@ export function LessonVideo({ title, length, embedUrl, videoFile, description }:
           style={{ width: '100%', borderRadius: '12px', display: 'block', background: '#000' }}
         >
           <source src={videoSrc} type="video/mp4" />
+          {videoFile && (
+            <track
+              kind="subtitles"
+              src={`${basePath}/videos/${videoFile.replace(/\.mp4$/i, '.vtt')}`}
+              srcLang="en"
+              label="English"
+              default
+            />
+          )}
         </video>
       ) : embedUrl ? (
         <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, borderRadius: '12px', overflow: 'hidden', background: '#000' }}>
