@@ -10,6 +10,7 @@ import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, Search, PenLine, Lightbulb, Wrench, Clock, Award, ChevronRight } from "lucide-react";
+import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
 
 export const metadata: Metadata = {
   title: "Module 1: College Expectations | Alum's Declassified",
@@ -173,6 +174,15 @@ export default function Module1Page() {
                 <p className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '0.6rem' }}>Complete the assessment section above, then submit via the embedded form.</p>
                 <Link href="/assignments#a1" className="hover:underline" style={{ color: '#0d7c7e', fontWeight: 600, fontSize: '0.875rem' }}>View full rubric →</Link>
               </div>
+              <LessonSelfCheck
+                questions={[
+            "I can explain what a syllabus tells you about grading and course policies",
+            "I can name at least one unwritten rule of college that professors rarely say out loud",
+            "I know what office hours are and feel like I could actually show up to one",
+                ]}
+                nextLabel="Go to Activity"
+                nextHref="#activity"
+              />
             </div>
           </div>
         </div>

@@ -11,6 +11,7 @@ import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, Mic, Briefcase, Lightbulb, Wrench, Clock, Award } from "lucide-react";
+import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
 
 export const metadata: Metadata = {
   title: "Module 6: Career Preparation | Alum's Declassified",
@@ -234,6 +235,15 @@ export default function Module6Page() {
                 <p className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '0.6rem' }}>LinkedIn profile (public URL) + encouraged resume + 100–150 word self-assessment.</p>
                 <Link href="/assignments#a6" className="hover:underline" style={{ color: '#0d7c7e', fontWeight: 600, fontSize: '0.875rem' }}>View full rubric →</Link>
               </div>
+              <LessonSelfCheck
+                questions={[
+            "I know what should be on a resume at this stage of my college career",
+            "I understand what LinkedIn is for and why I need a profile before I graduate",
+            "I know where the Career Center is and at least two ways it can help me",
+                ]}
+                nextLabel="Go to Activity"
+                nextHref="#activity"
+              />
             </div>
           </div>
         </div>

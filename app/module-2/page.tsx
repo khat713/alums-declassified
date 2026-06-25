@@ -10,6 +10,7 @@ import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, Mail, MapPin, Lightbulb, Wrench, Clock, Award, ChevronRight } from "lucide-react";
+import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
 
 export const metadata: Metadata = {
   title: "Module 2: Campus Resources | Alum's Declassified",
@@ -167,6 +168,15 @@ export default function Module2Page() {
                 <p className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '0.6rem' }}>Identify 6 resources across 3 categories specific to your school.</p>
                 <Link href="/assignments#a2" className="hover:underline" style={{ color: '#0d7c7e', fontWeight: 600, fontSize: '0.875rem' }}>View full rubric →</Link>
               </div>
+              <LessonSelfCheck
+                questions={[
+            "I can name at least two campus support resources and where to find them",
+            "I know which office to contact if I have a financial aid question",
+            "I know where to go on campus if I'm struggling mentally or emotionally",
+                ]}
+                nextLabel="Go to Activity"
+                nextHref="#activity"
+              />
             </div>
           </div>
         </div>

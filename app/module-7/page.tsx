@@ -11,6 +11,7 @@ import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, Mail, Heart, Lightbulb, Wrench, Clock, Award, Phone, Smartphone } from "lucide-react";
+import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
 
 export const metadata: Metadata = {
   title: "Module 7: Emotional Resilience | Alum's Declassified",
@@ -276,6 +277,15 @@ export default function Module7Page() {
                   <div className="flex items-center gap-[8px]"><Heart size={13} style={{ color: '#c2680a', flexShrink: 0 }} /><span>Campus CAPS: check your school&apos;s website</span></div>
                 </div>
               </div>
+              <LessonSelfCheck
+                questions={[
+            "I can name at least one strategy for dealing with homesickness or feeling out of place",
+            "I know where to find mental health support on campus and how to access it",
+            "I know what 988 is and when it's appropriate to use it",
+                ]}
+                nextLabel="Go to Activity"
+                nextHref="#activity"
+              />
             </div>
           </div>
         </div>

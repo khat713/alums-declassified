@@ -11,6 +11,7 @@ import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, ShoppingCart, PenLine, Lightbulb, Wrench, Clock, CheckCircle, Award } from "lucide-react";
+import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
 
 export const metadata: Metadata = {
   title: "Module 4: Essential Life Skills | Alum's Declassified",
@@ -237,6 +238,15 @@ export default function Module4Page() {
                 <p className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '0.6rem' }}>Checklist + 300–500 word reflection on your real skill gaps.</p>
                 <Link href="/assignments#a4" className="hover:underline" style={{ color: '#0d7c7e', fontWeight: 600, fontSize: '0.875rem' }}>View full assignment →</Link>
               </div>
+              <LessonSelfCheck
+                questions={[
+            "I know how to read a lease and what to look for before signing anything",
+            "I understand how health insurance works well enough to make a doctor's appointment",
+            "I can name at least one strategy for managing groceries, laundry, or daily routines on my own",
+                ]}
+                nextLabel="Go to Activity"
+                nextHref="#activity"
+              />
             </div>
           </div>
         </div>

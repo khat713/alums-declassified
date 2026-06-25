@@ -11,6 +11,7 @@ import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, PenLine, Calendar, Lightbulb, Wrench, Clock, Award } from "lucide-react";
+import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
 
 export const metadata: Metadata = {
   title: "Module 5: Academic Success | Alum's Declassified",
@@ -235,6 +236,15 @@ export default function Module5Page() {
                 <p className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '0.6rem' }}>Weekly schedule + 150–250 word explanation of your strategies.</p>
                 <Link href="/assignments#a5" className="hover:underline" style={{ color: '#0d7c7e', fontWeight: 600, fontSize: '0.875rem' }}>View full rubric →</Link>
               </div>
+              <LessonSelfCheck
+                questions={[
+            "I can describe two study or note-taking strategies that are actually backed by research",
+            "I know what imposter syndrome is and can recognize it in myself",
+            "I feel confident enough to build a weekly study schedule before classes start",
+                ]}
+                nextLabel="Go to Activity"
+                nextHref="#activity"
+              />
             </div>
           </div>
         </div>

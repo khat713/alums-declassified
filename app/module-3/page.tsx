@@ -11,6 +11,7 @@ import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, FileText, DollarSign, Lightbulb, Wrench, Clock, Award } from "lucide-react";
+import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
 
 export const metadata: Metadata = {
   title: "Module 3: Financial Literacy | Alum's Declassified",
@@ -233,6 +234,15 @@ export default function Module3Page() {
                 <p className="dark:text-white/80 text-[#374151]" style={{ fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '0.6rem' }}>Build a monthly budget using your real aid info and school costs.</p>
                 <Link href="/assignments#a3" className="hover:underline" style={{ color: '#0d7c7e', fontWeight: 600, fontSize: '0.875rem' }}>View full rubric →</Link>
               </div>
+              <LessonSelfCheck
+                questions={[
+            "I can explain the difference between a grant and a loan",
+            "I understand what the FAFSA is and why it has to be renewed each year",
+            "I could put together a basic college budget that tracks income and expenses",
+                ]}
+                nextLabel="Go to Activity"
+                nextHref="#activity"
+              />
             </div>
           </div>
         </div>
