@@ -160,8 +160,46 @@ export default function TechHelpPage() {
         </div>
         </FadeIn>
 
-        {/* Contact */}
+        {/* Privacy Policies */}
         <FadeIn delay={0.3}>
+        <div className="content-block p-7 mb-5">
+          <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#e0f4f4] text-[#0d7c7e]">
+            Privacy &amp; Data
+          </span>
+          <h2
+            className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
+            style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}
+          >
+            Tool Privacy Policies
+          </h2>
+          <p className="text-[0.9rem] text-[#5a6a82] dark:text-[#94a3b8] mb-3">
+            This course uses five external tools. Links to each tool&apos;s official privacy policy are below.
+          </p>
+          <ul className="ml-5 leading-[2]">
+            {[
+              { name: "GitHub Pages", url: "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" },
+              { name: "Zoom", url: "https://explore.zoom.us/en/privacy/" },
+              { name: "Canva", url: "https://www.canva.com/policies/privacy-policy/" },
+              { name: "Google Forms", url: "https://policies.google.com/privacy" },
+              { name: "ElevenLabs", url: "https://elevenlabs.io/privacy" },
+            ].map(({ name, url }) => (
+              <li key={name}>
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0d7c7e] font-semibold hover:underline"
+                >
+                  {name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        </FadeIn>
+
+        {/* Contact */}
+        <FadeIn delay={0.4}>
         <div className="content-block p-7 mb-5">
           <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#fde4ec] text-[#b0264a]">
             Contact
