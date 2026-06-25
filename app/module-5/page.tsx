@@ -9,6 +9,7 @@ import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from '@/components/ui/document-download';
 import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
+import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, PenLine, Calendar, Lightbulb, Wrench, Clock, Award } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -100,7 +101,19 @@ export default function Module5Page() {
               </h2>
               <LessonVideo title="What Actually Works (And What Doesn't)" length="~3 min" videoFile="module-5-lesson.mp4" />
               <Infographic title="Study Techniques Ranked by Evidence" filename="Infographic - Study Smarter.png" active={true} />
-              <DocumentDownload title="Module 5 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_5_Lesson.docx" type="lesson" active={true} />
+                              <LessonBody paragraphs={[
+                  "Most first-gen students were good enough at high school to get into college, which means most of you have study habits that worked. Here is the uncomfortable part: the habits that worked in high school are usually the ones research says do not work well, and they fail slowly enough in college that by the time you notice, you are already behind. This module is about replacing what feels productive with what actually produces learning, and the good news is that the more effective techniques take less time, not more.",
+                  "Start with two habits most students rely on and should mostly drop: rereading and highlighting. They feel productive because they are easy and your eyes move across familiar words, creating a sense of knowing the material. A major review of study research (Dunlosky et al., 2013) found that these techniques are low-utility, meaning the evidence that they actually improve learning is weak. Recognizing material when you see it is not the same as being able to recall it on an exam, and rereading only trains the first skill.",
+                  "The single most effective switch you can make is retrieval practice, which means testing yourself by pulling information out of your memory rather than putting it back in front of your eyes. Research by Roediger and Karpicke (2006) found that students who tested themselves remembered far more later than students who just reread, even though the rereaders felt more confident going in. Every time you close your notes and try to write down what you just read, you are strengthening the memory in a way that rereading never does. Practically, this means flashcards where you answer before flipping, practice problems done without looking at the example, or closing your notes and writing everything you can remember, then checking what you missed. It feels harder than rereading, and that difficulty is the learning happening.",
+                  "The second technique is spaced practice, which means spreading your studying across several shorter sessions instead of one long cram. The same review (Dunlosky et al., 2013) rated distributed practice as one of the two highest-utility study techniques alongside practice testing. Studying for one hour on three different days produces more lasting learning than three hours the night before, even though the total time is the same, and the cram session can get you through one exam but leaves you with material that evaporates afterward, which is a problem in college where finals often cover the whole semester.",
+                  "Combine the two and you have a simple, effective method: short sessions spread across the week where you test yourself instead of reread, and while it is less glamorous than a color-coded eight-hour study marathon, it works far better.",
+                  "The schedule matters as much as the technique because college handles work differently than high school. In high school, assignments came in daily, in small pieces, with constant reminders, but in college, a syllabus might list three assignments for the whole semester and nothing reminds you until they are due. The long stretches with nothing on the calendar are not empty; they are when you are supposed to be working quietly. Build a weekly schedule with specific blocks for studying each subject, not just class time, treat those blocks like real appointments, and put your due dates in a calendar at the start of the semester so you can schedule the work in the weeks before, not the night before.",
+                  "Last, talking to your professors. How you handle a problem matters more than the problem itself, so if you are struggling, falling behind, or going to miss a deadline, email the professor before it happens, not after. A message that says “I am struggling with this topic and I want to come to office hours” lands completely differently than silence followed by a failed exam. Professors are far more willing to help a student who reaches out early than one who disappears and resurfaces with excuses, and reaching out is not an admission that you do not belong; it is exactly what prepared students do.",
+                  "Academic success in college is less about raw talent than about method: test yourself instead of rereading, space your studying out, schedule the work the syllabus assumes you will do on your own, and talk to professors before things go wrong. None of that requires being the smartest person in the room; it requires knowing how learning works, and you can start applying that knowledge the first week.",
+                  "References",
+                  "Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2013). Improving students’ learning with effective learning techniques: Promising directions from cognitive and educational psychology. Psychological Science in the Public Interest, 14(1), 4–58.",
+                  "Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249–255.",
+                ]} />
             </div>
             </FadeIn>
 
@@ -116,7 +129,12 @@ export default function Module5Page() {
               >
                 Activity: Test the Technique
               </h2>
-              <DocumentDownload title="Module 5 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_5_Activity.docx" type="activity" active={true} />
+                              <LessonBody paragraphs={[
+                  "Step 1. Pick something you already know a little about. It can be anything you are learning, not necessarily college material yet. Read or review it for five minutes.",
+                  "Step 2. Close everything. Write down everything you can remember from memory with nothing in front of you. Then check what you missed.",
+                  "Step 3. Write two or three sentences: what did closing the book and recalling feel like compared to rereading, and what did you discover you did not know as well as you thought?",
+                  "Instructor feedback. Within 48 hours I respond with one specific way to turn this into a weekly habit for your hardest upcoming subject.",
+                ]} />
             </div>
             </FadeIn>
 

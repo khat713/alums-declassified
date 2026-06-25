@@ -61,25 +61,11 @@ export function Infographic({ title, filename, alt, active = false }: Infographi
           </a>
         </div>
       ) : (
-        <div>
-          <img
-            src={src}
-            alt={alt || title}
-            style={{ width: '100%', borderRadius: '12px', border: '1px solid rgba(0,0,0,0.1)', display: 'block', marginBottom: '0.6rem' }}
-          />
-          <a
-            href={src}
-            download
-            style={{
-              background: '#4f46e5', color: '#fff', padding: '8px 20px', borderRadius: '8px',
-              fontWeight: 600, fontSize: '0.875rem', textDecoration: 'none', display: 'inline-flex',
-              alignItems: 'center', gap: '6px',
-            }}
-            aria-label={`Download ${title} infographic`}
-          >
-            ↓ Download PNG
-          </a>
-        </div>
+        <img
+          src={src}
+          alt={alt || title}
+          style={{ width: '100%', maxWidth: '700px', borderRadius: '12px', border: '1px solid rgba(0,0,0,0.1)', display: 'block', margin: '0 auto' }}
+        />
       )}
     </div>
   );

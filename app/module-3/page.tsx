@@ -9,6 +9,7 @@ import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from '@/components/ui/document-download';
 import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
+import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, FileText, DollarSign, Lightbulb, Wrench, Clock, Award } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -100,7 +101,17 @@ export default function Module3Page() {
               </h2>
               <LessonVideo title="Your Award Letter Is Not a Gift Card" length="~3 min" videoFile="module-3-lesson.mp4" />
               <Infographic title="Free Money vs. Borrowed Money" filename="Infographic - How to Read Your Award Letter.png" active={true} />
-              <DocumentDownload title="Module 3 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_3_Lesson.docx" type="lesson" active={true} />
+                              <LessonBody paragraphs={[
+                  "More students leave college over money than over grades, and most of the time it is not because they are bad with money but because nobody explained how college money actually works. The vocabulary alone is a wall: award letters, disbursement, subsidized, work-study, cost of attendance. This module breaks all of it down, because you cannot manage money you do not understand.",
+                  "Start with your award letter, which is the document your school sends listing all the financial aid they are offering you. The most important thing to understand is that not all the money on it is the same kind, because some of it is free, some you pay back, and they are often listed right next to each other looking identical.",
+                  "Grants and scholarships are free money you do not pay back. A Pell Grant, a state grant, a scholarship from the school, these all reduce what you owe and never come due, and this is the best kind of aid, though you should always know exactly how much you have because it can disappear if your enrollment or grades change.",
+                  "Loans are borrowed money you pay back with interest, and here is the distinction most people miss. A subsidized loan does not charge you interest while you are in school because the government covers that cost for you during that time. An unsubsidized loan starts charging interest the day the money is sent to you, so the balance keeps growing the entire time you are enrolled. If you have a choice, subsidized is the cheaper option, but many students borrow both without ever knowing there was a difference, and the unsubsidized interest adds up quietly over four years.",
+                  "Work-study surprises almost everyone. It is not a deposit into your account but a job, and the amount on your award letter is the maximum you can earn by working a campus position, paid to you in a paycheck like any other job. If you do not get a job and work the hours, you do not get that money, so students who assume work-study is sitting in their account get a hard surprise in October. If you have work-study on your letter, find the campus job in the first two weeks before the good positions are taken.",
+                  "Cost of attendance is the school’s estimate of what one year actually costs, including tuition, fees, housing, food, books, and personal expenses. The number that matters most to you is the gap, which is cost of attendance minus all your grants, loans, and work-study, and that gap is what you or your family covers out of pocket. Knowing that number in July is much better than discovering it in October when a bill is due.",
+                  "The budget is just a plan for money you already have. List your monthly income: any aid that comes back to you directly, money from a job, money from family. Then list your expenses, split into fixed and variable, where fixed expenses stay the same every month like rent or a phone bill, and variable expenses change like food, gas, and going out. Subtract expenses from income, and if the number is positive you have a cushion; if it is negative you have a gap to close before it becomes debt, which is much easier to fix on paper in the summer than during a semester.",
+                  "Last, the scams, because students are a common target. If a company charges a fee to apply for a scholarship, it is a scam because real scholarships do not charge to apply. If someone offers to file your FAFSA for a fee, do not pay them because the FAFSA is free, which is literally what the first F stands for. If you get a call saying your financial aid will be canceled unless you pay right now or give out your Social Security number, hang up because that is not how aid offices work. Any message that creates urgency and asks for money or personal information is worth being suspicious of.",
+                  "None of this requires being naturally good with money, only reading one document carefully, knowing which money is free and which is borrowed, and writing down a plan before school starts. Do that, and money becomes something you manage instead of something that happens to you.",
+                ]} />
             </div>
             </FadeIn>
 
@@ -116,7 +127,12 @@ export default function Module3Page() {
               >
                 Activity: Name the Money
               </h2>
-              <DocumentDownload title="Module 3 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_3_Activity.docx" type="activity" active={true} />
+                              <LessonBody paragraphs={[
+                  "Step 1. Find a real or sample award letter. If you have your actual letter, use it. If not, search “sample financial aid award letter” and find one online.",
+                  "Step 2. Go line by line and label each item as one of these: grant or scholarship (free money), subsidized loan, unsubsidized loan, work-study (a job), or other.",
+                  "Step 3. Write down the one line you understand the least and write one question you will ask your financial aid office about it.",
+                  "Instructor feedback. Within 48 hours I confirm whether your labels are correct and either answer your question or tell you exactly who to ask.",
+                ]} />
             </div>
             </FadeIn>
 

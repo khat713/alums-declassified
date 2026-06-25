@@ -8,6 +8,7 @@ import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from '@/components/ui/document-download';
 import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
+import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, Mail, MapPin, Lightbulb, Wrench, Clock, Award, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -75,7 +76,16 @@ export default function Module2Page() {
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Module 2 Lesson</h2>
               <LessonVideo title="The Resources Nobody Pointed You To" length="~3 min" videoFile="module-2-lesson.mp4" />
               <Infographic title="The Campus Resource Map" filename="Infographic - Your Campus Resource Map.png" active={true} />
-              <DocumentDownload title="Module 2 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_2_Lesson.docx" type="lesson" active={true} />
+                              <LessonBody paragraphs={[
+                  "Every campus is full of help that students never use, and first-gen students use it least of all. Part of that is not knowing these resources exist, and part of it is a feeling that asking for help means you do not belong or that these services are for people worse off than you, but both of those assumptions are wrong, and this module is about replacing them with a map. Almost every resource on this list is already paid for through your tuition and fees, so using it is not asking for a favor; you are collecting something you already bought.",
+                  "Start with the financial aid office, because money problems end more college careers than grades do. This office helps you read your award letter, understand your loans, apply for emergency funds, and fix problems when your aid does not come through, and it is not just a fall-semester resource. If your situation changes during the year, a parent loses a job or your work hours get cut, you can file an appeal to have your aid reviewed, which most students never know is an option. Find the office, save the phone number, and know you can walk in.",
+                  "The tutoring center is free, and it is not just for students who are failing. Most tutoring centers offer drop-in help, scheduled appointments, and subject-specific support, often staffed by students who took the same class a year ago and did well. The students who use tutoring early, as a normal study habit, are using it exactly the way it was designed, because waiting until you are already behind is the harder path.",
+                  "The counseling center handles mental health support, and there is a whole module later in this course about why that matters, so for now just know it exists, that an intake appointment is usually free or low cost, and that you do not have to be in crisis to make one. Waitlists get long around midterms, so figuring out how to book before you need it is worth doing now.",
+                  "The food pantry is on more campuses than students realize. Food insecurity in college is far more common than the silence around it suggests, and campus pantries are confidential and free to enrolled students without requiring proof of need. If your grocery money runs out before the month does, which happens to a lot of students, the pantry is there and you already qualify by being enrolled.",
+                  "Disability services covers more than most students expect, including diagnosed conditions like ADHD, anxiety, learning disabilities, and chronic illness, and it can arrange accommodations like extended test time or a quieter testing room. If you ever struggled with timed tests or had accommodations in high school, this is the office that continues that support in college, but the process requires documentation, so it is worth asking early what they need.",
+                  "Beyond these core resources, there are others worth knowing about: the career center (which you will use in Module 6), the writing center where someone reads your paper with you before you turn it in, the health center for physical care, the registrar for anything involving your official academic record, and academic advising for choosing classes and staying on track to graduate. Each one solves a specific problem, and the pattern is always the same: the resource is most useful before the problem becomes an emergency.",
+                  "Here is the habit that separates students who use resources from those who do not. Do not wait until you need a resource to find out where it is, because when something goes wrong you do not want to be figuring out logistics while panicking. Find them now, while nothing is wrong, so the map is ready when you need it, and that is the entire point of this module's assignment: you are going to build a map of your school's resources before your first day.",
+                ]} />
             </div>
             </FadeIn>
 
@@ -83,7 +93,12 @@ export default function Module2Page() {
             <div id="activity" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 label-activity">Learning Activity</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Activity: Find Three</h2>
-              <DocumentDownload title="Module 2 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_2_Activity.docx" type="activity" active={true} />
+                              <LessonBody paragraphs={[
+                  "Step 1. Go to your school’s website and find three resources from the lesson. Choose from: financial aid, tutoring, counseling, food pantry, disability services, career center, writing center, or advising.",
+                  "Step 2. For each resource, write down what it is called at your school, where it is located, how to contact it, and one problem it would help you with specifically.",
+                  "Step 3. Pick the one resource you think you will need first and explain why.",
+                  "Instructor feedback. Within 48 hours I confirm your access details are current and let you know if there is a resource you did not list that would help you.",
+                ]} />
             </div>
             </FadeIn>
 

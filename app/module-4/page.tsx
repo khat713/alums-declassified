@@ -9,6 +9,7 @@ import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from '@/components/ui/document-download';
 import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
+import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, ShoppingCart, PenLine, Lightbulb, Wrench, Clock, CheckCircle, Award } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -100,7 +101,15 @@ export default function Module4Page() {
               </h2>
               <LessonVideo title="Running Your Own Life" length="~3 min" videoFile="module-4-lesson.mp4" />
               <Infographic title="The Adult Skills Checklist" filename="Infographic - The Adulting Cheat Sheet.png" active={true} />
-              <DocumentDownload title="Module 4 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_4_Lesson.docx" type="lesson" active={true} />
+                              <LessonBody paragraphs={[
+                  "There is a kind of college stress that has nothing to do with class, whether it is standing in a grocery store not knowing how to feed yourself for a week on the money you have, staring at a washing machine you have never used, or getting a medical bill and not understanding why you owe it. These things hit first-gen students harder because the assumption on campus is that everyone arrives already knowing how to run their own life, and this module covers the skills that make the rest of college possible: the ones nobody gives you credit for but everyone needs.",
+                  "Start with groceries, because food is a daily decision and a budget problem if you do not have a plan. The goal is not cooking impressive meals but buying food you will actually eat, food that lasts a week without spending too much. Stock a few base ingredients that work in multiple meals: rice, pasta, eggs, beans, frozen vegetables, a protein or two. Plan three or four simple meals you can rotate, because deciding fresh every day is how you end up ordering delivery you cannot afford. Store brands are almost always the same product as name brands for less money, and shopping with a list keeps you from spending on things that were not part of the plan.",
+                  "Cooking does not have to be fancy to keep you fed and out of debt. If you can make rice, scramble eggs, cook pasta, and roast vegetables on a sheet pan, you can eat for a week on what one or two delivery orders would cost, and the point is not impressive food but reliable, cheap food that you control.",
+                  "Laundry is simple once someone tells you the rules, and awkward to ask about once you are surrounded by people who assume you already know. Separate lights from darks so colors do not bleed, use cold water for most things because it is cheaper and safer for colors, do not overload the machine, and check the tag if something seems delicate. The biggest mistake is letting laundry pile up until it takes all day, so one load a week is easier than one giant load a month.",
+                  "Health insurance gets confusing fast, so here are the basics. Under current federal law, you can stay on a parent’s health insurance plan until you turn 26, so if a parent has coverage, you may already be covered and should confirm it. If not, most schools offer a student health plan and many require you to have some coverage. A few terms to know: a premium is what is paid monthly just to have insurance, a deductible is what you pay out of pocket before insurance starts covering costs, and a copay is the flat fee for a visit. Your campus health center usually offers low-cost or included care for enrolled students, so for routine things you may not need to navigate the full insurance system at all. Find out what you have before you need it.",
+                  "Leases matter if you are moving off campus, and a lease is a legal contract you are bound by even if you did not read it. Before you sign anything, check the monthly rent and exactly what it includes, find out if utilities like water, electric, and internet are separate, know the security deposit amount and what you have to do to get it back, check the start and end dates, and find out what happens if you need to leave early. Most expensive housing mistakes come from signing fast and missing the early-termination terms, or assuming utilities were included when they were not, so if you do not understand a clause, ask before you sign, and know that many campuses have a student legal services office that will review a lease with you for free.",
+                  "The honest truth about this module is that none of these skills are hard but feel that way because they are usually learned at home, slowly, from someone who already knew, and if you did not get that, you are learning them all at once under pressure. That is the gap this module is designed to close. You do not need to master all of it right now; you need to know which skills you already have and make a plan for the ones you do not, before you are forced to figure them out in real time.",
+                ]} />
             </div>
             </FadeIn>
 
@@ -116,7 +125,12 @@ export default function Module4Page() {
               >
                 Activity: Plan One Week of Food
               </h2>
-              <DocumentDownload title="Module 4 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_4_Activity.docx" type="activity" active={true} />
+                              <LessonBody paragraphs={[
+                  "Step 1. Set a realistic weekly food budget. Be honest about your actual situation.",
+                  "Step 2. Plan three simple meals you could rotate for a week, and write the grocery list to make them.",
+                  "Step 3. Add up the estimated cost. Does it fit your budget? If not, what would you change?",
+                  "Instructor feedback. Within 48 hours I respond with one swap or tip to make your plan cheaper or easier, based on what you listed.",
+                ]} />
             </div>
             </FadeIn>
 

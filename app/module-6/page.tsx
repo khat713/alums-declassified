@@ -9,6 +9,7 @@ import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from '@/components/ui/document-download';
 import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
+import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, Mic, Briefcase, Lightbulb, Wrench, Clock, Award } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -100,7 +101,17 @@ export default function Module6Page() {
               </h2>
               <LessonVideo title="You Already Have More Than You Think" length="~3 min" videoFile="module-6-lesson.mp4" />
               <Infographic title="Resume vs. LinkedIn: What Goes Where" filename="Infographic - Career Preparation Program.png" active={true} />
-              <DocumentDownload title="Module 6 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_6_Lesson.docx" type="lesson" active={true} />
+                              <LessonBody paragraphs={[
+                  "Most first-gen students walk into career preparation convinced they have nothing to put on a resume because there are no internships, no impressive titles, maybe one part-time job that does not feel like it counts, but that worry, while understandable, is wrong. A resume does not document your job titles; it documents what you are capable of, and a job where you trained two new hires and ran the register alone during a Friday rush is evidence of real capability. The work this module asks you to do is stop hiding that evidence.",
+                  "Start with the resume even if you plan to focus mostly on LinkedIn, because the resume forces you to name your experience in plain language first. A first-year resume has five parts, and you already have material for most of them. The header is your name, a professional email (not the one you made in middle school), your city and state, your phone number, and your LinkedIn URL once you have one. Education comes next: your school, expected degree, graduation year, and GPA only if it is above 3.0. Experience is any job, volunteer role, or responsibility you held whether or not someone paid you, because babysitting counts, running concessions for your church counts, and being the household tech support counts. The skills section covers software, languages, tools, and certifications, and the optional last section holds awards, relevant coursework, or activities.",
+                  "The part that trips people up most is the bullet points under each experience. The rule is to start every bullet with an action verb and never with “helped,” “assisted,” or “responsible for.” Use words like led, built, managed, designed, coordinated, created, trained, analyzed, or implemented. “Helped train new employees” tells a reader nothing, while “Trained two new employees during summer hiring and wrote the closing checklist they still use” tells a reader you can teach, document, and take ownership. The job is the same; the framing is completely different.",
+                  "LinkedIn is not a place to show what you have already done but a place to be findable while you build what you are going to do, and that distinction matters for first-gen students in particular. Research by Granovetter (1973) showed that most job leads come not from close friends but from weak ties, meaning acquaintances and second-degree connections who happen to know about an opening you would never have heard about otherwise. You cannot benefit from a weak tie who cannot find you, and a complete profile is how you become findable before you have anything impressive to show.",
+                  "Four sections do most of the work on LinkedIn. Your headline is not just your major: “First-year business student at UNC Chapel Hill interested in finance and nonprofit development” tells a reader where you are headed, while “Student at UNC Chapel Hill” tells them nothing. Your About section is three to five sentences in first person about who you are and what you are looking for. Your Education and at least one Experience entry carry the same content as your resume. Add a photo, because any clear, well-lit photo of your face is better than the gray default silhouette, and profiles with photos get looked at while profiles without them get skipped.",
+                  "Networking sounds like something that requires already knowing important people, but for a first-year student it comes down to three habits. First, go to office hours because every professor is a professional in your field and a possible reference later. Second, schedule a career center appointment before applications open, not during, when everyone else floods in. Third, connect with two or three alumni from your school on LinkedIn using a short, specific message; here is one you can use almost word for word: “Hi [Name], I am a first-year student at [school] studying [major]. I saw that you studied [major] and now work in [field]. If you have 15 minutes in the next few weeks, I would be grateful to ask a few questions about your path. Thank you.” Most people ignore a vague request, but most people answer a specific, polite, time-limited ask from a student at their own school.",
+                  "A career center appointment is not an interview, and you do not need to dress up or have everything figured out, because you bring your draft or even just your confusion and someone whose entire job is helping students works through it with you. Find your career center this week, write down the building, the hours, and how to book, and remember that the students who use it early are not the ones who needed the least help but the ones who stopped treating help as a last resort.",
+                  "References",
+                  "Granovetter, M. S. (1973). The strength of weak ties. American Journal of Sociology, 78(6), 1360–1380.",
+                ]} />
             </div>
             </FadeIn>
 
@@ -116,7 +127,13 @@ export default function Module6Page() {
               >
                 Activity: Experience Inventory
               </h2>
-              <DocumentDownload title="Module 6 Activity" description="Download and complete this worksheet as part of the module activity." filename="Module_6_Activity.docx" type="activity" active={true} />
+                              <LessonBody paragraphs={[
+                  "Do this before you build anything. You need raw material first.",
+                  "Step 1. Brainstorm every job, volunteer role, responsibility, club, and skill you have had in the last four years. Do not filter. A two-week summer job counts. Watching your siblings counts. Being the person your family asks for tech help counts. List everything.",
+                  "Step 2. Choose three items from your list and write each as one resume-style bullet point. Start each bullet with an action verb from the lesson, and include a specific detail or number wherever you can.",
+                  "Step 3. Submit your full raw list plus your three bullet points.",
+                  "Instructor feedback. I respond within 48 hours with a stronger version of whichever of your three bullets is the weakest, so you can see the technique applied to your own material before the graded assignment.",
+                ]} />
             </div>
             </FadeIn>
 
