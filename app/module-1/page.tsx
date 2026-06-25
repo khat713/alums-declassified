@@ -8,6 +8,7 @@ import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from '@/components/ui/document-download';
 import { LessonVideo } from '@/components/ui/lesson-video';
 import { Infographic } from '@/components/ui/infographic';
+import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, Search, PenLine, Lightbulb, Wrench, Clock, Award, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -76,7 +77,15 @@ export default function Module1Page() {
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Module 1 Lesson</h2>
               <LessonVideo title="The Manual Nobody Gave You" length="~3 min" videoFile="module-1-lesson.mp4" />
               <Infographic title="The 4 Unwritten Rules of College" filename="Infographic - Essential rules for academic success.png" active={true} />
-              <DocumentDownload title="Module 1 Lesson" description="Read the full lesson before completing the activity and assessment." filename="Module_1_Lesson.docx" type="lesson" active={true} />
+              <LessonBody paragraphs={[
+                "College runs on a set of rules nobody writes down. There is the official version in the catalog, with credit hours and prerequisites and the academic calendar, and then there is the version that actually determines how your semester goes, which gets passed down at dinner tables in families where people have already been to college. Researchers call this the hidden curriculum: the unspoken rules that colleges assume you already know. Students whose families went to college pick this up without thinking about it, while first-gen students are expected to know it without ever being taught, and this module is the part of the manual you were supposed to get and did not.",
+                "Start with the syllabus, because it is the most underused document in college. Most students skim it once and never open it again, which turns out to be a mistake because the syllabus is a contract. It tells you exactly how your grade is calculated, when every assignment is due for the whole semester, what the late policy is, and how the professor wants to be contacted. When a student emails a professor about something already answered on the syllabus, the professor notices, and not in a good way. Read it on the first day, put every due date in your calendar that night, and check it before you email about anything.",
+                "Office hours are the single biggest gap between students who know the rules and those who do not. These are blocks of time, listed on the syllabus, when a professor sits in their office specifically to talk with students, and you do not need an appointment, a crisis, or a brilliant question to show up. Faculty consistently report that office hours go mostly empty, meaning the students who do show up get a relationship with that professor that others do not. Go in the first three weeks before you need anything, introduce yourself, and ask one real question about the material or the field. The professor who knows your name in September is the one who writes your recommendation letter in two years and is also the one more likely to work with you when something goes wrong in October.",
+                "The way you contact a professor matters more than you think. An email that opens with “Hey” and no name reads differently than one that opens with “Hi Professor Lin.” Use their title, ask your question clearly, and sign your name and course. You are not being overly formal; you are signaling that you take their time seriously, and people respond to that.",
+                "Academic integrity is where good students get into trouble by accident. Everyone knows copying a test is cheating, but fewer students know that turning in the same paper for two different classes can be a violation, that working with a classmate on an assignment meant to be done alone is a violation, or that pasting a few sentences from a website without a citation is plagiarism even if you did not mean to steal anything. The rules vary by professor and school and are usually on the syllabus, so when you are not sure if something is allowed, ask first. “I did not know” does not protect you after the fact, but “I asked first” almost always does.",
+                "There are smaller unwritten rules too. Professors expect you to check your school email because that is where official information goes, not your personal account. Deadlines are usually firm, but many professors will work with you if you reach out before the deadline rather than after. Showing up matters even in classes that do not take attendance, because professors remember who was there, and none of this is difficult once someone tells you. The problem was never that first-gen students could not follow the rules but that nobody handed them the list.",
+                "The goal of this module is not to make college feel like a minefield but the opposite: once you can see these hidden rules, they stop feeling hidden, and most of them turn out to be straightforward. Read the syllabus. Go to office hours early. Email like a professional. Ask before you collaborate. Do those four things and you are already ahead of most of the room, first-gen or not.",
+              ]} />
             </div>
             </FadeIn>
 
@@ -84,7 +93,12 @@ export default function Module1Page() {
             <div id="activity" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 label-activity">Learning Activity</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Activity: Spot the Hidden Rule</h2>
-              <DocumentDownload title="Module 1 Activity Worksheet" description="Download and complete this worksheet as part of the module activity." filename="Module_1_Activity.docx" type="activity" active={true} />
+              <LessonBody paragraphs={[
+                "Step 1. Find a real syllabus. Use one from a course you are registered for if you have it, or search your school's website for a sample syllabus in your intended major.",
+                "Step 2. Read it and pull out three pieces of information you would have missed if you only skimmed it: one about how your grade is calculated, one about a policy (late work, attendance, or how to contact the professor), and one specific due date.",
+                "Step 3. Write one sentence naming the unwritten rule from the lesson you are most likely to forget, and what you will do about it.",
+                "Instructor feedback. I respond within 48 hours and point out one thing on your syllabus that students most often miss but that affects their grade.",
+              ]} />
             </div>
             </FadeIn>
 
