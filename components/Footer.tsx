@@ -11,7 +11,7 @@ export default function Footer() {
             <p style={{ fontFamily: 'Fraunces, serif', fontWeight: 800, fontSize: '1.4rem', color: '#ffffff', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>
               Alum&apos;s Declassified
             </p>
-            <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem', lineHeight: 1.7, maxWidth: '260px' }}>A comprehensive seven-week college survival guide built specifically for first-generation students. No gatekeeping.</p>
+            <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem', lineHeight: 1.7, maxWidth: '260px' }}>A comprehensive seven-week college survival guide built specifically for first-generation students.</p>
           </div>
           <nav aria-label="Course navigation">
             <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>Course</p>
