@@ -8,7 +8,6 @@ import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { PageTransition } from "@/components/ui/page-transition";
 import { FreddiePortal } from "@/components/ui/freddie-portal";
 import { FreddieProvider } from "@/components/ui/freddie-greeter";
-import { CelestialTracker } from "@/components/ui/celestial-tracker";
 import ReactLenis from 'lenis/react';
 
 const fraunces = Fraunces({
@@ -61,7 +60,6 @@ export default function RootLayout({
               style={{ position: 'relative', zIndex: 0, minHeight: '100vh', background: 'var(--page-bg)' }}
             >
               <Navbar />
-              <CelestialTracker />
               <PageTransition>{children}</PageTransition>
               <Footer />
             </div>

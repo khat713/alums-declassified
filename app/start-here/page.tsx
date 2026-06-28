@@ -7,6 +7,7 @@ import { LottieSceneLayer } from "@/components/ui/lottie-scenes";
 import { ScrollPath } from "@/components/ui/scroll-path";
 import { DocumentDownload } from "@/components/ui/document-download";
 import { LessonVideo } from "@/components/ui/lesson-video";
+import { CelestialTracker } from "@/components/ui/celestial-tracker";
 
 export const metadata: Metadata = {
   title: "Start Here | Alum's Declassified",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function StartHerePage() {
   return (
     <main>
+      <CelestialTracker />
       <ScrollAtmosphere />
       <LottieSceneLayer />
       <ScrollPath />

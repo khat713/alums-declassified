@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/fade-in";
 import { ScrollAtmosphere } from "@/components/ui/scroll-atmosphere";
+import { CelestialTracker } from "@/components/ui/celestial-tracker";
 import { LottieSceneLayer } from "@/components/ui/lottie-scenes";
 import { ScrollPath } from "@/components/ui/scroll-path";
 
@@ -15,6 +16,7 @@ const BASE = process.env.NODE_ENV === "production" ? "/alums-declassified" : "";
 export default function AboutPage() {
   return (
     <main>
+      <CelestialTracker />
       <ScrollAtmosphere />
       <LottieSceneLayer />
       <ScrollPath />

@@ -10,6 +10,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 const MotionLink = motion(Link);
 import { BookOpen, MapPin, DollarSign, CheckSquare, GraduationCap, Briefcase, Heart, Clock, CheckCircle, Smartphone, Award } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
+import { CelestialTracker } from "@/components/ui/celestial-tracker";
 import { ScrollAtmosphere } from '@/components/ui/scroll-atmosphere';
 import { LottieSceneLayer } from '@/components/ui/lottie-scenes';
 import { ScrollPath } from '@/components/ui/scroll-path';
@@ -37,6 +38,7 @@ export default function HomePage() {
 
   return (
     <main>
+      <CelestialTracker />
       <ScrollAtmosphere />
       <HeroBackdrop />
       <LottieSceneLayer />

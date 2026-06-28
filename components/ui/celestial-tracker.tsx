@@ -19,63 +19,50 @@ export function CelestialTracker() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    console.log('CelestialTracker isDark:', isDark);
-  }, [isDark]);
-
-  // DARK MODE - moon only. Stays visible the entire scroll.
-  const moonTop     = useTransform(scrollYProgress, [0, 1], ['4vh', '85vh']);
-  const moonOpacity = useTransform(scrollYProgress, [0, 1], [1, 1]);
-
-  // LIGHT MODE - sun only. Always visible, travels full scroll same as moon.
-  const sunTop     = useTransform(scrollYProgress, [0, 1], ['4vh', '85vh']);
-  const sunOpacity = useTransform(scrollYProgress, [0, 1], [1, 1]);
+  const moonTop = useTransform(scrollYProgress, [0, 1], ['4vh', '85vh']);
+  const sunTop  = useTransform(scrollYProgress, [0, 1], ['4vh', '85vh']);
 
   if (!mounted) return null;
 
   return (
     <>
-      {/* MOON - dark mode only - crescent via overlapping circles */}
+      {/* MOON - dark mode only */}
       {isDark && (
         <motion.div
           aria-hidden="true"
           style={{
             position: 'fixed',
-            right: '16px',
+            right: '12px',
             top: moonTop,
-            width: '120px',
-            height: '120px',
-            opacity: moonOpacity,
+            width: '60px',
+            height: '60px',
             pointerEvents: 'none',
             zIndex: 2,
           }}
         >
-          <div style={{ position: 'relative', width: '120px', height: '120px' }}>
-            {/* Moon body */}
+          <div style={{ position: 'relative', width: '60px', height: '60px' }}>
             <div style={{
               position: 'absolute',
               inset: 0,
               borderRadius: '50%',
               background: 'radial-gradient(circle at 40% 40%, #fef9c3, #fde047)',
-              boxShadow: '0 0 20px rgba(253,224,71,0.6), 0 0 40px rgba(253,224,71,0.3)',
+              boxShadow: '0 0 10px rgba(253,224,71,0.6), 0 0 20px rgba(253,224,71,0.3)',
             }} />
-            {/* Cutout to create crescent */}
             <div style={{
               position: 'absolute',
-              top: '-12px',
-              right: '-12px',
-              width: '100px',
-              height: '100px',
+              top: '-6px',
+              right: '-6px',
+              width: '50px',
+              height: '50px',
               borderRadius: '50%',
               background: 'var(--moon-cutout, #020818)',
             }} />
           </div>
-          {/* Twinkling stars nearby */}
           {[
-            { top: '-12px', right: '85px', size: '3px', opacity: 0.8 },
-            { top: '8px',   right: '95px', size: '2px', opacity: 0.6 },
-            { top: '-5px',  right: '70px', size: '2px', opacity: 0.7 },
-            { top: '25px',  right: '100px', size: '3px', opacity: 0.5 },
+            { top: '-6px',  right: '42px', size: '2px', opacity: 0.8 },
+            { top: '4px',   right: '48px', size: '1.5px', opacity: 0.6 },
+            { top: '-3px',  right: '35px', size: '1.5px', opacity: 0.7 },
+            { top: '12px',  right: '50px', size: '2px', opacity: 0.5 },
           ].map((star, i) => (
             <motion.div
               key={i}
@@ -96,27 +83,26 @@ export function CelestialTracker() {
         </motion.div>
       )}
 
-      {/* SUN - light mode only - clean yellow circle */}
+      {/* SUN - light mode only */}
       {!isDark && (
         <motion.div
           aria-hidden="true"
           style={{
             position: 'fixed',
-            right: '16px',
+            right: '12px',
             top: sunTop,
-            width: '110px',
-            height: '110px',
-            opacity: sunOpacity,
+            width: '55px',
+            height: '55px',
             pointerEvents: 'none',
             zIndex: 2,
           }}
         >
           <div style={{
-            width: '110px',
-            height: '110px',
+            width: '55px',
+            height: '55px',
             borderRadius: '50%',
             background: 'radial-gradient(circle at 40% 35%, #fef08a, #facc15 50%, #f59e0b)',
-            boxShadow: '0 0 24px rgba(250,204,21,0.7), 0 0 48px rgba(250,204,21,0.35), 0 0 72px rgba(250,204,21,0.15)',
+            boxShadow: '0 0 12px rgba(250,204,21,0.7), 0 0 24px rgba(250,204,21,0.35), 0 0 36px rgba(250,204,21,0.15)',
           }} />
         </motion.div>
       )}
