@@ -30,8 +30,8 @@ export default function TechHelpPage() {
           <Mail size={15} style={{ color: '#0d7c7e', marginTop: '2px', flexShrink: 0 }} />
           <p className="m-0 text-[0.9rem]">
             <strong>Can&apos;t find your answer below?</strong> Email me at{" "}
-            <a href="mailto:your-email@example.com" className="text-[#0d7c7e] font-semibold hover:underline">
-              your-email@example.com
+            <a href="mailto:khat03@ad.unc.edu" className="text-[#0d7c7e] font-semibold hover:underline">
+              khat03@ad.unc.edu
             </a>{" "}
             with a description of the problem, your device, and your browser. I
             respond within 48 hours on weekdays.
@@ -294,8 +294,8 @@ export default function TechHelpPage() {
           </h2>
           <p>
             Email{" "}
-            <a href="mailto:your-email@example.com" className="text-[#0d7c7e] font-bold hover:underline">
-              your-email@example.com
+            <a href="mailto:khat03@ad.unc.edu" className="text-[#0d7c7e] font-bold hover:underline">
+              khat03@ad.unc.edu
             </a>{" "}
             with:
           </p>
