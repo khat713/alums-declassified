@@ -37,7 +37,7 @@ export default function Footer() {
           </nav>
         </div>
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', marginTop: '3rem', paddingTop: '2rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.82rem' }}>© 2025 Alum&apos;s Declassified · Built for first-generation students</p>
+          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.82rem' }}>© 2026 Alum&apos;s Declassified · Built for first-generation students</p>
           <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.78rem' }}>Built with care for every first-gen student who deserved better information sooner.</p>
         </div>
       </div>
