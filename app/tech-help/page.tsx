@@ -56,64 +56,146 @@ export default function TechHelpPage() {
             <AccordionItem value="item-1">
               <AccordionTrigger>A video won&apos;t load or play</AccordionTrigger>
               <AccordionContent>
-                <ol className="ml-5 space-y-1">
-                  <li>Refresh the page (F5 or Ctrl+R).</li>
-                  <li>Try a different browser (Chrome or Firefox work best).</li>
-                  <li>Check that your internet connection is active.</li>
-                  <li>If it&apos;s a YouTube embed, try opening it directly on YouTube.</li>
-                  <li>If it&apos;s a Loom video, try opening the direct Loom link.</li>
-                  <li>Still stuck? Email me with your browser and device.</li>
-                </ol>
+                <ul className="ml-5 space-y-2 list-none">
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#0d7c7e] font-bold">→</span>
+                    <span>Refresh the page (F5 or Ctrl+R)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#0d7c7e] font-bold">→</span>
+                    <span>Try a different browser (Chrome or Firefox work best)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#0d7c7e] font-bold">→</span>
+                    <span>Check that your internet connection is active</span>
+                  </li>
+                  <li className="ml-0 mt-3 text-[0.9rem] font-semibold text-[#5a6a82] dark:text-[#94a3b8] mb-2">If the video is from an external source:</li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0">•</span>
+                    <span>YouTube embed → Try opening it directly on YouTube</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0">•</span>
+                    <span>Loom video → Try opening the direct Loom link</span>
+                  </li>
+                  <li className="mt-3 flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#d97706] font-bold">⚠</span>
+                    <span className="text-[#d97706]"><strong>Still stuck?</strong> Email me with your browser and device.</span>
+                  </li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-2">
               <AccordionTrigger>A link is broken or leads to a 404 page</AccordionTrigger>
               <AccordionContent>
-                <ol className="ml-5 space-y-1">
-                  <li>Copy the URL from the broken link and paste it into a new tab.</li>
-                  <li>Check for any extra spaces or characters in the address bar.</li>
-                  <li>Go back to the home page and navigate from there.</li>
-                  <li>Email me the URL of the broken link so I can fix it.</li>
-                </ol>
+                <ul className="ml-5 space-y-2 list-none">
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#0d7c7e] font-bold">→</span>
+                    <span>Copy the URL from the broken link and paste it into a new tab</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#0d7c7e] font-bold">→</span>
+                    <span>Check for any extra spaces or characters in the address bar</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#0d7c7e] font-bold">→</span>
+                    <span>Go back to the home page and navigate from there</span>
+                  </li>
+                  <li className="mt-3 flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#d97706] font-bold">⚠</span>
+                    <span className="text-[#d97706]"><strong>Still broken?</strong> Email me the URL of the broken link so I can fix it.</span>
+                  </li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3">
               <AccordionTrigger>A form or submission won&apos;t go through</AccordionTrigger>
               <AccordionContent>
-                <ol className="ml-5 space-y-1">
-                  <li>Make sure all required fields are filled in (look for red borders or asterisks).</li>
-                  <li>Try refreshing the page and re-entering your response.</li>
-                  <li>Try a different browser.</li>
-                  <li>If you&apos;re on a school or work network, try your personal wi-fi. Some networks block form submissions.</li>
-                  <li>As a backup, email your completed response directly to me.</li>
-                </ol>
+                <ul className="ml-5 space-y-2 list-none">
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#0d7c7e] font-bold">→</span>
+                    <span>Make sure all required fields are filled in (look for red borders or asterisks)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#0d7c7e] font-bold">→</span>
+                    <span>Try refreshing the page and re-entering your response</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#0d7c7e] font-bold">→</span>
+                    <span>Try a different browser</span>
+                  </li>
+                  <li className="ml-0 mt-3 text-[0.9rem] font-semibold text-[#5a6a82] dark:text-[#94a3b8] mb-2">Network issues:</li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0">•</span>
+                    <span>If you&apos;re on a school or work network, try your personal wi-fi (some networks block form submissions)</span>
+                  </li>
+                  <li className="mt-3 flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#d97706] font-bold">⚠</span>
+                    <span className="text-[#d97706]"><strong>Backup option:</strong> Email your completed response directly to me.</span>
+                  </li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4">
               <AccordionTrigger>The site looks broken on my phone</AccordionTrigger>
               <AccordionContent>
-                <ol className="ml-5 space-y-1">
-                  <li>Make sure you&apos;re using an up-to-date browser (Chrome or Safari on mobile).</li>
-                  <li>Try rotating your phone to landscape mode for wider tables or content.</li>
-                  <li>If text is very small, use your browser&apos;s zoom feature.</li>
-                  <li>Clear your browser cache: Settings → Browser → Clear Cache.</li>
-                  <li>Email me and describe exactly what looks wrong. Screenshot if possible.</li>
-                </ol>
+                <ul className="ml-5 space-y-2 list-none">
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#0d7c7e] font-bold">→</span>
+                    <span>Make sure you&apos;re using an up-to-date browser (Chrome or Safari on mobile)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#0d7c7e] font-bold">→</span>
+                    <span>Try rotating your phone to landscape mode for wider tables or content</span>
+                  </li>
+                  <li className="ml-0 mt-3 text-[0.9rem] font-semibold text-[#5a6a82] dark:text-[#94a3b8] mb-2">Display adjustments:</li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0">•</span>
+                    <span>If text is very small, use your browser&apos;s zoom feature</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0">•</span>
+                    <span>Clear your browser cache: <strong>Settings → Browser → Clear Cache</strong></span>
+                  </li>
+                  <li className="mt-3 flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#d97706] font-bold">⚠</span>
+                    <span className="text-[#d97706]"><strong>Still broken?</strong> Email me and describe exactly what looks wrong. Screenshot if possible.</span>
+                  </li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-5">
               <AccordionTrigger>I can&apos;t download or open a template file</AccordionTrigger>
               <AccordionContent>
-                <ol className="ml-5 space-y-1">
-                  <li>Right-click the download link and choose &ldquo;Save link as...&rdquo;</li>
-                  <li>If it&apos;s a Google Doc link, make sure you&apos;re signed into a Google account and click &ldquo;Make a copy.&rdquo;</li>
-                  <li>If you don&apos;t have Word, Google Docs opens .docx files for free.</li>
-                  <li>Email me and I&apos;ll send you the file directly.</li>
-                </ol>
+                <ul className="ml-5 space-y-2 list-none">
+                  <li className="ml-0 text-[0.9rem] font-semibold text-[#5a6a82] dark:text-[#94a3b8] mb-2">For direct downloads:</li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0">•</span>
+                    <span>Right-click the download link → choose &ldquo;Save link as...&rdquo;</span>
+                  </li>
+                  <li className="ml-0 mt-3 text-[0.9rem] font-semibold text-[#5a6a82] dark:text-[#94a3b8] mb-2">For Google Doc links:</li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0">→</span>
+                    <span>Make sure you&apos;re signed into a Google account</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0">→</span>
+                    <span>Click &ldquo;Make a copy&rdquo;</span>
+                  </li>
+                  <li className="ml-0 mt-3 text-[0.9rem] font-semibold text-[#5a6a82] dark:text-[#94a3b8] mb-2">If you don&apos;t have Word:</li>
+                  <li className="flex items-start gap-2">
+                    <span className="flex-shrink-0">•</span>
+                    <span>Google Docs opens .docx files for free</span>
+                  </li>
+                  <li className="mt-3 flex items-start gap-2">
+                    <span className="flex-shrink-0 text-[#d97706] font-bold">⚠</span>
+                    <span className="text-[#d97706]"><strong>Still can&apos;t access it?</strong> Email me and I&apos;ll send you the file directly.</span>
+                  </li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
