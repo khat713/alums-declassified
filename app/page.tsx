@@ -444,35 +444,6 @@ export default function HomePage() {
         </FadeIn>
       </div>
 
-      {/* EMOTIONAL COPY CARD */}
-      <section style={{ padding: '60px 20px', display: 'flex', justifyContent: 'center', background: 'transparent', position: 'relative', zIndex: 1 }}>
-        <div style={{
-          background: 'var(--emotional-card-bg)',
-          backdropFilter: 'blur(12px)',
-          border: '1px solid rgba(13,124,126,0.4)',
-          borderRadius: '24px',
-          padding: '60px 48px',
-          maxWidth: '760px',
-          width: '100%',
-          textAlign: 'center',
-          boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
-        }}>
-          <p style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#0d7c7e', marginBottom: '1rem' }}>FOR EVERY FIRST-GEN STUDENT</p>
-          <h2
-            className="dark:text-white text-[#1b2537]"
-            style={{ fontFamily: 'Fraunces, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, letterSpacing: '-0.03em', marginBottom: '1rem', lineHeight: 1.1 }}
-          >You deserve the same information everyone else got at the dinner table.</h2>
-          <p className="dark:text-white/75 text-[#374151]" style={{ fontSize: '1.05rem', marginBottom: '2rem', lineHeight: 1.7 }}>This course exists because the gap between first-gen students and their peers is not about intelligence. It is about access to information. Alum&apos;s Declassified closes that gap.</p>
-          <MotionLink
-            href="/module-1"
-            whileHover={{ scale: 1.03, boxShadow: '0 8px 24px rgba(13,124,126,0.4)' }}
-            whileTap={{ scale: 0.97 }}
-            style={{ background: 'linear-gradient(135deg, #0d7c7e, #096163)', color: '#fff', padding: '14px 32px', borderRadius: '8px', fontWeight: 700, display: 'inline-block', textDecoration: 'none' }}
-          >
-            Start Learning →
-          </MotionLink>
-        </div>
-      </section>
 
       </div>
     </main>
