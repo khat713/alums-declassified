@@ -384,7 +384,7 @@ export function FreddieDialog() {
                 </button>
               )}
               {isDone && (
-                <MotionLink href="/module-1" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} style={{ background: 'linear-gradient(135deg, #0d7c7e, #0a6466)', color: '#ffffff', padding: '12px 28px', borderRadius: '8px', fontWeight: 700, fontSize: '0.95rem', textDecoration: 'none', display: 'inline-block', border: '1px solid rgba(255,255,255,0.1)' }}>
+                <MotionLink href="/start-here" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} style={{ background: 'linear-gradient(135deg, #0d7c7e, #0a6466)', color: '#ffffff', padding: '12px 28px', borderRadius: '8px', fontWeight: 700, fontSize: '0.95rem', textDecoration: 'none', display: 'inline-block', border: '1px solid rgba(255,255,255,0.1)' }}>
                   Let&apos;s Go, Freddie! →
                 </MotionLink>
               )}
