@@ -148,7 +148,27 @@ export default function StartHerePage() {
         </div>
         </FadeIn>
 
+        {/* Introduce Yourself */}
         <FadeIn delay={0.4}>
+        <div className="content-block p-8 mb-5">
+          <span className="inline-block text-[0.7rem] font-bold uppercase tracking-[0.09em] px-[10px] py-[4px] rounded-full mb-4 bg-[#fef3e2] text-[#c2680a]">Before You Begin</span>
+          <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Introduce Yourself</h2>
+          <p className="text-[#374151] dark:text-white/80" style={{ fontSize: '0.97rem', lineHeight: 1.75, marginBottom: '0.75rem' }}>Before you start Module 1, take a second to say hello. No pressure on length or format. Just tell me something true.</p>
+          <iframe
+            src="https://docs.google.com/forms/d/1i30akapaJRpAbG95ub6yf1gNBSwhCcfaBeOiRKknsgo/viewform?embedded=true"
+            width="100%" height="600"
+            style={{ border: 'none', borderRadius: '10px', display: 'block' }}
+            title="Student Introduction Form" aria-label="Student introduction Google Form">
+            Loading form…
+          </iframe>
+          <p style={{ fontSize: '0.8rem', marginTop: '0.5rem' }} className="text-[#5a6a82] dark:text-[#94a3b8]">
+            Having trouble with the form?{' '}
+            <a href="https://forms.gle/HC8URZb5FuucWWX89" target="_blank" rel="noopener noreferrer" style={{ color: '#0d7c7e', fontWeight: 600 }}>Open it directly →</a>
+          </p>
+        </div>
+        </FadeIn>
+
+        <FadeIn delay={0.5}>
         <div className="text-center mt-4 mb-2">
           <Link
             href="/module-1"
