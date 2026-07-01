@@ -371,75 +371,50 @@ export default function HomePage() {
         </div>
         </FadeIn>
 
-        {/* INTRODUCE YOURSELF */}
+        {/* READY CTA CARD */}
         <FadeIn delay={0.2}>
-        <div className="content-block p-8 mb-5">
-          <span className="inline-block text-[0.7rem] font-bold uppercase tracking-[0.09em] px-[10px] py-[4px] rounded-full mb-4 bg-[#fef3e2] text-[#c2680a]">
-            Before You Begin
-          </span>
+        <div className="content-block p-8 mb-5 text-center">
           <h2
-            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-4 pb-[0.65rem] border-b dark:border-white/10 border-black/10 tracking-[-0.03em] leading-[1.2] dark:text-white text-[#1b2537]"
+            className="text-[clamp(1.4rem,2.8vw,2.2rem)] font-bold mb-3 tracking-[-0.03em] leading-[1.2] dark:text-white text-[#1b2537]"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Introduce Yourself
+            Ready to start this wonderful journey?
           </h2>
-          <p className="dark:text-white/75 text-[#2e3f5c]">
-            Before you start Module 1, take a second to say hello. No pressure
-            on length or format. Just tell me something true.
+          <p className="dark:text-white/70 text-[#4a5568] mb-7" style={{ fontSize: '1rem', lineHeight: 1.7, maxWidth: '520px', margin: '0 auto 1.75rem' }}>
+            Head to the Start Here page to read the syllabus and get oriented, or jump straight into the modules whenever you&apos;re ready.
           </p>
-          <iframe
-            src="https://docs.google.com/forms/d/1i30akapaJRpAbG95ub6yf1gNBSwhCcfaBeOiRKknsgo/viewform?embedded=true"
-            width="100%"
-            height="600"
-            style={{ border: 'none', borderRadius: '10px', display: 'block', marginTop: '0.75rem' }}
-            title="Student Introduction Form"
-            aria-label="Student introduction Google Form"
-          >
-            Loading form…
-          </iframe>
-          <p style={{ fontSize: '0.8rem', marginTop: '0.5rem' }} className="text-[#5a6a82] dark:text-[#94a3b8]">
-            Having trouble with the form?{' '}
-            <a href="https://forms.gle/HC8URZb5FuucWWX89" target="_blank" rel="noopener noreferrer" style={{ color: '#0d7c7e', fontWeight: 600 }}>
-              Open it directly →
-            </a>
-          </p>
-        </div>
-        </FadeIn>
-
-        {/* CTA */}
-        <FadeIn delay={0.3}>
-        <div className="text-center mt-4 mb-2">
-          <Link
-            href="/start-here"
-            style={{
-              background: 'linear-gradient(135deg, #0d7c7e, #096163)',
-              color: '#ffffff',
-              textDecoration: 'none',
-              padding: '11px 28px',
-              fontSize: '0.95rem',
-              borderRadius: '5px',
-              fontWeight: 700,
-              display: 'inline-block',
-              marginRight: '0.5rem',
-            }}
-          >
-            Start Here →
-          </Link>
-          <Link
-            href="/modules"
-            style={{
-              background: 'linear-gradient(135deg, #0d7c7e, #096163)',
-              color: '#ffffff',
-              textDecoration: 'none',
-              padding: '11px 28px',
-              fontSize: '0.95rem',
-              borderRadius: '5px',
-              fontWeight: 700,
-              display: 'inline-block',
-            }}
-          >
-            View All Modules →
-          </Link>
+          <div className="flex gap-4 flex-wrap justify-center">
+            <Link
+              href="/start-here"
+              style={{
+                background: 'linear-gradient(135deg, #0d7c7e, #096163)',
+                color: '#ffffff',
+                textDecoration: 'none',
+                padding: '13px 32px',
+                fontSize: '0.97rem',
+                borderRadius: '8px',
+                fontWeight: 700,
+                display: 'inline-block',
+              }}
+            >
+              Start Here →
+            </Link>
+            <Link
+              href="/modules"
+              className="border-[1.5px] border-[#1b2537] dark:border-[#e2e8f0] text-[#1b2537] dark:text-[#e2e8f0] hover:bg-[#1b2537] dark:hover:bg-[#e2e8f0] hover:text-white dark:hover:text-[#1b2537] transition-all"
+              style={{
+                background: 'transparent',
+                textDecoration: 'none',
+                padding: '13px 32px',
+                fontSize: '0.97rem',
+                borderRadius: '8px',
+                fontWeight: 600,
+                display: 'inline-block',
+              }}
+            >
+              View All Modules →
+            </Link>
+          </div>
         </div>
         </FadeIn>
       </div>
