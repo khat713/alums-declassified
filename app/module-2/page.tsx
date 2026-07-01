@@ -87,7 +87,16 @@ export default function Module2Page() {
                   "Beyond these core resources, there are others worth knowing about: the career center (which you will use in Module 6), the writing center where someone reads your paper with you before you turn it in, the health center for physical care, the registrar for anything involving your official academic record, and academic advising for choosing classes and staying on track to graduate. Each one solves a specific problem, and they are all easier to use before things go wrong than after.",
                   "Do not wait until you need a resource to find out where it is. When something goes wrong you do not want to be figuring out logistics at the same time. Find them now, before anything happens, and write down where they are.",
                 ]}
-              headings={[{ beforeIndex: 0, text: "Why This Gets Missed" }, { beforeIndex: 1, text: "Six Resources to Know" }, { beforeIndex: 7, text: "Look Them Up Early" }]}
+              headings={[
+                { beforeIndex: 0, text: "Why This Gets Missed" },
+                { beforeIndex: 1, text: "The Financial Aid Office" },
+                { beforeIndex: 2, text: "The Tutoring Center" },
+                { beforeIndex: 3, text: "The Counseling Center" },
+                { beforeIndex: 4, text: "The Food Pantry" },
+                { beforeIndex: 5, text: "Disability Services" },
+                { beforeIndex: 6, text: "Other Resources" },
+                { beforeIndex: 7, text: "Look Them Up Early" },
+              ]}
             />
             </div>
             </FadeIn>
