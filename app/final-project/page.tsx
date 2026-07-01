@@ -150,11 +150,11 @@ export default function FinalProjectPage() {
             </div>
             </FadeIn>
 
-            {/* Model Response */}
+            {/* Worked Example */}
             <FadeIn delay={0.4}>
             <div id="model" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
-                Model Response
+                Worked Example
               </span>
               <h2
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
@@ -162,7 +162,7 @@ export default function FinalProjectPage() {
               >
                 Example Portfolio: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Final Project Model Response" description="See an example of a Proficient portfolio to guide your own submission." filename="Final_Portfolio_Model_Response_Complete.docx" type="model" active={true} />
+              <DocumentDownload title="Final Project Worked Example" description="Read through this before you put yours together." filename="Final_Portfolio_Model_Response_Complete.docx" type="model" active={true} />
             </div>
             </FadeIn>
 
@@ -189,7 +189,7 @@ export default function FinalProjectPage() {
                     { href: "#instructions", icon: <FileText size={14} />, label: "Instructions" },
                     { href: "#submit", icon: <Star size={14} />, label: "Submission Checklist" },
                     { href: "#assessment", icon: <GraduationCap size={14} />, label: "Final Assignment" },
-                    { href: "#model", icon: <Video size={14} />, label: "Model Response" },
+                    { href: "#model", icon: <Video size={14} />, label: "Worked Example" },
                   ].map(({ href, icon, label }) => (
                     <li key={href} className="border-b border-[#edf0f4] dark:border-[#243044] last:border-b-0">
                       <a href={href} className="flex items-center gap-[6px] py-[7px] text-[0.85rem] text-[#5a6a82] dark:text-[#94a3b8] hover:text-[#0d7c7e] no-underline transition-colors">{icon}{label}</a>

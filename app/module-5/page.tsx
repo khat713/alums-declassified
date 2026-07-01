@@ -158,11 +158,11 @@ export default function Module5Page() {
             </div>
             </FadeIn>
 
-            {/* Model Response */}
+            {/* Worked Example */}
             <FadeIn delay={0.4}>
             <div id="model" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
-                Model Response
+                Worked Example
               </span>
               <h2
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
@@ -170,7 +170,7 @@ export default function Module5Page() {
               >
                 Example Study Plan: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 5 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_5_Model_Responses.docx" type="model" active={true} />
+              <DocumentDownload title="Module 5 Worked Example" description="Read through this before you write your own." filename="Module_5_Model_Responses.docx" type="model" active={true} />
             </div>
             </FadeIn>
 
@@ -219,7 +219,7 @@ export default function Module5Page() {
                     { href: "#lesson", icon: <BookOpen size={14} />, label: "Lesson" },
                     { href: "#activity", icon: <PenLine size={14} />, label: "Activity" },
                     { href: "#assessment", icon: <Calendar size={14} />, label: "Assessment" },
-                    { href: "#model", icon: <Lightbulb size={14} />, label: "Model Response" },
+                    { href: "#model", icon: <Lightbulb size={14} />, label: "Worked Example" },
                     { href: "#tools", icon: <Wrench size={14} />, label: "Tools" },
                   ].map(({ href, icon, label }) => (
                     <li key={href}>

@@ -87,7 +87,7 @@ export default function Module1Page() {
                 "There are smaller unwritten rules too. Professors expect you to check your school email because that is where official information goes, not your personal account. Deadlines are usually firm, but many professors will work with you if you reach out before the deadline rather than after. Showing up matters even in classes that do not take attendance, because professors remember who was there, and none of this is difficult once someone tells you. The problem was never that first-gen students could not follow the rules but that nobody handed them the list.",
                 "The goal of this module is not to make college feel like a minefield but the opposite: once you can see these hidden rules, they stop feeling hidden, and most of them turn out to be straightforward. Read the syllabus. Go to office hours early. Email like a professional. Ask before you collaborate. Do those four things and you are already ahead of most of the room, first-gen or not.",
               ]}
-              headings={[{ beforeIndex: 0, text: "The Hidden Curriculum" }, { beforeIndex: 1, text: "The Syllabus and Office Hours" }, { beforeIndex: 3, text: "How to Email a Professor" }, { beforeIndex: 4, text: "Academic Integrity" }, { beforeIndex: 5, text: "The Smaller Rules That Add Up" }]}
+              headings={[{ beforeIndex: 0, text: "The Hidden Curriculum" }, { beforeIndex: 1, text: "The Syllabus and Office Hours" }, { beforeIndex: 3, text: "How to Email a Professor" }, { beforeIndex: 4, text: "Academic Integrity" }, { beforeIndex: 5, text: "A Few More Things to Know" }]}
             />
             </div>
             </FadeIn>
@@ -116,9 +116,9 @@ export default function Module1Page() {
 
             <FadeIn delay={0.4}>
             <div id="model" className="content-block p-7 mb-5">
-              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">Model Response</span>
-              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Example Response: See What Proficient Looks Like</h2>
-              <DocumentDownload title="Module 1 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_1_Model_Responses.docx" type="model" active={true} />
+              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">Worked Example</span>
+              <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>What a Good Response Looks Like</h2>
+              <DocumentDownload title="Module 1 Worked Example" description="Read through this before you write your own." filename="Module_1_Model_Responses.docx" type="model" active={true} />
             </div>
             </FadeIn>
 
@@ -158,7 +158,7 @@ export default function Module1Page() {
                     { href: "#lesson", icon: <BookOpen size={14} />, label: "Lesson" },
                     { href: "#activity", icon: <Search size={14} />, label: "Activity" },
                     { href: "#assessment", icon: <PenLine size={14} />, label: "Assessment" },
-                    { href: "#model", icon: <Lightbulb size={14} />, label: "Model Response" },
+                    { href: "#model", icon: <Lightbulb size={14} />, label: "Worked Example" },
                     { href: "#tools", icon: <Wrench size={14} />, label: "Tools" },
                   ].map(({ href, icon, label }) => (
                     <li key={href} className="border-b border-[#edf0f4] dark:border-[#243044] last:border-b-0">

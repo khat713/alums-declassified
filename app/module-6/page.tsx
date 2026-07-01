@@ -113,7 +113,7 @@ export default function Module6Page() {
                   "References",
                   "Granovetter, M. S. (1973). The strength of weak ties. American Journal of Sociology, 78(6), 1360–1380.",
                 ]}
-              headings={[{ beforeIndex: 1, text: "Building Your Resume" }, { beforeIndex: 3, text: "LinkedIn: Being Findable" }, { beforeIndex: 5, text: "Networking" }, { beforeIndex: 6, text: "The Career Center" }]}
+              headings={[{ beforeIndex: 1, text: "Building Your Resume" }, { beforeIndex: 3, text: "Setting Up LinkedIn" }, { beforeIndex: 5, text: "Networking" }, { beforeIndex: 6, text: "The Career Center" }]}
             />
             </div>
             </FadeIn>
@@ -157,11 +157,11 @@ export default function Module6Page() {
             </div>
             </FadeIn>
 
-            {/* Model Response */}
+            {/* Worked Example */}
             <FadeIn delay={0.4}>
             <div id="model" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
-                Model Response
+                Worked Example
               </span>
               <h2
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
@@ -169,7 +169,7 @@ export default function Module6Page() {
               >
                 Example Resume: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 6 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_6_Model_Responses.docx" type="model" active={true} />
+              <DocumentDownload title="Module 6 Worked Example" description="Read through this before you write your own." filename="Module_6_Model_Responses.docx" type="model" active={true} />
             </div>
             </FadeIn>
 
@@ -218,7 +218,7 @@ export default function Module6Page() {
                     { href: "#lesson", icon: <BookOpen size={14} />, label: "Lesson" },
                     { href: "#activity", icon: <Mic size={14} />, label: "Activity" },
                     { href: "#assessment", icon: <Briefcase size={14} />, label: "Assessment" },
-                    { href: "#model", icon: <Lightbulb size={14} />, label: "Model Response" },
+                    { href: "#model", icon: <Lightbulb size={14} />, label: "Worked Example" },
                     { href: "#tools", icon: <Wrench size={14} />, label: "Tools" },
                   ].map(({ href, icon, label }) => (
                     <li key={href}>

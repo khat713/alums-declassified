@@ -87,7 +87,7 @@ export default function Module2Page() {
                   "Beyond these core resources, there are others worth knowing about: the career center (which you will use in Module 6), the writing center where someone reads your paper with you before you turn it in, the health center for physical care, the registrar for anything involving your official academic record, and academic advising for choosing classes and staying on track to graduate. Each one solves a specific problem, and the pattern is always the same: the resource is most useful before the problem becomes an emergency.",
                   "Here is the habit that separates students who use resources from those who do not. Do not wait until you need a resource to find out where it is, because when something goes wrong you do not want to be figuring out logistics while panicking. Find them now, while nothing is wrong, so the map is ready when you need it, and that is the entire point of this module's assignment: you are going to build a map of your school's resources before your first day.",
                 ]}
-              headings={[{ beforeIndex: 0, text: "Why First-Gen Students Miss Out" }, { beforeIndex: 1, text: "Six Resources Worth Knowing" }, { beforeIndex: 7, text: "Find Them Before You Need Them" }]}
+              headings={[{ beforeIndex: 0, text: "Why This Gets Missed" }, { beforeIndex: 1, text: "Six Resources to Know" }, { beforeIndex: 7, text: "Look Them Up Early" }]}
             />
             </div>
             </FadeIn>
@@ -116,9 +116,9 @@ export default function Module2Page() {
 
             <FadeIn delay={0.4}>
             <div id="model" className="content-block p-7 mb-5">
-              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">Model Response</span>
+              <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">Worked Example</span>
               <h2 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-4 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1 }}>Example Resource Map: See What Proficient Looks Like</h2>
-              <DocumentDownload title="Module 2 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_2_Model_Responses.docx" type="model" active={true} />
+              <DocumentDownload title="Module 2 Worked Example" description="Read through this before you write your own." filename="Module_2_Model_Responses.docx" type="model" active={true} />
             </div>
             </FadeIn>
 
@@ -152,7 +152,7 @@ export default function Module2Page() {
                     { href: "#lesson", icon: <BookOpen size={14} />, label: "Lesson" },
                     { href: "#activity", icon: <Mail size={14} />, label: "Activity" },
                     { href: "#assessment", icon: <MapPin size={14} />, label: "Assessment" },
-                    { href: "#model", icon: <Lightbulb size={14} />, label: "Model Response" },
+                    { href: "#model", icon: <Lightbulb size={14} />, label: "Worked Example" },
                     { href: "#tools", icon: <Wrench size={14} />, label: "Tools" },
                   ].map(({ href, icon, label }) => (
                     <li key={href} className="border-b border-[#edf0f4] dark:border-[#243044] last:border-b-0">

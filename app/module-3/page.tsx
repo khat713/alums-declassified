@@ -113,7 +113,7 @@ export default function Module3Page() {
                   "Last, the scams, because students are a common target. If a company charges a fee to apply for a scholarship, it is a scam because real scholarships do not charge to apply. If someone offers to file your FAFSA for a fee, do not pay them because the FAFSA is free, which is literally what the first F stands for. If you get a call saying your financial aid will be canceled unless you pay right now or give out your Social Security number, hang up because that is not how aid offices work. Any message that creates urgency and asks for money or personal information is worth being suspicious of.",
                   "None of this requires being naturally good with money, only reading one document carefully, knowing which money is free and which is borrowed, and writing down a plan before school starts. Do that, and money becomes something you manage instead of something that happens to you.",
                 ]}
-              headings={[{ beforeIndex: 0, text: "Why Money Ends More College Careers Than Grades" }, { beforeIndex: 1, text: "Reading Your Award Letter" }, { beforeIndex: 6, text: "Building Your Budget" }, { beforeIndex: 7, text: "Scams to Watch For" }]}
+              headings={[{ beforeIndex: 0, text: "Money and College" }, { beforeIndex: 1, text: "Reading Your Award Letter" }, { beforeIndex: 6, text: "Building Your Budget" }, { beforeIndex: 7, text: "Scams to Watch For" }]}
             />
             </div>
             </FadeIn>
@@ -156,11 +156,11 @@ export default function Module3Page() {
             </div>
             </FadeIn>
 
-            {/* Model Response */}
+            {/* Worked Example */}
             <FadeIn delay={0.4}>
             <div id="model" className="content-block p-7 mb-5">
               <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
-                Model Response
+                Worked Example
               </span>
               <h2
                 className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
@@ -168,7 +168,7 @@ export default function Module3Page() {
               >
                 Example Budget: See What Proficient Looks Like
               </h2>
-              <DocumentDownload title="Module 3 Model Response" description="See an example of a Proficient response to guide your own submission." filename="Module_3_Model_Responses.docx" type="model" active={true} />
+              <DocumentDownload title="Module 3 Worked Example" description="Read through this before you write your own." filename="Module_3_Model_Responses.docx" type="model" active={true} />
             </div>
             </FadeIn>
 
@@ -217,7 +217,7 @@ export default function Module3Page() {
                     { href: "#lesson", icon: <BookOpen size={14} />, label: "Lesson" },
                     { href: "#activity", icon: <FileText size={14} />, label: "Activity" },
                     { href: "#assessment", icon: <DollarSign size={14} />, label: "Assessment" },
-                    { href: "#model", icon: <Lightbulb size={14} />, label: "Model Response" },
+                    { href: "#model", icon: <Lightbulb size={14} />, label: "Worked Example" },
                     { href: "#tools", icon: <Wrench size={14} />, label: "Tools" },
                   ].map(({ href, icon, label }) => (
                     <li key={href}>

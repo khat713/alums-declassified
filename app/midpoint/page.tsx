@@ -81,7 +81,7 @@ export default function MidpointPage() {
           {/* Model response */}
           <div className="content-block p-7 mb-5">
             <span className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.09em] px-[9px] py-[3px] rounded-[20px] mb-3 bg-[#ede8fb] text-[#5e3a9e]">
-              Model Response
+              Worked Example
             </span>
             <h2
               className="font-bold text-[#1b2537] dark:text-[#e2e8f0] mb-3 pb-[0.65rem] border-b border-[#edf0f4] dark:border-[#243044]"
@@ -93,7 +93,7 @@ export default function MidpointPage() {
               Review this after writing your own draft. Use it as a benchmark, not a script.
             </p>
             <DocumentDownload
-              title="Midpoint Model Response"
+              title="Midpoint Worked Example"
               description="An example of a Proficient discussion post and peer reply."
               filename="Midpoint_Model_Response.docx"
               type="model"

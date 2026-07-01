@@ -46,7 +46,7 @@ const DROPDOWNS: {
       { href: "/module-5", label: "Module 5: Academic Success" },
       { href: "/module-6", label: "Module 6: Career Preparation" },
       { href: "/module-7", label: "Module 7: Emotional Resilience" },
-      { href: "/final-project", label: "Final Project: College Readiness Portfolio" },
+      { href: "/final-project", label: "Summative Assessment: College Readiness Portfolio" },
     ],
     extras: [
       { href: "/assignments", label: "Assignments" },
