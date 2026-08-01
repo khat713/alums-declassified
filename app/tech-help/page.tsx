@@ -308,14 +308,6 @@ export default function TechHelpPage() {
           <p>
             I respond within <strong>48 hours on weekdays</strong>.
           </p>
-          <div className="bg-[#f2f4f7] dark:bg-[#162032] border-[1.5px] border-dashed border-[#dde2eb] dark:border-[#334155] rounded-[5px] p-[1.4rem_1.5rem] text-[#5a6a82] dark:text-[#94a3b8] text-[0.92rem] text-center">
-            <strong>Optional: Embed a contact form here</strong>
-            <br />
-            <small>
-              Google Form with fields: Name, Email, Issue Description, Device,
-              Browser
-            </small>
-          </div>
         </div>
         </FadeIn>
       </div>
