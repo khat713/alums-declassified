@@ -11,6 +11,7 @@ import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, Search, PenLine, Lightbulb, Wrench, Clock, Award, ChevronRight } from "lucide-react";
 import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
+import { ModuleAnalytics } from '@/components/ui/module-analytics';
 
 export const metadata: Metadata = {
   title: "Module 1: College Expectations | Alum's Declassified",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 export default function Module1Page() {
   return (
     <main>
+      <ModuleAnalytics moduleNumber={1} moduleTitle="College Expectations" />
       <ReadingProgress />
       <ModuleToastInit message="Welcome to Module 1: College Expectations. This module takes about 45 minutes to complete." />
       <div className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[10px] text-[0.82rem]">

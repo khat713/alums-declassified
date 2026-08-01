@@ -12,6 +12,7 @@ import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, Mic, Briefcase, Lightbulb, Wrench, Clock, Award } from "lucide-react";
 import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
+import { ModuleAnalytics } from '@/components/ui/module-analytics';
 
 export const metadata: Metadata = {
   title: "Module 6: Career Preparation | Alum's Declassified",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function Module6Page() {
   return (
     <main>
+      <ModuleAnalytics moduleNumber={6} moduleTitle="Career Preparation" />
       <ReadingProgress />
       <ModuleToastInit message="Welcome to Module 6: Career Preparation. You already have more to put on a resume than you think." />
       <Breadcrumb

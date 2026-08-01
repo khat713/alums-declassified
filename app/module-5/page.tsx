@@ -12,6 +12,7 @@ import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, PenLine, Calendar, Lightbulb, Wrench, Clock, Award } from "lucide-react";
 import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
+import { ModuleAnalytics } from '@/components/ui/module-analytics';
 
 export const metadata: Metadata = {
   title: "Module 5: Academic Success | Alum's Declassified",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function Module5Page() {
   return (
     <main>
+      <ModuleAnalytics moduleNumber={5} moduleTitle="Academic Success" />
       <ReadingProgress />
       <ModuleToastInit message="Welcome to Module 5: Academic Success. Re-reading your notes is not studying." />
       <Breadcrumb

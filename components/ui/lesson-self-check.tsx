@@ -1,17 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { trackSelfCheckComplete } from '@/lib/analytics';
 
 interface LessonSelfCheckProps {
   questions: string[];
   nextLabel: string;
   nextHref: string;
+  moduleNumber?: number;
 }
 
-export function LessonSelfCheck({ questions, nextLabel, nextHref }: LessonSelfCheckProps) {
+export function LessonSelfCheck({ questions, nextLabel, nextHref, moduleNumber }: LessonSelfCheckProps) {
   const [checked, setChecked] = useState<boolean[]>(() => questions.map(() => false));
+  const firedRef = useRef(false);
 
   const toggle = (i: number) => {
     setChecked((prev) => {
@@ -22,6 +25,13 @@ export function LessonSelfCheck({ questions, nextLabel, nextHref }: LessonSelfCh
   };
 
   const allChecked = checked.every(Boolean);
+
+  useEffect(() => {
+    if (allChecked && !firedRef.current && moduleNumber !== undefined) {
+      firedRef.current = true;
+      trackSelfCheckComplete(moduleNumber);
+    }
+  }, [allChecked, moduleNumber]);
 
   return (
     <div className="sidebar-block p-[1.1rem_1.2rem] mb-4">

@@ -12,6 +12,7 @@ import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, FileText, DollarSign, Lightbulb, Wrench, Clock, Award } from "lucide-react";
 import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
+import { ModuleAnalytics } from '@/components/ui/module-analytics';
 
 export const metadata: Metadata = {
   title: "Module 3: Financial Literacy | Alum's Declassified",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function Module3Page() {
   return (
     <main>
+      <ModuleAnalytics moduleNumber={3} moduleTitle="Financial Literacy" />
       <ReadingProgress />
       <ModuleToastInit message="Welcome to Module 3: Financial Literacy. Know the difference between free money and debt before you accept anything." />
       <Breadcrumb

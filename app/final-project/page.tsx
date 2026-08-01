@@ -8,6 +8,7 @@ import { ReadingProgress } from "@/components/ui/reading-progress";
 import { DocumentDownload } from "@/components/ui/document-download";
 import { GraduationCap, FileText, Video, BookOpen, Clock, Award, Star, CheckCircle } from "lucide-react";
 import { Infographic } from '@/components/ui/infographic';
+import { PageAnalytics } from '@/components/ui/page-analytics';
 
 export const metadata: Metadata = {
   title: "Final Project: College Readiness Portfolio | Alum's Declassified",
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 export default function FinalProjectPage() {
   return (
     <main>
+      <PageAnalytics event="portfolio_start" />
       <ReadingProgress />
       <ModuleToastInit message="Final Project: College Readiness Portfolio. Bring everything together." />
       <Breadcrumb

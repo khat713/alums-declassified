@@ -12,6 +12,7 @@ import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, Mail, Heart, Lightbulb, Wrench, Clock, Award, Phone, Smartphone } from "lucide-react";
 import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
+import { ModuleAnalytics } from '@/components/ui/module-analytics';
 
 export const metadata: Metadata = {
   title: "Module 7: Emotional Resilience | Alum's Declassified",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function Module7Page() {
   return (
     <main>
+      <ModuleAnalytics moduleNumber={7} moduleTitle="Emotional Resilience" />
       <ReadingProgress />
       <ModuleToastInit message="Welcome to Module 7: Emotional Resilience. You've made it to the final module." />
       <Breadcrumb

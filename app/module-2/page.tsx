@@ -11,6 +11,7 @@ import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, Mail, MapPin, Lightbulb, Wrench, Clock, Award, ChevronRight } from "lucide-react";
 import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
+import { ModuleAnalytics } from '@/components/ui/module-analytics';
 
 export const metadata: Metadata = {
   title: "Module 2: Campus Resources | Alum's Declassified",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 export default function Module2Page() {
   return (
     <main>
+      <ModuleAnalytics moduleNumber={2} moduleTitle="Campus Resources" />
       <ReadingProgress />
       <ModuleToastInit message="Welcome to Module 2: Campus Resources. Identify 6 support resources specific to your school." />
       <div className="bg-white dark:bg-[#1e293b] border-b border-[#dde2eb] dark:border-[#334155] py-[10px] text-[0.82rem]">

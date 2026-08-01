@@ -12,6 +12,7 @@ import { Infographic } from '@/components/ui/infographic';
 import { LessonBody } from '@/components/ui/lesson-body';
 import { Target, BookOpen, ShoppingCart, PenLine, Lightbulb, Wrench, Clock, CheckCircle, Award } from "lucide-react";
 import { LessonSelfCheck } from '@/components/ui/lesson-self-check';
+import { ModuleAnalytics } from '@/components/ui/module-analytics';
 
 export const metadata: Metadata = {
   title: "Module 4: Essential Life Skills | Alum's Declassified",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function Module4Page() {
   return (
     <main>
+      <ModuleAnalytics moduleNumber={4} moduleTitle="Essential Life Skills" />
       <ReadingProgress />
       <ModuleToastInit message="Welcome to Module 4: Essential Life Skills. Today: groceries, laundry, health insurance, and leases." />
       <Breadcrumb
