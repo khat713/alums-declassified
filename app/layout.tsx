@@ -3,7 +3,6 @@ import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { ToastContainer } from "@/components/ui/toast-notification";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { PageTransition } from "@/components/ui/page-transition";
@@ -52,6 +51,13 @@ export default function RootLayout({
           href={`${process.env.NODE_ENV === "production" ? "/alums-declassified" : ""}/images/logo-clip.png`}
           type="image/png"
         />
+        {/* Google Analytics 4 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8QTC258EZ" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-E8QTC258EZ');`,
+          }}
+        />
       </head>
       <body className="text-[#1b2537] dark:text-[#e2e8f0] font-body transition-colors duration-200">
         <a href="#main-content" className="skip-link">Skip to main content</a>
@@ -70,10 +76,6 @@ export default function RootLayout({
           <FreddiePortal />
         </FreddieProvider>
       </body>
-      {/* GA4 — only loads in production when the measurement ID env var is set */}
-      {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
-      )}
     </html>
   );
 }
